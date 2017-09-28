@@ -201,7 +201,7 @@ $(document).ready(function(){
 						var controlvalidados=0;
 
 						$.each(controles, function (ind, elem) { 
-							if(validatext(elem == 1 )
+							if(validatext(elem)== 1)
 							{
 								controlvalidados += 1;
 							}else{
@@ -260,25 +260,18 @@ $(document).ready(function(){
 					
 						break;
 					case '2':
-						var controles=['#txtCalleSolicitantenew','#txtNumExteriornew', '#txtCpSolicitantenew','#txtCorreonew','#txtTelefonoCasanew','#txtTelefonoCelularnew'];
+						var controles=['#txtCalleSolicitantenew','#txtNumExteriornew', '#txtCpSolicitantenew','#txtCorreonew'];
 						var contlisterror=[]
-						var controleslist=['#lisEstadoSolicitantenew','#lstNacionalidadnew', '#lstEdoCivilnew'];
+						
+						var controlestelefono=['#txtTelefonoCasanew','#txtTelefonoCelularnew'];
+						var contlisterrortelefono=[]
+						var controleslist=['#lisEstadoSolicitantenew','#lisDelMuniSolicitantenew', '#lisColoniaSolicitantenew','#lisCompaniaMovilnew', '#lisEstatusResidencianew'];
 						var controleslisterror=[];
-						var totalvalidar = 8;
+						var totalvalidar = 13;
 						var controlvalidados=0;
-						
-						
-						
-						if(validaspiners($('#txtTiempoResidencianew')) == 1 )
-						{
-							controlvalidados += 1;
-						}else{
-							contlisterror[ind] = elem;
-							
-						}
 
 						$.each(controles, function (ind, elem) { 
-							if($(elem).val() != '' )
+							if(validatext(elem) == 1)
 							{
 								controlvalidados += 1;
 							}else{
@@ -287,8 +280,9 @@ $(document).ready(function(){
 							}
 						});
 						
+						
 						$.each(controleslist, function (ind, elem) { 
-							if($(elem).val() != '0' )
+							if(validalistas(elem) == 1 )
 							{
 								controlvalidados += 1;
 							}else{
@@ -296,13 +290,37 @@ $(document).ready(function(){
 								
 							}
 						});
-						
-						if(controlvalidados == totalvalidar ){
-							$("#stOkTitstepgrales").show();
-							$("#stOkTitModgrales").show();
+						if(validaspiners($('#txtTiempoResidencianew')) == 1 )
+						{
+							controlvalidados += 1;
 						}else{
-							$('#rowvalida').addClass('novalidorow').removeClass('rowiniciostepactivo');
-							$('#anumpaso1').css('color','yellow')
+							contlisterror[contlisterror.length + 1] = '#txtTiempoResidencianew';
+							
+						}
+						
+						if(validamontos($('#txtMontoViviendanew')) == 1 )
+						{
+							controlvalidados += 1;
+						}else{
+							contlisterror[contlisterror.length + 1] = '#txtMontoViviendanew';
+							
+						}
+						
+						$.each(controlestelefono, function (ind, elem) { 
+							if(validatelefono(elem) == 1 )
+							{
+								controlvalidados += 1;
+							}else{
+								contlisterrortelefono[ind] = elem;
+								
+							}
+						});
+						if(controlvalidados == totalvalidar ){
+							$("#stOkTitstepDomicilio").show();
+							$("#stOkTitModDomicilio").show();
+						}else{
+							$('#rowvalida2').addClass('novalidorow').removeClass('rowiniciostepactivo');
+							$('#anumpaso2').css('color','yellow')
 							
 							$.each(controleslisterror, function (ind, elem) { 
 							
@@ -311,10 +329,6 @@ $(document).ready(function(){
 								$(elem).trigger('startRumble');
 								$(elem).css('border', '1px solid red');
 								demoTimeout = setTimeout(function(){$(elem).trigger('stopRumble');},1500);							
-								
-								
-							
-							
 							});
 							
 							$.each(contlisterror, function (ind, elem) { 
@@ -324,10 +338,15 @@ $(document).ready(function(){
 								$(elem).trigger('startRumble');
 								$(elem).css('border', '1px solid red');
 								demoTimeout = setTimeout(function(){$(elem).trigger('stopRumble');},1500);							
-								
-								
+							});
 							
+							$.each(contlisterrortelefono, function (ind, elem) { 
 							
+								var demoTimeout;
+								clearTimeout(demoTimeout);
+								$(elem).trigger('startRumble');
+								$(elem).css('border', '1px solid red');
+								demoTimeout = setTimeout(function(){$(elem).trigger('stopRumble');},1500);							
 							});
 							e.preventDefault();
 							
@@ -335,25 +354,215 @@ $(document).ready(function(){
 						}
 						break;
 					case '3':
-						tipoagrupa = 'Rechazadas';
-						tiporow = 'rowRechazadas';
-						topoproy = data.solicitudes[r].ID_SOLICITUD;
-						icono = 'glyphicon glyphicon-ban-circle';
-						fstitulo ='fs-titleRechazadas';
+						var controles=['#txtNombreEmpresanew','#txtGironew', '#txtPuestonew','#txtCalleEmpresanew','#txtNumeroExteriorEmpresa','#txtCpEmpresanew'];
+						var contlisterror=[]
+						
+						var controleslistmontos=['#txtIngresonew'];
+						var controleslistmontoserror=[];
+						
+						var controlestelefono=['#txtTelOficinanew'];
+						var contlisterrortelefono=[]
+						var controleslist=['#lisTipoContratonew','#lisEstadoEmpresanew', '#lisDelMuniEmpresanew','#lisColoniaEmpresanew'];
+						var controleslisterror=[];
+						var controleslistspiners=['#txtantiguedadnew'];
+						var controleslistspinerserror=[];
+						
+						var totalvalidar = 13;
+						var controlvalidados=0;
+
+						$.each(controles, function (ind, elem) { 
+							if(validatext(elem) == 1)
+							{
+								controlvalidados += 1;
+							}else{
+								controleslisterror[ind] = elem;
+								
+							}
+						});
+						
+						
+						$.each(controleslist, function (ind, elem) { 
+							if(validalistas(elem) == 1 )
+							{
+								controlvalidados += 1;
+							}else{
+								contlisterror[ind] = elem;
+								
+							}
+						});
+						
+						$.each(controleslistspiners, function (ind, elem) { 
+							if(validalistas(elem) == 1 )
+							{
+								controlvalidados += 1;
+							}else{
+								controleslistspinerserror[ind] = elem;
+								
+							}
+						});
+						
+						$.each(controlestelefono, function (ind, elem) { 
+							if(validatelefono(elem) == 1 )
+							{
+								controlvalidados += 1;
+							}else{
+								contlisterrortelefono[ind] = elem;
+								
+							}
+						});
+						
+						$.each(controleslistmontos, function (ind, elem) { 
+							if(validamontos(elem) == 1)
+							{
+								controlvalidados += 1;
+							}else{
+								controleslistmontoserror[ind] = elem;
+								
+							}
+						});
+						if(controlvalidados == totalvalidar ){
+							$("#stOkTitstepDatEco").show();
+							$("#stOkTitModDatEco").show();
+						}else{
+							$('#rowvalida3').addClass('novalidorow').removeClass('rowiniciostepactivo');
+							$('#anumpaso3').css('color','yellow')
+							
+							$.each(controleslisterror, function (ind, elem) { 
+							
+								var demoTimeout;
+								clearTimeout(demoTimeout);
+								$(elem).trigger('startRumble');
+								$(elem).css('border', '1px solid red');
+								demoTimeout = setTimeout(function(){$(elem).trigger('stopRumble');},1500);							
+							});
+							
+							$.each(contlisterror, function (ind, elem) { 
+							
+								var demoTimeout;
+								clearTimeout(demoTimeout);
+								$(elem).trigger('startRumble');
+								$(elem).css('border', '1px solid red');
+								demoTimeout = setTimeout(function(){$(elem).trigger('stopRumble');},1500);							
+							});
+							
+							$.each(contlisterrortelefono, function (ind, elem) { 
+							
+								var demoTimeout;
+								clearTimeout(demoTimeout);
+								$(elem).trigger('startRumble');
+								$(elem).css('border', '1px solid red');
+								demoTimeout = setTimeout(function(){$(elem).trigger('stopRumble');},1500);							
+							});
+							
+							$.each(controleslistspiners, function (ind, elem) { 
+								var demoTimeout;
+								clearTimeout(demoTimeout);
+								$(elem).trigger('startRumble');
+								$(elem).css('border', '1px solid red');
+								demoTimeout = setTimeout(function(){$(elem).trigger('stopRumble');},1500);
+							});
+							$.each(controleslistmontoserror, function (ind, elem) { 
+								var demoTimeout;
+								clearTimeout(demoTimeout);
+								$(elem).trigger('startRumble');
+								$(elem).css('border', '1px solid red');
+								demoTimeout = setTimeout(function(){$(elem).trigger('stopRumble');},1500);
+							});
+							e.preventDefault();
+							
+							
+						}
 						break;
 					case '4':
-						tipoagrupa = 'Canceladas';
-						tiporow = 'rowCanceladas';
-						topoproy = data.solicitudes[r].ID_SOLICITUD;
-						icono = 'glyphicon glyphicon-remove';
-						fstitulo ='fs-titleCanceladas';
+						//validar que es requerido
 						break;
 					case '5':
-						tipoagrupa = 'Enviadas';
-						tiporow = 'rowEnviadas';
-						topoproy = data.solicitudes[r].ID_SOLICITUD;
-						icono = 'glyphicon glyphicon-send';
-						fstitulo ='fs-titleEnviadas';
+						var controles=['#txtNombreRef1new','#txtNombreRef2new', '#txtApellidoPaternoRef1new','#txtApellidoPaternoRef2new'];
+						var contlisterror=[]
+						
+						
+						var controlestelefono=['#txtTelCasaRef1new','#txtTelCasaRef2new'];
+						var contlisterrortelefono=[]
+						var controleslist=['#lisNacionalidadRef1new','#lisNacionalidadRef2new'];
+						var controleslisterror=[];
+						
+						var totalvalidar = 8;
+						var controlvalidados=0;
+
+						$.each(controles, function (ind, elem) { 
+							if(validatext(elem) == 1)
+							{
+								controlvalidados += 1;
+							}else{
+								controleslisterror[ind] = elem;
+								
+							}
+						});
+						
+						
+						$.each(controleslist, function (ind, elem) { 
+							if(validalistas(elem) == 1 )
+							{
+								controlvalidados += 1;
+							}else{
+								contlisterror[ind] = elem;
+								
+							}
+						});
+						
+						
+						
+						$.each(controlestelefono, function (ind, elem) { 
+							if(validatelefono(elem) == 1 )
+							{
+								controlvalidados += 1;
+							}else{
+								contlisterrortelefono[ind] = elem;
+								
+							}
+						});
+						
+						
+						if(controlvalidados == totalvalidar ){
+							$("#stOkTitstepRefFam").show();
+							$("#stOkTitModRefFam").show();
+						}else{
+							$('#rowvalida5').addClass('novalidorow').removeClass('rowiniciostepactivo');
+							$('#anumpaso5').css('color','yellow')
+							
+							$.each(controleslisterror, function (ind, elem) { 
+							
+								var demoTimeout;
+								clearTimeout(demoTimeout);
+								$(elem).trigger('startRumble');
+								$(elem).css('border', '1px solid red');
+								demoTimeout = setTimeout(function(){$(elem).trigger('stopRumble');},1500);							
+							});
+							
+							$.each(contlisterror, function (ind, elem) { 
+							
+								var demoTimeout;
+								clearTimeout(demoTimeout);
+								$(elem).trigger('startRumble');
+								$(elem).css('border', '1px solid red');
+								demoTimeout = setTimeout(function(){$(elem).trigger('stopRumble');},1500);							
+							});
+							
+							$.each(contlisterrortelefono, function (ind, elem) { 
+							
+								var demoTimeout;
+								clearTimeout(demoTimeout);
+								$(elem).trigger('startRumble');
+								$(elem).css('border', '1px solid red');
+								demoTimeout = setTimeout(function(){$(elem).trigger('stopRumble');},1500);							
+							});
+							
+							
+							
+							e.preventDefault();
+							
+							
+						}
 						break;
 					default:
 						break;

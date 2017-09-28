@@ -1,5 +1,5 @@
 $(document).ready(function(){ 
-	$('#lstNacionalidadnew, #txtNomSolicitantenew, #dateFechanacnew, #txtApePaternonew, #txtRFCnew, #txtApeMaternonew, #lstEdoCivilnew, #txtTipIdentificacionnew, #txtNumIdentificanew, #txtCalleSolicitantenew, #txtTiempoResidencianew, #txtNumExteriornew, #lisEstatusResidencianew, #txtCpSolicitantenew, #txtCorreonew, #lisEstadoSolicitantenew, #txtTelefonoCasanew, #lisDelMuniSolicitantenew, #txtTelefonoCelularnew, #lisColoniaSolicitantenew, #txtNombreEmpresanew, #txtCalleEmpresanew, #txtantiguedadnew, #txtGironew, #txtNumeroExteriorEmpresa, #lisTipoContratonew, #txtCpEmpresanew, #lisEstadoEmpresanew, #txtIngresonew, #lisDelMuniEmpresanew, #lisColoniaEmpresanew, #txtTelOficinanew, #txtNombreRef1new, #txtNombreRef2new, #txtNombreRef3new, #txtApellidoPaternoRef1new, #txtApellidoPaternoRef2new, #txtApellidoPaternoRef3new, #txtApellidoMaternoRef1new, #txtApellidoMaternoRef2new, #txtApellidoMaternoRef3new, #lisNacionalidadRef1new, #lisNacionalidadRef2new, #txtTelCasaRef1new, #txtTelCasaRef2new, #firma-canvas').jrumble({
+	$('#txtFuenteOtrosIngrenew, #txtAosCasadonew, #txtPuestonew, #lstNacionalidadnew, #txtNomSolicitantenew,#txtMontoViviendanew, #dateFechanacnew, #lisCompaniaMovilnew, #txtApePaternonew, #txtRFCnew, #txtApeMaternonew, #lstEdoCivilnew, #txtTipIdentificacionnew, #txtNumIdentificanew, #txtCalleSolicitantenew, #txtTiempoResidencianew, #txtNumExteriornew, #lisEstatusResidencianew, #txtCpSolicitantenew, #txtCorreonew, #lisEstadoSolicitantenew, #txtTelefonoCasanew, #lisDelMuniSolicitantenew, #txtTelefonoCelularnew, #lisColoniaSolicitantenew, #txtNombreEmpresanew, #txtCalleEmpresanew, #txtantiguedadnew, #txtGironew, #txtNumeroExteriorEmpresa, #lisTipoContratonew, #txtCpEmpresanew, #lisEstadoEmpresanew, #txtIngresonew, #lisDelMuniEmpresanew, #lisColoniaEmpresanew, #txtTelOficinanew, #txtNombreRef1new, #txtNombreRef2new, #txtNombreRef3new, #txtApellidoPaternoRef1new, #txtApellidoPaternoRef2new, #txtApellidoPaternoRef3new, #txtApellidoMaternoRef1new, #txtApellidoMaternoRef2new, #txtApellidoMaternoRef3new, #lisNacionalidadRef1new, #lisNacionalidadRef2new, #txtTelCasaRef1new, #txtTelCasaRef2new, #firma-canvas').jrumble({
 			x: 1,
 			y: 0,
 			rotation: 0,
@@ -852,12 +852,10 @@ $(document).ready(function(){
 		
 		$('#lstNacionalidadnew').on({
 			change:	function () {
-				$("#lstNacionalidadnew").css('border', 'none');
-				$("#lstNacionalidadnew").css('border-bottom', '2px solid #cecfd3'); 
+				enablecontroles("#lstNacionalidadnew");
 			},
 			focus:	function () {
-				$("#lstNacionalidadnew").css('border', 'none');
-				$("#lstNacionalidadnew").css('border-bottom', '2px solid #cecfd3'); 
+				enablecontroles("#lstNacionalidadnew");
 			}
 		  
 		});

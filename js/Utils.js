@@ -1481,11 +1481,19 @@ function validatext(txtcontrol)
 function validamontos(txtmonto)
 {
 	
+	if(parseInt($(txtmonto).val().replace('$ ', '')) > 0 )
+	{
+		return 1;
+	}else{
+		return 0;
+		
+	}
+	
 	return 
 }
 function validaspiners(txtespiner)
 {
-	if(parseInt($('txtespiner').val()) > 0 )
+	if(parseInt($(txtespiner).val()) > 0 )
 	{
 		return 1;
 	}else{
@@ -1493,6 +1501,24 @@ function validaspiners(txtespiner)
 		
 	}
 }
+
+function validatelefono(txttelfono)
+{
+	if(parseInt($(txttelfono).val().replace('(', '').replace(')', '').replace(' ', '')) > 0 )
+	{
+		return 1;
+	}else{
+		return 0;
+		
+	}
+}
+
+function enablecontroles(controles){
+	$(controles).css('border', 'none');
+	$(controles).css('border-bottom', '2px solid #cecfd3'); 
+}
+
+
 	
 
 
