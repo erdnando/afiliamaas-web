@@ -1,0 +1,7 @@
+﻿div.spinedit { display: inline-block; position: relative; }
+input[type="text"].spinedit { width: 35px; text-align: -webkit-center; }
+div.spinedit .glyphicon-circle-arrow-up,
+div.spinedit .glyphicon-circle-arrow-down { position: absolute;    cursor: pointer;    width: 12px;    left: -70px; font-size: 25px; }
+div.spinedit .glyphicon-circle-arrow-up { top: -16px; }
+div.spinedit .glyphicon-circle-arrow-down {top: -17px;    left: 10px; }
+.form-search div.spinedit, .form-inline div.spinedit, .form-horizontal div.spinedit { top: 5px; }

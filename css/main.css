@@ -1,0 +1,68 @@
+
+nav .nombre-plugin {font-size: 20px}
+nav .link-post {padding-top: 5px}
+
+.oculto {display: none}
+
+
+
+/*codigo para demo*/
+.boton-test {text-align: center; 0 20px 15px 15px}
+.boton-test .btn {padding: 25px 20px; background-color: rgba(70, 69, 70, 0.8); border-bottom: 8px solid #49483e; width: 100%;
+	-webkit-border-radius: 7px 7px 7px 7px;border-radius: 7px 7px 7px 7px;}
+.boton-test .btn:hover {border-bottom: 5px solid #49483e; transform: translateY(3px); -ms-transform: translateY(3px); -webkit-transform: translateY(3px);}
+.codigo {background-color: #49483e; color: #fff; padding: 50px 15px; font-size: 17px; -webkit-box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.4);
+	box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.4); -webkit-border-radius: 7px 7px 7px 7px;border-radius: 7px 7px 7px 7px;}
+.row.demo {margin-bottom: 50px;}
+}
+
+
+
+#framecarru
+{
+        position:fixed;
+        height:100vh;/*150vh*/
+        width:100vw;
+        overflow-x: hidden;
+        overflow-y: hidden;
+}
+
+/*sliding navigation between the slides*/
+.ulcarroucel {
+
+
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left:0;
+
+    height:100vh;
+
+
+    list-style-type: none;
+    -webkit-transform-style: preserve-3d;/*YAY lag is fixed on firefox*/
+	-ms-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+
+
+
+
+}
+
+.liclasscarru {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    float: left;
+    width: 90vw;
+    height: 128%;
+    color: #0a0a0a;
+    text-align: center;
+
+}
+
+
+/*end of sliding navigation between the slides*/
+

@@ -1,0 +1,1501 @@
+
+	function getParameterByName(name, url) {
+		if (!url) url = window.location.href;
+		name = name.replace(/[\[\]]/g, "\\$&");
+		var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+			results = regex.exec(url);
+		if (!results) return "ERRO";
+		if (!results[2]) return 'ERRO';
+		return decodeURIComponent(results[2].replace(/\+/g, " "));
+	}
+	
+	
+	var hasSigned = false;
+
+    function clearCanvasSign() {
+        hasSigned = false;
+        setTimeout(function () {
+            loading("hide");
+        },2000);
+    }
+
+    function signToImage() {
+        var canvas = document.getElementById("firma-canvas");
+		
+		if(canvas.toDataURL() === "data:image/png;base64,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"){
+			var demoTimeout;
+			clearTimeout(demoTimeout);
+			$('#firma-canvas').trigger('startRumble');
+			$("#firma-canvas").css('border', '1px solid red'); 
+			demoTimeout = setTimeout(function(){$('#firma-canvas').trigger('stopRumble');},1000);
+			
+		}
+		else{
+		
+			var image = $("#firma-img");
+			var image2 = $("#imagenpresenta")
+			image.attr("src", canvas.toDataURL());
+			var d = new Date();
+			image.attr("name", "TEC_" + d.getTime() +".jpg");
+			//image[0].name="TEC_" + d.getTime() +".jpg";
+			//canvas2.removeAttr("src");
+			image2.attr("src", canvas.toDataURL());
+			image2.attr("name", image[0].name);
+			$("#linkmodalopen").attr("class", "overlay");
+			$("#nomfirma").text(image[0].name);
+			$("#nomfirma").attr("disabled", "disabled");
+			$("#Firma").hide();
+			
+		}
+		
+		
+		
+		
+		
+		
+
+    }
+
+function fncompaniamovil(){
+	$.ajax({ 			
+				type: 'POST',
+				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo', 
+				data: JSON.stringify({ 'tipocatalogo':'1'}),
+				contentType: "application/json; charset=utf-8",
+                dataType: "json",
+				success: function(data){
+						//console.log('seguimiento - estado');
+						data.sort();
+						 $.each(data, function(i, item) {
+							$("#lisCompaniaMovilnew").append('<option value="' + item.ID_CATALOGO + '">' + item.DESCRIPCION + '</option>');
+						   });	
+				},
+				error: function (result) {  
+					console.log("errror....companiamovil");  
+				}   
+			});
+}
+
+function fncargaNacionalidad(){
+	
+	$.ajax({ 			
+				type: 'POST',
+				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo', 
+				data: JSON.stringify({ 'tipocatalogo':'9'}),
+				contentType: "application/json; charset=utf-8",
+                dataType: "json",
+				success: function(data){
+						//console.log('seguimiento - estado');
+						data.sort();
+						//if(combo ==="" || combo===null){
+						 $.each(data, function(i, item) {
+							$("#lstNacionalidadnew").append('<option value="' + item.ID_CATALOGO + '">' + item.DESCRIPCION + '</option>');
+							$("#lisNacionalidadRef1new").append('<option value="' + item.ID_CATALOGO + '">' + item.DESCRIPCION + '</option>');
+							$("#lisNacionalidadRef2new").append('<option value="' + item.ID_CATALOGO + '">' + item.DESCRIPCION + '</option>');
+							$("#lisNacionalidadRef3new").append('<option value="' + item.ID_CATALOGO + '">' + item.DESCRIPCION + '</option>');
+						   });	
+						/*}else{
+							.each(data, function(i, item) {
+								$(combo).append('<option value="' + item.ID_CATALOGO + '">' + item.DESCRIPCION + '</option>');
+						   });	
+						   $(combo + ' option[value="'+ tiponac +'"]').attr("selected","selected");
+						}*/
+				},
+				error: function (result) {  
+					console.log("errror....nacionalidad");  
+				}   
+			});
+	
+}
+
+function fncargatipoidentificacion(){
+	
+	$.ajax({ 			
+				type: 'POST',
+				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo', 
+				data: JSON.stringify({ 'tipocatalogo':'2'}),
+				contentType: "application/json; charset=utf-8",
+                dataType: "json",
+				success: function(data){
+						//console.log('seguimiento - estado');
+						data.sort();
+						 $.each(data, function(i, item) {
+							$("#txtTipIdentificacionnew").append('<option value="' + item.ID_CATALOGO + '">' + item.DESCRIPCION + '</option>');
+						   });	
+				},
+				error: function (result) {  
+					console.log("errror....tipoiden");  
+				}   
+			});
+	
+}
+
+function fncargaEdocivil(){
+	$.ajax({ 			
+				type: 'POST',
+				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo', 
+				data: JSON.stringify({ 'tipocatalogo':'3'}),
+				contentType: "application/json; charset=utf-8",
+                dataType: "json",
+				success: function(data){
+						//console.log('seguimiento - estado');
+						data.sort();
+						 $.each(data, function(i, item) {
+							$("#lstEdoCivilnew").append('<option value="' + item.ID_CATALOGO + '">' + item.DESCRIPCION + '</option>');
+						   });	
+				},
+				error: function (result) {  
+					console.log("errror....edocivil");  
+				}   
+			});
+	
+}
+function fnestatusrecidencia(){
+	
+	$.ajax({ 			
+				type: 'POST',
+				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo', 
+				data: JSON.stringify({ 'tipocatalogo':'4'}),
+				contentType: "application/json; charset=utf-8",
+                dataType: "json",
+				success: function(data){
+						//console.log('seguimiento - estado');
+						data.sort();
+						 $.each(data, function(i, item) {
+							$("#lisEstatusResidencianew").append('<option value="' + item.ID_CATALOGO + '">' + item.DESCRIPCION + '</option>');
+						   });	
+				},
+				error: function (result) {  
+					console.log("errror....statusrecidencia");  
+				}   
+			});
+	
+}
+function fntipocontrato(){
+	
+	$.ajax({ 			
+				type: 'POST',
+				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo', 
+				data: JSON.stringify({ 'tipocatalogo':'7'}),
+				contentType: "application/json; charset=utf-8",
+                dataType: "json",
+				success: function(data){
+						//console.log('seguimiento - estado');
+						data.sort();
+						 $.each(data, function(i, item) {
+							$("#lisTipoContratonew").append('<option value="' + item.ID_CATALOGO + '">' + item.DESCRIPCION + '</option>');
+						   });	
+				},
+				error: function (result) {  
+					console.log("errror....tipocontrato");  
+				}   
+			});
+	
+}
+
+
+function fncargaEdo(){//(combo, tipoedo, Delesol, colsoli){
+	
+	$.ajax({ 			
+				type: 'POST',
+				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetallEstado', 
+				data: '{}',
+				contentType: "application/json; charset=utf-8",
+                dataType: "json",
+				success: function(data){
+						//console.log('seguimiento - estado');
+						data.sort();
+						
+						//if(combo ==="" || combo===null){
+							$.each(data, function(i, item) {
+							 
+							$("#lisEstadoSolicitantenew").append('<option value="' + item.IDESTADO +'">' + item.ESTADO + '</option>');
+							$("#lisEstadoEmpresanew").append('<option value="' + item.IDESTADO + '">' + item.ESTADO + '</option>');
+							$("#lisEstadotem").append('<option value="' + item.IDESTADO +'">' + item.ESTADO + '</option>');
+							
+
+							//console.log( item.ESTADO);
+						   });
+						/*}
+						else{
+							.each(data, function(i, item) {
+								$(combo).append('<option value="' + item.IDESTADO + '">' + item.ESTADO + '</option>');
+						   });
+						   $(combo + ' option[value="'+ tipoedo +'"]').attr("selected","selected");
+							
+						}*/
+						 
+						
+						
+						
+				},
+				error: function (result) {  
+					console.log("errror....cargaestado");  
+				}   
+			});
+}
+
+
+function CalcularRFC(nombre,apellidoPaterno,apellidoMaterno,fecha) 
+{ 
+	console.log("hola RFC");
+	
+	nombre = nombre.toUpperCase().trim(); 
+	apellidoPaterno =apellidoPaterno.toUpperCase().trim(); 
+	apellidoMaterno =apellidoMaterno.toUpperCase().trim(); 
+
+	//RFC que se regresarÃ¡ 
+	var rfc=""; 
+
+	//Quitamos los artÃ­culos de los apellidos 
+	apellidoPaterno = QuitarArticulos(apellidoPaterno); 
+	apellidoMaterno = QuitarArticulos(apellidoMaterno); 
+
+	//Agregamos el primer caracter del apellido paterno 
+	rfc = apellidoPaterno.substr(0,1);
+
+	//Buscamos y agregamos al rfc la primera vocal del primer apellido 
+	var len_apellidoPaterno=apellidoPaterno.length; 
+	for(var x=1;x<len_apellidoPaterno;x++) 
+	{ 
+		c= apellidoPaterno.substr(x,1); 
+		if (EsVocal(c)) 
+		{ 
+			rfc = rfc + c; 
+			break; 
+		} 
+	} 
+
+	//Agregamos el primer caracter del apellido materno 
+	rfc = rfc + apellidoMaterno.substr(0, 1); 
+
+	//Agregamos el primer caracter del primer nombre 
+	rfc = rfc + nombre.substr(0, 1); 
+
+	//agregamos la fecha ddmmyyyy
+	rfc = rfc + fecha.substr(2, 2) + fecha.substr(5, 2) + fecha.substr(8, 2); 
+
+	//Le agregamos la homoclave al rfc 
+	rfc = CalcularHomoclave(apellidoPaterno + " " + apellidoMaterno +" "+ nombre, fecha,rfc); 
+	return rfc; 
+}
+
+function QuitarArticulos(palabra) 
+{	
+	palabra= palabra.replace("DEL ",""); 
+	palabra=palabra.replace("LAS ",""); 
+	palabra=palabra.replace("DE ",""); 
+	palabra=palabra.replace("LA ",""); 
+	palabra=palabra.replace("Y ",""); 
+	palabra=palabra.replace("A ",""); 
+	return palabra; 
+} 
+function EsVocal(letra) 
+{ 
+	if (letra == 'A' || letra == 'E' || letra == 'I' || letra == 'O' || letra == 'U' || 
+	letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') 
+	return 1; 
+	else 
+	return 0; 
+} 
+
+
+function CalcularHomoclave(nombreCompleto,fecha,rfc) 
+{ 
+	//Guardara el nombre en su correspondiente numÃ©rico 
+	//agregamos un cero al inicio de la representaciÃ³n nÃºmerica del nombre 
+	var nombreEnNumero="0"; 
+	//La suma de la secuencia de nÃºmeros de nombreEnNumero 
+	var valorSuma = 0; 
+
+	
+	var tablaRFC1 = [];
+	var tablaRFC2 = [];
+	var tablaRFC3 = [];
+
+	tablaRFC1['&']='10'; 
+	tablaRFC1['Ã‘']='10'; 
+	tablaRFC1['A']='11'; 
+	tablaRFC1['B']='12'; 
+	tablaRFC1['C']='13'; 
+	tablaRFC1['D']='14'; 
+	tablaRFC1['E']='15'; 
+	tablaRFC1['F']='16'; 
+	tablaRFC1['G']='17'; 
+	tablaRFC1['H']='18'; 
+	tablaRFC1['I']='19'; 
+	tablaRFC1['J']='21'; 
+	tablaRFC1['K']='22'; 
+	tablaRFC1['L']='23'; 
+	tablaRFC1['M']='24'; 
+	tablaRFC1['N']='25'; 
+	tablaRFC1['O']='26'; 
+	tablaRFC1['P']='27'; 
+	tablaRFC1['Q']='28'; 
+	tablaRFC1['R']='29'; 
+	tablaRFC1['S']='32'; 
+	tablaRFC1['T']='33'; 
+	tablaRFC1['U']='34'; 
+	tablaRFC1['V']='35'; 
+	tablaRFC1['W']='36'; 
+	tablaRFC1['X']='37'; 
+	tablaRFC1['Y']='38'; 
+	tablaRFC1['Z']='39'; 
+	tablaRFC1['0']='00'; 
+	tablaRFC1['1']='01'; 
+	tablaRFC1['2']='02'; 
+	tablaRFC1['3']='03'; 
+	tablaRFC1['4']='04'; 
+	tablaRFC1['5']='05'; 
+	tablaRFC1['6']='06'; 
+	tablaRFC1['7']='07'; 
+	tablaRFC1['8']='08'; 
+	tablaRFC1['9']='09'; 
+
+	tablaRFC2[0]="1"; 
+	tablaRFC2[1]="2"; 
+	tablaRFC2[2]="3"; 
+	tablaRFC2[3]="4"; 
+	tablaRFC2[4]="5"; 
+	tablaRFC2[5]="6"; 
+	tablaRFC2[6]="7"; 
+	tablaRFC2[7]="8"; 
+	tablaRFC2[8]="9"; 
+	tablaRFC2[9]="A"; 
+	tablaRFC2[10]="B"; 
+	tablaRFC2[11]="C"; 
+	tablaRFC2[12]="D"; 
+	tablaRFC2[13]="E"; 
+	tablaRFC2[14]="F"; 
+	tablaRFC2[15]="G"; 
+	tablaRFC2[16]="H"; 
+	tablaRFC2[17]="I"; 
+	tablaRFC2[18]="J"; 
+	tablaRFC2[19]="K"; 
+	tablaRFC2[20]="L"; 
+	tablaRFC2[21]="M"; 
+	tablaRFC2[22]="N"; 
+	tablaRFC2[23]="P"; 
+	tablaRFC2[24]="Q"; 
+	tablaRFC2[25]="R"; 
+	tablaRFC2[26]="S"; 
+	tablaRFC2[27]="T"; 
+	tablaRFC2[28]="U"; 
+	tablaRFC2[29]="V"; 
+	tablaRFC2[30]="W"; 
+	tablaRFC2[31]="X"; 
+	tablaRFC2[32]="Y"; 
+	tablaRFC2[33]="Z"; 
+
+	tablaRFC3['A']=10; 
+	tablaRFC3['B']=11; 
+	tablaRFC3['C']=12; 
+	tablaRFC3['D']=13; 
+	tablaRFC3['E']=14; 
+	tablaRFC3['F']=15; 
+	tablaRFC3['G']=16; 
+	tablaRFC3['H']=17; 
+	tablaRFC3['I']=18; 
+	tablaRFC3['J']=19; 
+	tablaRFC3['K']=20; 
+	tablaRFC3['L']=21; 
+	tablaRFC3['M']=22; 
+	tablaRFC3['N']=23; 
+	tablaRFC3['O']=25; 
+	tablaRFC3['P']=26; 
+	tablaRFC3['Q']=27; 
+	tablaRFC3['R']=28; 
+	tablaRFC3['S']=29; 
+	tablaRFC3['T']=30; 
+	tablaRFC3['U']=31; 
+	tablaRFC3['V']=32; 
+	tablaRFC3['W']=33; 
+	tablaRFC3['X']=34; 
+	tablaRFC3['Y']=35; 
+	tablaRFC3['Z']=36; 
+	tablaRFC3['0']=0; 
+	tablaRFC3['1']=1; 
+	tablaRFC3['2']=2; 
+	tablaRFC3['3']=3; 
+	tablaRFC3['4']=4; 
+	tablaRFC3['5']=5; 
+	tablaRFC3['6']=6; 
+	tablaRFC3['7']=7; 
+	tablaRFC3['8']=8; 
+	tablaRFC3['9']=9; 
+	tablaRFC3['']=24; 
+	tablaRFC3[' ']=37; 
+
+	//Recorremos el nombre y vamos convirtiendo las letras en 
+	//su valor numÃ©rico 
+	len_nombreCompleto=nombreCompleto.length; 
+	for(var x=0;x<len_nombreCompleto;x++) 
+	{ 
+		var c=nombreCompleto.substr(x,1); 
+		if (tablaRFC1[c]) 
+			nombreEnNumero= nombreEnNumero +tablaRFC1[c]; 
+		else 
+			nombreEnNumero= nombreEnNumero+"00"; 
+	} 
+	
+
+	var n=nombreEnNumero.length-1; 
+	for (var i = 0; i < n; i++) 
+	{ 
+		prod1 = nombreEnNumero.substr(i, 2); 
+		prod2 = nombreEnNumero.substr(i + 1, 1); 
+		valorSuma += prod1 * prod2; 
+	} 
+	
+	var div = 0; 
+	var mod = 0; 
+	div = valorSuma % 1000; 
+	mod = Math.floor(div / 34);//cociente 
+	div = div - mod * 34;//residuo 
+
+	var hc = tablaRFC2[mod]; 
+	hc = hc + tablaRFC2[div]; 
+
+	rfc = rfc + hc; 
+
+	
+	var sumaParcial = 0; 
+	var n=rfc.length; 
+	for (var i = 0; i < n; i++) 
+	{ 
+		c=rfc.substr(i,1); 
+		if (tablaRFC3[c]) 
+		{ 
+			sumaParcial = sumaParcial +(tablaRFC3[c] * (14 - (i + 1))); 
+		} 
+	} 
+
+	var moduloVerificador = sumaParcial % 11; 
+	if (moduloVerificador == 0) 
+		rfc = rfc + "0"; 
+	else 
+	{ 
+		sumaParcial = 11 - moduloVerificador; 
+		if (sumaParcial == 10) 
+			rfc = rfc + "A"; 
+		else 
+			rfc = rfc + sumaParcial; 
+	} 
+	return rfc;
+}
+
+
+
+	function buscaCPemp( inpCP){
+		$.ajax({ 			
+				type: 'POST',
+				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetCP', 
+				data: JSON.stringify({"CP":inpCP}),
+				contentType: "application/json; charset=utf-8",
+                dataType: "json",
+				success: function(data){
+						var idest;
+						var idpob;
+						var cont= 0
+						$('#lisColoniaEmpresanew').empty();
+						$("#lisColoniaEmpresanew").append('<option value="0">Seleccione...</option>');
+						$.each(data, function(i, item) {
+							$("#lisColoniaEmpresanew").append('<option value="' + item.CTECP + '">' + item.COLONIA + '</option>');	
+							idest = item.IDESTADO
+							idpob = item.IDPOBLACION
+						   });
+						   
+						   
+						   $('#lisEstadoEmpresanew').empty();
+						   $("#lisEstadotem option").each(function () {
+							   $("#lisEstadoEmpresanew").append("<option value='" + this.value + "'>" + this.text + '</option>');
+							   
+							   });
+							$("#lisEstadoEmpresanew option[value="+ idest +"]").attr("selected","selected");
+						
+						$.ajax({ 			
+								type: 'POST',
+								url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetMunicipio', 
+								data: JSON.stringify({"idestado":idest}),
+								contentType: "application/json; charset=utf-8",
+								dataType: "json",
+								success: function(data){
+										$.each(data, function(i, item) {
+											$("#lisDelMuniEmpresanew").append('<option value="' + item.IDPOBLACION + '">' + item.POBLACION + '</option>');	
+										   });
+										$("#lisDelMuniEmpresanew option[value="+ idpob +"]").attr("selected","selected");
+										
+										
+										
+								},
+								error: function (result) {  
+									console.log("errror....");  
+								}   
+							}); 
+						
+						
+						
+				},
+				error: function (result) {  
+					console.log("errror....");  
+				}   
+			}); 
+	}
+	
+	function buscaMunicipioemp(inpMuni){
+		$('#lisColoniaEmpresanew').empty();
+		$("#lisColoniaEmpresanew").append('<option value="0">Seleccione...</option>');
+		$('#txtCpEmpresanew').val("");
+		$('#lisDelMuniEmpresanew').empty();
+		$("#lisDelMuniEmpresanew").append('<option value="0">Seleccione...</option>');
+		$.ajax({ 			
+				type: 'POST',
+				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetMunicipio', 
+				data: JSON.stringify({"idestado":inpMuni}),
+				contentType: "application/json; charset=utf-8",
+                dataType: "json",
+				success: function(data){
+					var idest;
+					var idpob;
+					var cont= 0
+					$.each(data, function(i, item) {
+						$("#lisDelMuniEmpresanew").append('<option value="' + item.IDPOBLACION + '">' + item.POBLACION + '</option>');	
+					   });	
+				},
+				error: function (result) {  
+					console.log("errror....");  
+				}   
+			}); 
+	}
+	
+	
+	function buscacoloniaemp(inppoblacion, inpoblaestado){
+		
+		$('#txtCpEmpresanew').val("");
+		
+		$.ajax({ 			
+				type: 'POST',
+				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetColonia', 
+				data: JSON.stringify({"idpoblacion":inppoblacion, "idestado":inpoblaestado}),
+				contentType: "application/json; charset=utf-8",
+                dataType: "json",
+				success: function(data){
+					var dcodpos;
+					var idpob;
+					var cont= 0
+					$.each(data, function(i, item) {
+						$("#lisColoniaEmpresanew").append('<option value="' + item.CTECP + '">' + item.COLONIA + '</option>');	
+						dcodpos =item.CTECP
+					   });
+					$('#txtCpEmpresanew').val(dcodpos);
+				},
+				error: function (result) {  
+					console.log("errror....");  
+				}   
+			}); 
+	}
+	
+	function buscaCP( inpCP){
+		$.ajax({ 			
+				type: 'POST',
+				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetCP', 
+				data: JSON.stringify({"CP":inpCP}),
+				contentType: "application/json; charset=utf-8",
+                dataType: "json",
+				success: function(data){
+						var idest;
+						var idpob;
+						var cont= 0
+						$('#lisColoniaSolicitantenew').empty();
+						$("#lisColoniaSolicitantenew").append('<option value="0">Seleccione...</option>');
+						$.each(data, function(i, item) {
+							$("#lisColoniaSolicitantenew").append('<option value="' + item.CTECP + '">' + item.COLONIA + '</option>');	
+							idest = item.IDESTADO
+							idpob = item.IDPOBLACION
+						   });
+						   
+						   
+						   //$("#lisEstadoSolicitantenew").empty();
+						   //$("#lisColoniaSolicitantenew").append('<option value="0">Seleccione...</option>');
+						   //$("#lisEstadoSolicitantenew option:selected").removeAttr("selected");
+						  $('#lisEstadoSolicitantenew').empty();
+						   $("#lisEstadotem option").each(function () {
+							   $("#lisEstadoSolicitantenew").append("<option value='" + this.value + "'>" + this.text + '</option>');
+							   
+							   });
+							$("#lisEstadoSolicitantenew option[value="+ idest +"]").attr("selected","selected");
+						
+						$.ajax({ 			
+								type: 'POST',
+								url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetMunicipio', 
+								data: JSON.stringify({"idestado":idest}),
+								contentType: "application/json; charset=utf-8",
+								dataType: "json",
+								success: function(data){
+										$.each(data, function(i, item) {
+											$("#lisDelMuniSolicitantenew").append('<option value="' + item.IDPOBLACION + '">' + item.POBLACION + '</option>');	
+										   });
+										$("#lisDelMuniSolicitantenew option[value="+ idpob +"]").attr("selected","selected");
+										
+										
+										
+								},
+								error: function (result) {  
+									console.log("errror....");  
+								}   
+							}); 
+						
+						
+						
+				},
+				error: function (result) {  
+					console.log("errror....");  
+				}   
+			}); 
+	}
+	
+	function buscaMunicipio(inpMuni){
+		$('#lisColoniaSolicitantenew').empty();
+		$("#lisColoniaSolicitantenew").append('<option value="0">Seleccione...</option>');
+		$('#txtCpSolicitantenew').val("");
+		$('#lisDelMuniSolicitantenew').empty();
+		$("#lisDelMuniSolicitantenew").append('<option value="0">Seleccione...</option>');
+		$.ajax({ 			
+				type: 'POST',
+				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetMunicipio', 
+				data: JSON.stringify({"idestado":inpMuni}),
+				contentType: "application/json; charset=utf-8",
+                dataType: "json",
+				success: function(data){
+					var idest;
+					var idpob;
+					var cont= 0
+					$.each(data, function(i, item) {
+						$("#lisDelMuniSolicitantenew").append('<option value="' + item.IDPOBLACION + '">' + item.POBLACION + '</option>');	
+					   });	
+				},
+				error: function (result) {  
+					console.log("errror....");  
+				}   
+			}); 
+	}
+	
+	
+	function buscacolonia(inppoblacion, inpoblaestado){
+		
+		$('#txtCpSolicitantenew').val("");
+		
+		$.ajax({ 			
+				type: 'POST',
+				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetColonia', 
+				data: JSON.stringify({"idpoblacion":inppoblacion, "idestado":inpoblaestado}),
+				contentType: "application/json; charset=utf-8",
+                dataType: "json",
+				success: function(data){
+					var dcodpos;
+					var idpob;
+					var cont= 0
+					$.each(data, function(i, item) {
+						$("#lisColoniaSolicitantenew").append('<option value="' + item.CTECP + '">' + item.COLONIA + '</option>');	
+						dcodpos =item.CTECP
+					   });
+					$('#txtCpSolicitantenew').val("");
+				},
+				error: function (result) {  
+					console.log("errror....");  
+				}   
+			}); 
+	}
+	
+	function Generadatos(NoIDSol){
+		console.log("abremodal de sol");
+		
+		var DOC_IF64; //= data.solicitudes[r].DOC_IF64;
+		var DOC_IA64; //= data.solicitudes[r].DOC_IA64;
+		var F164; //= data.solicitudes[r].F164;
+		var DOC_C164; //= data.solicitudes[r].DOC_C164;
+		var DOC_C264; //= data.solicitudes[r].DOC_C264;
+		var E164; //= data.solicitudes[r].E164;
+		var E264; //= data.solicitudes[r].E264;
+		var E36; //= data.solicitudes[r].E364;
+		var E464; //= data.solicitudes[r].E464;
+		var E564; //= data.solicitudes[r].E564;
+		
+		
+		var datosgrales = [];
+		datosgrales = NoIDSol.value.split('|');
+		console.log(JSON.stringify({"img":{"imagen":"","tipoDoc":"IF","idSolicitud": datosgrales[2].toString() ,"nameImg":""},"llave":{"idUsuario":datosgrales[5],"Token":datosgrales[6]}}));
+		$.ajax({ 			
+				type: 'POST',
+				url: 'https://stefaninimx.com/mx.com.stefanini.service.api.rest/Service1.svc/GetImagenSol', 
+				//data: JSON.stringify({"Promotoria":"","RegPromotor":"","Compania":$("#Empresa").val(),"Formato":"","Usuario":$("#Usuario").val(),"Contrasenia":$("#Password").val(),"Coordinador":{"ClaveC":"","NombreC":""},"Gerente":{"ClaveG":"","NombreG":""},"TipoUsuario":"4"}),
+				data: JSON.stringify({"idSolicitud": datosgrales[2].toString(),"llave":{"idUsuario":datosgrales[5],"Token":datosgrales[6]}}),
+				contentType: "application/json; charset=utf-8",
+                dataType: "json",
+				success: function(data){
+						console.log('Imagen IF');
+						console.log(data);
+						DOC_IF64 = data[0].DOC_IF64;
+						DOC_C164 = data[0].DOC_C164;
+						DOC_C264 = data[0].DOC_C264;
+					    DOC_IA64 = data[0].DOC_IA64;
+					    E164 = data[0].E164;
+					    E264 = data[0].E264;
+					    E364 = data[0].E364;
+					    E464 = data[0].E464;
+					    E564 = data[0].E564;
+					    F164 = data[0].F164;
+						$("#txttokenWS").val(data.Token);
+						muestramodalSolirecrea(NoIDSol, DOC_IF64, DOC_IA64, F164, DOC_C164, DOC_C264, E164, E264, E36, E464, E564 )					
+				},
+				error: function (result) {  
+					console.log("errror" + result);  
+				},
+				async: false   
+			}); 
+		
+		
+		
+		
+		
+	}
+	
+	function muestramodalSolirecrea(NoIDSol, DOC_IF64, DOC_IA64, F164, DOC_C164, DOC_C264, E164, E264, E36, E464, E564 ){
+		
+		var datosgrales = [];
+		datosgrales = NoIDSol.value.split('|');
+		$('#mdlgralnombre').text("Solicitud ID: " + datosgrales[2].toString());
+		var xml = datosgrales[7],
+		xmlDoc = $.parseXML( xml ),
+		//generales
+		$Pnombre = validaexiste(xmlDoc.documentElement.getElementsByTagName("generales")[0].getElementsByTagName("Pmrnombre"),null);
+		$snombre = validaexiste(xmlDoc.documentElement.getElementsByTagName("generales")[0].getElementsByTagName("Sdonombre"),null);
+		$Apellidopaterno = validaexiste(xmlDoc.documentElement.getElementsByTagName("generales")[0].getElementsByTagName("Apaterno"),null);
+		$Apellidomaterno = validaexiste(xmlDoc.documentElement.getElementsByTagName("generales")[0].getElementsByTagName("Amaterno"),null); 
+		$Tpoidentif = validaexiste(xmlDoc.documentElement.getElementsByTagName("generales")[0].getElementsByTagName("Tpoidentif"),0); 
+		$Noidenficacion = validaexiste(xmlDoc.documentElement.getElementsByTagName("generales")[0].getElementsByTagName("Noidenficacion"),0); 
+		$Sexo = validaexiste(xmlDoc.documentElement.getElementsByTagName("generales")[0].getElementsByTagName("Sexo"),null);
+		$Fechanacdia = validaexiste(xmlDoc.documentElement.getElementsByTagName("generales")[0].getElementsByTagName("Fechanacdia"),null); 
+		$Rfc = validaexiste(xmlDoc.documentElement.getElementsByTagName("generales")[0].getElementsByTagName("Rfc"),null); 
+		$Edocivil = validaexiste(xmlDoc.documentElement.getElementsByTagName("generales")[0].getElementsByTagName("Edocivil"),0); 
+		$Nodependiente = validaexiste(xmlDoc.documentElement.getElementsByTagName("generales")[0].getElementsByTagName("Nodependiente"),0); 
+		$Cveperspol = validaexiste(xmlDoc.documentElement.getElementsByTagName("generales")[0].getElementsByTagName("Cveperspol"),0); 
+		$FechasnacMes = validaexiste(xmlDoc.documentElement.getElementsByTagName("generales")[0].getElementsByTagName("FechasnacMes"),0); 
+		$FechanacAnio = validaexiste(xmlDoc.documentElement.getElementsByTagName("generales")[0].getElementsByTagName("FechanacAnio"),0); 
+		var sexobool;
+		if($Sexo =="FEMENINO"){
+			$('#chksexosolicitante').prop('checked', true)
+			}
+		$Nacionalidad = validaexiste(xmlDoc.documentElement.getElementsByTagName("generales")[0].getElementsByTagName("Nacionalidad"),0); 
+		
+		//Llenado de combo Nacionalidad
+		//fncargaNacionalidad($('#lstNacionalidadconsulsol' + r), $Nacionalidad);
+		$fechanac = $Fechanacdia + '/' + $FechasnacMes +'/'+ $FechanacAnio;
+		//console.log($fechanac);
+		$nomcompleto = $Pnombre + ' ' +  $Apellidopaterno + ' ' + $Apellidomaterno;
+		  //console.log($nomcompleto);
+		//doc
+		$IdentificacionFrentePath = validaexiste(xmlDoc.documentElement.getElementsByTagName("doc")[0].getElementsByTagName("IdentificacionFrentePath"),"INE(frente)");
+		$IdentificacionAtrasPath= validaexiste(xmlDoc.documentElement.getElementsByTagName("doc")[0].getElementsByTagName("IdentificacionAtrasPath"),"INE(atras)"); 
+		$Contrato1Path= validaexiste(xmlDoc.documentElement.getElementsByTagName("doc")[0].getElementsByTagName("Contrato1Path"),"Contrato 1-2");
+		$Contrato2Path= validaexiste(xmlDoc.documentElement.getElementsByTagName("doc")[0].getElementsByTagName("Contrato2Path"),"Contrato 2-2");
+		$FirmaPath= validaexiste(xmlDoc.documentElement.getElementsByTagName("doc")[0].getElementsByTagName("FirmaPath"),"Firma");
+		$Extra1= validaexiste(xmlDoc.documentElement.getElementsByTagName("doc")[0].getElementsByTagName("Extra1"),"Extra");
+		$Extra2= validaexiste(xmlDoc.documentElement.getElementsByTagName("doc")[0].getElementsByTagName("Extra2"),"Extra");
+		$Extra3= validaexiste(xmlDoc.documentElement.getElementsByTagName("doc")[0].getElementsByTagName("Extra3"),"Extra");
+		$Extra4= validaexiste(xmlDoc.documentElement.getElementsByTagName("doc")[0].getElementsByTagName("Extra4"),"Extra");
+		$Extra5= validaexiste(xmlDoc.documentElement.getElementsByTagName("doc")[0].getElementsByTagName("Extra5"),"Extra");
+		
+		$('#txtNomSolicitantenew').val($Pnombre);
+		$('#txtSegundonombrenew').val($snombre);
+		$('#txtApePaternonew').val($Apellidopaterno);
+		$('#txtApeMaternonew').val($Apellidomaterno);
+		$("#txtTipIdentificacionnew option[value="+$Tpoidentif+"]").attr("selected","selected");
+		$('#txtNumIdentificanew').val($Noidenficacion);
+		$('#dateFechanacnew').val($fechanac);
+		$('#txtRFCnew').val($Rfc);
+		$("#lstEdoCivilnew option[value="+$Edocivil+"]").attr("selected","selected");
+		$('#txtDependientesnew').val($Nodependiente);
+		$('#dateFechanacnewdia').val($Fechanacdia);
+		$('#dateFechanacnewmes').val($FechasnacMes);
+		$('#dateFechanacnewanio').val($FechanacAnio);
+		$("#lstNacionalidadnew option[value="+$Nacionalidad+"]").attr("selected","selected");
+		$('#dateFechanacnewanio').val($FechanacAnio);
+		
+
+		$("#result_imagefin").attr("src",DOC_IF64);
+		$("#result_imagefinmod").attr("src",DOC_IF64);
+		$('#lnknombremodalINEFrente').text($IdentificacionFrentePath);
+		$('#lnknombremodalINEFrente').attr("disabled","disabled");
+		//$('#titulomodalfinINEFrente').text($IdentificacionFrentePath);
+		
+		$("#result_imagefinatras").attr("src",DOC_IA64);
+		$("#result_imagefinmodatras").attr("src",DOC_IA64);
+		$('#lnknombremodalINEAtras').text($IdentificacionAtrasPath);
+		$('#lnknombremodalINEAtras').attr("disabled","disabled");
+		//$('#titulomodalfinINEAtras').text($IdentificacionAtrasPath);
+		
+		$("#imagenpresenta").attr("src",F164);
+		$("#firma-img").attr("src",F164);
+		$("#firma-img").removeAttr("class","hide");
+		
+		$("#DivdelaFirmaBorrar").css("display","none");
+		$("#validarCliente").css("display","none");
+		
+		
+		
+		$("#firma-canvas").css("display","none");
+		$("#linkmodalopen").attr("class", "overlay");
+		$('#nomfirma').text("Firma");
+		$('#nomfirma').attr("disabled","disabled");
+		
+		
+		/*$('#lnknombremodalINEFrente').text($IdentificacionFrentePath);
+		$('#titulomodalfinINEFrente').text($IdentificacionFrentePath);
+		
+		$("#result_imagefin").attr("src",datosgrales[5].toString());
+		$("#result_imagefinmod").attr("src",datosgrales[5].toString());
+		$('#lnknombremodalINEFrente').text($IdentificacionFrentePath);
+		$('#titulomodalfinINEFrente').text($IdentificacionFrentePath);
+		
+		$("#result_imagefin").attr("src",datosgrales[5].toString());
+		$("#result_imagefinmod").attr("src",datosgrales[5].toString());
+		$('#lnknombremodalINEFrente').text($IdentificacionFrentePath);
+		$('#titulomodalfinINEFrente').text($IdentificacionFrentePath);*/
+		
+		
+		
+		//domiciliosolicitante
+		$Calle= validaexiste(xmlDoc.documentElement.getElementsByTagName("domicilio")[0].getElementsByTagName("Calle"),null);
+		$NoInt= validaexiste(xmlDoc.documentElement.getElementsByTagName("domicilio")[0].getElementsByTagName("NoInt"),0);
+		$NoExt= validaexiste(xmlDoc.documentElement.getElementsByTagName("domicilio")[0].getElementsByTagName("NoExt"),0);
+		$Cpdom= validaexiste(xmlDoc.documentElement.getElementsByTagName("domicilio")[0].getElementsByTagName("Cpdom"),null);
+		$Estado= validaexiste(xmlDoc.documentElement.getElementsByTagName("domicilio")[0].getElementsByTagName("Estado"),0);
+		//fncargaEdo($('#lisEstadoSolicitanteconsulsol' + r), $Estado);
+		$Delegacion= validaexiste(xmlDoc.documentElement.getElementsByTagName("domicilio")[0].getElementsByTagName("Delegacion"),0);
+		
+		$('#txtCalleSolicitantenew').val($Calle);
+		$('#txtNumInteriornew').val($NoInt);
+		$('#txtNumExteriornew').val($NoExt);
+		$('#txtCpSolicitantenew').val($Cpdom);
+		buscaCP($Cpdom);
+		$("#lisEstadoSolicitantenew option[value="+$Estado+"]").attr("selected","selected");
+		$("#lisDelMuniSolicitantenew option[value="+$Delegacion+"]").attr("selected","selected");
+		
+		
+		
+		$Colonia= validaexiste(xmlDoc.documentElement.getElementsByTagName("domicilio")[0].getElementsByTagName("Colonia"),0);
+		$TiempoResidencia= validaexiste(xmlDoc.documentElement.getElementsByTagName("domicilio")[0].getElementsByTagName("TiempoResidencia"),0);
+		$EstatusResidencia= validaexiste(xmlDoc.documentElement.getElementsByTagName("domicilio")[0].getElementsByTagName("EstatusResidencia"),0);
+		$MontoVivienda= validaexiste(xmlDoc.documentElement.getElementsByTagName("domicilio")[0].getElementsByTagName("MontoVivienda"),"$ 0.00");
+		$Email= validaexiste(xmlDoc.documentElement.getElementsByTagName("domicilio")[0].getElementsByTagName("Email"),null);
+		$Telcasa= validaexiste(xmlDoc.documentElement.getElementsByTagName("domicilio")[0].getElementsByTagName("Telcasa"),null);
+		$Telmovil= validaexiste(xmlDoc.documentElement.getElementsByTagName("domicilio")[0].getElementsByTagName("Telmovil"),null);
+		$CompaniaMovil= validaexiste(xmlDoc.documentElement.getElementsByTagName("domicilio")[0].getElementsByTagName("CompaniaMovil"),0);
+		
+		//$("#lisColoniaSolicitantenew option[text="+$Colonia+"]").attr("selected","selected");
+		
+		$("#lisColoniaSolicitantenew option").each(function () {
+			if($("#lisColoniaSolicitantenew option").text == $Colonia){
+				$("#lisColoniaSolicitantenew option").attr("selected","selected");
+			}
+		});
+		$('#txtTiempoResidencianew').val($TiempoResidencia);
+		$("#lisEstatusResidencianew option[value="+$EstatusResidencia+"]").attr("selected","selected");
+		$('#txtMontoViviendanew').val($MontoVivienda);
+		$('#txtCorreonew').val($Email);
+		$('#txtTelefonoCasanew').val($Telcasa);
+		$('#txtTelefonoCelularnew').val($Telmovil);
+		$("#lisCompaniaMovilnew option[value="+$CompaniaMovil+"]").attr("selected","selected");
+		
+		
+		
+		
+		//Personapolitica
+		$TipoParentesco= validaexiste(xmlDoc.documentElement.getElementsByTagName("Personapolitica")[0].getElementsByTagName("TipoParentesco"),null);
+		$Descfuncion= validaexiste(xmlDoc.documentElement.getElementsByTagName("Personapolitica")[0].getElementsByTagName("Descfuncion"),null);
+		$Descparentesco= validaexiste(xmlDoc.documentElement.getElementsByTagName("Personapolitica")[0].getElementsByTagName("Descparentesco"),null);
+		$TieneParentesco= validaexiste(xmlDoc.documentElement.getElementsByTagName("Personapolitica")[0].getElementsByTagName("TieneParentesco"),"NO");
+		$EsPersonaPolitica= validaexiste(xmlDoc.documentElement.getElementsByTagName("Personapolitica")[0].getElementsByTagName("EsPersonaPolitica"),"NO");
+		
+		if($EsPersonaPolitica =="SI"){
+			$('#optpersonapoliticonew').prop('checked', true);
+
+			}
+			
+		if($TieneParentesco =="SI"){
+			$('#optparenpoliticonew').prop('checked', true);
+		}
+		
+		$('#txfuncionpoliticoSolicitantenew').val($Descfuncion);
+		$('#txparentescofuncionpoliticoSolicitantenew').val($Descparentesco);
+		$('#txqueparenfuncionpoliticoSolicitantenew').val($TipoParentesco);
+
+
+		//Ref1
+		$Pmrnombreref1 = validaexiste(xmlDoc.documentElement.getElementsByTagName("Refer")[0].getElementsByTagName("Pmrnombre"),null);
+		$Sdonombreref1 = validaexiste(xmlDoc.documentElement.getElementsByTagName("Refer")[0].getElementsByTagName("Sdonombre"),null);
+		$Apaternoref1= validaexiste(xmlDoc.documentElement.getElementsByTagName("Refer")[0].getElementsByTagName("Apaterno"),null);
+		$Amaternoref1= validaexiste(xmlDoc.documentElement.getElementsByTagName("Refer")[0].getElementsByTagName("Amaterno"),null);
+		$Nacionalidadref1= validaexiste(xmlDoc.documentElement.getElementsByTagName("Refer")[0].getElementsByTagName("Nacionalidad"),0);
+		$TelefonoCasaref1= validaexiste(xmlDoc.documentElement.getElementsByTagName("Refer")[0].getElementsByTagName("TelefonoCasa"),null);
+		
+		$('#txtNombreRef1new').val($Pmrnombreref1);
+		$('#txtApellidoPaternoRef1new').val($Apaternoref1);
+		$('#txtApellidoMaternoRef1new').val($Amaternoref1);
+		$("#lisNacionalidadRef1new option[value="+$Nacionalidadref1+"]").attr("selected","selected");
+		$('#txtTelCasaRef1new').val($TelefonoCasaref1);
+
+		
+		//Ref2
+		$Pmrnombreref2 = validaexiste(xmlDoc.documentElement.getElementsByTagName("Refer2")[0].getElementsByTagName("Pmrnombre"),null);
+		$Sdonombreref2 = validaexiste(xmlDoc.documentElement.getElementsByTagName("Refer2")[0].getElementsByTagName("Sdonombre"),null);
+		$Apaternoref2= validaexiste(xmlDoc.documentElement.getElementsByTagName("Refer2")[0].getElementsByTagName("Apaterno"),null);
+		$Amaternoref2= validaexiste(xmlDoc.documentElement.getElementsByTagName("Refer2")[0].getElementsByTagName("Amaterno"),null);
+		$Nacionalidadref2= validaexiste(xmlDoc.documentElement.getElementsByTagName("Refer2")[0].getElementsByTagName("Nacionalidad"),0);
+		$TelefonoCasaref2= validaexiste(xmlDoc.documentElement.getElementsByTagName("Refer2")[0].getElementsByTagName("TelefonoCasa"),null);
+		
+		$('#txtNombreRef2new').val($Pmrnombreref2);
+		$('#txtApellidoPaternoRef2new').val($Apaternoref2);
+		$('#txtApellidoMaternoRef2new').val($Amaternoref2);
+		$("#lisNacionalidadRef2new option[value="+$Nacionalidadref2+"]").attr("selected","selected");
+		$('#txtTelCasaRef2new').val($TelefonoCasaref2);
+		
+		//Ref3
+		$Pmrnombreref3 = validaexiste(xmlDoc.documentElement.getElementsByTagName("Refer3")[0].getElementsByTagName("Pmrnombre"),null);
+		$Sdonombreref3 = validaexiste(xmlDoc.documentElement.getElementsByTagName("Refer3")[0].getElementsByTagName("Sdonombre"),null);
+		$Apaternoref3 = validaexiste(xmlDoc.documentElement.getElementsByTagName("Refer3")[0].getElementsByTagName("Apaterno"),null);
+		$Amaternoref3 = validaexiste(xmlDoc.documentElement.getElementsByTagName("Refer3")[0].getElementsByTagName("Amaterno"),null);
+		$Nacionalidadref3 = validaexiste(xmlDoc.documentElement.getElementsByTagName("Refer3")[0].getElementsByTagName("Nacionalidad"),0);
+		$TelefonoCasaref3 = validaexiste(xmlDoc.documentElement.getElementsByTagName("Refer3")[0].getElementsByTagName("TelefonoCasa"),null);
+		
+		$('#txtNombreRef3new').val($Pmrnombreref3);
+		$('#txtApellidoPaternoRef3new').val($Apaternoref3);
+		$('#txtApellidoMaternoRef3new').val($Amaternoref3);
+		$("#lisNacionalidadRef3new option[value="+$Nacionalidadref3+"]").attr("selected","selected");
+		$('#txtTelCasaRef3new').val($TelefonoCasaref3);
+
+		//Promotor
+		$Compania= validaexiste(xmlDoc.documentElement.getElementsByTagName("Promotor")[0].getElementsByTagName("Compania"),0);
+		$Usuario= validaexiste(xmlDoc.documentElement.getElementsByTagName("Promotor")[0].getElementsByTagName("Usuario"),null);
+		$Contrasenia= validaexiste(xmlDoc.documentElement.getElementsByTagName("Promotor")[0].getElementsByTagName("Contrasenia"),null);
+	  
+		$FolioLocal= validaexiste(xmlDoc.documentElement.getElementsByTagName("FolioLocal"),null);
+		$DiaCreacion= validaexiste(xmlDoc.documentElement.getElementsByTagName("DiaCreacion"),0);
+		$MesCreacion= validaexiste(xmlDoc.documentElement.getElementsByTagName("MesCreacion"),0);
+		$AnioCreacion= validaexiste(xmlDoc.documentElement.getElementsByTagName("AnioCreacion"),0);
+	  
+		//Deconominos
+		$TipoContrato = validaexiste(xmlDoc.documentElement.getElementsByTagName("Deconominos")[0].getElementsByTagName("TipoContrato"),null);
+		$AntiguedadEmpleo = validaexiste(xmlDoc.documentElement.getElementsByTagName("Deconominos")[0].getElementsByTagName("AntiguedadEmpleo"),0);
+		$AniosCasada = validaexiste(xmlDoc.documentElement.getElementsByTagName("Deconominos")[0].getElementsByTagName("AniosCasada"),0);
+		$Ingresos = validaexiste(xmlDoc.documentElement.getElementsByTagName("Deconominos")[0].getElementsByTagName("Ingresos"),"$ 0.00");
+		$NombreEmpresa = validaexiste(xmlDoc.documentElement.getElementsByTagName("Deconominos")[0].getElementsByTagName("NombreEmpresa"),null);
+		$GiroEmpresa = validaexiste(xmlDoc.documentElement.getElementsByTagName("Deconominos")[0].getElementsByTagName("GiroEmpresa"),null);
+		$Puesto = validaexiste(xmlDoc.documentElement.getElementsByTagName("Deconominos")[0].getElementsByTagName("Puesto"),null);
+		
+		$("#lisTipoContratonew option[value="+$TipoContrato+"]").attr("selected","selected");
+		$('#txtantiguedadnew').val($AntiguedadEmpleo);
+		$('#txtAosCasadonew').val($AniosCasada);
+		$("#txtIngresonew").val($Ingresos);
+		$('#txtNombreEmpresanew').val($NombreEmpresa);
+		$("#txtGironew").val($GiroEmpresa);
+		$("#txtPuestonew").val($Puesto);
+		
+		//Deconominos -> Domicilio
+		  $Calleemp= validaexiste(xmlDoc.documentElement.getElementsByTagName("Deconominos")[0].getElementsByTagName("Domicilio")[0].getElementsByTagName("Calle"),null);
+		  $NoIntemp= validaexiste(xmlDoc.documentElement.getElementsByTagName("Deconominos")[0].getElementsByTagName("Domicilio")[0].getElementsByTagName("NoInt"),null);
+		  $NoExtemp= validaexiste(xmlDoc.documentElement.getElementsByTagName("Deconominos")[0].getElementsByTagName("Domicilio")[0].getElementsByTagName("NoExt"),null);
+		  $Cpdomemp= validaexiste(xmlDoc.documentElement.getElementsByTagName("Deconominos")[0].getElementsByTagName("Domicilio")[0].getElementsByTagName("Cpdom"),null);
+		  $Estadoemp= validaexiste(xmlDoc.documentElement.getElementsByTagName("Deconominos")[0].getElementsByTagName("Domicilio")[0].getElementsByTagName("Estado"),0);
+		  $Delegacionemp= validaexiste(xmlDoc.documentElement.getElementsByTagName("Deconominos")[0].getElementsByTagName("Domicilio")[0].getElementsByTagName("Delegacion"),0);
+		  $Coloniaempresa= validaexiste(xmlDoc.documentElement.getElementsByTagName("Deconominos")[0].getElementsByTagName("Domicilio")[0].getElementsByTagName("Colonia"),0);
+		  $TiempoResidenciaemp= validaexiste(xmlDoc.documentElement.getElementsByTagName("Deconominos")[0].getElementsByTagName("Domicilio")[0].getElementsByTagName("TiempoResidencia"),0);
+		  $EstatusResidenciaemp= validaexiste(xmlDoc.documentElement.getElementsByTagName("Deconominos")[0].getElementsByTagName("Domicilio")[0].getElementsByTagName("EstatusResidencia"),0);
+		  $MontoViviendaemp= validaexiste(xmlDoc.documentElement.getElementsByTagName("Deconominos")[0].getElementsByTagName("Domicilio")[0].getElementsByTagName("MontoVivienda"),"$ 0.00");
+		  $Telcasaemp= validaexiste(xmlDoc.documentElement.getElementsByTagName("Deconominos")[0].getElementsByTagName("Domicilio")[0].getElementsByTagName("Telcasa"),null);
+		  $Telmovilemp= validaexiste(xmlDoc.documentElement.getElementsByTagName("Deconominos")[0].getElementsByTagName("Domicilio")[0].getElementsByTagName("Telmovil"),null);
+
+		$OtrosIngresos= validaexiste(xmlDoc.documentElement.getElementsByTagName("Deconominos")[0].getElementsByTagName("OtrosIngresos"),"$ 0.00");
+		$FuenteOtrosIngresos= validaexiste(xmlDoc.documentElement.getElementsByTagName("Deconominos")[0].getElementsByTagName("FuenteOtrosIngresos"),null);
+		
+		$("#txtCalleEmpresanew").val($Calleemp);
+		$("#txtNumeroInteriorempnew").val($NoIntemp);
+		$("#txtNumeroExteriorEmpresa").val($NoExtemp);
+		$("#txtCpEmpresanew").val($Cpdomemp);
+		buscaCPemp($Cpdomemp);
+		$("#lisEstadoEmpresanew option[value="+$Estadoemp+"]").attr("selected","selected");
+		$("#lisDelMuniEmpresanew option[value="+$Delegacionemp+"]").attr("selected","selected");
+		
+		//$("#lisColoniaEmpresanew option[text="+$Coloniaempresa+"]").attr("selected","selected");
+		
+		$("#lisColoniaEmpresanew option").each(function () {
+			if($("#lisColoniaEmpresanew option").text == $Colonia){
+				$("#lisColoniaEmpresanew option").attr("selected","selected");
+			}
+		});
+		
+		
+		$("#txtantiguedadnew").val($TiempoResidenciaemp);
+		$("#txtTelOficinanew").val($Telcasaemp);
+		$("#txtOtrosIngresosnew").val($OtrosIngresos);
+		$("#txtFuenteOtrosIngrenew").val($FuenteOtrosIngresos);
+		
+		//disabled
+		$('#txtNomSolicitantenew').attr("disabled","disabled");
+		$('#txtSegundonombrenew').attr("disabled","disabled");
+		$('#txtApePaternonew').attr("disabled","disabled");
+		$('#txtApeMaternonew').attr("disabled","disabled");
+		$('#chksexosolicitante').attr("disabled","disabled");
+		$('#sldsexosoli').css("background-color","#e2dede");
+		$('#sldpersopoli').css("background-color","#e2dede");
+		$('#sldparentescopoli').css("background-color","#e2dede");
+		
+		
+		$('.glyphicon-circle-arrow-up').attr("disabled",true);
+		$('.glyphicon-circle-arrow-down').attr("disabled",true);
+		$('#optpersonapoliticonew').attr("disabled","disabled");
+		$('#optparenpoliticonew').attr("disabled","disabled");
+		$("#txtTipIdentificacionnew").attr("disabled","disabled");
+		$('#txtNumIdentificanew').attr("disabled","disabled");
+		$('#dateFechanacnew').attr("disabled","disabled");
+		$('#txtRFCnew').attr("disabled","disabled");
+		$("#lstEdoCivilnew").attr("disabled","disabled");
+		$('#txtDependientesnew').attr("disabled","disabled");
+		$('#dateFechanacnewdia').attr("disabled","disabled");
+		$('#dateFechanacnewmes').attr("disabled","disabled");
+		$('#dateFechanacnewanio').attr("disabled","disabled");
+		$("#lstNacionalidadnew").attr("disabled","disabled");
+		$('#dateFechanacnewanio').attr("disabled","disabled");
+		
+
+		/*$("#result_imagefin").attr("src",datosgrales[5].toString());
+		$("#result_imagefinmod").attr("src",datosgrales[5].toString());
+		$('#lnknombremodalINEFrente').text($IdentificacionFrentePath);
+		$('#titulomodalfinINEFrente').text($IdentificacionFrentePath);
+		
+		$("#result_imagefinatras").attr("src",datosgrales[6].toString());
+		$("#result_imagefinmodatras").attr("src",datosgrales[6].toString());
+		$('#lnknombremodalINEAtras').text($IdentificacionAtrasPath);
+		$('#titulomodalfinINEAtras').text($IdentificacionAtrasPath);
+		
+		$("#imagenpresenta").attr("src",datosgrales[7].toString());
+		$("#firma-img").attr("src",datosgrales[7].toString());
+		$('#lnknombremodalINEFrente').text($IdentificacionFrentePath);
+		$('#titulomodalfinINEFrente').text($IdentificacionFrentePath);
+		
+		$("#result_imagefin").attr("src",datosgrales[5].toString());
+		$("#result_imagefinmod").attr("src",datosgrales[5].toString());
+		$('#lnknombremodalINEFrente').text($IdentificacionFrentePath);
+		$('#titulomodalfinINEFrente').text($IdentificacionFrentePath);
+		
+		$("#result_imagefin").attr("src",datosgrales[5].toString());
+		$("#result_imagefinmod").attr("src",datosgrales[5].toString());
+		$('#lnknombremodalINEFrente').text($IdentificacionFrentePath);
+		$('#titulomodalfinINEFrente').text($IdentificacionFrentePath);*/
+		
+		$('#txtCalleSolicitantenew').attr("disabled","disabled");
+		$('#txtNumInteriornew').attr("disabled","disabled");
+		$('#txtNumExteriornew').attr("disabled","disabled");
+		$('#txtCpSolicitantenew').attr("disabled","disabled");
+
+		$("#lisEstadoSolicitantenew").attr("disabled","disabled");
+		$("#lisDelMuniSolicitantenew").attr("disabled","disabled");
+		
+		$("#lisColoniaSolicitantenew").attr("disabled","disabled");
+		$('#txtTiempoResidencianew').attr("disabled","disabled");
+		$("#lisEstatusResidencianew").attr("disabled","disabled");
+		$('#txtMontoViviendanew').attr("disabled","disabled");
+		$('#txtCorreonew').attr("disabled","disabled");
+		$('#txtTelefonoCasanew').attr("disabled","disabled");
+		$('#txtTelefonoCelularnew').attr("disabled","disabled");
+		$("#lisCompaniaMovilnew").attr("disabled","disabled");
+
+		$('#txtNombreRef1new').attr("disabled","disabled");
+		$('#txtApellidoPaternoRef1new').attr("disabled","disabled");
+		$('#txtApellidoMaternoRef1new').attr("disabled","disabled");
+		$("#lisNacionalidadRef1new").attr("disabled","disabled");
+		$('#txtTelCasaRef1new').attr("disabled","disabled");
+
+		$('#txtNombreRef2new').attr("disabled","disabled");
+		$('#txtApellidoPaternoRef2new').attr("disabled","disabled");
+		$('#txtApellidoMaternoRef2new').attr("disabled","disabled");
+		$("#lisNacionalidadRef2new").attr("disabled","disabled");
+		$('#txtTelCasaRef2new').attr("disabled","disabled");
+		
+		$('#txtNombreRef3new').attr("disabled","disabled");
+		$('#txtApellidoPaternoRef3new').attr("disabled","disabled");
+		$('#txtApellidoMaternoRef3new').attr("disabled","disabled");
+		$("#lisNacionalidadRef3new").attr("disabled","disabled");
+		$('#txtTelCasaRef3new').attr("disabled","disabled");
+
+		$("#lisTipoContratonew").attr("disabled","disabled");
+		$('#txtantiguedadnew').attr("disabled","disabled");
+		$('#txtAosCasadonew').attr("disabled","disabled");
+		$("#txtIngresonew").attr("disabled","disabled");
+		$('#txtNombreEmpresanew').attr("disabled","disabled");
+		$("#txtGironew").attr("disabled","disabled");
+		$("#txtPuestonew").attr("disabled","disabled");
+		
+		
+		$("#txtCalleEmpresanew").attr("disabled","disabled");
+		$("#txtNumeroInteriorempnew").attr("disabled","disabled");
+		$("#txtNumeroExteriorEmpresa").attr("disabled","disabled");
+		$("#txtCpEmpresanew").attr("disabled","disabled");
+		$("#lisEstadoEmpresanew").attr("disabled","disabled");
+		$("#lisDelMuniEmpresanew").attr("disabled","disabled");
+		$("#lisColoniaEmpresanew").attr("disabled","disabled");
+		$("#txtantiguedadnew").attr("disabled","disabled");
+		$("#txtTelOficinanew").attr("disabled","disabled");
+		$("#txtOtrosIngresosnew").attr("disabled","disabled");
+		$("#txtFuenteOtrosIngrenew").attr("disabled","disabled");
+		
+		
+		
+		/*DOC_IF64 = "data:image/jpeg;base64," + DOC_IF64;
+								DOC_IA64 = "data:image/jpeg;base64," + DOC_IA64;
+								F164 = "data:image/png;base64,"+F164;
+								DOC_C164 = "data:image/jpeg;base64," + DOC_C164 
+								DOC_C264*/
+								
+								
+								
+								
+								//ubicación
+								/*$Lattitude = validaexiste(xmlDoc.documentElement.getElementsByTagName("Lattitude"),null);
+								$Longuitud = validaexiste(xmlDoc.documentElement.getElementsByTagName("Longuitud"),null);*/
+		$('#DatGrales').modal();
+	}
+	
+	function NuevaSolicitud(){
+		$('#mdlgralnombre').text("Nueva solicitud");
+		$('#txtNomSolicitantenew').removeAttr("disabled");
+		$('#txtSegundonombrenew').removeAttr("disabled");
+		$('#txtApePaternonew').removeAttr("disabled");
+		$('#txtApeMaternonew').removeAttr("disabled");
+		$("#txtTipIdentificacionnew").removeAttr("disabled");
+		$('#txtNumIdentificanew').removeAttr("disabled");
+		$('#dateFechanacnew').removeAttr("disabled");
+		$('#txtRFCnew').removeAttr("disabled");
+		$("#lstEdoCivilnew").removeAttr("disabled");
+		//$('#txtDependientesnew').removeAttr("disabled");
+		$('#dateFechanacnewdia').removeAttr("disabled");
+		$('#dateFechanacnewmes').removeAttr("disabled");
+		$('#dateFechanacnewanio').removeAttr("disabled");
+		$("#lstNacionalidadnew").removeAttr("disabled");
+		$('#dateFechanacnewanio').removeAttr("disabled");
+		
+		
+		$("#firma-img").removeAttr("src");
+		$("#firma-img").attr("class","hide");
+		
+		$("#DivdelaFirmaBorrar").css("display","");
+		$("#validarCliente").css("display","");
+		
+		
+		
+		
+		
+		$("#firma-canvas").css("display","");
+		$("#linkmodalopen").removeAttr("class", "overlay");
+		$('#nomfirma').text("Agregar firma");
+		$('#nomfirma').removeAttr("disabled");
+		
+
+		/*$("#result_imagefin").attr("src",datosgrales[5].toString());
+		$("#result_imagefinmod").attr("src",datosgrales[5].toString());
+		$('#lnknombremodalINEFrente').text($IdentificacionFrentePath);
+		$('#titulomodalfinINEFrente').text($IdentificacionFrentePath);
+		
+		$("#result_imagefinatras").attr("src",datosgrales[6].toString());
+		$("#result_imagefinmodatras").attr("src",datosgrales[6].toString());
+		$('#lnknombremodalINEAtras').text($IdentificacionAtrasPath);
+		$('#titulomodalfinINEAtras').text($IdentificacionAtrasPath);
+		
+		$("#imagenpresenta").attr("src",datosgrales[7].toString());
+		$("#firma-img").attr("src",datosgrales[7].toString());
+		$('#lnknombremodalINEFrente').text($IdentificacionFrentePath);
+		$('#titulomodalfinINEFrente').text($IdentificacionFrentePath);
+		
+		$("#result_imagefin").attr("src",datosgrales[5].toString());
+		$("#result_imagefinmod").attr("src",datosgrales[5].toString());
+		$('#lnknombremodalINEFrente').text($IdentificacionFrentePath);
+		$('#titulomodalfinINEFrente').text($IdentificacionFrentePath);
+		
+		$("#result_imagefin").attr("src",datosgrales[5].toString());
+		$("#result_imagefinmod").attr("src",datosgrales[5].toString());
+		$('#lnknombremodalINEFrente').text($IdentificacionFrentePath);
+		$('#titulomodalfinINEFrente').text($IdentificacionFrentePath);*/
+		
+		$('#txtCalleSolicitantenew').removeAttr("disabled");
+		$('#txtNumInteriornew').removeAttr("disabled");
+		$('#txtNumExteriornew').removeAttr("disabled");
+		$('#txtCpSolicitantenew').removeAttr("disabled");
+
+		$("#lisEstadoSolicitantenew").removeAttr("disabled");
+		$("#lisDelMuniSolicitantenew").removeAttr("disabled");
+		
+		$('.glyphicon-circle-arrow-up').removeAttr("disabled");
+		$('.glyphicon-circle-arrow-down').removeAttr("disabled");
+		
+		$("#lisColoniaSolicitantenew").removeAttr("disabled");
+		//$('#txtTiempoResidencianew').removeAttr("disabled");
+		$("#lisEstatusResidencianew").removeAttr("disabled");
+		$('#txtMontoViviendanew').removeAttr("disabled");
+		$('#txtCorreonew').removeAttr("disabled");
+		$('#txtTelefonoCasanew').removeAttr("disabled");
+		$('#txtTelefonoCelularnew').removeAttr("disabled");
+		$("#lisCompaniaMovilnew").removeAttr("disabled");
+
+		$('#txtNombreRef1new').removeAttr("disabled");
+		$('#txtApellidoPaternoRef1new').removeAttr("disabled");
+		$('#txtApellidoMaternoRef1new').removeAttr("disabled");
+		$("#lisNacionalidadRef1new").removeAttr("disabled");
+		$('#txtTelCasaRef1new').removeAttr("disabled");
+
+		$('#txtNombreRef2new').removeAttr("disabled");
+		$('#txtApellidoPaternoRef2new').removeAttr("disabled");
+		$('#txtApellidoMaternoRef2new').removeAttr("disabled");
+		$("#lisNacionalidadRef2new").removeAttr("disabled");
+		$('#txtTelCasaRef2new').removeAttr("disabled");
+		
+		$('#txtNombreRef3new').removeAttr("disabled");
+		$('#txtApellidoPaternoRef3new').removeAttr("disabled");
+		$('#txtApellidoMaternoRef3new').removeAttr("disabled");
+		$("#lisNacionalidadRef3new").removeAttr("disabled");
+		$('#txtTelCasaRef3new').removeAttr("disabled");
+
+		$("#lisTipoContratonew").removeAttr("disabled");
+		//$('#txtantiguedadnew').removeAttr("disabled");
+		//$('#txtAosCasadonew').removeAttr("disabled");
+		$("#txtIngresonew").removeAttr("disabled");
+		$('#txtNombreEmpresanew').removeAttr("disabled");
+		$("#txtGironew").removeAttr("disabled");
+		$("#txtPuestonew").removeAttr("disabled");
+		
+		
+		$("#txtCalleEmpresanew").removeAttr("disabled");
+		$("#txtNumeroInteriorempnew").removeAttr("disabled");
+		$("#txtNumeroExteriorEmpresa").removeAttr("disabled");
+		$("#txtCpEmpresanew").removeAttr("disabled");
+		$("#lisEstadoEmpresanew").removeAttr("disabled");
+		$("#lisDelMuniEmpresanew").removeAttr("disabled");
+		$("#lisColoniaEmpresanew").removeAttr("disabled");
+		//$("#txtantiguedadnew").removeAttr("disabled");
+		$("#txtTelOficinanew").removeAttr("disabled");
+		$("#txtOtrosIngresosnew").removeAttr("disabled");
+		$("#txtFuenteOtrosIngrenew").removeAttr("disabled");
+		$('#chksexosolicitante').removeAttr("disabled");
+		$('#sldsexosoli').css("background-color","#2196f3");
+		$('#optpersonapoliticonew').removeAttr("disabled");
+		$('#sldpersopoli').css("background-color","#2196f3");
+		
+		$('#optparenpoliticonew').removeAttr("disabled");
+		$('#sldparentescopoli').css("background-color","#2196f3");
+		
+		reseteavalores();
+		
+	}
+	
+	function validaexiste(campo, tipocampo)
+	{
+		if(campo.length > 0){
+			if(!campo[0].textContent)
+			{
+				return tipocampo; //alert("the string is null or empty");
+			}
+			else{
+				return campo[0].textContent;
+			}
+		}else{
+			return tipocampo;
+		}
+		
+	}
+	
+	function validaexisteocr(campo, tipocampo)
+	{
+		if(!campo)
+		{
+			return tipocampo; //alert("the string is null or empty");
+		}
+		else{
+			return campo;
+		}
+		
+	}
+	
+	
+	
+	function reseteavalores(){
+		$('#txtNomSolicitantenew').val();
+		$('#txtSegundonombrenew').val();
+		$('#txtApePaternonew').val();
+		$('#txtApeMaternonew').val();
+		$("#txtTipIdentificacionnew").empty();
+		$("#txtTipIdentificacionnew").append('<option value="0">Seleccione...</option>');
+		
+		
+		$('#txtNumIdentificanew').val();
+		$('#dateFechanacnew').val();
+		$('#txtRFCnew').val();
+		$("#lstEdoCivilnew").empty();
+		$("#lstEdoCivilnew").append('<option value="0">Seleccione...</option>');
+		$('#txtDependientesnew').val("0");
+		$('#dateFechanacnewdia').val();
+		$('#dateFechanacnewmes').val();
+		$('#dateFechanacnewanio').val();
+		$("#lstNacionalidadnew").empty();
+		$("#lstNacionalidadnew").append('<option value="0">Seleccione...</option>');
+		$('#dateFechanacnewanio').val();
+		
+
+		/*$("#result_imagefin").attr("src",datosgrales[5].toString());
+		$("#result_imagefinmod").attr("src",datosgrales[5].toString());
+		$('#lnknombremodalINEFrente').text($IdentificacionFrentePath);
+		$('#titulomodalfinINEFrente').text($IdentificacionFrentePath);
+		
+		$("#result_imagefinatras").attr("src",datosgrales[6].toString());
+		$("#result_imagefinmodatras").attr("src",datosgrales[6].toString());
+		$('#lnknombremodalINEAtras').text($IdentificacionAtrasPath);
+		$('#titulomodalfinINEAtras').text($IdentificacionAtrasPath);*/
+		
+		$("#imagenpresenta").attr("src","images/fondo.jpg");
+		//$("#firma-img").attr("src",null);
+		$('#lnknombremodalINEFrente').text();
+		$('#titulomodalfinINEFrente').text();
+		
+		/*$("#result_imagefin").attr("src",datosgrales[5].toString());
+		$("#result_imagefinmod").attr("src",datosgrales[5].toString());
+		$('#lnknombremodalINEFrente').text($IdentificacionFrentePath);
+		$('#titulomodalfinINEFrente').text($IdentificacionFrentePath);
+		
+		$("#result_imagefin").attr("src",datosgrales[5].toString());
+		$("#result_imagefinmod").attr("src",datosgrales[5].toString());
+		$('#lnknombremodalINEFrente').text($IdentificacionFrentePath);
+		$('#titulomodalfinINEFrente').text($IdentificacionFrentePath);*/
+		
+		$('#txtCalleSolicitantenew').val();
+		$('#txtNumInteriornew').val(null);
+		$('#txtNumExteriornew').val(null);
+		$('#txtCpSolicitantenew').val(null);
+
+		$("#lisEstadoSolicitantenew").empty();
+		$("#lisEstadoSolicitantenew").append('<option value="0">Seleccione...</option>');
+		$("#lisDelMuniSolicitantenew").empty();
+		$("#lisDelMuniSolicitantenew").append('<option value="0">Seleccione...</option>');
+		
+		$("#lisColoniaSolicitantenew").empty();
+		$("#lisColoniaSolicitantenew").append('<option value="0">Seleccione...</option>');
+		
+		$('#txtTiempoResidencianew').val("0");
+		$("#lisEstatusResidencianew").empty();
+		$("#lisEstatusResidencianew").append('<option value="0">Seleccione...</option>');
+		$('#txtMontoViviendanew').val("$ 0.00");
+		$('#txtCorreonew').val(null);
+		$('#txtTelefonoCasanew').val(null);
+		$('#txtTelefonoCelularnew').val(null);
+		$("#lisCompaniaMovilnew").empty();
+		$("#lisCompaniaMovilnew").append('<option value="0">Seleccione...</option>');
+
+		$('#txtNombreRef1new').val(null);
+		$('#txtApellidoPaternoRef1new').val(null);
+		$('#txtApellidoMaternoRef1new').val(null);
+		$("#lisNacionalidadRef1new").empty();
+		$("#lisNacionalidadRef1new").append('<option value="0">Seleccione...</option>');
+		$('#txtTelCasaRef1new').val(null);
+
+		$('#txtNombreRef2new').val(null);
+		$('#txtApellidoPaternoRef2new').val(null);
+		$('#txtApellidoMaternoRef2new').val(null);
+		$("#lisNacionalidadRef2new").empty();
+		$("#lisNacionalidadRef2new").append('<option value="0">Seleccione...</option>');
+		$('#txtTelCasaRef2new').val(null);
+		
+		$('#txtNombreRef3new').val(null);
+		$('#txtApellidoPaternoRef3new').val(null);
+		$('#txtApellidoMaternoRef3new').val(null);
+		$("#lisNacionalidadRef3new").empty();
+		$("#lisNacionalidadRef3new").append('<option value="0">Seleccione...</option>');
+		$('#txtTelCasaRef3new').val(null);
+
+		$("#lisTipoContratonew").empty();
+		$("#lisTipoContratonew").append('<option value="0">Seleccione...</option>');
+		$('#txtantiguedadnew').val("0");
+		$('#txtAosCasadonew').val("0");
+		$("#txtIngresonew").val("$ 0.00");
+		$('#txtNombreEmpresanew').val(null);
+		$("#txtGironew").val(null);
+		$("#txtPuestonew").val(null);
+		
+		
+		$("#txtCalleEmpresanew").val(null);
+		$("#txtNumeroInteriorempnew").val(null);
+		$("#txtNumeroExteriorEmpresa").val(null);
+		$("#txtCpEmpresanew").val(null);
+		$("#lisEstadoEmpresanew").empty();
+		$("#lisEstadoEmpresanew").append('<option value="0">Seleccione...</option>');
+		$("#lisDelMuniEmpresanew").empty();
+		$("#lisDelMuniEmpresanew").append('<option value="0">Seleccione...</option>');
+		$("#lisColoniaEmpresanew").empty();
+		$("#lisColoniaEmpresanew").append('<option value="0">Seleccione...</option>');
+		$("#txtantiguedadnew").val("0");
+		$("#txtTelOficinanew").val(null);
+		$("#txtOtrosIngresosnew").val("$ 0.00");
+		$("#txtFuenteOtrosIngrenew").val(null);
+		
+		
+		
+		fncargatipoidentificacion();
+		fncargaNacionalidad();
+		fncargaEdocivil();
+		fncargaEdo();
+		fnestatusrecidencia();
+		fncompaniamovil();
+		fntipocontrato();
+	}
+	
+function validalistas(lista)
+{
+	if($(lista).val() != '0' )
+	{
+		return 1;
+	}else{
+		return 0;
+		
+	}
+	
+	return 
+}
+
+function validatext(txtcontrol)
+{
+	if($(txtcontrol).val() != '' )
+	{
+		return 1;
+	}else{
+		return 0;
+		
+	}
+}
+function validamontos(txtmonto)
+{
+	
+	return 
+}
+function validaspiners(txtespiner)
+{
+	if(parseInt($('txtespiner').val()) > 0 )
+	{
+		return 1;
+	}else{
+		return 0;
+		
+	}
+}
+	
+
+
+	
+
+
