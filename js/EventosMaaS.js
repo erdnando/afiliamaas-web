@@ -105,6 +105,7 @@ $(document).ready(function(){
 		
 		$('#txtDependientesnew, #txtNumIdentificanew, #txtTiempoResidencianew, #txtCpSolicitantenew, #txtantiguedadnew, #txtCpEmpresanew, #txtAosCasadonew ').on({
 		  keydown: function(e) {
+			  enablecontroles($(this));
 			if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
 				(e.keyCode == 65 && e.ctrlKey === true) || 
 				(e.keyCode >= 35 && e.keyCode <= 39)) {
@@ -114,10 +115,33 @@ $(document).ready(function(){
 			if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105) || e.keyCode==186) {
 				e.preventDefault();
 			}
+			validaricontxt($(this));
 
 		  }
 		 
 		});
+		
+		$('#txtNumIdentificanew').on({
+		  keyup: function() {
+			
+			validaricontxt($('#txtNumIdentificanew'));		
+		  },
+		  blur: function() {
+			validaricontxt($('#txtNumIdentificanew'));		
+		  }
+		});
+		
+		$('#txtRFCnew').on({
+		  keyup: function() {
+			
+			validaricontxt($('#txtRFCnew'));		
+		  },
+		  blur: function() {
+			validaricontxt($('#txtRFCnew'));		
+		  }
+		});
+		
+		
 		
 		/*$('#txtNumIdentificanew').on({
 		  keydown: function(e) {
@@ -171,9 +195,13 @@ $(document).ready(function(){
 	  keyup: function() {
 		if($('#txtNomSolicitantenew').val()!= '' && $('#txtApePaternonew').val() != '' && $('#txtApeMaternonew').val()!= '' && $('#dateFechanacnew').val() != ''){
 			$('#txtRFCnew').val(CalcularRFC($('#txtNomSolicitantenew').val() + " " + $('#txtSegundonombrenew').val() ,$('#txtApePaternonew').val(),$('#txtApeMaternonew').val(),$('#dateFechanacnew').val()));
+			validaricontxt($('#txtRFCnew'));
 		}
+		validaricontxt($('#txtNomSolicitantenew'));	
+		enablecontroles("#txtNomSolicitantenew");		
 	  },
 	  keypress: function(tecla) {
+		  enablecontroles("#txtNomSolicitantenew");
 		var texto=tecla.key; 
 		var reg=  /^([-a-z_-ÁÉÍÑÓÚáéíñóú \s])+$/i; 
 	   if(reg.test(texto)) { 
@@ -183,6 +211,9 @@ $(document).ready(function(){
 			return false;
 		} 
 		//if((tecla.charCode < 97 || tecla.charCode > 122) && (tecla.charCode < 65 || tecla.charCode > 90) && (tecla.charCode != 45)) return false;
+	  },
+	  blur: function() {
+		validaricontxt($('#txtNomSolicitantenew'));		
 	  }
 	});
 	
@@ -190,6 +221,7 @@ $(document).ready(function(){
 	  keyup: function() {
 		if($('#txtNomSolicitantenew').val()!= '' && $('#txtApePaternonew').val() != '' && $('#txtApeMaternonew').val()!= '' && $('#dateFechanacnew').val() != ''){
 			$('#txtRFCnew').val(CalcularRFC($('#txtNomSolicitantenew').val() + " " + $('#txtSegundonombrenew').val() ,$('#txtApePaternonew').val(),$('#txtApeMaternonew').val(),$('#dateFechanacnew').val()));
+			validaricontxt($('#txtRFCnew'));
 		}
 	  },
 	  keypress: function(tecla) {
@@ -207,11 +239,15 @@ $(document).ready(function(){
 	
 	$('#txtApePaternonew').on({
 	  keyup: function() {
+		  enablecontroles("#txtApePaternonew");
 		if($('#txtNomSolicitantenew').val()!= '' && $('#txtApePaternonew').val() != '' && $('#txtApeMaternonew').val()!= '' && $('#dateFechanacnew').val() != ''){
 			$('#txtRFCnew').val(CalcularRFC($('#txtNomSolicitantenew').val() + " " + $('#txtSegundonombrenew').val() ,$('#txtApePaternonew').val(),$('#txtApeMaternonew').val(),$('#dateFechanacnew').val()));
+			validaricontxt($('#txtRFCnew'));
 		}
+		validaricontxt($('#txtApePaternonew'));	
 	  },
 	  keypress: function(tecla) {
+		  enablecontroles("#txtApePaternonew")
 		var texto=tecla.key; 
 		var reg=  /^([-a-z_-ÁÉÍÑÓÚáéíñóú \s])+$/i; 
 	   if(reg.test(texto)) { 
@@ -221,13 +257,17 @@ $(document).ready(function(){
 			return false;
 		} 
 		//if((tecla.charCode < 97 || tecla.charCode > 122) && (tecla.charCode < 65 || tecla.charCode > 90) && (tecla.charCode != 45)) return false;
-	  }  
+	  },
+	  blur: function() {
+		validaricontxt($('#txtApePaternonew'));		
+	  } 
 	});
 	
 	$('#txtApeMaternonew').on({
 	  keyup: function() {
 		if($('#txtNomSolicitantenew').val()!= '' && $('#txtApePaternonew').val() != '' && $('#txtApeMaternonew').val()!= '' && $('#dateFechanacnew').val() != ''){
 			$('#txtRFCnew').val(CalcularRFC($('#txtNomSolicitantenew').val() + " " + $('#txtSegundonombrenew').val() ,$('#txtApePaternonew').val(),$('#txtApeMaternonew').val(),$('#dateFechanacnew').val()));
+			validaricontxt($('#txtRFCnew'));
 		}
 	  },
 	  keypress: function(tecla) {
@@ -250,6 +290,7 @@ $(document).ready(function(){
 			$('#dateFechanacnewdia').val($('#dateFechanacnew').val().substr(8, 2));
 			$('#dateFechanacnewmes').val($('#dateFechanacnew').val().substr(5, 2));
 			$('#dateFechanacnewanio').val($('#dateFechanacnew').val().substr(0, 4));
+			validaricontxt($('#txtRFCnew'));
 		}
 	  }
 	});
@@ -871,6 +912,58 @@ $(document).ready(function(){
 			}
 		  
 		});
+		
+		
+		$('#anumpaso1').on({
+			click:	function () {
+				//navegasliderheader($('#anumpaso1'),1);
+				navegasliderheaderlibre($('#anumpaso1'), 1)	;						
+			}
+		  
+		});
+		
+		$('#anumpaso2').on({
+			click:	function () {
+				//navegasliderheader($('#anumpaso2'),2);
+				//validacontrolespantall('1',true);
+				navegasliderheaderlibre($('#anumpaso2'), 2)	;			
+			}
+		  
+		});
+		$('#anumpaso3').on({
+			click:	function () {
+				//navegasliderheader($('#anumpaso3'),3);
+				//validacontrolespantall('2',true);	
+				navegasliderheaderlibre($('#anumpaso3'), 3)	;				
+			}
+		  
+		});
+		$('#anumpaso4').on({
+			click:	function () {
+				//navegasliderheader($('#anumpaso4'),4);	
+				//validacontrolespantall('3',true);	
+				navegasliderheaderlibre($('#anumpaso4'), 4)	;
+			}
+		  
+		});
+		$('#anumpaso5').on({
+			click:	function () {
+				//navegasliderheader($('#anumpaso5'),5);
+				//validacontrolespantall('4',true);
+				navegasliderheaderlibre($('#anumpaso5'), 5)	;
+			}
+		  
+		});
+		$('#anumpaso6').on({
+			click:	function () {
+				//navegasliderheader($('#anumpaso6'),6);	
+				//validacontrolespantall('5',true);	
+				navegasliderheaderlibre($('#anumpaso6'), 6)	;
+			}
+		  
+		});
+		
+		
 	
 
 		

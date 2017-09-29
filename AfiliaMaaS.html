@@ -377,7 +377,7 @@
 							</label>
 						</div>-->
 						<div class="col-xs-12 col-sm-4 col-md4 col-lg-11" style="text-align:-webkit-right;">
-							<button data-toggle="modal" type="button" class="btnokeys" style="display:none;"  id="btnifeok" name="btnifeok" disabled>
+							<button data-toggle="modal" type="button" class="btnokeys" style=""  id="btnifeok" name="btnifeok" >
 								<i class="glyphicon glyphicon-ok"></i>
 							</button>
 							
@@ -430,50 +430,50 @@
 									<a href="#" data-mce-href="#1" id="anumpaso2">
 										<span class="number">2</span>
 										<span class="desc"> 
-											<label>Domicilio <i id="stOkTitstepDomicilio" class="glyphicon glyphicon-ok" style="display:none;"></i></label>
+											<label id="titulostep2">Domicilio <i id="stOkTitstepDomicilio" class="glyphicon glyphicon-ok" style="display:none;"></i></label>
 										</span>
 										
-										<div id="rowvalida2">2</div>
+										<div class="rowvalida2" id="rowvalida2">2</div>
 									</a>
 								</li>
 								<li data-target="step-3" class="current" id="lipaso3">
 									<a href="#" data-mce-href="#2" id="anumpaso3">
 										<span class="number">3</span>
 										<span class="desc"> 
-											<label>Datos Económicos. <i id="stOkTitstepDatEco" class="glyphicon glyphicon-ok" style="display:none;"></i></label>
+											<label id="titulostep3">Datos Económicos. <i id="stOkTitstepDatEco" class="glyphicon glyphicon-ok" style="display:none;"></i></label>
 											
 										</span>
-										<div class="rowiniciostep" id="rowvalida3">3</div>
+										<div class="rowvalida3" id="rowvalida3">3</div>
 									</a>
 								</li>
 								<li data-target="step-4" class="current" id="lipaso4">
 									<a href="#" data-mce-href="#3" id="anumpaso4">
 										<span class="number">4</span>
 										<span class="desc"> 
-											<label>Persona Política <i id="stOkTitstepPerPol" class="glyphicon glyphicon-ok" style="display:none;"></i></label>
+											<label id="titulostep4">Persona Política <i id="stOkTitstepPerPol" class="glyphicon glyphicon-ok" style="display:none;"></i></label>
 											
 										</span>
-										<div class="rowiniciostep" id="rowvalida4">4</div>
+										<div class="rowvalida4" id="rowvalida4">4</div>
 									</a>
 								</li>
 								<li data-target="step-5" class="current" id="lipaso5">
 									<a href="#" data-mce-href="#4" id="anumpaso5">
 										<span class="number">5</span>
 										<span class="desc"> 
-											<label>Referencias Familiares. <i id="stOkTitstepRefFam" class="glyphicon glyphicon-ok" style="display:none;"></i></label>
+											<label id="titulostep5">Referencias Familiares. <i id="stOkTitstepRefFam" class="glyphicon glyphicon-ok" style="display:none;"></i></label>
 											
 										</span>
-										<div class="rowiniciostep" id="rowvalida5">5</div>
+										<div class="rowvalida5" id="rowvalida5">5</div>
 									</a>
 								</li>
 								<li data-target="step-6" class="current" id="lipaso6">
 									<a href="#" data-mce-href="#5" id="anumpaso6">
 										<span class="number">6</span>
 										<span class="desc"> 
-											<label>Documentos. <i id="stOkTitstepDoctos" class="glyphicon glyphicon-ok" style="display:none;"></i></label>
+											<label id="titulostep6">Documentos. <i id="stOkTitstepDoctos" class="glyphicon glyphicon-ok" style="display:none;"></i></label>
 											
 										</span>
-										<div id="rowvalida6">6</div>
+										<div class="rowvalida6" id="rowvalida6">6</div>
 									</a>
 								</li>
 							</ul>
@@ -488,16 +488,18 @@
 							<!-- BEGIN STEP 1-->
 								<div class="tsf-step step-1" id="modalpaso1">
 									<div class="tsf-step-content email-editor-elements-sortable ui-sortable">
-										<h2 class="fs-title">(1) Generales <i id="stOkTitModgrales" class="glyphicon glyphicon-ok" style="display:none;"></i></h2>
+										<h2 class="fs-title">(1) Generales <i id="stOkTitModgrales" style="display:none;"></i></h2>
 										<div class="row">
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">Nombre del solicitante*:</label>
+												<div  id="txtNomSolicitantenewdiv">
+													<label class="control-label col-md-5" for="txtNomSolicitantenew">Nombre del solicitante*:</label>
 													<div class="col-md-6">          
 														<input type="text" class="form-control" id="txtNomSolicitantenew" placeholder="Nombre del Solicitante" name="txtNomSolicitantenew" tabindex="1">
+														<span id="txtNomSolicitantenewspan" ></span>
 													</div>
 												</div>
 											</div>
+											
 											<div class="col-md-6">
 												<div class="form-group">
 													<label class="control-label col-md-5" for="pwd">Nacionalidad*:</label>
@@ -533,20 +535,22 @@
 											</div>
 										</div>
 
-										<div class="row">
+										<div class="row">											
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">Apellido paterno*:</label>
+												<div id="txtApePaternonewdiv" class="form-group">
+													<label class="control-label col-md-5" for="txtApePaternonew">Apellido paterno*:</label>
 													<div class="col-md-6">          
 														<input type="text" class="form-control" id="txtApePaternonew" placeholder="Apellido paterno" name="txtApePaternonew" tabindex="3">
+														<span id="txtApePaternonewspan" ></span>
 													</div>
 												</div>
 											</div>
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">R.F.C*:</label>
+												<div id="txtRFCnewdiv">
+													<label class="control-label col-md-5" for="txtRFCnew">R.F.C*:</label>
 													<div class="col-md-6">          
 														<input type="text" class="form-control" id="txtRFCnew" placeholder="R.F.C." name="txtRFCnew" tabindex="9">
+														<span id="txtRFCnewspan" ></span>
 													</div>
 												</div>
 												
@@ -601,12 +605,13 @@
 											
 										</div>
 										
-										<div class="row">
+										<div class="row">											
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">Número de identificación*:</label>
+												<div id="txtNumIdentificanewdiv">
+													<label class="control-label col-md-5" for="txtNumIdentificanew">Número de identificación*:</label>
 													<div class="col-md-6">          
 														<input type="text" class="form-control" id="txtNumIdentificanew" placeholder="Número de identificación" name="txtNumIdentificanew" tabindex="6">
+														<span id="txtNumIdentificanewspan" ></span>
 													</div>
 												</div>
 											</div>
@@ -641,10 +646,11 @@
 										<h2 class="fs-title">(2) Domicilio <i id="stOkTitModDomicilio" class="glyphicon glyphicon-ok" style="display:none;"></i></h2>
 										<div class="row">
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">Calle*:</label>
+												<div id="txtCalleSolicitantenewdiv">
+													<label class="control-label col-md-5" for="txtCalleSolicitantenew">Calle*:</label>
 													<div class="col-md-6">          
 														<input type="text" class="form-control" id="txtCalleSolicitantenew" placeholder="Calle del solicitante." name="txtCalleSolicitantenew" tabindex="12">
+														<span id="txtCalleSolicitantenewspan" ></span>
 													</div>
 												</div>
 											</div>
@@ -658,12 +664,13 @@
 												</div>
 											</div>
 										</div>
-										<div class="row">
+										<div class="row">											
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">No. Exterior*:</label>
+												<div id="txtNumExteriornewdiv">
+													<label class="control-label col-md-5" for="txtNumExteriornew">No. Exterior*:</label>
 													<div class="col-md-6">          
 														<input type="text" class="form-control" id="txtNumExteriornew" placeholder="No. Exterior." name="txtNumExteriornew" tabindex="13">
+														<span id="txtNumExteriornewspan" ></span>
 													</div>
 												</div>
 											</div>
@@ -680,19 +687,21 @@
 										</div>
 										<div class="row">
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">No. Interior:</label>
+												<div id="txtNumInteriornewdiv">
+													<label class="control-label col-md-5" for="txtNumInteriornew">No. Interior:</label>
 													<div class="col-md-6">          
 														<input type="text" class="form-control" id="txtNumInteriornew" placeholder="No. Interior." name="txtNumInteriornew" tabindex="14">
+														<span id="txtNumInteriornewspan" ></span>
 													</div>
 												</div>
 											</div>
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">Monto de vivienda*:</label>
+												<div id="txtMontoViviendanewdiv">
+													<label class="control-label col-md-5" for="txtMontoViviendanew">Monto de vivienda*:</label>
 													<div class="col-md-6">          
 														<input type="text" class="form-control" id="txtMontoViviendanew"  name="txtMontoViviendanew"  data-thousands="," data-decimal="." data-prefix="$ " value="$ 0.00" tabindex="20"/>
 														<script type="text/javascript">$("#txtMontoViviendanew").maskMoney();</script>
+														<span id="txtMontoViviendanewspan" ></span>
 													</div>
 												</div>
 												
@@ -701,18 +710,20 @@
 										</div>
 										<div class="row">
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">CP*:</label>
+												<div id="txtCpSolicitantenewdiv">
+													<label class="control-label col-md-5" for="txtCpSolicitantenew">CP*:</label>
 													<div class="col-md-6">          
 														<input type="text" class="form-control" id="txtCpSolicitantenew" placeholder="Código postal." name="txtCpSolicitantenew" tabindex="15">
+														<span id="txtCpSolicitantenewspan" ></span>
 													</div>
 												</div>
 											</div>
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">Correo eléctronico*:</label>
+												<div id="txtCorreonewdiv">
+													<label class="control-label col-md-5" for="txtCorreonew">Correo eléctronico*:</label>
 													<div class="col-md-6">          
 														<input type="email" class="form-control" id="txtCorreonew" placeholder="correo@dominio.com" name="txtCorreonew" tabindex="21">
+														<span id="txtCorreonewspan" ></span>
 													</div>
 												</div>
 											</div>
@@ -735,10 +746,11 @@
 												</div>
 											</div>
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">Teléfono de casa*:</label>
+												<div id="txtTelefonoCasanewdiv">
+													<label class="control-label col-md-5" for="txtTelefonoCasanew">Teléfono de casa*:</label>
 													<div class="col-md-6">          
 														<input type="tel" class="form-control" id="txtTelefonoCasanew" placeholder="Teléfono de casa." name="txtTelefonoCasanew" maxlength="10" pattern="[0-9]{10}" tabindex="22">
+														<span id="txtTelefonoCasanewspan" ></span>
 													</div>
 												</div>
 											</div>
@@ -756,10 +768,11 @@
 												</div>
 											</div>
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">Teléfono celular*:</label>
+												<div id="txtTelefonoCelularnewdiv">
+													<label class="control-label col-md-5" for="txtTelefonoCelularnew">Teléfono celular*:</label>
 													<div class="col-md-6">          
 														<input type="tel" class="form-control" id="txtTelefonoCelularnew" placeholder="Teléfono celular." name="txtTelefonoCelularnew" maxlength="10" tabindex="23">
+														<span id="txtTelefonoCelularnewspan" ></span>
 													</div>
 												</div>
 											</div>
@@ -800,18 +813,20 @@
 										<h2 class="fs-title">(3) Datos Económicos <i id="stOkTitModDatEco" class="glyphicon glyphicon-ok" style="display:none;"></i></h2>
 										<div class="row">
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">Nombre de empresa*:</label>
+												<div id="txtNombreEmpresanewdiv">
+													<label class="control-label col-md-5" for="txtNombreEmpresanew">Nombre de empresa*:</label>
 													<div class="col-md-6">          
 														<input type="text" class="form-control" id="txtNombreEmpresanew" placeholder="Nombre de empresa." name="txtNombreEmpresanew" tabindex="25">
+														<span id="txtNombreEmpresanewspan" ></span>
 													</div>
 												</div>
 											</div>
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">Calle*:</label>
+												<div id="ttxtCalleEmpresanewdiv">
+													<label class="control-label col-md-5" for="txtCalleEmpresanew">Calle*:</label>
 													<div class="col-md-6">          
 														<input type="text" class="form-control" id="txtCalleEmpresanew" placeholder="Calle." name="txtCalleEmpresanew" tabindex="32">
+														<span id="txtCalleEmpresanewspan" ></span>
 													</div>
 												</div>
 											</div>
