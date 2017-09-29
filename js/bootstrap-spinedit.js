@@ -121,16 +121,22 @@
         },
 
         increase: function () {
+			enablecontrolesiconspin(this);
+			
 			if($('#spinumup')[0].attributes.length == 2){
             var newValue = this.value + this.step;
             this.setValue(newValue);
+			validariconspinereditjs(this);
 			}
         },
 
         decrease: function () {
+			enablecontrolesiconspin(this);
+			
 			if($('#spinumup')[0].attributes.length == 2){
             var newValue = this.value - this.step;
             this.setValue(newValue);
+			validariconspinereditjs(this);
 			}
         },
 

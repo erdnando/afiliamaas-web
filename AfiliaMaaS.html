@@ -501,12 +501,13 @@
 											</div>
 											
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">Nacionalidad*:</label>
+												<div id="lstNacionalidadnewdiv">
+													<label class="control-label col-md-5" for="lstNacionalidadnew">Nacionalidad*:</label>
 													<div class="col-md-6">          
 														<select class="form-control" name="lstNacionalidadnew" id="lstNacionalidadnew" tabindex="7">
 														  <option value="0" selected>Seleccióne....</option>
 														</select>
+														<span id="lstNacionalidadnewspan" ></span>
 													</div>
 												</div>
 											</div>
@@ -522,14 +523,16 @@
 													</div>
 												</div>
 											</div>
+											
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">Fecha de nacimiento*:</label>
+												<div id="dateFechanacnewdiv">
+													<label class="control-label col-md-5" for="dateFechanacnew">Fecha de nacimiento*:</label>
 													<div class="col-md-6">          
 														<input type="date" class="form-control" id="dateFechanacnew" placeholder="Fecha de nacimiento" name="dateFechanacnew" tabindex="8">
 														<input type="hidden"  id="dateFechanacnewdia" name="dateFechanacnewdia">
 														<input type="hidden"  id="dateFechanacnewmes"  name="dateFechanacnewmes">
 														<input type="hidden"  id="dateFechanacnewanio" name="dateFechanacnewanio">
+														<span id="dateFechanacnewspan" ></span>
 													</div>
 												</div>
 											</div>
@@ -567,13 +570,15 @@
 													</div>
 												</div>
 											</div>
+											
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">Estado civil*:</label>
+												<div id="lstEdoCivilnewdiv">
+													<label class="control-label col-md-5" for="lstEdoCivilnew">Estado civil*:</label>
 													<div class="col-md-6">          
 														<select class="form-control" name="lstEdoCivilnew" id="lstEdoCivilnew" tabindex="10">
 														  <option value="0" selected>Seleccióne....</option>
 														</select>
+														<span id="lstEdoCivilnewspan" ></span>
 													</div>
 												</div>
 											</div>
@@ -583,13 +588,14 @@
 										
 										<div class="row">
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">Tipo de identificación*:</label>
+												<div id="txtTipIdentificacionnewdiv">
+													<label class="control-label col-md-5" for="txtTipIdentificacionnew">Tipo de identificación*:</label>
 													<div class="col-md-6">          
 														<!--<input type="text" class="form-control" id="txtTipIdentificacionnew" placeholder="Tipo de identificación" name="txtTipIdentificacionnew">-->
 														<select class="form-control" name="txtTipIdentificacionnew" id="txtTipIdentificacionnew" tabindex="5">
 														  <option value="0" selected>Seleccióne....</option>
 														</select>
+														<span id="txtTipIdentificacionnewspan" ></span>
 													</div>
 												</div>
 											</div>
@@ -655,11 +661,12 @@
 												</div>
 											</div>
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">Tiempo de residencia (años)*:</label>
+												<div id="txtTiempoResidencianewdiv">
+													<label class="control-label col-md-5" for="txtTiempoResidencianew">Tiempo de residencia (años)*:</label>
 													<div class="col-md-6">          
 														<!--<input type="text" class="form-control" id="txtTiempoResidencianew" placeholder="0" name="txtTiempoResidencianew">-->
 														<input type="text" id="txtTiempoResidencianew" disabled="disabled" />
+														<span id="txtTiempoResidencianewspan" ></span>
 													</div>
 												</div>
 											</div>
@@ -675,12 +682,13 @@
 												</div>
 											</div>
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">Estatus de residencia*:</label>
+												<div id="lisEstatusResidencianewdiv">
+													<label class="control-label col-md-5" for="lisEstatusResidencianew">Estatus de residencia*:</label>
 													<div class="col-md-6">          
 														<select class="form-control" name="lisEstatusResidencianew" id="lisEstatusResidencianew" tabindex="19">
 														  <option value="0">Seleccióne...</option>
 														</select>
+														<span id="lisEstatusResidencianewspan" ></span>
 													</div>
 												</div>
 											</div>
@@ -730,13 +738,14 @@
 										</div>
 										<div class="row">
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">Estado*:</label>
+												<div id="lisEstadoSolicitantenewdiv">
+													<label class="control-label col-md-5" for="lisEstadoSolicitantenew">Estado*:</label>
 													<div class="col-md-6">          
 														<select class="form-control" name="lisEstadoSolicitantenew" id="lisEstadoSolicitantenew" tabindex="16">
 														  <option value="0">Seleccione...</option>
 														  
 														</select>
+														<span id="lisEstadoSolicitantenewspan" ></span>
 														<select class="form-control" name="lisEstadotem" id="lisEstadotem" style="display:none;">
 														  <option value="0">Seleccione...</option>
 														  
@@ -757,13 +766,14 @@
 										</div>
 										<div class="row">
 											<div class="col-md-6">
-												<div class="form-group">
+												<div id="lisDelMuniSolicitantenewdiv">
 													<label class="control-label col-md-5" for="pwd">Delegación / Municipio*:</label>
 													<div class="col-md-6">          
 														<select class="form-control" name="lisDelMuniSolicitantenew" id="lisDelMuniSolicitantenew" tabindex="17">
 														  <option value="0">Seleccióne...</option>
 														  
 														</select>
+														<span id="lisDelMuniSolicitantenewspan" ></span>
 													</div>
 												</div>
 											</div>
@@ -779,24 +789,26 @@
 										</div>
 										<div class="row">
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">Colonia*:</label>
+												<div id="lisColoniaSolicitantenewdiv">
+													<label class="control-label col-md-5" for="lisColoniaSolicitantenew">Colonia*:</label>
 													<div class="col-md-6">          
 														<select class="form-control" name="lisColoniaSolicitantenew" id="lisColoniaSolicitantenew" tabindex="18">
 															<option value="0">Seleccióne...</option>
 														  
 														</select>
+														<span id="lisColoniaSolicitantenewspan" ></span>
 													</div>
 												</div>
 											</div>
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">Compañía movil*:</label>
+												<div id="lisCompaniaMovilnewdiv">
+													<label class="control-label col-md-5" for="lisCompaniaMovilnew">Compañía movil*:</label>
 													<div class="col-md-6">          
 														<select class="form-control" name="lisCompaniaMovilnew" id="lisCompaniaMovilnew" tabindex="24">
 														  <option value="0">Seleccióne...</option>
 														  
 														</select>
+														<span id="lisCompaniaMovilnewspan" ></span>
 													</div>
 												</div>
 											</div>

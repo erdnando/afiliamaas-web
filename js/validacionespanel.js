@@ -191,7 +191,7 @@ $(document).ready(function(){
 				   pantalla = '6';
 			   }
 			   
-			   validacontrolespantall(pantalla,false);
+			   validacontrolespantall(pantalla,false,e);
 				 
 			},
 			onAfterNextButtonClick:function (e, from, to, validation) {

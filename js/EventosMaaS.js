@@ -44,25 +44,39 @@ $(document).ready(function(){
 		  
 		});*/
 		
-		
-		
 		$('#txtCorreonew').on({
-		  blur: function() {
+		  keyup: function(tecla) {
 			var texto=$('#txtCorreonew').val(); 
 			var reg=  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
 		   if(reg.test(texto)) { 
-				console.log("coreovalido")
+				console.log("coreovalido");
+				var nombrecladiv = "#txtCorreonewdiv";
+				$(nombrecladiv).attr('class', 'form-group has-success has-feedback');
+				var nombreclaspan = "#txtCorreonewspan";
+				$(nombreclaspan).attr('class', 'glyphicon glyphicon-ok form-control-feedback');
 		 
 			} else { 
 				console.log("coreoinvalido");
-				var demoTimeout;
+				var nombrecladiv = "#txtCorreonewdiv";
+				var nombreclaspan = "#txtCorreonewspan";
+				$(nombreclaspan).attr('class', 'glyphicon glyphicon-warning-sign form-control-feedback');
+				$(nombrecladiv).attr('class', 'form-group has-warning has-feedback');
+				/*var demoTimeout;
 				clearTimeout(demoTimeout);
 				$('#txtCorreonew').trigger('startRumble');
-				demoTimeout = setTimeout(function(){$('#txtCorreonew').trigger('stopRumble');},1500);
+				demoTimeout = setTimeout(function(){$('#txtCorreonew').trigger('stopRumble');},1500);*/
 				//$('#txtCorreonew').focus();
-			} 
-			//if((tecla.charCode < 97 || tecla.charCode > 122) && (tecla.charCode < 65 || tecla.charCode > 90) && (tecla.charCode != 45)) return false;
+			}
+		  },
+		  blur: function(tecla) {
+			if($('#txtCorreonew').val().length == 0){
+				var nombrecladiv = "#txtCorreonewdiv";
+				var nombreclaspan = "#txtCorreonewspan";
+				$(nombreclaspan).attr('class', 'glyphicon glyphicon-remove form-control-feedback');
+				$(nombrecladiv).attr('class', 'form-group has-error has-feedback');
+			}
 		  }
+		  
 		});
 		
 		
@@ -103,9 +117,9 @@ $(document).ready(function(){
 		
 		
 		
-		$('#txtDependientesnew, #txtNumIdentificanew, #txtTiempoResidencianew, #txtCpSolicitantenew, #txtantiguedadnew, #txtCpEmpresanew, #txtAosCasadonew ').on({
+		$('#txtDependientesnew, #txtNumIdentificanew, #txtTiempoResidencianew, #txtantiguedadnew, #txtCpEmpresanew, #txtAosCasadonew ').on({
 		  keydown: function(e) {
-			  enablecontroles($(this));
+			  //enablecontroles($(this));
 			if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
 				(e.keyCode == 65 && e.ctrlKey === true) || 
 				(e.keyCode >= 35 && e.keyCode <= 39)) {
@@ -128,8 +142,12 @@ $(document).ready(function(){
 		  },
 		  blur: function() {
 			validaricontxt($('#txtNumIdentificanew'));		
+		  },
+		  click: function() {
+			enablecontrolesicon("#txtNumIdentificanew");	
 		  }
 		});
+		
 		
 		$('#txtRFCnew').on({
 		  keyup: function() {
@@ -138,9 +156,65 @@ $(document).ready(function(){
 		  },
 		  blur: function() {
 			validaricontxt($('#txtRFCnew'));		
+		  },
+		  click: function() {
+			enablecontrolesicon("#txtRFCnew");	
 		  }
 		});
 		
+		$('#txtCalleSolicitantenew').on({
+		  keyup: function() {
+			
+			validaricontxt($('#txtCalleSolicitantenew'));		
+		  },
+		  blur: function() {
+			validaricontxt($('#txtCalleSolicitantenew'));		
+		  },
+		  click: function() {
+			enablecontrolesicon("#txtCalleSolicitantenew");	
+		  }
+		});
+		
+		$('#txtNumExteriornew').on({
+		  keyup: function() {
+			
+			validaricontxt($('#txtNumExteriornew'));		
+		  },
+		  blur: function() {
+			validaricontxt($('#txtNumExteriornew'));		
+		  },
+		  click: function() {
+			enablecontrolesicon("#txtNumExteriornew");	
+		  }
+		});
+		
+		$('#txtCpSolicitantenew').on({
+		  keyup: function() {
+			
+			validariconCP($('#txtCpSolicitantenew'));		
+		  },
+		  blur: function() {
+			validariconCP($('#txtCpSolicitantenew'));		
+		  },
+		  click: function() {
+			enablecontrolesicon("#txtCpSolicitantenew");	
+		  },
+		  keydown: function(e) {
+			  //enablecontroles($(this));
+			if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+				(e.keyCode == 65 && e.ctrlKey === true) || 
+				(e.keyCode >= 35 && e.keyCode <= 39)) {
+					validariconCP($('#txtCpSolicitantenew'));
+					 return;
+			}
+	 
+			if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105) || e.keyCode==186) {
+				e.preventDefault();
+			}
+			validariconCP($('#txtCpSolicitantenew'));
+
+		  }
+		});
 		
 		
 		/*$('#txtNumIdentificanew').on({
@@ -198,10 +272,10 @@ $(document).ready(function(){
 			validaricontxt($('#txtRFCnew'));
 		}
 		validaricontxt($('#txtNomSolicitantenew'));	
-		enablecontroles("#txtNomSolicitantenew");		
+		//enablecontroles("#txtNomSolicitantenew");		
 	  },
 	  keypress: function(tecla) {
-		  enablecontroles("#txtNomSolicitantenew");
+		  //enablecontroles("#txtNomSolicitantenew");
 		var texto=tecla.key; 
 		var reg=  /^([-a-z_-ÁÉÍÑÓÚáéíñóú \s])+$/i; 
 	   if(reg.test(texto)) { 
@@ -214,6 +288,9 @@ $(document).ready(function(){
 	  },
 	  blur: function() {
 		validaricontxt($('#txtNomSolicitantenew'));		
+	  },
+	  click: function() {
+		enablecontrolesicon("#txtNomSolicitantenew");	
 	  }
 	});
 	
@@ -239,7 +316,7 @@ $(document).ready(function(){
 	
 	$('#txtApePaternonew').on({
 	  keyup: function() {
-		  enablecontroles("#txtApePaternonew");
+		  //enablecontroles("#txtApePaternonew");
 		if($('#txtNomSolicitantenew').val()!= '' && $('#txtApePaternonew').val() != '' && $('#txtApeMaternonew').val()!= '' && $('#dateFechanacnew').val() != ''){
 			$('#txtRFCnew').val(CalcularRFC($('#txtNomSolicitantenew').val() + " " + $('#txtSegundonombrenew').val() ,$('#txtApePaternonew').val(),$('#txtApeMaternonew').val(),$('#dateFechanacnew').val()));
 			validaricontxt($('#txtRFCnew'));
@@ -247,7 +324,7 @@ $(document).ready(function(){
 		validaricontxt($('#txtApePaternonew'));	
 	  },
 	  keypress: function(tecla) {
-		  enablecontroles("#txtApePaternonew")
+		  //enablecontroles("#txtApePaternonew")
 		var texto=tecla.key; 
 		var reg=  /^([-a-z_-ÁÉÍÑÓÚáéíñóú \s])+$/i; 
 	   if(reg.test(texto)) { 
@@ -260,7 +337,10 @@ $(document).ready(function(){
 	  },
 	  blur: function() {
 		validaricontxt($('#txtApePaternonew'));		
-	  } 
+	  },
+	  click: function() {
+		enablecontrolesicon("#txtApePaternonew");	
+	  }
 	});
 	
 	$('#txtApeMaternonew').on({
@@ -282,6 +362,22 @@ $(document).ready(function(){
 		//if((tecla.charCode < 97 || tecla.charCode > 122) && (tecla.charCode < 65 || tecla.charCode > 90) && (tecla.charCode != 45)) return false;
 	  }  
 	});
+	$('#txtMontoViviendanew').on({
+	  blur: function() {
+		  
+			if($('#txtMontoViviendanew').val().length > 0){
+				validariconmonto($('#txtMontoViviendanew'));
+			}else{
+				$('#txtMontoViviendanew').val('$ 0.00');
+				validariconmonto($('#txtMontoViviendanew'));
+			}		
+	  },
+	  click: function() {
+		enablecontrolesicon("#txtMontoViviendanew");	
+	  }  
+	});
+	
+	
 	
 	$('#dateFechanacnew').on({
 	  change: function() {
@@ -292,6 +388,12 @@ $(document).ready(function(){
 			$('#dateFechanacnewanio').val($('#dateFechanacnew').val().substr(0, 4));
 			validaricontxt($('#txtRFCnew'));
 		}
+	  },
+	  blur: function() {
+		validariconfecha($('#dateFechanacnew'));		
+	  },
+	  click: function() {
+		enablecontrolesicon("#dateFechanacnew");	
 	  }
 	});
 	
@@ -384,13 +486,36 @@ $(document).ready(function(){
 			var texto=tecla.key; 
 			var reg=  /^([()0-9\s])+$/i; 
 		   if(reg.test(texto)) { 
+				validaricontelefonos('#txtTelefonoCasanew');
 				return true;
 		 
 			} else { 
 				return false;
 			} 
 			//if((tecla.charCode < 97 || tecla.charCode > 122) && (tecla.charCode < 65 || tecla.charCode > 90) && (tecla.charCode != 45)) return false;
-		  }
+		  },
+	  blur: function() {
+		validaricontelefonos($('#txtTelefonoCasanew'));		
+	  }
+		});
+		
+		
+			$('#txtTelefonoCelularnew').on({
+		  keypress: function(tecla) {
+			var texto=tecla.key; 
+			var reg=  /^([()0-9\s])+$/i; 
+		   if(reg.test(texto)) { 
+				validaricontelefonos('#txtTelefonoCelularnew');
+				return true;
+		 
+			} else { 
+				return false;
+			} 
+			//if((tecla.charCode < 97 || tecla.charCode > 122) && (tecla.charCode < 65 || tecla.charCode > 90) && (tecla.charCode != 45)) return false;
+		  },
+	  blur: function() {
+		validaricontelefonos($('#txtTelefonoCelularnew'));		
+	  }
 		});
 		
 		$('#txtTelefonoCasanew, #txtTelefonoCelularnew, #txtTelOficinanew, #txtTelCasaRef1new, #txtTelCasaRef2new, #txtTelCasaRef3new').on({
@@ -893,22 +1018,136 @@ $(document).ready(function(){
 		
 		$('#lstNacionalidadnew').on({
 			change:	function () {
-				enablecontroles("#lstNacionalidadnew");
+				enablecontrolesicon("#lstNacionalidadnew");
 			},
 			focus:	function () {
-				enablecontroles("#lstNacionalidadnew");
+				enablecontrolesicon("#lstNacionalidadnew");
+			},
+			click:	function () {
+				enablecontrolesicon("#lstNacionalidadnew");
+			},
+			blur:	function () {
+				validariconlistas("#lstNacionalidadnew");
 			}
 		  
 		});
 		
-		$('#lstEdoCivilnew').on({
-			change:	function () {
-				$("#lstEdoCivilnew").css('border', 'none');
-				$("#lstEdoCivilnew").css('border-bottom', '2px solid #cecfd3'); 
+		$('#lisEstadoSolicitantenew').on({
+			change: function() {
+			
+				enablecontrolesicon($('#lisEstadoSolicitantenew'));		
 			},
 			focus:	function () {
-				$("#lstEdoCivilnew").css('border', 'none');
-				$("#lstEdoCivilnew").css('border-bottom', '2px solid #cecfd3'); 
+				enablecontrolesicon("#lstNacionalidadnew");
+			},
+			blur: function() {
+				validariconlistas($('#lisEstadoSolicitantenew'));		
+			},
+			click: function() {
+				enablecontrolesicon("#lisEstadoSolicitantenew");	
+			}
+		});
+		
+		$('#lisDelMuniSolicitantenew').on({
+			change: function() {
+			
+				enablecontrolesicon($('#lisDelMuniSolicitantenew'));		
+			},
+			focus:	function () {
+				enablecontrolesicon("#lisDelMuniSolicitantenew");
+			},
+			blur: function() {
+				validariconlistas($('#lisDelMuniSolicitantenew'));		
+			},
+			click: function() {
+				enablecontrolesicon("#lisDelMuniSolicitantenew");	
+			}
+		});
+		
+		$('#lisColoniaSolicitantenew').on({
+			change: function() {
+			
+				enablecontrolesicon($('#lisColoniaSolicitantenew'));		
+			},
+			focus:	function () {
+				enablecontrolesicon("#lisColoniaSolicitantenew");
+			},
+			blur: function() {
+				validariconlistas($('#lisColoniaSolicitantenew'));		
+			},
+			click: function() {
+				enablecontrolesicon("#lisColoniaSolicitantenew");	
+			}
+		});
+		
+		$('#lisEstatusResidencianew').on({
+			change: function() {
+			
+				enablecontrolesicon($('#lisEstatusResidencianew'));		
+			},
+			focus:	function () {
+				enablecontrolesicon("#lisEstatusResidencianew");
+			},
+			blur: function() {
+				validariconlistas($('#lisEstatusResidencianew'));		
+			},
+			click: function() {
+				enablecontrolesicon("#lisEstatusResidencianew");	
+			}
+		});
+		
+		$('#lisCompaniaMovilnew').on({
+			change: function() {
+			
+				enablecontrolesicon($('#lisCompaniaMovilnew'));		
+			},
+			focus:	function () {
+				enablecontrolesicon("#lisCompaniaMovilnew");
+			},
+			blur: function() {
+				validariconlistas($('#lisCompaniaMovilnew'));		
+			},
+			click: function() {
+				enablecontrolesicon("#lisCompaniaMovilnew");	
+			}
+		});
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		$('#lstEdoCivilnew').on({
+			change:	function () {
+				enablecontrolesicon("#lstEdoCivilnew");
+			},
+			focus:	function () {
+				enablecontrolesicon("#lstEdoCivilnew"); 
+			},
+			click:	function () {
+				enablecontrolesicon("#lstEdoCivilnew");
+			},
+			blur:	function () {
+				validariconlistas("#lstEdoCivilnew");
+			}
+		  
+		});
+		
+		$('#txtTipIdentificacionnew').on({
+			change:	function () {
+				enablecontrolesicon("#txtTipIdentificacionnew");
+			},
+			focus:	function () {
+				enablecontrolesicon("#txtTipIdentificacionnew");
+			},
+			click:	function () {
+				enablecontrolesicon("#txtTipIdentificacionnew");
+			},
+			blur:	function () {
+				validariconlistas("#txtTipIdentificacionnew");
 			}
 		  
 		});

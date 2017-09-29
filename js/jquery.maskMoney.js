@@ -194,6 +194,8 @@
                     if (!settings.reverse) {
                         startPos = startPos - (originalLen - newLen);
                     }
+					
+					validariconmonto($($input[0]));
                     setCursorPosition(startPos);
                 }
 

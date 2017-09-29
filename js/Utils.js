@@ -1478,6 +1478,18 @@ function validatext(txtcontrol)
 		
 	}
 }
+
+function validatextCP(CP)
+{
+	if($(CP).val() != '' && $(CP).val().length == 5)
+	{
+		return 1;
+	}else{
+		return 0;
+		
+	}
+}
+
 function validamontos(txtmonto)
 {
 	
@@ -1488,9 +1500,20 @@ function validamontos(txtmonto)
 		return 0;
 		
 	}
-	
-	return 
 }
+
+function validafechas(fecha){
+	
+	if($('#dateFechanacnew')[0].value != '' )
+	{
+		return 1;
+	}else{
+		return 0;
+		
+	}
+	
+}
+
 function validaspiners(txtespiner)
 {
 	if(parseInt($(txtespiner).val()) > 0 )
@@ -1518,6 +1541,25 @@ function enablecontroles(controles){
 	$(controles).css('border-bottom', '2px solid #cecfd3'); 
 }
 
+function enablecontrolesicon(controles){
+	
+	var nombrecladiv = "#" + $(controles)[0].id + "div";
+			var nombreclaspan = "#" + $(controles)[0].id + "span";
+			$(nombreclaspan).removeClass('glyphicon glyphicon-remove form-control-feedback').removeClass('glyphicon glyphicon-warning-sign form-control-feedback').removeClass('glyphicon glyphicon-ok form-control-feedback');
+			$(nombrecladiv).removeClass('form-group has-error has-feedback').removeClass('form-group has-warning has-feedback').removeClass('form-group has-success has-feedback');
+	
+}
+
+function enablecontrolesiconspin(controles){
+	
+	var nombrecladiv = "#" + $(controles)[0].element[0].id + "div";
+			var nombreclaspan = "#" + $(controles)[0].element[0].id + "span";
+			$(nombreclaspan).removeClass('glyphicon glyphicon-remove form-control-feedback').removeClass('glyphicon glyphicon-warning-sign form-control-feedback').removeClass('glyphicon glyphicon-ok form-control-feedback');
+			$(nombrecladiv).removeClass('form-group has-error has-feedback').removeClass('form-group has-warning has-feedback').removeClass('form-group has-success has-feedback');
+	
+}
+
+
 function validaricontxt(txt){
 	
 		if($(txt).val().length == 0){
@@ -1543,13 +1585,140 @@ function validaricontxt(txt){
 
 function validariconlistas(lista){
 	
+	if(parseInt($(lista).val()) == 0){
+			var nombrecladiv = "#" + $(lista)[0].id + "div";
+			var nombreclaspan = "#" + $(lista)[0].id + "span";
+			$(nombreclaspan).attr('class', 'glyphicon glyphicon-remove form-control-feedback');
+			$(nombrecladiv).attr('class', 'form-group has-error has-feedback');
+			
+		}else{
+			var nombrecladiv = "#" + $(lista)[0].id + "div";
+			$(nombrecladiv).attr('class', 'form-group has-success has-feedback');
+			var nombreclaspan = "#" + $(lista)[0].id + "span";
+			$(nombreclaspan).attr('class', 'glyphicon glyphicon-ok form-control-feedback');
+		}
+	
 }
-function validariconmonto(monto){
+
+function validariconfecha(fecha){
+	
+	if($(fecha)[0].value == ''){
+			var nombrecladiv = "#" + $(fecha)[0].id + "div";
+			var nombreclaspan = "#" + $(fecha)[0].id + "span";
+			$(nombreclaspan).attr('class', 'glyphicon glyphicon-remove form-control-feedback');
+			$(nombrecladiv).attr('class', 'form-group has-error has-feedback');
+			
+		}else{
+			var nombrecladiv = "#" + $(fecha)[0].id + "div";
+			$(nombrecladiv).attr('class', 'form-group has-success has-feedback');
+			var nombreclaspan = "#" + $(fecha)[0].id + "span";
+			$(nombreclaspan).attr('class', 'glyphicon glyphicon-ok form-control-feedback');
+		}
+	
+}
+
+function validariconmonto(monto){	
+	if(parseInt($(monto).val().replace('$ ', '')) == 0){
+		//$(monto).val('$ 0.00');
+			var nombrecladiv = "#" + $(monto)[0].id + "div";
+			var nombreclaspan = "#" + $(monto)[0].id + "span";
+			$(nombreclaspan).attr('class', 'glyphicon glyphicon-remove form-control-feedback');
+			$(nombrecladiv).attr('class', 'form-group has-error has-feedback');
+			
+		}else if(parseInt($(monto).val().replace('$ ', '')) > 0 && parseInt($(monto).val().replace('$ ', '').length) <= 2) {
+			var nombrecladiv = "#" + $(monto)[0].id + "div";
+			var nombreclaspan = "#" + $(monto)[0].id + "span";
+			$(nombreclaspan).attr('class', 'glyphicon glyphicon-warning-sign form-control-feedback');
+			$(nombrecladiv).attr('class', 'form-group has-warning has-feedback');
+			
+		}else{
+			var nombrecladiv = "#" + $(monto)[0].id + "div";
+			$(nombrecladiv).attr('class', 'form-group has-success has-feedback');
+			var nombreclaspan = "#" + $(monto)[0].id + "span";
+			$(nombreclaspan).attr('class', 'glyphicon glyphicon-ok form-control-feedback');
+		}
 	
 	
 }
-function validariconspiner(monto){
+
+function validaricontelefonos(telefono){
+
+	if($(telefono).val().replace('(', '').replace(')', '').replace(' ', '').length == 0 ){
+			var nombrecladiv = "#" + $(telefono)[0].id + "div";
+			var nombreclaspan = "#" + $(telefono)[0].id + "span";
+			$(nombreclaspan).attr('class', 'glyphicon glyphicon-remove form-control-feedback');
+			$(nombrecladiv).attr('class', 'form-group has-error has-feedback');
+			
+		}else if(($(telefono).val().replace('(', '').replace(')', '').replace(' ', '').length > 0) && ($(telefono).val().replace('(', '').replace(')', '').replace(' ', '').length < 10)){
+			var nombrecladiv = "#" + $(telefono)[0].id + "div";
+			var nombreclaspan = "#" + $(telefono)[0].id + "span";
+			$(nombreclaspan).attr('class', 'glyphicon glyphicon-warning-sign form-control-feedback');
+			$(nombrecladiv).attr('class', 'form-group has-warning has-feedback');
+			
+		}else if($(telefono).val().replace('(', '').replace(')', '').replace(' ', '').length == 10 ){
+			var nombrecladiv = "#" + $(telefono)[0].id + "div";
+			$(nombrecladiv).attr('class', 'form-group has-success has-feedback');
+			var nombreclaspan = "#" + $(telefono)[0].id + "span";
+			$(nombreclaspan).attr('class', 'glyphicon glyphicon-ok form-control-feedback');
+		}
 	
+	
+}
+
+function validariconspiner(txtespiner){
+	
+	if(parseInt($(txtespiner).val()) == 0 ){
+			var nombrecladiv = "#" + $(txtespiner)[0].id + "div";
+			var nombreclaspan = "#" + $(txtespiner)[0].id + "span";
+			$(nombreclaspan).attr('class', 'glyphicon glyphicon-remove form-control-feedback');
+			$(nombrecladiv).attr('class', 'form-group has-error has-feedback');
+			
+		}else if(parseInt($(txtespiner).val()) > 0 ){
+			var nombrecladiv = "#" + $(txtespiner)[0].id + "div";
+			$(nombrecladiv).attr('class', 'form-group has-success has-feedback');
+			var nombreclaspan = "#" + $(txtespiner)[0].id + "span";
+			$(nombreclaspan).attr('class', 'glyphicon glyphicon-ok form-control-feedback');
+		}
+	
+}
+
+function validariconspinereditjs(txtespiner){
+	
+	if(parseInt($(txtespiner)[0].element[0].value) == 0 ){
+			var nombrecladiv = "#" + $(txtespiner)[0].element[0].id + "div";
+			var nombreclaspan = "#" + $(txtespiner)[0].element[0].id + "span";
+			$(nombreclaspan).attr('class', 'glyphicon glyphicon-remove form-control-feedback');
+			$(nombrecladiv).attr('class', 'form-group has-error has-feedback');
+			
+		}else if(parseInt($(txtespiner)[0].element[0].value) > 0 ){
+			var nombrecladiv = "#" + $(txtespiner)[0].element[0].id + "div";
+			$(nombrecladiv).attr('class', 'form-group has-success has-feedback');
+			var nombreclaspan = "#" + $(txtespiner)[0].element[0].id + "span";
+			$(nombreclaspan).attr('class', 'glyphicon glyphicon-ok form-control-feedback');
+		}
+	
+}
+
+function validariconCP(CP){
+	
+	if($(CP).val().length == 0){
+			var nombrecladiv = "#" + $(CP)[0].id + "div";
+			var nombreclaspan = "#" + $(CP)[0].id + "span";
+			$(nombreclaspan).attr('class', 'glyphicon glyphicon-remove form-control-feedback');
+			$(nombrecladiv).attr('class', 'form-group has-error has-feedback');
+			
+		}else if($(CP).val().length > 0 && $(CP).val().length < 4) {
+			var nombrecladiv = "#" + $(CP)[0].id + "div";
+			var nombreclaspan = "#" + $(CP)[0].id + "span";
+			$(nombreclaspan).attr('class', 'glyphicon glyphicon-warning-sign form-control-feedback');
+			$(nombrecladiv).attr('class', 'form-group has-warning has-feedback');
+			
+		}else if($(CP).val().length == 5) {
+			var nombrecladiv = "#" + $(CP)[0].id + "div";
+			$(nombrecladiv).attr('class', 'form-group has-success has-feedback');
+			var nombreclaspan = "#" + $(CP)[0].id + "span";
+			$(nombreclaspan).attr('class', 'glyphicon glyphicon-ok form-control-feedback');
+		}
 }
 
 function navegasliderheader(headlink, step){
@@ -1739,14 +1908,16 @@ function navegasliderheaderatras(step){
 	
 }
 
-function validacontrolespantall(pantalla, kinkheader){
+function validacontrolespantall(pantalla, kinkheader, e){
 	
 	switch(pantalla) {
 		case '1':
-			var controles=['#txtNomSolicitantenew','#txtApePaternonew', '#txtNumIdentificanew','#dateFechanacnew','#txtRFCnew'];
-			var contlisterror=[]
+			var controles=['#txtNomSolicitantenew','#txtApePaternonew', '#txtNumIdentificanew','#txtRFCnew'];
+			var contlisterror=[];
 			var controleslist=['#txtTipIdentificacionnew','#lstNacionalidadnew', '#lstEdoCivilnew'];
 			var controleslisterror=[];
+			var controlesfecha=['#dateFechanacnew'];
+			var controlesfechaterror=[];
 			var totalvalidar = 8;
 			var controlvalidados=0;
 
@@ -1786,6 +1957,23 @@ function validacontrolespantall(pantalla, kinkheader){
 				}
 			});
 			
+			$.each(controlesfecha, function (ind, elem) { 
+				if(validatext(elem)== 1)
+				{
+					controlvalidados += 1;
+				}else{
+					if(controlesfechaterror.length == 0)
+					{
+						controlesfechaterror[0] = elem;
+					}else 
+					{
+						controlesfechaterror[controlesfechaterror.length] = elem;
+					}
+					
+					
+				}
+			});
+			
 			if(controlvalidados == totalvalidar ){
 				$("#stOkTitstepgrales").show();
 				$("#stOkTitModgrales").show();
@@ -1798,8 +1986,8 @@ function validacontrolespantall(pantalla, kinkheader){
 					var demoTimeout;
 					clearTimeout(demoTimeout);
 					$(elem).trigger('startRumble');
-					$(elem).css('border', '1px solid red');
-					
+					//$(elem).css('border', '1px solid red');
+					validariconlistas(elem);
 					//$(elem).css('border', '1px solid red');
 					demoTimeout = setTimeout(function(){$(elem).trigger('stopRumble');},1500);							
 					
@@ -1820,6 +2008,20 @@ function validacontrolespantall(pantalla, kinkheader){
 				
 				
 				});
+				$.each(controlesfechaterror, function (ind, elem) { 
+				
+					var demoTimeout;
+					clearTimeout(demoTimeout);
+					$(elem).trigger('startRumble');
+					validariconfecha(elem);
+					demoTimeout = setTimeout(function(){$(elem).trigger('stopRumble');},1500);							
+					
+					
+				
+				
+				});
+				
+				
 				/*$("#stOkTitstepgrales").attr('class', 'glyphicon glyphicon-warning-sign');
 				$("#stOkTitstepgrales").show();*/
 				if(!kinkheader){
@@ -1831,11 +2033,17 @@ function validacontrolespantall(pantalla, kinkheader){
 		
 			break;
 		case '2':
-			var controles=['#txtCalleSolicitantenew','#txtNumExteriornew', '#txtCpSolicitantenew','#txtCorreonew'];
-			var contlisterror=[]
-			
+			var controles=['#txtCalleSolicitantenew','#txtNumExteriornew', '#txtCorreonew'];
+			var contlisterror=[];
+			var controlesCP=['#txtCpSolicitantenew'];
+			var contlistCPerror=[];
+			var contlistmonto = ['#txtMontoViviendanew'];
+			var contlisterrormonto = [];
 			var controlestelefono=['#txtTelefonoCasanew','#txtTelefonoCelularnew'];
-			var contlisterrortelefono=[]
+			var contlisterrortelefono=[];
+			
+			var controlesspiner=['#txtTiempoResidencianew'];
+			var contlisterrorspiner=[];
 			var controleslist=['#lisEstadoSolicitantenew','#lisDelMuniSolicitantenew', '#lisColoniaSolicitantenew','#lisCompaniaMovilnew', '#lisEstatusResidencianew'];
 			var controleslisterror=[];
 			var totalvalidar = 13;
@@ -1872,31 +2080,81 @@ function validacontrolespantall(pantalla, kinkheader){
 					}				
 				}
 			});
-			if(validaspiners($('#txtTiempoResidencianew')) == 1 )
-			{
-				controlvalidados += 1;
-			}else{
-				controleslisterror[controleslisterror.length] = '#txtTiempoResidencianew';
-				
-			}
 			
-			if(validamontos($('#txtMontoViviendanew')) == 1 )
-			{
-				controlvalidados += 1;
-			}else{
-				contlisterror[contlisterror.length] = '#txtMontoViviendanew';
-				
-			}
+			$.each(controlesspiner, function (ind, elem) { 
+				if(validalistas(elem) == 1 )
+				{
+					controlvalidados += 1;
+				}else{
+					if(contlisterrorspiner.length == 0)
+					{
+						contlisterrorspiner[0] = elem;
+					}else 
+					{
+						contlisterrorspiner[contlisterrorspiner.length] = elem;
+					}				
+				}
+			});
+			
+			
+			
+			$.each(contlistmonto, function (ind, elem) { 
+				if(validamontos(elem) == 1 )
+				{
+					controlvalidados += 1;
+				}else{
+					if(contlisterrormonto.length == 0)
+					{
+						contlisterrormonto[0] = elem;
+					}else 
+					{
+						contlisterrormonto[contlisterrormonto.length] = elem;
+					}				
+				}
+			});
+			
+			
 			
 			$.each(controlestelefono, function (ind, elem) { 
 				if(validatelefono(elem) == 1 )
 				{
 					controlvalidados += 1;
 				}else{
-					contlisterrortelefono[ind] = elem;
+					if(contlisterrortelefono.length == 0)
+					{
+						contlisterrortelefono[0] = elem;
+					}else 
+					{
+						contlisterrortelefono[contlisterrortelefono.length] = elem;
+					}	
+					
 					
 				}
 			});
+			
+			$.each(controlesCP, function (ind, elem) { 
+				if(validatelefono(elem) == 1 )
+				{
+					controlvalidados += 1;
+				}else{
+					
+					if(contlistCPerror.length == 0)
+					{
+						contlistCPerror[0] = elem;
+					}else 
+					{
+						contlistCPerror[contlistCPerror.length] = elem;
+					}	
+					
+					
+				}
+			});
+			
+			
+			
+			
+			
+			
 			if(controlvalidados == totalvalidar ){
 				$("#stOkTitstepDomicilio").show();
 				$("#stOkTitModDomicilio").show();
@@ -1909,7 +2167,8 @@ function validacontrolespantall(pantalla, kinkheader){
 					var demoTimeout;
 					clearTimeout(demoTimeout);
 					$(elem).trigger('startRumble');
-					$(elem).css('border', '1px solid red');
+					//$(elem).css('border', '1px solid red');
+					validariconlistas(elem);
 					demoTimeout = setTimeout(function(){$(elem).trigger('stopRumble');},1500);							
 				});
 				
@@ -1921,21 +2180,56 @@ function validacontrolespantall(pantalla, kinkheader){
 					validaricontxt(elem);
 					demoTimeout = setTimeout(function(){$(elem).trigger('stopRumble');},1500);							
 				});
+				$.each(contlisterrormonto, function (ind, elem) { 
+				
+					var demoTimeout;
+					clearTimeout(demoTimeout);
+					$(elem).trigger('startRumble');
+					validariconmonto(elem);
+					demoTimeout = setTimeout(function(){$(elem).trigger('stopRumble');},1500);							
+				});
+				
+				
 				
 				$.each(contlisterrortelefono, function (ind, elem) { 
 				
 					var demoTimeout;
 					clearTimeout(demoTimeout);
 					$(elem).trigger('startRumble');
-					$(elem).css('border', '1px solid red');
+					validaricontelefonos(elem);
+					//$(elem).css('border', '1px solid red');
 					demoTimeout = setTimeout(function(){$(elem).trigger('stopRumble');},1500);							
 				});
+				
+				$.each(contlistCPerror, function (ind, elem) { 
+				
+					var demoTimeout;
+					clearTimeout(demoTimeout);
+					$(elem).trigger('startRumble');
+					//$(elem).css('border', '1px solid red');
+					validariconCP(elem);
+					demoTimeout = setTimeout(function(){$(elem).trigger('stopRumble');},1500);							
+				});
+				
+				$.each(contlisterrorspiner, function (ind, elem) { 
+				
+					var demoTimeout;
+					clearTimeout(demoTimeout);
+					$(elem).trigger('startRumble');
+					//$(elem).css('border', '1px solid red');
+					validariconspiner(elem);
+					demoTimeout = setTimeout(function(){$(elem).trigger('stopRumble');},1500);							
+				});
+				
+				
+				
+				
 				
 				/*$("#stOkTitstepDomicilio").attr('class', 'glyphicon glyphicon-warning-sign');
 				$("#stOkTitstepDomicilio").show();*/
 				
 				if(!kinkheader){
-				e.preventDefault();
+					e.preventDefault();
 				}
 				
 				
@@ -1963,7 +2257,14 @@ function validacontrolespantall(pantalla, kinkheader){
 				{
 					controlvalidados += 1;
 				}else{
-					controleslisterror[ind] = elem;
+					if(contlisterror.length == 0)
+					{
+						contlisterror[0] = elem;
+					}else 
+					{
+						contlisterror[contlisterror.length] = elem;
+					}	
+
 					
 				}
 			});
@@ -1974,18 +2275,31 @@ function validacontrolespantall(pantalla, kinkheader){
 				{
 					controlvalidados += 1;
 				}else{
-					contlisterror[ind] = elem;
+					if(controleslisterror.length == 0)
+					{
+						controleslisterror[0] = elem;
+					}else 
+					{
+						controleslisterror[controleslisterror.length] = elem;
+					}
+
 					
 				}
 			});
+			
 			
 			$.each(controleslistspiners, function (ind, elem) { 
 				if(validalistas(elem) == 1 )
 				{
 					controlvalidados += 1;
 				}else{
-					controleslistspinerserror[ind] = elem;
-					
+					if(controleslistspinerserror.length == 0)
+					{
+						controleslistspinerserror[0] = elem;
+					}else 
+					{
+						controleslistspinerserror[controleslistspinerserror.length] = elem;
+					}				
 				}
 			});
 			
