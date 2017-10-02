@@ -7,6 +7,7 @@ $(document).ready(function(){
 		$("#Ingresar").css('border-bottom', '2px solid #cecfd3');*/
 		if($("#Usuario").val() != "" && $("#Password").val() !="" && $("#Empresa").val() !="" )
 		{
+			$('#cargando').show();
 			var Idusrlog = '', companiausrlog = '',estatusLogin = '',nombreusrlog ='',tipousuario ='';
 			$.ajax({ 			
 				type: 'POST',

@@ -1985,6 +1985,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 			if(controlvalidados == totalvalidar ){
 				$("#stOkTitstepgrales").show();
 				$("#stOkTitModgrales").show();
+				$('#rowvalida').addClass('rowiniciostepactivosuccess').removeClass('rowiniciostepactivo');
 			}else{
 				//$('#rowvalida').addClass('novalidorow').removeClass('rowiniciostepactivo');
 				//$('#anumpaso1').css('color','yellow');

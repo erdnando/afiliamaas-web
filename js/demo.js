@@ -186,10 +186,14 @@ function processCompress(input) {
 														$("#btnifeok").fadeIn();
 													}
 													document.getElementById('txtNomSolicitantenew').value=data.Nombre;
+													validaricontxt($('#txtNomSolicitantenew'));
 												   document.getElementById('txtApePaternonew').value=data.Paterno;
+												   validaricontxt($('#txtApePaternonew'));
 												   document.getElementById('txtApeMaternonew').value=data.Materno;
 												   document.getElementById('txtCalleSolicitantenew').value=data.calle;
+												   validaricontxt($('#txtCalleSolicitantenew'));
 												   document.getElementById('txtCpSolicitantenew').value=data.codigoPostal;
+												   validariconCP($('#txtCpSolicitantenew'));
 												   result_imagefin.src = result_image.src;
 													result_imagefinmod.src = result_image.src;
 												   
@@ -197,6 +201,8 @@ function processCompress(input) {
 												   $("#txtTipIdentificacionnew option[value=2565]").attr("selected","selected");
 												   $("#txtTipIdentificacionnew").prop( "disabled", true );
 												   $("#lstNacionalidadnew option[value=2519]").attr("selected","selected");
+												   
+												   validariconlistas($("#txtTipIdentificacionnew"));
 												   
 												   $.ajax({ 			
 															type: 'POST',
@@ -219,6 +225,7 @@ function processCompress(input) {
 																	   });
 																	   $("#lisEstadoSolicitantenew option:selected").removeAttr("selected");
 																		$("#lisEstadoSolicitantenew option[value="+ idest +"]").attr("selected","selected");
+																		validariconlistas($("#lisEstadoSolicitantenew"));
 																	
 																	$.ajax({ 			
 																			type: 'POST',
@@ -234,6 +241,7 @@ function processCompress(input) {
 																						
 																					   });
 																					$("#lisDelMuniSolicitantenew option[value="+ idpob +"]").attr("selected","selected");
+																					validariconlistas($("#lisDelMuniSolicitantenew"));
 																					
 																					
 																					
@@ -259,8 +267,12 @@ function processCompress(input) {
 																		
 												   
 												   $('#dateFechanacnew').val("19" + data.fechaDeNacimientoANIO +"-"+ data.fechaDeNacimientoMES +"-" + data.fechaDeNacimientoDIA);
+												   validariconfecha($('#dateFechanacnew'));
 												   document.getElementById('txtNumExteriornew').value=data.numeroExt;
+												   validaricontxt($('#txtNumExteriornew'));
+												   
 												   $('#txtRFCnew').val(CalcularRFC($('#txtNomSolicitantenew').val() + " " + $('#txtSegundonombrenew').val() ,$('#txtApePaternonew').val(),$('#txtApeMaternonew').val(),$('#dateFechanacnew').val()));
+												   validaricontxt($('#txtRFCnew'));
 												   //document.getElementById('cpresult').value=data.codigoPostal;
 												   
 												}, function (dismiss) {

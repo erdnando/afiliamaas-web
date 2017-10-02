@@ -6772,6 +6772,24 @@ button.close {
 }
 
 
+.rowiniciostepactivosuccess {
+    position: absolute;
+    content: counter(step);
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #96c03d;
+    left: 42%;
+    top: 125%;
+    z-index: 2;
+    text-align: center;
+    color: #2c3f4c;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+
 
 
 

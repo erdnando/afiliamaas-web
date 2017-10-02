@@ -48,6 +48,7 @@
 
 	<script src="js/jquery.bpopup-x.x.x.min.js"></script>
 	<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="css/jPages.css">
 		<SCRIPT src="./js/cifrarjs.js" type="text/javascript"></SCRIPT>
 	
 	
@@ -251,7 +252,9 @@
 											</label>									
 										</DIV>
 									</div>
-									<IMG src="images/ajax-loader.gif" id="cargandomdlimg">
+									<div class="cargandomdlimgdiv" id="cargandomdlimg" >
+										<IMG src="images/ajax-loader.gif" >
+									</div>
 									<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 										<DIV id="holderanver" >
 											<!--<DIV id="holder_helper">
@@ -494,7 +497,7 @@
 												<div  id="txtNomSolicitantenewdiv">
 													<label class="control-label col-md-5" for="txtNomSolicitantenew">Nombre del solicitante*:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtNomSolicitantenew" placeholder="Nombre del Solicitante" name="txtNomSolicitantenew" tabindex="1">
+														<input type="text" class="form-control" id="txtNomSolicitantenew" placeholder="Nombre del Solicitante" name="txtNomSolicitantenew" tabindex="1" maxlength="50">
 														<span id="txtNomSolicitantenewspan" ></span>
 													</div>
 												</div>
@@ -519,7 +522,7 @@
 												<div class="form-group">
 													<label class="control-label col-md-5" for="pwd">Segundo nombre:</label>
 													<div class="col-md-6"> 
-														<input type="text" class="form-control" id="txtSegundonombrenew" placeholder="Segundo nombre" name="txtSegundonombrenew" tabindex="2">
+														<input type="text" class="form-control" id="txtSegundonombrenew" placeholder="Segundo nombre" name="txtSegundonombrenew" tabindex="2" maxlength="50">
 													</div>
 												</div>
 											</div>
@@ -543,7 +546,7 @@
 												<div id="txtApePaternonewdiv" class="form-group">
 													<label class="control-label col-md-5" for="txtApePaternonew">Apellido paterno*:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtApePaternonew" placeholder="Apellido paterno" name="txtApePaternonew" tabindex="3">
+														<input type="text" class="form-control" id="txtApePaternonew" placeholder="Apellido paterno" name="txtApePaternonew" tabindex="3" maxlength="50">
 														<span id="txtApePaternonewspan" ></span>
 													</div>
 												</div>
@@ -552,7 +555,7 @@
 												<div id="txtRFCnewdiv">
 													<label class="control-label col-md-5" for="txtRFCnew">R.F.C*:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtRFCnew" placeholder="R.F.C." name="txtRFCnew" tabindex="9">
+														<input type="text" class="form-control" id="txtRFCnew" placeholder="R.F.C." name="txtRFCnew" tabindex="9" maxlength="13">
 														<span id="txtRFCnewspan" ></span>
 													</div>
 												</div>
@@ -566,7 +569,7 @@
 												<div class="form-group">
 													<label class="control-label col-md-5" for="pwd">Apellido materno:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtApeMaternonew" placeholder="Apellido materno" name="txtApeMaternonew" tabindex="4">
+														<input type="text" class="form-control" id="txtApeMaternonew" placeholder="Apellido materno" name="txtApeMaternonew" tabindex="4" maxlength="50">
 													</div>
 												</div>
 											</div>
@@ -616,7 +619,7 @@
 												<div id="txtNumIdentificanewdiv">
 													<label class="control-label col-md-5" for="txtNumIdentificanew">Número de identificación*:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtNumIdentificanew" placeholder="Número de identificación" name="txtNumIdentificanew" tabindex="6">
+														<input type="text" class="form-control" id="txtNumIdentificanew" placeholder="Número de identificación" name="txtNumIdentificanew" tabindex="6" maxlength="20">
 														<span id="txtNumIdentificanewspan" ></span>
 													</div>
 												</div>
@@ -655,7 +658,7 @@
 												<div id="txtCalleSolicitantenewdiv">
 													<label class="control-label col-md-5" for="txtCalleSolicitantenew">Calle*:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtCalleSolicitantenew" placeholder="Calle del solicitante." name="txtCalleSolicitantenew" tabindex="12">
+														<input type="text" class="form-control" id="txtCalleSolicitantenew" placeholder="Calle del solicitante." name="txtCalleSolicitantenew" tabindex="12" maxlength="50">
 														<span id="txtCalleSolicitantenewspan" ></span>
 													</div>
 												</div>
@@ -676,7 +679,7 @@
 												<div id="txtNumExteriornewdiv">
 													<label class="control-label col-md-5" for="txtNumExteriornew">No. Exterior*:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtNumExteriornew" placeholder="No. Exterior." name="txtNumExteriornew" tabindex="13">
+														<input type="text" class="form-control" id="txtNumExteriornew" placeholder="No. Exterior." name="txtNumExteriornew" tabindex="13" maxlength="50">
 														<span id="txtNumExteriornewspan" ></span>
 													</div>
 												</div>
@@ -698,7 +701,7 @@
 												<div id="txtNumInteriornewdiv">
 													<label class="control-label col-md-5" for="txtNumInteriornew">No. Interior:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtNumInteriornew" placeholder="No. Interior." name="txtNumInteriornew" tabindex="14">
+														<input type="text" class="form-control" id="txtNumInteriornew" placeholder="No. Interior." name="txtNumInteriornew" tabindex="14" maxlength="50">
 														<span id="txtNumInteriornewspan" ></span>
 													</div>
 												</div>
@@ -707,7 +710,7 @@
 												<div id="txtMontoViviendanewdiv">
 													<label class="control-label col-md-5" for="txtMontoViviendanew">Monto de vivienda*:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtMontoViviendanew"  name="txtMontoViviendanew"  data-thousands="," data-decimal="." data-prefix="$ " value="$ 0.00" tabindex="20"/>
+														<input type="text" class="form-control" id="txtMontoViviendanew"  name="txtMontoViviendanew"  data-thousands="," data-decimal="." data-prefix="$ " value="$ 0.00" tabindex="20" maxlength="12"/>
 														<script type="text/javascript">$("#txtMontoViviendanew").maskMoney();</script>
 														<span id="txtMontoViviendanewspan" ></span>
 													</div>
@@ -721,7 +724,7 @@
 												<div id="txtCpSolicitantenewdiv">
 													<label class="control-label col-md-5" for="txtCpSolicitantenew">CP*:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtCpSolicitantenew" placeholder="Código postal." name="txtCpSolicitantenew" tabindex="15">
+														<input type="text" class="form-control" id="txtCpSolicitantenew" placeholder="Código postal." name="txtCpSolicitantenew" tabindex="15" maxlength="5">
 														<span id="txtCpSolicitantenewspan" ></span>
 													</div>
 												</div>
@@ -730,7 +733,7 @@
 												<div id="txtCorreonewdiv">
 													<label class="control-label col-md-5" for="txtCorreonew">Correo eléctronico*:</label>
 													<div class="col-md-6">          
-														<input type="email" class="form-control" id="txtCorreonew" placeholder="correo@dominio.com" name="txtCorreonew" tabindex="21">
+														<input type="email" class="form-control" id="txtCorreonew" placeholder="correo@dominio.com" name="txtCorreonew" tabindex="21" maxlength="50">
 														<span id="txtCorreonewspan" ></span>
 													</div>
 												</div>
@@ -792,7 +795,7 @@
 												<div id="lisColoniaSolicitantenewdiv">
 													<label class="control-label col-md-5" for="lisColoniaSolicitantenew">Colonia*:</label>
 													<div class="col-md-6">          
-														<select class="form-control" name="lisColoniaSolicitantenew" id="lisColoniaSolicitantenew" tabindex="18">
+														<select class="form-control" name="lisColoniaSolicitantenew" id="lisColoniaSolicitantenew" tabindex="18" maxlength="50">
 															<option value="0">Seleccióne...</option>
 														  
 														</select>
@@ -828,7 +831,7 @@
 												<div id="txtNombreEmpresanewdiv">
 													<label class="control-label col-md-5" for="txtNombreEmpresanew">Nombre de empresa*:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtNombreEmpresanew" placeholder="Nombre de empresa." name="txtNombreEmpresanew" tabindex="25">
+														<input type="text" class="form-control" id="txtNombreEmpresanew" placeholder="Nombre de empresa." name="txtNombreEmpresanew" tabindex="25" maxlength="50">
 														<span id="txtNombreEmpresanewspan" ></span>
 													</div>
 												</div>
@@ -837,7 +840,7 @@
 												<div id="txtCalleEmpresanewdiv">
 													<label class="control-label col-md-5" for="txtCalleEmpresanew">Calle*:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtCalleEmpresanew" placeholder="Calle." name="txtCalleEmpresanew" tabindex="32">
+														<input type="text" class="form-control" id="txtCalleEmpresanew" placeholder="Calle." name="txtCalleEmpresanew" tabindex="32" maxlength="50">
 														<span id="txtCalleEmpresanewspan" ></span>
 													</div>
 												</div>
@@ -859,13 +862,13 @@
 													<div id="txtNumeroExteriorEmpresadiv">
 														<label class="control-label col-md-5" for="txtNumeroExteriorEmpresa">No. Ext.*:</label>
 														<div class="col-md-3">          
-															<input type="text" class="form-control" id="txtNumeroExteriorEmpresa" placeholder="Exterior." name="txtNumeroExteriorEmpresa" tabindex="33">
+															<input type="text" class="form-control" id="txtNumeroExteriorEmpresa" placeholder="Exterior." name="txtNumeroExteriorEmpresa" tabindex="33" maxlength="50">
 															<span id="txtNumeroExteriorEmpresaspan" ></span>
 														</div>
 													</div>
 													<label class="control-label col-md-2" for="pwd" style="width: 64px;">No. Int.:</label>
 													<div class="col-md-3">          
-														<input type="text" class="form-control" id="txtNumeroInteriorempnew" placeholder="Interior." name="txtNumeroExteriorEmpresa" tabindex="34" style="width: 85px;">
+														<input type="text" class="form-control" id="txtNumeroInteriorempnew" placeholder="Interior." name="txtNumeroExteriorEmpresa" tabindex="34" style="width: 85px;" maxlength="50">
 													</div>
 													
 													
@@ -877,7 +880,7 @@
 												<div id="txtGironewdiv">
 													<label class="control-label col-md-5" for="txtGironew">Giro*:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtGironew" placeholder="Giro." name="txtGironew" tabindex="26">
+														<input type="text" class="form-control" id="txtGironew" placeholder="Giro." name="txtGironew" tabindex="26" maxlength="50">
 														<span id="txtGironewspan" ></span>
 													</div>
 												</div>
@@ -894,7 +897,7 @@
 												<div id="txtCpEmpresanewdiv">
 													<label class="control-label col-md-5" for="txtCpEmpresanew">CP*:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtCpEmpresanew" placeholder="C.P." name="txtCpEmpresanew" tabindex="35">
+														<input type="text" class="form-control" id="txtCpEmpresanew" placeholder="C.P." name="txtCpEmpresanew" tabindex="35" maxlength="5">
 														<span id="txtCpEmpresanewspan" ></span>
 													</div>
 												</div>
@@ -939,7 +942,7 @@
 												<div id="txtPuestonewdiv">
 													<label class="control-label col-md-5" for="txtPuestonew">Puesto*:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtPuestonew" placeholder="Puesto." name="txtPuestonew" tabindex="28">
+														<input type="text" class="form-control" id="txtPuestonew" placeholder="Puesto." name="txtPuestonew" tabindex="28" maxlength="50">
 														<span id="txtPuestonewspan" ></span>
 													</div>
 												</div>
@@ -974,7 +977,7 @@
 												<div id="txtIngresonewdiv">
 													<label class="control-label col-md-5" for="txtIngresonew">Ingreso*:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtIngresonew" name="txtIngresonew" data-thousands="," data-decimal="." data-prefix="$ " value="$ 0.00" tabindex="29"/>
+														<input type="text" class="form-control" id="txtIngresonew" name="txtIngresonew" data-thousands="," data-decimal="." data-prefix="$ " value="$ 0.00" tabindex="29" maxlength="12"/>
 														<script type="text/javascript">$("#txtIngresonew").maskMoney();</script>
 														<span id="txtIngresonewspan" ></span>
 													</div>
@@ -1040,7 +1043,7 @@
 												<div class="form-group">
 													<label class="control-label col-md-5" for="pwd">Fuente otros ingresos:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtFuenteOtrosIngrenew" placeholder="Fuente otros ingresos." name="txtFuenteOtrosIngrenew" tabindex="30">
+														<input type="text" class="form-control" id="txtFuenteOtrosIngrenew" placeholder="Fuente otros ingresos." name="txtFuenteOtrosIngrenew" tabindex="30" maxlength="50">
 													</div>
 												</div>
 											</div>
@@ -1056,7 +1059,7 @@
 												<div class="form-group">
 													<label class="control-label col-md-5" for="pwd">Otros ingresos:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtOtrosIngresosnew" name="txtOtrosIngresosnew" data-thousands="," data-decimal="." data-prefix="$ " value="$ 0.00" tabindex="31"/>
+														<input type="text" class="form-control" id="txtOtrosIngresosnew" name="txtOtrosIngresosnew" data-thousands="," data-decimal="." data-prefix="$ " value="$ 0.00" tabindex="31" maxlength="12"/>
 														<script type="text/javascript">$("#txtOtrosIngresosnew").maskMoney();</script>
 														
 													</div>
@@ -1110,7 +1113,7 @@
 													<label class="control-label" for="txfuncionpoliticoSolicitantenew">¿Que función desempeña o ha desempeñado?*</label>
 												</div>
 												<div class="col-md-3">          
-													<input type="text" class="form-control" id="txfuncionpoliticoSolicitantenew" placeholder="Función." name="txfuncionpoliticoSolicitantenew">
+													<input type="text" class="form-control" id="txfuncionpoliticoSolicitantenew" placeholder="Función." name="txfuncionpoliticoSolicitantenew" maxlength="50">
 													<span id="txfuncionpoliticoSolicitantenewspan" ></span>
 												</div>
 											</div>
@@ -1137,7 +1140,7 @@
 														<label class="control-label" for="txparentescofuncionpoliticoSolicitantenew">¿Que función desempeña o ha desempeñado?</label>
 												</div>
 												<div class="col-md-3">          
-													<input type="text" class="form-control" id="txparentescofuncionpoliticoSolicitantenew" placeholder="Función." name="txparentescofuncionpoliticoSolicitantenew">
+													<input type="text" class="form-control" id="txparentescofuncionpoliticoSolicitantenew" placeholder="Función." name="txparentescofuncionpoliticoSolicitantenew" maxlength="50">
 													<span id="txparentescofuncionpoliticoSolicitantenewspan" ></span>
 												</div>
 											</div>
@@ -1148,7 +1151,7 @@
 													<label class="control-label" for="txqueparenfuncionpoliticoSolicitantenew">¿Que parentesco?</label>
 												</div>
 												<div class="col-md-3">          
-													<input type="text" class="form-control" id="txqueparenfuncionpoliticoSolicitantenew" placeholder="Parentesco." name="txqueparenfuncionpoliticoSolicitantenew">
+													<input type="text" class="form-control" id="txqueparenfuncionpoliticoSolicitantenew" placeholder="Parentesco." name="txqueparenfuncionpoliticoSolicitantenew" maxlength="50">
 													<span id="txqueparenfuncionpoliticoSolicitantenewspan" ></span>
 												</div>
 											</div>
@@ -1186,7 +1189,7 @@
 											<div class="col-md-3">
 												<div id="txtNombreRef1newdiv">
 													<div>
-														<input type="text" class="form-control" id="txtNombreRef1new" placeholder="Nombre." name="txtNombreRef1new" tabindex="42">
+														<input type="text" class="form-control" id="txtNombreRef1new" placeholder="Nombre." name="txtNombreRef1new" tabindex="42" maxlength="50">
 														<span id="txtNombreRef1newspan" ></span>
 													</div>
 												</div>
@@ -1195,13 +1198,13 @@
 											<div class="col-md-3">
 												<div  id="txtNombreRef2newdiv">
 													<div>
-														<input type="text" class="form-control" id="txtNombreRef2new" placeholder="Nombre." name="txtNombreRef2new" tabindex="47">
+														<input type="text" class="form-control" id="txtNombreRef2new" placeholder="Nombre." name="txtNombreRef2new" tabindex="47" maxlength="50">
 														<span id="txtNombreRef2newspan" ></span>
 													</div>
 												</div>
 											</div>
 											<div class="col-md-3">
-												<div><input type="text" class="form-control" id="txtNombreRef3new" placeholder="Nombre." name="txtNombreRef3new" tabindex="52"></div>
+												<div><input type="text" class="form-control" id="txtNombreRef3new" placeholder="Nombre." name="txtNombreRef3new" tabindex="52" maxlength="50"></div>
 											</div>
 
 										</div>													
@@ -1212,7 +1215,7 @@
 											<div class="col-md-3">
 												<div  id="txtApellidoPaternoRef1newdiv" >
 													<div>
-														<input type="text" class="form-control" id="txtApellidoPaternoRef1new" placeholder="Apellido paterno." name="txtApellidoPaternoRef1new" tabindex="43">
+														<input type="text" class="form-control" id="txtApellidoPaternoRef1new" placeholder="Apellido paterno." name="txtApellidoPaternoRef1new" tabindex="43" maxlength="50">
 														<span id="txtApellidoPaternoRef1newspan" ></span>
 													</div>
 												</div>
@@ -1220,13 +1223,13 @@
 											<div class="col-md-3">
 												<div id="txtApellidoPaternoRef2newdiv">
 													<div>
-														<input type="text" class="form-control" id="txtApellidoPaternoRef2new" placeholder="Apellido paterno." name="txtApellidoPaternoRef2new" tabindex="48">
+														<input type="text" class="form-control" id="txtApellidoPaternoRef2new" placeholder="Apellido paterno." name="txtApellidoPaternoRef2new" tabindex="48" maxlength="50">
 														<span id="txtApellidoPaternoRef2newspan" ></span>
 													</div>
 												</div>
 											</div>
 											<div class="col-md-3">
-												<div><input type="text" class="form-control" id="txtApellidoPaternoRef3new" placeholder="Apellido paterno." name="txtApellidoPaternoRef3new" tabindex="53"></div>
+												<div><input type="text" class="form-control" id="txtApellidoPaternoRef3new" placeholder="Apellido paterno." name="txtApellidoPaternoRef3new" tabindex="53" maxlength="50"></div>
 											</div>
 										</div>													
 										<div class="row">
@@ -1236,7 +1239,7 @@
 											<div class="col-md-3">
 												<div id="txtApellidoMaternoRef1newdiv">
 													<div>
-														<input type="text" class="form-control" id="txtApellidoMaternoRef1new" placeholder="Apellido materno." name="txtApellidoMaternoRef1new" tabindex="44">
+														<input type="text" class="form-control" id="txtApellidoMaternoRef1new" placeholder="Apellido materno." name="txtApellidoMaternoRef1new" tabindex="44" maxlength="50">
 														<span id="txtApellidoMaternoRef1newspan" ></span>
 													</div>
 												</div>
@@ -1244,13 +1247,13 @@
 											<div class="col-md-3">
 												<div id="txtApellidoMaternoRef2newdiv">
 													<div>
-														<input type="text" class="form-control" id="txtApellidoMaternoRef2new" placeholder="Apellido materno." name="txtApellidoMaternoRef2new" tabindex="49">
+														<input type="text" class="form-control" id="txtApellidoMaternoRef2new" placeholder="Apellido materno." name="txtApellidoMaternoRef2new" tabindex="49" maxlength="50">
 														<span id="txtApellidoMaternoRef2newspan" ></span>
 													</div>
 												</div>
 											</div>
 											<div class="col-md-3">
-												<div><input type="text" class="form-control" id="txtApellidoMaternoRef3new" placeholder="Apellido materno." name="txtApellidoMaternoRef3new" tabindex="54"></div>
+												<div><input type="text" class="form-control" id="txtApellidoMaternoRef3new" placeholder="Apellido materno." name="txtApellidoMaternoRef3new" tabindex="54" maxlength="50"></div>
 											</div>
 										</div>	
 										<div class="row">
@@ -1297,7 +1300,7 @@
 											<div class="col-md-3">
 												<div id="txtTelCasaRef1newdiv">
 													<div>
-														<input type="text" class="form-control" id="txtTelCasaRef1new" placeholder="Teléfono de casa." name="txtTelCasaRef1new" maxlength="10" tabindex="46">
+														<input type="text" class="form-control" id="txtTelCasaRef1new" placeholder="Teléfono de casa." name="txtTelCasaRef1new" maxlength="10" tabindex="46" maxlength="50">
 														<span id="txtTelCasaRef1newspan" ></span>	
 													</div>
 												</div>
@@ -1305,13 +1308,13 @@
 											<div class="col-md-3">
 												<div id="txtTelCasaRef2newdiv">
 													<div>
-														<input type="text" class="form-control" id="txtTelCasaRef2new" placeholder="Teléfono de casa." name="txtTelCasaRef2new" maxlength="10" tabindex="51">
+														<input type="text" class="form-control" id="txtTelCasaRef2new" placeholder="Teléfono de casa." name="txtTelCasaRef2new" maxlength="10" tabindex="51" maxlength="50">
 														<span id="txtTelCasaRef2newspan" ></span>
 													</div>
 												</div>
 											</div>
 											<div class="col-md-3">
-												<div><input type="text" class="form-control" id="txtTelCasaRef3new" placeholder="Teléfono de casa." name="txtTelCasaRef3new" maxlength="10" tabindex="56"></div>
+												<div><input type="text" class="form-control" id="txtTelCasaRef3new" placeholder="Teléfono de casa." name="txtTelCasaRef3new" maxlength="10" tabindex="56" maxlength="50"></div>
 											</div>
 										</div>	
 									</div>
@@ -1915,15 +1918,22 @@
 								<!-- portfolio items start -->
 
 								<br>
-
-								<div style="position: relative; height: 552px;" id="contenidogral" name="contenidogral">
 								
-									<!--<div class="contenido">
+								<div class="holder"></div>
+			
+			
+				
+			
+								<ul id="itemContainer">
+									<div style="position: relative; height: 552px;" id="contenidogral" name="contenidogral">
 									
-									</div>-->
-								
+										<!--<div class="contenido">
+										
+										</div>-->
 									
-								</div>
+										
+									</div>
+								</ul>
 								<!-- portfolio items end -->
 
 							</div>
@@ -1932,6 +1942,7 @@
 				</div>
 
 			</div>
+			
 			<div class="col-sm-6 col-md-3 isotope-item web-design">
 				<!-- Modal -->
 				
@@ -1986,6 +1997,7 @@
 	<script type="text/javascript" src="./js/tsf-wizard.bundle.min.js"></script>
 	<script src="signature-pad/jquery.signaturepad.js" type="text/javascript"></script>
 	<script src="signature-pad/assets/json2.min.js" type="text/javascript"></script>
+	<script src="js/jPages.js"></script>
 	
 	<script src="js/jquery.jrumble.1.3.js"></script>
 	<script src="js/jquery.maskedinput.min.js" type="text/javascript"></script>

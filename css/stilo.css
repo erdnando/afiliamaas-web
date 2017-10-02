@@ -1668,17 +1668,25 @@ html .ui-field-contain>label+.ui-flipswitch, html .ui-popup .ui-field-contain>la
 } */
 
 #cargando {
-    position:absolute;
-    width:100%;
-    height:100%;
-    background:#fff url(../images/ajax-loader.gif) no-repeat center;
-}
-#cargandomdlimg {
     position: absolute;
-	left: 253px;
-	top: 173px;
-	height: 88px;
+    width: 32%;
+    height: 49%;
+    text-align: -webkit-center;
+    bottom: 172px;
+}
+.imgloadingindex {
+    position: absolute;
+    top: 54px;
+    left: 77px;
+}
+.cargandomdlimgdiv {
 	display:none;
+    width: 461px;
+    position: absolute;
+    left: 66px;
+    top: 175px;
+    height: 88px;
+    text-align: -webkit-center;
     /*background:#fff url(../images/ajax-loader.gif) no-repeat center;*/
 }
 
