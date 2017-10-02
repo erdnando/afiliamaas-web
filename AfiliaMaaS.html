@@ -834,7 +834,7 @@
 												</div>
 											</div>
 											<div class="col-md-6">
-												<div id="ttxtCalleEmpresanewdiv">
+												<div id="txtCalleEmpresanewdiv">
 													<label class="control-label col-md-5" for="txtCalleEmpresanew">Calle*:</label>
 													<div class="col-md-6">          
 														<input type="text" class="form-control" id="txtCalleEmpresanew" placeholder="Calle." name="txtCalleEmpresanew" tabindex="32">
@@ -845,20 +845,23 @@
 										</div>
 										<div class="row">
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">Antiguedad de empleo (años)*:</label>
+												<div id="txtantiguedadnewdiv">
+													<label class="control-label col-md-5" for="txtantiguedadnew">Antiguedad de empleo (años)*:</label>
 													<div class="col-md-6">          
 														<!--<input type="text" class="form-control" id="txtantiguedadnew" placeholder="Antiguedad de empleo." name="txtGironew">-->
 														<input type="text" id="txtantiguedadnew" disabled="disabled" />
-														
+														<span id="txtantiguedadnewspan" ></span>
 													</div>
 												</div>
 											</div>
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">No. Ext.*:</label>
-													<div class="col-md-3">          
-														<input type="text" class="form-control" id="txtNumeroExteriorEmpresa" placeholder="Exterior." name="txtNumeroExteriorEmpresa" tabindex="33">
+												<div >
+													<div id="txtNumeroExteriorEmpresadiv">
+														<label class="control-label col-md-5" for="txtNumeroExteriorEmpresa">No. Ext.*:</label>
+														<div class="col-md-3">          
+															<input type="text" class="form-control" id="txtNumeroExteriorEmpresa" placeholder="Exterior." name="txtNumeroExteriorEmpresa" tabindex="33">
+															<span id="txtNumeroExteriorEmpresaspan" ></span>
+														</div>
 													</div>
 													<label class="control-label col-md-2" for="pwd" style="width: 64px;">No. Int.:</label>
 													<div class="col-md-3">          
@@ -871,10 +874,11 @@
 										</div>
 										<div class="row">
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">Giro*:</label>
+												<div id="txtGironewdiv">
+													<label class="control-label col-md-5" for="txtGironew">Giro*:</label>
 													<div class="col-md-6">          
 														<input type="text" class="form-control" id="txtGironew" placeholder="Giro." name="txtGironew" tabindex="26">
+														<span id="txtGironewspan" ></span>
 													</div>
 												</div>
 											</div>
@@ -887,23 +891,25 @@
 												</div>
 											</div>-->
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">CP*:</label>
+												<div id="txtCpEmpresanewdiv">
+													<label class="control-label col-md-5" for="txtCpEmpresanew">CP*:</label>
 													<div class="col-md-6">          
 														<input type="text" class="form-control" id="txtCpEmpresanew" placeholder="C.P." name="txtCpEmpresanew" tabindex="35">
+														<span id="txtCpEmpresanewspan" ></span>
 													</div>
 												</div>
 											</div>
 										</div>
 										<div class="row">
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">Tipo de contrato*:</label>
+												<div id="lisTipoContratonewdiv">
+													<label class="control-label col-md-5" for="lisTipoContratonew">Tipo de contrato*:</label>
 													<div class="col-md-6">          
 														<select class="form-control" name="lisTipoContratonew" id="lisTipoContratonew" tabindex="27">
 														  <option value="0">Seleccióne...</option>
 														  
 														</select>
+														<span id="lisTipoContratonewspan" ></span>
 													</div>
 												</div>
 											</div>
@@ -916,23 +922,25 @@
 												</div>
 											</div>-->
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">Estado*:</label>
+												<div id="lisEstadoEmpresanewdiv">
+													<label class="control-label col-md-5" for="lisEstadoEmpresanew">Estado*:</label>
 													<div class="col-md-6">          
 														<select class="form-control" name="lisEstadoEmpresanew" id="lisEstadoEmpresanew" tabindex="36">
 														  <option value="0">Seleccióne..</option>
 														  
 														</select>
+														<span id="lisEstadoEmpresanewspan" ></span>
 													</div>
 												</div>
 											</div>
 										</div>
 										<div class="row">
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">Puesto*:</label>
+												<div id="txtPuestonewdiv">
+													<label class="control-label col-md-5" for="txtPuestonew">Puesto*:</label>
 													<div class="col-md-6">          
 														<input type="text" class="form-control" id="txtPuestonew" placeholder="Puesto." name="txtPuestonew" tabindex="28">
+														<span id="txtPuestonewspan" ></span>
 													</div>
 												</div>
 											</div>
@@ -949,25 +957,26 @@
 											</div>-->
 											
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">Delegación / Municipio*:</label>
+												<div id="lisDelMuniEmpresanewdiv">
+													<label class="control-label col-md-5" for="lisDelMuniEmpresanew">Delegación / Municipio*:</label>
 													<div class="col-md-6">          
 														<select class="form-control" name="lisDelMuniEmpresanew" id="lisDelMuniEmpresanew" tabindex="37">
 														  <option value="0">Seleccióne...</option>
 														  
 														</select>
+														<span id="lisDelMuniEmpresanewspan" ></span>
 													</div>
 												</div>
 											</div>
 										</div>
 										<div class="row">
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">Ingreso*:</label>
+												<div id="txtIngresonewdiv">
+													<label class="control-label col-md-5" for="txtIngresonew">Ingreso*:</label>
 													<div class="col-md-6">          
 														<input type="text" class="form-control" id="txtIngresonew" name="txtIngresonew" data-thousands="," data-decimal="." data-prefix="$ " value="$ 0.00" tabindex="29"/>
 														<script type="text/javascript">$("#txtIngresonew").maskMoney();</script>
-														
+														<span id="txtIngresonewspan" ></span>
 													</div>
 												</div>
 											</div>
@@ -983,13 +992,14 @@
 												</div>
 											</div>-->
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">Colonia*:</label>
+												<div id="lisColoniaEmpresanewdiv">
+													<label class="control-label col-md-5" for="lisColoniaEmpresanew">Colonia*:</label>
 													<div class="col-md-6">          
 														<select class="form-control" name="lisColoniaEmpresanew" id="lisColoniaEmpresanew"tabindex="38">
 															<option value="0">Seleccióne...</option>
 														  
 														</select>
+														<span id="lisColoniaEmpresanewspan" ></span>
 													</div>
 												</div>
 											</div>
@@ -1016,10 +1026,11 @@
 												</div>
 											</div>-->
 											<div class="col-md-6">
-												<div class="form-group">
-													<label class="control-label col-md-5" for="pwd">Teléfono de oficina*:</label>
+												<div id="txtTelOficinanewdiv">
+													<label class="control-label col-md-5" for="txtTelOficinanew">Teléfono de oficina*:</label>
 													<div class="col-md-6">          
 														<input type="text" class="form-control" id="txtTelOficinanew" placeholder="Teléfono de oficina." name="txtTelOficinanew" maxlength="10" tabindex="39">
+														<span id="txtTelOficinanewspan" ></span>
 													</div>
 												</div>
 											</div>
@@ -1093,12 +1104,15 @@
 												</div>
 											</div>
 										</div>
-										<div class="row" style="margin-right: -15px;margin-left: 54px; display:none;" id="rowfunciondesempeñasolnew">
-											<div class="col-md-7" style="text-align: -webkit-left;">
-												<label class="control-label" for="pwd">¿Que función desempeña o ha desempeñado?</label>
-											</div>
-											<div class="col-md-3">          
-												<input type="text" class="form-control" id="txfuncionpoliticoSolicitantenew" placeholder="Función." name="txfuncionpoliticoSolicitantenew">
+										<div class="row" style="margin-right: -15px;margin-left: 54px; display:none;" id="rowfunciondesempeñasolnew">											
+											<div id="txfuncionpoliticoSolicitantenewdiv">
+												<div class="col-md-7" style="text-align: -webkit-left;">
+													<label class="control-label" for="txfuncionpoliticoSolicitantenew">¿Que función desempeña o ha desempeñado?*</label>
+												</div>
+												<div class="col-md-3">          
+													<input type="text" class="form-control" id="txfuncionpoliticoSolicitantenew" placeholder="Función." name="txfuncionpoliticoSolicitantenew">
+													<span id="txfuncionpoliticoSolicitantenewspan" ></span>
+												</div>
 											</div>
 										</div>
 										<div class="row" style="margin-right: -15px;margin-left: 54px;">
@@ -1118,19 +1132,25 @@
 												
 										</div>
 										<div class="row" style="margin-right: -15px;margin-left: 54px; display:none;" id="rowfunciondesempeñaparentescosolnew">
-											<div class="col-md-7" style="text-align: -webkit-left;">
-													<label class="control-label" for="pwd">¿Que función desempeña o ha desempeñado?</label>
-											</div>
-											<div class="col-md-3">          
-												<input type="text" class="form-control" id="txparentescofuncionpoliticoSolicitantenew" placeholder="Función." name="txparentescofuncionpoliticoSolicitantenew">
+											<div id="txparentescofuncionpoliticoSolicitantenewdiv">
+												<div class="col-md-7" style="text-align: -webkit-left;">
+														<label class="control-label" for="txparentescofuncionpoliticoSolicitantenew">¿Que función desempeña o ha desempeñado?</label>
+												</div>
+												<div class="col-md-3">          
+													<input type="text" class="form-control" id="txparentescofuncionpoliticoSolicitantenew" placeholder="Función." name="txparentescofuncionpoliticoSolicitantenew">
+													<span id="txparentescofuncionpoliticoSolicitantenewspan" ></span>
+												</div>
 											</div>
 										</div>
 										<div class="row" style="margin-right: -15px;margin-left: 54px; display:none;" id="rowqueparentescosolnew">
-											<div class="col-md-7" style="text-align: -webkit-left;">
-												<label class="control-label" for="pwd">¿Que parentesco?</label>
-											</div>
-											<div class="col-md-3">          
-												<input type="text" class="form-control" id="txqueparenfuncionpoliticoSolicitantenew" placeholder="Parentesco." name="txqueparenfuncionpoliticoSolicitantenew">
+											<div id="txqueparenfuncionpoliticoSolicitantenewdiv">
+												<div class="col-md-7" style="text-align: -webkit-left;">
+													<label class="control-label" for="txqueparenfuncionpoliticoSolicitantenew">¿Que parentesco?</label>
+												</div>
+												<div class="col-md-3">          
+													<input type="text" class="form-control" id="txqueparenfuncionpoliticoSolicitantenew" placeholder="Parentesco." name="txqueparenfuncionpoliticoSolicitantenew">
+													<span id="txqueparenfuncionpoliticoSolicitantenewspan" ></span>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -1159,14 +1179,26 @@
 											</div>
 										</div>													
 										<div class="row">
+
 											<div class="col-md-3">
 												<label class="control-label col-md-12" for="pwd">Nombre*:</label>
 											</div>
 											<div class="col-md-3">
-												<div><input type="text" class="form-control" id="txtNombreRef1new" placeholder="Nombre." name="txtNombreRef1new" tabindex="42"></div>
+												<div id="txtNombreRef1newdiv">
+													<div>
+														<input type="text" class="form-control" id="txtNombreRef1new" placeholder="Nombre." name="txtNombreRef1new" tabindex="42">
+														<span id="txtNombreRef1newspan" ></span>
+													</div>
+												</div>
 											</div>
+											
 											<div class="col-md-3">
-												<div><input type="text" class="form-control" id="txtNombreRef2new" placeholder="Nombre." name="txtNombreRef2new" tabindex="47"></div>
+												<div  id="txtNombreRef2newdiv">
+													<div>
+														<input type="text" class="form-control" id="txtNombreRef2new" placeholder="Nombre." name="txtNombreRef2new" tabindex="47">
+														<span id="txtNombreRef2newspan" ></span>
+													</div>
+												</div>
 											</div>
 											<div class="col-md-3">
 												<div><input type="text" class="form-control" id="txtNombreRef3new" placeholder="Nombre." name="txtNombreRef3new" tabindex="52"></div>
@@ -1178,10 +1210,20 @@
 												<label class="control-label  col-md-12" for="pwd">Apellido paterno*:</label>
 											</div>
 											<div class="col-md-3">
-												<div><input type="text" class="form-control" id="txtApellidoPaternoRef1new" placeholder="Apellido paterno." name="txtApellidoPaternoRef1new" tabindex="43"></div>
+												<div  id="txtApellidoPaternoRef1newdiv" >
+													<div>
+														<input type="text" class="form-control" id="txtApellidoPaternoRef1new" placeholder="Apellido paterno." name="txtApellidoPaternoRef1new" tabindex="43">
+														<span id="txtApellidoPaternoRef1newspan" ></span>
+													</div>
+												</div>
 											</div>
 											<div class="col-md-3">
-												<div><input type="text" class="form-control" id="txtApellidoPaternoRef2new" placeholder="Apellido paterno." name="txtApellidoPaternoRef2new" tabindex="48"></div>
+												<div id="txtApellidoPaternoRef2newdiv">
+													<div>
+														<input type="text" class="form-control" id="txtApellidoPaternoRef2new" placeholder="Apellido paterno." name="txtApellidoPaternoRef2new" tabindex="48">
+														<span id="txtApellidoPaternoRef2newspan" ></span>
+													</div>
+												</div>
 											</div>
 											<div class="col-md-3">
 												<div><input type="text" class="form-control" id="txtApellidoPaternoRef3new" placeholder="Apellido paterno." name="txtApellidoPaternoRef3new" tabindex="53"></div>
@@ -1192,10 +1234,20 @@
 												<label class="control-label  col-md-12" for="pwd">Apellido materno*:</label>
 											</div>
 											<div class="col-md-3">
-												<div><input type="text" class="form-control" id="txtApellidoMaternoRef1new" placeholder="Apellido materno." name="txtApellidoMaternoRef1new" tabindex="44"></div>
+												<div id="txtApellidoMaternoRef1newdiv">
+													<div>
+														<input type="text" class="form-control" id="txtApellidoMaternoRef1new" placeholder="Apellido materno." name="txtApellidoMaternoRef1new" tabindex="44">
+														<span id="txtApellidoMaternoRef1newspan" ></span>
+													</div>
+												</div>
 											</div>
 											<div class="col-md-3">
-												<div><input type="text" class="form-control" id="txtApellidoMaternoRef2new" placeholder="Apellido materno." name="txtApellidoMaternoRef2new" tabindex="49"></div>
+												<div id="txtApellidoMaternoRef2newdiv">
+													<div>
+														<input type="text" class="form-control" id="txtApellidoMaternoRef2new" placeholder="Apellido materno." name="txtApellidoMaternoRef2new" tabindex="49">
+														<span id="txtApellidoMaternoRef2newspan" ></span>
+													</div>
+												</div>
 											</div>
 											<div class="col-md-3">
 												<div><input type="text" class="form-control" id="txtApellidoMaternoRef3new" placeholder="Apellido materno." name="txtApellidoMaternoRef3new" tabindex="54"></div>
@@ -1205,21 +1257,27 @@
 											<div class="col-md-3">
 												<label class="control-label  col-md-12" for="pwd">Nacionalidad*:</label>
 											</div>
-											<div class="col-md-3">
-												<div>
-														<select class="form-control" name="lisNacionalidadRef1new" id="lisNacionalidadRef1new" tabindex="45">
-														  <option value="0">Seleccióne...</option>
-														  
-														</select>
+											<div  class="col-md-3">
+												<div id="lisNacionalidadRef1newdiv">
+													<div>
+															<select class="form-control" name="lisNacionalidadRef1new" id="lisNacionalidadRef1new" tabindex="45">
+															  <option value="0">Seleccióne...</option>
+															  
+															</select>
+															<span id="lisNacionalidadRef1newspan" ></span>
+													</div>
 												</div>
 											</div>
 											<div class="col-md-3">
-												<div>
-														<select class="form-control" name="lisNacionalidadRef2new" id="lisNacionalidadRef2new" tabindex="50">
-														  <option value="0">Seleccióne...</option>
-														  
-														</select>
+												<div id="lisNacionalidadRef2newdiv" >
+													<div>
+															<select class="form-control" name="lisNacionalidadRef2new" id="lisNacionalidadRef2new" tabindex="50">
+															  <option value="0">Seleccióne...</option>
+															  
+															</select>
+															<span id="lisNacionalidadRef2newspan" ></span>														
 
+													</div>
 												</div>
 											</div>
 											<div class="col-md-3">
@@ -1237,10 +1295,20 @@
 												<label class="control-label  col-md-12" for="pwd">Teléfono de casa*:</label>
 											</div>
 											<div class="col-md-3">
-												<div><input type="text" class="form-control" id="txtTelCasaRef1new" placeholder="Teléfono de casa." name="txtTelCasaRef1new" maxlength="10" tabindex="46"></div>
+												<div id="txtTelCasaRef1newdiv">
+													<div>
+														<input type="text" class="form-control" id="txtTelCasaRef1new" placeholder="Teléfono de casa." name="txtTelCasaRef1new" maxlength="10" tabindex="46">
+														<span id="txtTelCasaRef1newspan" ></span>	
+													</div>
+												</div>
 											</div>
 											<div class="col-md-3">
-												<div><input type="text" class="form-control" id="txtTelCasaRef2new" placeholder="Teléfono de casa." name="txtTelCasaRef2new" maxlength="10" tabindex="51"></div>
+												<div id="txtTelCasaRef2newdiv">
+													<div>
+														<input type="text" class="form-control" id="txtTelCasaRef2new" placeholder="Teléfono de casa." name="txtTelCasaRef2new" maxlength="10" tabindex="51">
+														<span id="txtTelCasaRef2newspan" ></span>
+													</div>
+												</div>
 											</div>
 											<div class="col-md-3">
 												<div><input type="text" class="form-control" id="txtTelCasaRef3new" placeholder="Teléfono de casa." name="txtTelCasaRef3new" maxlength="10" tabindex="56"></div>

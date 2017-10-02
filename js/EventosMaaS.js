@@ -1,11 +1,33 @@
 $(document).ready(function(){ 
-	$('#txtFuenteOtrosIngrenew, #txtAosCasadonew, #txtPuestonew, #lstNacionalidadnew, #txtNomSolicitantenew,#txtMontoViviendanew, #dateFechanacnew, #lisCompaniaMovilnew, #txtApePaternonew, #txtRFCnew, #txtApeMaternonew, #lstEdoCivilnew, #txtTipIdentificacionnew, #txtNumIdentificanew, #txtCalleSolicitantenew, #txtTiempoResidencianew, #txtNumExteriornew, #lisEstatusResidencianew, #txtCpSolicitantenew, #txtCorreonew, #lisEstadoSolicitantenew, #txtTelefonoCasanew, #lisDelMuniSolicitantenew, #txtTelefonoCelularnew, #lisColoniaSolicitantenew, #txtNombreEmpresanew, #txtCalleEmpresanew, #txtantiguedadnew, #txtGironew, #txtNumeroExteriorEmpresa, #lisTipoContratonew, #txtCpEmpresanew, #lisEstadoEmpresanew, #txtIngresonew, #lisDelMuniEmpresanew, #lisColoniaEmpresanew, #txtTelOficinanew, #txtNombreRef1new, #txtNombreRef2new, #txtNombreRef3new, #txtApellidoPaternoRef1new, #txtApellidoPaternoRef2new, #txtApellidoPaternoRef3new, #txtApellidoMaternoRef1new, #txtApellidoMaternoRef2new, #txtApellidoMaternoRef3new, #lisNacionalidadRef1new, #lisNacionalidadRef2new, #txtTelCasaRef1new, #txtTelCasaRef2new, #firma-canvas').jrumble({
+	$('#txtFuenteOtrosIngrenew, #txtAosCasadonew, #txtPuestonew, #lstNacionalidadnew, #txtNomSolicitantenew,#txtMontoViviendanew, #dateFechanacnew, #lisCompaniaMovilnew, #txtApePaternonew, #txtRFCnew, #txtApeMaternonew, #lstEdoCivilnew, #txtTipIdentificacionnew, #txtNumIdentificanew, #txtCalleSolicitantenew, #txtTiempoResidencianew, #txtNumExteriornew, #lisEstatusResidencianew, #txtCpSolicitantenew, #txtCorreonew, #lisEstadoSolicitantenew, #txtTelefonoCasanew, #lisDelMuniSolicitantenew, #txtTelefonoCelularnew, #lisColoniaSolicitantenew, #txtNombreEmpresanew, #txtCalleEmpresanew, #txtantiguedadnew, #txtGironew, #txtNumeroExteriorEmpresa, #lisTipoContratonew, #txtCpEmpresanew, #lisEstadoEmpresanew, #txtIngresonew, #lisDelMuniEmpresanew, #lisColoniaEmpresanew, #txtTelOficinanew, #txtNombreRef1new, #txtNombreRef2new, #txtNombreRef3new, #txtApellidoPaternoRef1new, #txtApellidoPaternoRef2new, #txtApellidoPaternoRef3new, #txtApellidoMaternoRef1new, #txtApellidoMaternoRef2new, #txtApellidoMaternoRef3new, #lisNacionalidadRef1new, #lisNacionalidadRef2new, #txtTelCasaRef1new, #txtTelCasaRef2new, #firma-canvas, #txparentescofuncionpoliticoSolicitantenew, #txqueparenfuncionpoliticoSolicitantenew, #txfuncionpoliticoSolicitantenew').jrumble({
 			x: 1,
 			y: 0,
 			rotation: 0,
 			opacity: true
 			});
 			
+			
+			
+			
+			var controles=['#txtCpSolicitantenew','#txtNombreEmpresanew','#txtGironew', '#txtPuestonew','#txtCalleEmpresanew','#txtNumeroExteriorEmpresa','#txtCpEmpresanew', '#txtCalleSolicitantenew','#txtNumExteriornew', '#txtCorreonew', '#txtNomSolicitantenew','#txtApePaternonew', '#txtNumIdentificanew','#txtRFCnew','#txfuncionpoliticoSolicitantenew','#txparentescofuncionpoliticoSolicitantenew', '#txqueparenfuncionpoliticoSolicitantenew','#txtNombreRef1new','#txtNombreRef2new', '#txtApellidoPaternoRef1new','#txtApellidoPaternoRef2new'];
+			$.each(controles, function (ind, elem) { 
+				agregaeventostextos(elem);
+			});
+			
+			var controleslist=['#txtTipIdentificacionnew','#lstNacionalidadnew', '#lstEdoCivilnew', '#lisEstadoSolicitantenew','#lisDelMuniSolicitantenew', '#lisColoniaSolicitantenew','#lisCompaniaMovilnew', '#lisEstatusResidencianew', '#lisTipoContratonew','#lisEstadoEmpresanew', '#lisDelMuniEmpresanew','#lisColoniaEmpresanew', '#lisNacionalidadRef1new','#lisNacionalidadRef2new'];
+			$.each(controleslist, function (ind, elem) { 
+				agregaeventoslistas(elem);
+			});
+			
+			var controleslisttelefonos=['#txtTelefonoCasanew', '#txtTelefonoCelularnew', '#txtTelOficinanew', '#txtTelCasaRef1new', '#txtTelCasaRef2new', '#txtTelCasaRef3new'];
+			$.each(controleslisttelefonos, function (ind, elem) { 
+				agregaeventostelefonos(elem);
+			});
+			
+			var controleslistmontos=['#txtMontoViviendanew', '#txtIngresonew', '#txtOtrosIngresosnew'];
+			$.each(controleslistmontos, function (ind, elem) { 
+				agregaeventosmontos(elem);
+			});
 			
 			
 
@@ -129,13 +151,13 @@ $(document).ready(function(){
 			if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105) || e.keyCode==186) {
 				e.preventDefault();
 			}
-			validaricontxt($(this));
+			//validaricontxt($(this));
 
 		  }
 		 
 		});
 		
-		$('#txtNumIdentificanew').on({
+		/*$('#txtNumIdentificanew').on({
 		  keyup: function() {
 			
 			validaricontxt($('#txtNumIdentificanew'));		
@@ -147,6 +169,21 @@ $(document).ready(function(){
 			enablecontrolesicon("#txtNumIdentificanew");	
 		  }
 		});
+		
+		$('#txtNombreEmpresanew').on({
+		  keyup: function() {
+			
+			validaricontxt($('#txtNombreEmpresanew'));		
+		  },
+		  blur: function() {
+			validaricontxt($('#txtNombreEmpresanew'));		
+		  },
+		  click: function() {
+			enablecontrolesicon("#txtNombreEmpresanew");	
+		  }
+		});
+		
+		
 		
 		
 		$('#txtRFCnew').on({
@@ -186,7 +223,7 @@ $(document).ready(function(){
 		  click: function() {
 			enablecontrolesicon("#txtNumExteriornew");	
 		  }
-		});
+		});*/
 		
 		$('#txtCpSolicitantenew').on({
 		  keyup: function() {
@@ -362,7 +399,7 @@ $(document).ready(function(){
 		//if((tecla.charCode < 97 || tecla.charCode > 122) && (tecla.charCode < 65 || tecla.charCode > 90) && (tecla.charCode != 45)) return false;
 	  }  
 	});
-	$('#txtMontoViviendanew').on({
+	/*$('#txtMontoViviendanew').on({
 	  blur: function() {
 		  
 			if($('#txtMontoViviendanew').val().length > 0){
@@ -375,7 +412,7 @@ $(document).ready(function(){
 	  click: function() {
 		enablecontrolesicon("#txtMontoViviendanew");	
 	  }  
-	});
+	});*/
 	
 	
 	
@@ -481,7 +518,7 @@ $(document).ready(function(){
 	  
 	});
 	
-	$('#txtTelefonoCasanew').on({
+	/*$('#txtTelefonoCasanew').on({
 		  keypress: function(tecla) {
 			var texto=tecla.key; 
 			var reg=  /^([()0-9\s])+$/i; 
@@ -535,7 +572,13 @@ $(document).ready(function(){
 
 		  }
 		 
-		});
+		});*/
+		
+		
+		
+		
+		
+		
 		
 		$('#txtApellidoMaternoRef1new').on({
 		  blur: function() {
@@ -691,7 +734,7 @@ $(document).ready(function(){
 		 
 		});
 		
-		$('#txtNombreRef2new').on({
+		/*$('#txtNombreRef2new').on({
 		click:	function () {
 			$("#txtNombreRef2new").css('border', 'none');
 			$("#txtNombreRef2new").css('border-bottom', '2px solid #cecfd3'); 
@@ -723,7 +766,7 @@ $(document).ready(function(){
 				$("#txtApellidoMaternoRef2new").css('border-bottom', '2px solid #cecfd3'); 
 			}
 		  
-		});
+		});*/
 		
 		
 		
@@ -824,7 +867,7 @@ $(document).ready(function(){
 		 
 		});
 		
-		$('#txtNombreRef3new').on({
+		/*$('#txtNombreRef3new').on({
 		click:	function () {
 			$("#txtNombreRef3new").css('border', 'none');
 			$("#txtNombreRef3new").css('border-bottom', '2px solid #cecfd3'); 
@@ -856,7 +899,7 @@ $(document).ready(function(){
 				$("#txtApellidoMaternoRef3new").css('border-bottom', '2px solid #cecfd3'); 
 			}
 		  
-		});
+		});*/
 		
 		$('#btnClosemdlOcr').on({			
 			click:	function () {
@@ -1016,7 +1059,7 @@ $(document).ready(function(){
 		  
 		});
 		
-		$('#lstNacionalidadnew').on({
+		/*$('#lstNacionalidadnew').on({
 			change:	function () {
 				enablecontrolesicon("#lstNacionalidadnew");
 			},
@@ -1134,9 +1177,9 @@ $(document).ready(function(){
 				validariconlistas("#lstEdoCivilnew");
 			}
 		  
-		});
+		});*/
 		
-		$('#txtTipIdentificacionnew').on({
+		/*$('#txtTipIdentificacionnew').on({
 			change:	function () {
 				enablecontrolesicon("#txtTipIdentificacionnew");
 			},
@@ -1150,7 +1193,7 @@ $(document).ready(function(){
 				validariconlistas("#txtTipIdentificacionnew");
 			}
 		  
-		});
+		});*/
 		
 		
 		$('#anumpaso1').on({
