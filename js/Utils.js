@@ -193,7 +193,7 @@ function fntipocontrato(){
 	
 }
 
-
+#region RFC
 function fncargaEdo(){//(combo, tipoedo, Delesol, colsoli){
 	
 	$.ajax({ 			
@@ -483,7 +483,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 	} 
 	return rfc;
 }
-
+#endregion
 
 
 	function buscaCPemp( inpCP){
@@ -790,7 +790,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		
 		//Llenado de combo Nacionalidad
 		//fncargaNacionalidad($('#lstNacionalidadconsulsol' + r), $Nacionalidad);
-		$fechanac = $Fechanacdia + '/' + $FechasnacMes +'/'+ $FechanacAnio;
+		$fechanac = $FechanacAnio +"-"+ $FechasnacMes +"-"+ $Fechanacdia;
+
 		//console.log($fechanac);
 		$nomcompleto = $Pnombre + ' ' +  $Apellidopaterno + ' ' + $Apellidomaterno;
 		  //console.log($nomcompleto);
@@ -812,6 +813,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$('#txtApeMaternonew').val($Apellidomaterno);
 		$("#txtTipIdentificacionnew option[value="+$Tpoidentif+"]").attr("selected","selected");
 		$('#txtNumIdentificanew').val($Noidenficacion);
+		
+		
 		$('#dateFechanacnew').val($fechanac);
 		$('#txtRFCnew').val($Rfc);
 		$("#lstEdoCivilnew option[value="+$Edocivil+"]").attr("selected","selected");
@@ -846,7 +849,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		
 		$("#firma-canvas").css("display","none");
 		$("#linkmodalopen").attr("class", "overlay");
-		$('#nomfirma').text("Firma");
+		$('#nomfirma').text($FirmaPath);
 		$('#nomfirma').attr("disabled","disabled");
 		
 		
@@ -1470,7 +1473,7 @@ function validalistas(lista)
 
 function validatext(txtcontrol)
 {
-	if($(txtcontrol).val() != '' && $(txtcontrol).val().length > 3)
+	if($(txtcontrol).val() != '' && $(txtcontrol).val().length > 1)
 	{
 		return 1;
 	}else{
@@ -1568,13 +1571,13 @@ function validaricontxt(txt){
 			$(nombreclaspan).attr('class', 'glyphicon glyphicon-remove form-control-feedback');
 			$(nombrecladiv).attr('class', 'form-group has-error has-feedback');
 			
-		}else if($(txt).val().length > 0 && $(txt).val().length <= 3){
+		}else if($(txt).val().length > 0 && $(txt).val().length <= 1){
 			var nombrecladiv = "#" + $(txt)[0].id + "div";
 			var nombreclaspan = "#" + $(txt)[0].id + "span";
 			$(nombreclaspan).attr('class', 'glyphicon glyphicon-warning-sign form-control-feedback');
 			$(nombrecladiv).attr('class', 'form-group has-warning has-feedback');
 			
-		}else if($(txt).val().length > 0 && $(txt).val().length > 3){
+		}else if($(txt).val().length > 0 && $(txt).val().length > 1){
 			var nombrecladiv = "#" + $(txt)[0].id + "div";
 			$(nombrecladiv).attr('class', 'form-group has-success has-feedback');
 			var nombreclaspan = "#" + $(txt)[0].id + "span";

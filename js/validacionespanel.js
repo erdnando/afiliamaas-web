@@ -146,7 +146,7 @@ $(document).ready(function(){
 		
 		$('#txtantiguedadnew, #txtTiempoResidencianew, #txtantiguedadnew, #txtAosCasadonew').spinedit({
 			minimum: 0,
-			maximum: 50,
+			maximum: 90,
 			step: 1
 	    });
 		
@@ -245,25 +245,6 @@ $(document).ready(function(){
 			   console.log('validation '+validation);
 			}
 			});
-			
-			
-			/* initiate plugin */
-    $("div.holder").jPages({
-      containerID : "itemContainer",
-      perPage : 5
-    });
-
-    /* on select change */
-    $("select").change(function(){
-      /* get new nº of items per page */
-      var newPerPage = parseInt( $(this).val() );
-
-      /* destroy jPages and initiate plugin again */
-      $("div.holder").jPages("destroy").jPages({
-        containerID   : "itemContainer",
-        perPage       : newPerPage
-      });
-    });
 			
 	var cadenacif1 = Base64.decode(getParameterByName('exml2340'));
 		var cadsincif1 = [];
