@@ -496,6 +496,8 @@ $(document).ready(function(){
 			console.log("El checkbox con valor " + $(this).val() + " ha sido deseleccionado");
 			$('#rowfunciondesempeñasolnew').hide();
 			$('#txfuncionpoliticoSolicitantenew').val('');
+			enablecontrolesicon($('#txfuncionpoliticoSolicitantenew'));
+
 			
 		}
 	  }
@@ -517,6 +519,9 @@ $(document).ready(function(){
 			$('#rowqueparentescosolnew').hide();
 			$('#txparentescofuncionpoliticoSolicitantenew').val('');
 			$('#txqueparenfuncionpoliticoSolicitantenew').val('');
+			enablecontrolesicon($('#txparentescofuncionpoliticoSolicitantenew'));
+			enablecontrolesicon($('#txqueparenfuncionpoliticoSolicitantenew'));
+
 			
 			
 		}

@@ -846,7 +846,61 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$("#linkmodalopen").attr("class", "overlay");
 		$('#nomfirma').text($FirmaPath);
 		$('#nomfirma').attr("disabled","disabled");
+
+		if(E164){
+
+			$("#imaextramodal").attr("src",E164);
+			$("#result_imageextra").attr("src",E164);
+			$('#titulomodalfin').text($Extra1);
+			$("#linkmodalopenextra").attr("class", "overlay");
+			$('#lblextra').text($Extra1);
+			$('#lblextra').attr("disabled","disabled");
+
+		}
+
+		if(E264){
+
+			$("#imaextramodal2").attr("src",E264);
+			$("#result_imageextra2").attr("src",E264);
+			$('#titulomodalfin2').text($Extra2);
+			$("#linkmodalopenextra2").attr("class", "overlay");
+			$('#lblextra2').text($Extra2);
+			$('#lblextra2').attr("disabled","disabled");
+			$('#Imagesextras2').show();
+		}
 		
+		if(E364){
+
+			$("#imaextramodal3").attr("src",E364);
+			$("#result_imageextra3").attr("src",E364);
+			$('#titulomodalfin3').text($Extra3);
+			$("#linkmodalopenextra3").attr("class", "overlay");
+			$('#lblextra3').text($Extra3);
+			$('#lblextra3').attr("disabled","disabled");
+			$('#Imagesextras3').show();
+		}
+
+		if(E464){
+
+			$("#imaextramodal4").attr("src",E464);
+			$("#result_imageextra4").attr("src",E464);
+			$('#titulomodalfin4').text($Extra4);
+			$("#linkmodalopenextra4").attr("class", "overlay");
+			$('#lblextra4').text($Extra4);
+			$('#lblextra4').attr("disabled","disabled");
+			$('#Imagesextras4').show();
+		}
+
+		if(E564){
+
+			$("#imaextramodal5").attr("src",E564);
+			$("#result_imageextra5").attr("src",E564);
+			$('#titulomodalfin5').text($Extra5);
+			$("#linkmodalopenextra5").attr("class", "overlay");
+			$('#lblextra5').text($Extra5);
+			$('#lblextra5').attr("disabled","disabled");
+			$('#Imagesextras5').show();
+		}
 		
 		
 		
@@ -1651,7 +1705,7 @@ function validariconmonto(monto){
 function validaricontelefonos(telefono){
 	
 	var valortelefono = $(telefono).val();
-	var valorfinal = valortelefono.unmask();
+	//var valorfinal = $(valortelefono).unmask();
 
 	if($(telefono).val().replace('(', '').replace(')', '').replace(' ', '').length == 0 ){
 			var nombrecladiv = "#" + $(telefono)[0].id + "div";
@@ -2177,6 +2231,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 			if(controlvalidados == totalvalidar ){
 				$("#stOkTitstepDomicilio").show();
 				$("#stOkTitModDomicilio").show();
+				$('#rowvalida2').addClass('rowiniciostepactivosuccess2').removeClass('rowiniciostepactivo').removeClass('rowvalida2');
 			}else{
 				//$('#rowvalida2').addClass('novalidorow').removeClass('rowiniciostepactivo');
 				//$('#anumpaso2').css('color','yellow')
@@ -2363,6 +2418,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 			if(controlvalidados == totalvalidar ){
 				$("#stOkTitstepDatEco").show();
 				$("#stOkTitModDatEco").show();
+				$('#rowvalida3').addClass('rowiniciostepactivosuccess3').removeClass('rowiniciostepactivo').removeClass('rowvalida3');
 			}else{
 				//$('#rowvalida3').addClass('novalidorow').removeClass('rowiniciostepactivo');
 				//$('#anumpaso3').css('color','yellow')
@@ -2465,6 +2521,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 			if(controlvalidados == totalvalidar ){
 					$("#stOkTitstepPerPol").show();
 					$("#stOkTitModPerPol").show();
+					$('#rowvalida4').addClass('rowiniciostepactivosuccess4').removeClass('rowiniciostepactivo').removeClass('rowvalida4');
 				}else{
 					//$('#rowvalida5').addClass('novalidorow').removeClass('rowiniciostepactivo');
 					//$('#anumpaso5').css('color','yellow')
@@ -2547,6 +2604,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 			if(controlvalidados == totalvalidar ){
 				$("#stOkTitstepRefFam").show();
 				$("#stOkTitModRefFam").show();
+				$('#rowvalida5').addClass('rowiniciostepactivosuccess5').removeClass('rowiniciostepactivo').removeClass('rowvalida5');
 			}else{
 				//$('#rowvalida5').addClass('novalidorow').removeClass('rowiniciostepactivo');
 				//$('#anumpaso5').css('color','yellow')
@@ -2694,6 +2752,11 @@ function agregaeventostelefonos(telefono)
 		  },
 		 
 		});
+}
+
+function ValidaAcentos(controlelement){
+	controlelement = controlelement.replace('á', '&aacute').replace('é', '&eacute').replace('í', '&iacute').replace('ó', '&oacute').replace('ú', '&uacute').replace('Á', '&Aacute').replace('É', '&Eacute').replace('Í', '&Iacute').replace('Ó', '&Oacute').replace('Ú', '&Uacute');
+
 }
 
 
