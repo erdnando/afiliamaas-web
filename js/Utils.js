@@ -1613,9 +1613,9 @@ function enablecontroles(controles){
 function enablecontrolesicon(controles){
 	
 	var nombrecladiv = "#" + $(controles)[0].id + "div";
-			var nombreclaspan = "#" + $(controles)[0].id + "span";
-			$(nombreclaspan).removeClass('glyphicon glyphicon-remove form-control-feedback').removeClass('glyphicon glyphicon-warning-sign form-control-feedback').removeClass('glyphicon glyphicon-ok form-control-feedback');
-			$(nombrecladiv).removeClass('form-group has-error has-feedback').removeClass('form-group has-warning has-feedback').removeClass('form-group has-success has-feedback');
+    var nombreclaspan = "#" + $(controles)[0].id + "span";
+    $(nombreclaspan).removeClass('glyphicon glyphicon-remove form-control-feedback').removeClass('glyphicon glyphicon-warning-sign form-control-feedback').removeClass('glyphicon glyphicon-ok form-control-feedback');
+    $(nombrecladiv).removeClass('form-group has-error has-feedback').removeClass('form-group has-warning has-feedback').removeClass('form-group has-success has-feedback');
 	
 }
 
@@ -1943,14 +1943,69 @@ function navegasliderheaderatras(step){
 			$('#rowvalida4').addClass('rowvalida4').removeClass('rowiniciostepactivo4');
 			$('#rowvalida5').addClass('rowvalida5').removeClass('rowiniciostepactivo5');
 			$('#rowvalida6').addClass('rowvalida6').removeClass('rowiniciostepactivo6');
+            var controles=['#txtCalleSolicitantenew','#txtNumExteriornew','#txtCpSolicitantenew','#txtTelefonoCasanew','#txtTelefonoCelularnew','#txtCorreonew'];
+
+            $.each(controles, function (ind, elem) {
+                if($(controles[ind]).val() == ''){
+                    enablecontrolesicon(elem);
+                   }
+
+			});
+
+            var controlesmonto=['#txtMontoViviendanew'];
+
+            $.each(controlesmonto, function (ind, elem) {
+                if($(controlesmonto[ind]).val() == '$ 0.00'){
+                    enablecontrolesicon(elem);
+                   }
+
+			});
+
+            var controleslistas = ['#lisEstadoSolicitantenew','#lisDelMuniSolicitantenew', '#lisColoniaSolicitantenew','#lisCompaniaMovilnew', '#lisEstatusResidencianew','#txtTiempoResidencianew'];
+            $.each(controleslistas, function (ind, elem) {
+                if($(controleslistas[ind]).val() == '0'){
+                    enablecontrolesicon(elem);
+                   }
+
+			});
 			
 			break;
 		case 2:
+
 			//$('#rowvalida2').addClass('rowiniciostepactivo2').removeClass('rowvalida2');
 			$('#rowvalida3').addClass('rowvalida3').removeClass('rowiniciostepactivo3');
 			$('#rowvalida4').addClass('rowvalida4').removeClass('rowiniciostepactivo4');
 			$('#rowvalida5').addClass('rowvalida5').removeClass('rowiniciostepactivo5');
 			$('#rowvalida6').addClass('rowvalida6').removeClass('rowiniciostepactivo6');
+
+
+            var controles=['#txtNombreEmpresanew','#txtGironew', '#txtPuestonew','#txtCalleEmpresanew','#txtNumeroExteriorEmpresa','#txtCpEmpresanew','#txtTelOficinanew'];
+
+            $.each(controles, function (ind, elem) {
+                if($(controles[ind]).val() == ''){
+                    enablecontrolesicon(elem);
+                   }
+
+			});
+
+            var controlesmonto=['#txtIngresonew'];
+
+            $.each(controlesmonto, function (ind, elem) {
+                if($(controlesmonto[ind]).val() == '$ 0.00'){
+                    enablecontrolesicon(elem);
+                   }
+
+			});
+
+            var controleslistas = ['#lisTipoContratonew','#lisEstadoEmpresanew', '#lisDelMuniEmpresanew','#lisColoniaEmpresanew','#txtantiguedadnew'];
+            $.each(controleslistas, function (ind, elem) {
+                if($(controleslistas[ind]).val() == '0'){
+                    enablecontrolesicon(elem);
+                   }
+
+			});
+
+
 			break;
 		case 3:
 			/*$('#rowvalida2').addClass('rowiniciostepactivo2').removeClass('rowvalida2');
@@ -1958,6 +2013,20 @@ function navegasliderheaderatras(step){
 			$('#rowvalida4').addClass('rowvalida4').removeClass('rowiniciostepactivo4');
 			$('#rowvalida5').addClass('rowvalida5').removeClass('rowiniciostepactivo5');
 			$('#rowvalida6').addClass('rowvalida6').removeClass('rowiniciostepactivo6');
+
+
+
+            var controles=['#txfuncionpoliticoSolicitantenew','#txparentescofuncionpoliticoSolicitantenew', '#txqueparenfuncionpoliticoSolicitantenew'];
+
+			$.each(controles, function (ind, elem) {
+                if($(controles[ind]).val() == ''){
+                    enablecontrolesicon(elem);
+                   }
+
+			});
+
+
+
 			break;
 		case 4:
 			/*$('#rowvalida2').addClass('rowiniciostepactivo2').removeClass('rowvalida2');
@@ -1965,6 +2034,25 @@ function navegasliderheaderatras(step){
 			$('#rowvalida4').addClass('rowiniciostepactivo4').removeClass('rowvalida4');*/
 			$('#rowvalida5').addClass('rowvalida5').removeClass('rowiniciostepactivo5');
 			$('#rowvalida6').addClass('rowvalida6').removeClass('rowiniciostepactivo6');
+
+
+            var controles=['#txtNombreRef1new','#txtNombreRef2new', '#txtApellidoPaternoRef1new','#txtApellidoPaternoRef2new','#txtTelCasaRef1new','#txtTelCasaRef2new'];
+			 $.each(controles, function (ind, elem) {
+                if($(controles[ind]).val() == ''){
+                    enablecontrolesicon(elem);
+                   }
+
+			});
+
+
+			var controleslistas=['#lisNacionalidadRef1new','#lisNacionalidadRef2new'];
+            $.each(controleslistas, function (ind, elem) {
+                if($(controleslistas[ind]).val() == '0'){
+                    enablecontrolesicon(elem);
+                   }
+
+			});
+
 			break;
 		case 5:
 			/*$('#rowvalida2').addClass('rowiniciostepactivo2').removeClass('rowvalida2');
@@ -2114,7 +2202,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 		
 			break;
 		case '2':
-			var controles=['#txtCalleSolicitantenew','#txtNumExteriornew'];
+			var controles=['#txtCalleSolicitantenew','#txtNumExteriornew','#txtCorreonew'];
 			var contlisterror=[];
 			var controlesCP=['#txtCpSolicitantenew'];
 			var contlistCPerror=[];
@@ -2321,31 +2409,14 @@ function validacontrolespantall(pantalla, kinkheader, e){
 			var controles=['#txtNombreEmpresanew','#txtGironew', '#txtPuestonew','#txtCalleEmpresanew','#txtNumeroExteriorEmpresa','#txtCpEmpresanew'];
 			var contlisterror=[];
 			
-			
-			/*$.each(controles, function (ind, elem) { 
-				agregaeventostextos(elem);
-			});*/
-
-			var controleslistmontos=['#txtIngresonew'];
+            var controleslistmontos=['#txtIngresonew'];
 			var controleslistmontoserror=[];
-			
-			/*$.each(controleslistmontos, function (ind, elem) { 
-				agregaeventosmontos(elem);
-			});*/
-			
-			
-			
+
 			var controlestelefono=['#txtTelOficinanew'];
 			var contlisterrortelefono=[];
-			/*$.each(controlestelefono, function (ind, elem) { 
-				agregaeventostelefonos(elem);
-			});*/
 
 			var controleslist=['#lisTipoContratonew','#lisEstadoEmpresanew', '#lisDelMuniEmpresanew','#lisColoniaEmpresanew'];
 			var controleslisterror=[];
-			/*$.each(controles, function (ind, elem) { 
-				agregaeventoslistas(elem);
-			});*/
 			
 			var controleslistspiners=['#txtantiguedadnew'];
 			var controleslistspinerserror=[];
