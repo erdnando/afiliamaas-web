@@ -27,7 +27,8 @@ $(document).ready(function(){
 						
 						if(data.IdUsuario == 0){
 							swal("","Usuario, empresa y/o contraseña incorrectas. Verifique por favor.","error");
-							//location.href='';							
+							//location.href='';
+                            $('#cargando').hide();
 							return false;
 						}else{
 							var nomCompleto = data.Tipo_Usuario+": " + data.Nombre + " " + data.Paterno
@@ -176,4 +177,3 @@ $(window).load(function () {
             loadUrl: 'test.html' //Uses jQuery.load()
         });
      })(jQuery);*/
-	 

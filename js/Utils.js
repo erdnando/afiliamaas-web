@@ -1423,6 +1423,14 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		//$("#firma-img").attr("src",null);
 		$('#lnknombremodalINEFrente').text();
 		$('#titulomodalfinINEFrente').text();
+
+
+        $("#imaextramodal").attr("src","images/fondo.jpg");
+        $("#result_imageextra").attr("src",null);
+        $('#titulomodalfin').text("Extra");
+        $("#linkmodalopenextra").removeClass("overlay");
+        $('#lblextra').text("Extra");
+        $('#lblextra').attr("disabled",false);
 		
 		/*$("#result_imagefin").attr("src",datosgrales[5].toString());
 		$("#result_imagefinmod").attr("src",datosgrales[5].toString());
