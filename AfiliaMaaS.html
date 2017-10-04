@@ -380,7 +380,7 @@
 							</label>
 						</div>-->
 						<div class="col-xs-12 col-sm-4 col-md4 col-lg-11" style="text-align:-webkit-right;">
-							<button data-toggle="modal" type="button" class="btnokeys" style="display:none;"  id="btnifeok" name="btnifeok" disabled>
+							<button data-toggle="modal" type="button" class="btnokeys" style="display:none;" id="btnifeok" name="btnifeok" disabled>
 								<i class="glyphicon glyphicon-ok"></i>
 							</button>
 							
@@ -494,23 +494,27 @@
 										<h2 class="fs-title">(1) Generales <i id="stOkTitModgrales" style="display:none;"></i></h2>
 										<div class="row">
 											<div class="col-md-6">
-												<div  id="txtNomSolicitantenewdiv">
+												<div>
 													<label class="control-label col-md-5" for="txtNomSolicitantenew">Nombre del solicitante*:</label>
-													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtNomSolicitantenew" placeholder="Nombre del Solicitante" name="txtNomSolicitantenew" tabindex="1" maxlength="50">
-														<span id="txtNomSolicitantenewspan" ></span>
+													<div class="col-md-6">  
+														<div id="txtNomSolicitantenewdiv">
+															<input type="text" class="form-control" id="txtNomSolicitantenew" placeholder="Nombre del Solicitante" name="txtNomSolicitantenew" tabindex="1" maxlength="50">
+															<span id="txtNomSolicitantenewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
 											
 											<div class="col-md-6">
-												<div id="lstNacionalidadnewdiv">
+												<div>
 													<label class="control-label col-md-5" for="lstNacionalidadnew">Nacionalidad*:</label>
-													<div class="col-md-6">          
-														<select class="form-control" name="lstNacionalidadnew" id="lstNacionalidadnew" tabindex="7">
-														  <option value="0" selected>Seleccióne....</option>
-														</select>
-														<span id="lstNacionalidadnewspan" ></span>
+													<div class="col-md-6"> 
+														<div id="lstNacionalidadnewdiv"> 
+															<select class="form-control" name="lstNacionalidadnew" id="lstNacionalidadnew" tabindex="7">
+															  <option value="0" selected>Seleccióne....</option>
+															</select>
+															<span id="lstNacionalidadnewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -528,14 +532,16 @@
 											</div>
 											
 											<div class="col-md-6">
-												<div id="dateFechanacnewdiv">
+												<div>
 													<label class="control-label col-md-5" for="dateFechanacnew">Fecha de nacimiento*:</label>
-													<div class="col-md-6">          
-														<input type="date" class="form-control" id="dateFechanacnew" placeholder="Fecha de nacimiento" name="dateFechanacnew" tabindex="8">
-														<input type="hidden"  id="dateFechanacnewdia" name="dateFechanacnewdia">
-														<input type="hidden"  id="dateFechanacnewmes"  name="dateFechanacnewmes">
-														<input type="hidden"  id="dateFechanacnewanio" name="dateFechanacnewanio">
-														<span id="dateFechanacnewspan" ></span>
+													<div class="col-md-6">  
+														<div id="dateFechanacnewdiv">
+															<input type="date" class="form-control" id="dateFechanacnew" placeholder="Fecha de nacimiento" name="dateFechanacnew" tabindex="8">
+															<input type="hidden"  id="dateFechanacnewdia" name="dateFechanacnewdia">
+															<input type="hidden"  id="dateFechanacnewmes"  name="dateFechanacnewmes">
+															<input type="hidden"  id="dateFechanacnewanio" name="dateFechanacnewanio">
+															<span id="dateFechanacnewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -543,20 +549,24 @@
 
 										<div class="row">											
 											<div class="col-md-6">
-												<div id="txtApePaternonewdiv" class="form-group">
+												<div class="form-group">
 													<label class="control-label col-md-5" for="txtApePaternonew">Apellido paterno*:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtApePaternonew" placeholder="Apellido paterno" name="txtApePaternonew" tabindex="3" maxlength="50">
-														<span id="txtApePaternonewspan" ></span>
+														<div id="txtApePaternonewdiv">
+															<input type="text" class="form-control" id="txtApePaternonew" placeholder="Apellido paterno" name="txtApePaternonew" tabindex="3" maxlength="50">
+															<span id="txtApePaternonewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
 											<div class="col-md-6">
-												<div id="txtRFCnewdiv">
+												<div>
 													<label class="control-label col-md-5" for="txtRFCnew">R.F.C*:</label>
-													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtRFCnew" placeholder="R.F.C." name="txtRFCnew" tabindex="9" maxlength="13">
-														<span id="txtRFCnewspan" ></span>
+													<div class="col-md-6">
+														<div id="txtRFCnewdiv">
+															<input type="text" class="form-control" id="txtRFCnew" placeholder="R.F.C." name="txtRFCnew" tabindex="9" maxlength="13">
+															<span id="txtRFCnewspan" ></span>
+														</div>
 													</div>
 												</div>
 												
@@ -575,13 +585,15 @@
 											</div>
 											
 											<div class="col-md-6">
-												<div id="lstEdoCivilnewdiv">
+												<div>
 													<label class="control-label col-md-5" for="lstEdoCivilnew">Estado civil*:</label>
 													<div class="col-md-6">          
-														<select class="form-control" name="lstEdoCivilnew" id="lstEdoCivilnew" tabindex="10">
-														  <option value="0" selected>Seleccióne....</option>
-														</select>
-														<span id="lstEdoCivilnewspan" ></span>
+														<div id="lstEdoCivilnewdiv">
+															<select class="form-control" name="lstEdoCivilnew" id="lstEdoCivilnew" tabindex="10">
+															  <option value="0" selected>Seleccióne....</option>
+															</select>
+															<span id="lstEdoCivilnewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -591,14 +603,16 @@
 										
 										<div class="row">
 											<div class="col-md-6">
-												<div id="txtTipIdentificacionnewdiv">
+												<div>
 													<label class="control-label col-md-5" for="txtTipIdentificacionnew">Tipo de identificación*:</label>
 													<div class="col-md-6">          
-														<!--<input type="text" class="form-control" id="txtTipIdentificacionnew" placeholder="Tipo de identificación" name="txtTipIdentificacionnew">-->
-														<select class="form-control" name="txtTipIdentificacionnew" id="txtTipIdentificacionnew" tabindex="5">
-														  <option value="0" selected>Seleccióne....</option>
-														</select>
-														<span id="txtTipIdentificacionnewspan" ></span>
+														<div id="txtTipIdentificacionnewdiv">
+															<!--<input type="text" class="form-control" id="txtTipIdentificacionnew" placeholder="Tipo de identificación" name="txtTipIdentificacionnew">-->
+															<select class="form-control" name="txtTipIdentificacionnew" id="txtTipIdentificacionnew" tabindex="5">
+															  <option value="0" selected>Seleccióne....</option>
+															</select>
+															<span id="txtTipIdentificacionnewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -607,7 +621,7 @@
 													<label class="control-label col-md-5" for="spin">Número de dependientes:</label>
 													<div class="col-md-6">          
 														<!--<input type="text" class="form-control" id="txtDependientesnew" placeholder="Numero de dependientes" name="txtDependientesnew">-->
-														<input type="text" id="txtDependientesnew" disabled="disabled" />
+														<input type="text" id="txtDependientesnew" maxlength="2"/>
 													</div>
 												</div>
 											</div>
@@ -616,11 +630,13 @@
 										
 										<div class="row">											
 											<div class="col-md-6">
-												<div id="txtNumIdentificanewdiv">
+												<div>
 													<label class="control-label col-md-5" for="txtNumIdentificanew">Número de identificación*:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtNumIdentificanew" placeholder="Número de identificación" name="txtNumIdentificanew" tabindex="6" maxlength="20">
-														<span id="txtNumIdentificanewspan" ></span>
+														<div id="txtNumIdentificanewdiv">
+															<input type="text" class="form-control" id="txtNumIdentificanew" placeholder="Número de identificación" name="txtNumIdentificanew" tabindex="6" maxlength="20">
+															<span id="txtNumIdentificanewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -655,64 +671,76 @@
 										<h2 class="fs-title">(2) Domicilio <i id="stOkTitModDomicilio" class="glyphicon glyphicon-ok" style="display:none;"></i></h2>
 										<div class="row">
 											<div class="col-md-6">
-												<div id="txtCalleSolicitantenewdiv">
+												<div>
 													<label class="control-label col-md-5" for="txtCalleSolicitantenew">Calle*:</label>
-													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtCalleSolicitantenew" placeholder="Calle del solicitante." name="txtCalleSolicitantenew" tabindex="12" maxlength="50">
-														<span id="txtCalleSolicitantenewspan" ></span>
+													<div class="col-md-6">   
+														<div id="txtCalleSolicitantenewdiv">
+															<input type="text" class="form-control" id="txtCalleSolicitantenew" placeholder="Calle del solicitante." name="txtCalleSolicitantenew" tabindex="12" maxlength="50">
+															<span id="txtCalleSolicitantenewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
 											<div class="col-md-6">
-												<div id="txtTiempoResidencianewdiv">
+												<div>
 													<label class="control-label col-md-5" for="txtTiempoResidencianew">Tiempo de residencia (años)*:</label>
 													<div class="col-md-6">          
-														<!--<input type="text" class="form-control" id="txtTiempoResidencianew" placeholder="0" name="txtTiempoResidencianew">-->
-														<input type="text" id="txtTiempoResidencianew" disabled="disabled" />
-														<span id="txtTiempoResidencianewspan" ></span>
+														<div id="txtTiempoResidencianewdiv">
+															<!--<input type="text" class="form-control" id="txtTiempoResidencianew" placeholder="0" name="txtTiempoResidencianew">-->
+															<input type="text" id="txtTiempoResidencianew" maxlength="2"/>
+															<span id="txtTiempoResidencianewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
 										<div class="row">											
 											<div class="col-md-6">
-												<div id="txtNumExteriornewdiv">
+												<div>
 													<label class="control-label col-md-5" for="txtNumExteriornew">No. Exterior*:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtNumExteriornew" placeholder="No. Exterior." name="txtNumExteriornew" tabindex="13" maxlength="50">
-														<span id="txtNumExteriornewspan" ></span>
+														<div id="txtNumExteriornewdiv">
+															<input type="text" class="form-control" id="txtNumExteriornew" placeholder="No. Exterior." name="txtNumExteriornew" tabindex="13" maxlength="50">
+															<span id="txtNumExteriornewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
 											<div class="col-md-6">
-												<div id="lisEstatusResidencianewdiv">
+												<div>
 													<label class="control-label col-md-5" for="lisEstatusResidencianew">Estatus de residencia*:</label>
 													<div class="col-md-6">          
-														<select class="form-control" name="lisEstatusResidencianew" id="lisEstatusResidencianew" tabindex="19">
-														  <option value="0">Seleccióne...</option>
-														</select>
-														<span id="lisEstatusResidencianewspan" ></span>
+														<div id="lisEstatusResidencianewdiv">
+															<select class="form-control" name="lisEstatusResidencianew" id="lisEstatusResidencianew" tabindex="19">
+															  <option value="0">Seleccióne...</option>
+															</select>
+															<span id="lisEstatusResidencianewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
 										<div class="row">
 											<div class="col-md-6">
-												<div id="txtNumInteriornewdiv">
+												<div>
 													<label class="control-label col-md-5" for="txtNumInteriornew">No. Interior:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtNumInteriornew" placeholder="No. Interior." name="txtNumInteriornew" tabindex="14" maxlength="50">
-														<span id="txtNumInteriornewspan" ></span>
+														<div id="txtNumInteriornewdiv">
+															<input type="text" class="form-control" id="txtNumInteriornew" placeholder="No. Interior." name="txtNumInteriornew" tabindex="14" maxlength="50">
+															<span id="txtNumInteriornewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
 											<div class="col-md-6">
-												<div id="txtMontoViviendanewdiv">
+												<div>
 													<label class="control-label col-md-5" for="txtMontoViviendanew">Monto de vivienda*:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtMontoViviendanew"  name="txtMontoViviendanew"  data-thousands="," data-decimal="." data-prefix="$ " value="$ 0.00" tabindex="20" maxlength="12"/>
-														<script type="text/javascript">$("#txtMontoViviendanew").maskMoney();</script>
-														<span id="txtMontoViviendanewspan" ></span>
+														<div id="txtMontoViviendanewdiv">
+															<input type="text" class="form-control" id="txtMontoViviendanew"  name="txtMontoViviendanew"  data-thousands="," data-decimal="." data-prefix="$ " value="$ 0.00" tabindex="20" maxlength="12"/>
+															<script type="text/javascript">$("#txtMontoViviendanew").maskMoney();</script>
+															<span id="txtMontoViviendanewspan" ></span>
+														</div>
 													</div>
 												</div>
 												
@@ -721,97 +749,112 @@
 										</div>
 										<div class="row">
 											<div class="col-md-6">
-												<div id="txtCpSolicitantenewdiv">
+												<div>
 													<label class="control-label col-md-5" for="txtCpSolicitantenew">CP*:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtCpSolicitantenew" placeholder="Código postal." name="txtCpSolicitantenew" tabindex="15" maxlength="5">
-														<span id="txtCpSolicitantenewspan" ></span>
+														<div id="txtCpSolicitantenewdiv">
+															<input type="text" class="form-control" id="txtCpSolicitantenew" placeholder="Código postal." name="txtCpSolicitantenew" tabindex="15" maxlength="5">
+															<span id="txtCpSolicitantenewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
 											<div class="col-md-6">
-												<div id="txtCorreonewdiv">
+												<div>
 													<label class="control-label col-md-5" for="txtCorreonew">Correo eléctronico*:</label>
 													<div class="col-md-6">          
-														<input type="email" class="form-control" id="txtCorreonew" placeholder="correo@dominio.com" name="txtCorreonew" tabindex="21" maxlength="50">
-														<span id="txtCorreonewspan" ></span>
+														<div id="txtCorreonewdiv">
+															<input type="email" class="form-control" id="txtCorreonew" placeholder="correo@dominio.com" name="txtCorreonew" tabindex="21" maxlength="50">
+															<span id="txtCorreonewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
 										<div class="row">
 											<div class="col-md-6">
-												<div id="lisEstadoSolicitantenewdiv">
+												<div>
 													<label class="control-label col-md-5" for="lisEstadoSolicitantenew">Estado*:</label>
 													<div class="col-md-6">          
-														<select class="form-control" name="lisEstadoSolicitantenew" id="lisEstadoSolicitantenew" tabindex="16">
-														  <option value="0">Seleccione...</option>
-														  
-														</select>
-														<span id="lisEstadoSolicitantenewspan" ></span>
-														<select class="form-control" name="lisEstadotem" id="lisEstadotem" style="display:none;">
-														  <option value="0">Seleccione...</option>
-														  
-														</select>
-														
+														<div id="lisEstadoSolicitantenewdiv">
+															<select class="form-control" name="lisEstadoSolicitantenew" id="lisEstadoSolicitantenew" tabindex="16">
+															  <option value="0">Seleccione...</option>
+															  
+															</select>
+															<span id="lisEstadoSolicitantenewspan" ></span>
+															<select class="form-control" name="lisEstadotem" id="lisEstadotem" style="display:none;">
+															  <option value="0">Seleccione...</option>
+															  
+															</select>
+														</div>														
 													</div>
 												</div>
 											</div>
 											<div class="col-md-6">
-												<div id="txtTelefonoCasanewdiv">
+												<div>
 													<label class="control-label col-md-5" for="txtTelefonoCasanew">Teléfono de casa*:</label>
 													<div class="col-md-6">          
-														<input type="tel" class="form-control" id="txtTelefonoCasanew" placeholder="Teléfono de casa." name="txtTelefonoCasanew" maxlength="10" pattern="[0-9]{10}" tabindex="22">
-														<span id="txtTelefonoCasanewspan" ></span>
+														<div id="txtTelefonoCasanewdiv">
+															<input type="tel" class="form-control" id="txtTelefonoCasanew" placeholder="Teléfono de casa." name="txtTelefonoCasanew" maxlength="10" pattern="[0-9]{10}" tabindex="22">
+															<span id="txtTelefonoCasanewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
 										<div class="row">
 											<div class="col-md-6">
-												<div id="lisDelMuniSolicitantenewdiv">
+												<div>
 													<label class="control-label col-md-5" for="pwd">Delegación / Municipio*:</label>
 													<div class="col-md-6">          
-														<select class="form-control" name="lisDelMuniSolicitantenew" id="lisDelMuniSolicitantenew" tabindex="17">
-														  <option value="0">Seleccióne...</option>
-														  
-														</select>
-														<span id="lisDelMuniSolicitantenewspan" ></span>
+														<div id="lisDelMuniSolicitantenewdiv">
+															<select class="form-control" name="lisDelMuniSolicitantenew" id="lisDelMuniSolicitantenew" tabindex="17">
+															  <option value="0">Seleccióne...</option>
+															  
+															</select>
+															<span id="lisDelMuniSolicitantenewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
 											<div class="col-md-6">
-												<div id="txtTelefonoCelularnewdiv">
+												<div>
 													<label class="control-label col-md-5" for="txtTelefonoCelularnew">Teléfono celular*:</label>
 													<div class="col-md-6">          
-														<input type="tel" class="form-control" id="txtTelefonoCelularnew" placeholder="Teléfono celular." name="txtTelefonoCelularnew" maxlength="10" tabindex="23">
-														<span id="txtTelefonoCelularnewspan" ></span>
+														<div id="txtTelefonoCelularnewdiv">
+															<input type="tel" class="form-control" id="txtTelefonoCelularnew" placeholder="Teléfono celular." name="txtTelefonoCelularnew" maxlength="10" tabindex="23">
+															<span id="txtTelefonoCelularnewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
 										<div class="row">
 											<div class="col-md-6">
-												<div id="lisColoniaSolicitantenewdiv">
+												<div>
 													<label class="control-label col-md-5" for="lisColoniaSolicitantenew">Colonia*:</label>
 													<div class="col-md-6">          
-														<select class="form-control" name="lisColoniaSolicitantenew" id="lisColoniaSolicitantenew" tabindex="18" maxlength="50">
-															<option value="0">Seleccióne...</option>
-														  
-														</select>
-														<span id="lisColoniaSolicitantenewspan" ></span>
+														<div id="lisColoniaSolicitantenewdiv">
+															<select class="form-control" name="lisColoniaSolicitantenew" id="lisColoniaSolicitantenew" tabindex="18" maxlength="50">
+																<option value="0">Seleccióne...</option>
+															  
+															</select>
+															<span id="lisColoniaSolicitantenewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
 											<div class="col-md-6">
-												<div id="lisCompaniaMovilnewdiv">
+												<div>
 													<label class="control-label col-md-5" for="lisCompaniaMovilnew">Compañía movil*:</label>
 													<div class="col-md-6">          
-														<select class="form-control" name="lisCompaniaMovilnew" id="lisCompaniaMovilnew" tabindex="24">
-														  <option value="0">Seleccióne...</option>
-														  
-														</select>
-														<span id="lisCompaniaMovilnewspan" ></span>
+														<div id="lisCompaniaMovilnewdiv">
+															<select class="form-control" name="lisCompaniaMovilnew" id="lisCompaniaMovilnew" tabindex="24">
+															  <option value="0">Seleccióne...</option>
+															  
+															</select>
+															<span id="lisCompaniaMovilnewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -828,42 +871,50 @@
 										<h2 class="fs-title">(3) Datos Económicos <i id="stOkTitModDatEco" class="glyphicon glyphicon-ok" style="display:none;"></i></h2>
 										<div class="row">
 											<div class="col-md-6">
-												<div id="txtNombreEmpresanewdiv">
+												<div>
 													<label class="control-label col-md-5" for="txtNombreEmpresanew">Nombre de empresa*:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtNombreEmpresanew" placeholder="Nombre de empresa." name="txtNombreEmpresanew" tabindex="25" maxlength="50">
-														<span id="txtNombreEmpresanewspan" ></span>
+														<div id="txtNombreEmpresanewdiv">
+															<input type="text" class="form-control" id="txtNombreEmpresanew" placeholder="Nombre de empresa." name="txtNombreEmpresanew" tabindex="25" maxlength="50">
+															<span id="txtNombreEmpresanewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
 											<div class="col-md-6">
-												<div id="txtCalleEmpresanewdiv">
+												<div>
 													<label class="control-label col-md-5" for="txtCalleEmpresanew">Calle*:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtCalleEmpresanew" placeholder="Calle." name="txtCalleEmpresanew" tabindex="32" maxlength="50">
-														<span id="txtCalleEmpresanewspan" ></span>
+														<div id="txtCalleEmpresanewdiv">
+															<input type="text" class="form-control" id="txtCalleEmpresanew" placeholder="Calle." name="txtCalleEmpresanew" tabindex="32" maxlength="50">
+															<span id="txtCalleEmpresanewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
 										<div class="row">
 											<div class="col-md-6">
-												<div id="txtantiguedadnewdiv">
+												<div>
 													<label class="control-label col-md-5" for="txtantiguedadnew">Antiguedad de empleo (años)*:</label>
 													<div class="col-md-6">          
-														<!--<input type="text" class="form-control" id="txtantiguedadnew" placeholder="Antiguedad de empleo." name="txtGironew">-->
-														<input type="text" id="txtantiguedadnew" disabled="disabled" />
-														<span id="txtantiguedadnewspan" ></span>
+														<div id="txtantiguedadnewdiv">
+															<!--<input type="text" class="form-control" id="txtantiguedadnew" placeholder="Antiguedad de empleo." name="txtGironew">-->
+															<input type="text" id="txtantiguedadnew" maxlength="2"/>
+															<span id="txtantiguedadnewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
 											<div class="col-md-6">
 												<div >
-													<div id="txtNumeroExteriorEmpresadiv">
+													<div>
 														<label class="control-label col-md-5" for="txtNumeroExteriorEmpresa">No. Ext.*:</label>
 														<div class="col-md-3">          
-															<input type="text" class="form-control" id="txtNumeroExteriorEmpresa" placeholder="Exterior." name="txtNumeroExteriorEmpresa" tabindex="33" maxlength="50">
-															<span id="txtNumeroExteriorEmpresaspan" ></span>
+															<div id="txtNumeroExteriorEmpresadiv">
+																<input type="text" class="form-control" id="txtNumeroExteriorEmpresa" placeholder="Exterior." name="txtNumeroExteriorEmpresa" tabindex="33" maxlength="50">
+																<span id="txtNumeroExteriorEmpresaspan" ></span>
+															</div>
 														</div>
 													</div>
 													<label class="control-label col-md-2" for="pwd" style="width: 64px;">No. Int.:</label>
@@ -877,11 +928,13 @@
 										</div>
 										<div class="row">
 											<div class="col-md-6">
-												<div id="txtGironewdiv">
+												<div>
 													<label class="control-label col-md-5" for="txtGironew">Giro*:</label>
-													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtGironew" placeholder="Giro." name="txtGironew" tabindex="26" maxlength="50">
-														<span id="txtGironewspan" ></span>
+													<div class="col-md-6">         
+														<div id="txtGironewdiv">
+															<input type="text" class="form-control" id="txtGironew" placeholder="Giro." name="txtGironew" tabindex="26" maxlength="50">
+															<span id="txtGironewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -894,25 +947,29 @@
 												</div>
 											</div>-->
 											<div class="col-md-6">
-												<div id="txtCpEmpresanewdiv">
+												<div>
 													<label class="control-label col-md-5" for="txtCpEmpresanew">CP*:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtCpEmpresanew" placeholder="C.P." name="txtCpEmpresanew" tabindex="35" maxlength="5">
-														<span id="txtCpEmpresanewspan" ></span>
+														<div id="txtCpEmpresanewdiv">
+															<input type="text" class="form-control" id="txtCpEmpresanew" placeholder="C.P." name="txtCpEmpresanew" tabindex="35" maxlength="5">
+															<span id="txtCpEmpresanewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
 										<div class="row">
 											<div class="col-md-6">
-												<div id="lisTipoContratonewdiv">
+												<div>
 													<label class="control-label col-md-5" for="lisTipoContratonew">Tipo de contrato*:</label>
 													<div class="col-md-6">          
-														<select class="form-control" name="lisTipoContratonew" id="lisTipoContratonew" tabindex="27">
-														  <option value="0">Seleccióne...</option>
-														  
-														</select>
-														<span id="lisTipoContratonewspan" ></span>
+														<div id="lisTipoContratonewdiv">
+															<select class="form-control" name="lisTipoContratonew" id="lisTipoContratonew" tabindex="27">
+															  <option value="0">Seleccióne...</option>
+															  
+															</select>
+															<span id="lisTipoContratonewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -925,25 +982,29 @@
 												</div>
 											</div>-->
 											<div class="col-md-6">
-												<div id="lisEstadoEmpresanewdiv">
+												<div>
 													<label class="control-label col-md-5" for="lisEstadoEmpresanew">Estado*:</label>
 													<div class="col-md-6">          
-														<select class="form-control" name="lisEstadoEmpresanew" id="lisEstadoEmpresanew" tabindex="36">
-														  <option value="0">Seleccióne..</option>
-														  
-														</select>
-														<span id="lisEstadoEmpresanewspan" ></span>
+														<div id="lisEstadoEmpresanewdiv">
+															<select class="form-control" name="lisEstadoEmpresanew" id="lisEstadoEmpresanew" tabindex="36">
+															  <option value="0">Seleccióne..</option>
+															  
+															</select>
+															<span id="lisEstadoEmpresanewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
 										<div class="row">
 											<div class="col-md-6">
-												<div id="txtPuestonewdiv">
+												<div>
 													<label class="control-label col-md-5" for="txtPuestonew">Puesto*:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtPuestonew" placeholder="Puesto." name="txtPuestonew" tabindex="28" maxlength="50">
-														<span id="txtPuestonewspan" ></span>
+														<div id="txtPuestonewdiv">
+															<input type="text" class="form-control" id="txtPuestonew" placeholder="Puesto." name="txtPuestonew" tabindex="28" maxlength="50">
+															<span id="txtPuestonewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -960,26 +1021,30 @@
 											</div>-->
 											
 											<div class="col-md-6">
-												<div id="lisDelMuniEmpresanewdiv">
+												<div>
 													<label class="control-label col-md-5" for="lisDelMuniEmpresanew">Delegación / Municipio*:</label>
 													<div class="col-md-6">          
-														<select class="form-control" name="lisDelMuniEmpresanew" id="lisDelMuniEmpresanew" tabindex="37">
-														  <option value="0">Seleccióne...</option>
-														  
-														</select>
-														<span id="lisDelMuniEmpresanewspan" ></span>
+														<div id="lisDelMuniEmpresanewdiv">
+															<select class="form-control" name="lisDelMuniEmpresanew" id="lisDelMuniEmpresanew" tabindex="37">
+															  <option value="0">Seleccióne...</option>
+															  
+															</select>
+															<span id="lisDelMuniEmpresanewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
 										<div class="row">
 											<div class="col-md-6">
-												<div id="txtIngresonewdiv">
+												<div>
 													<label class="control-label col-md-5" for="txtIngresonew">Ingreso*:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtIngresonew" name="txtIngresonew" data-thousands="," data-decimal="." data-prefix="$ " value="$ 0.00" tabindex="29" maxlength="12"/>
-														<script type="text/javascript">$("#txtIngresonew").maskMoney();</script>
-														<span id="txtIngresonewspan" ></span>
+														<div id="txtIngresonewdiv">
+															<input type="text" class="form-control" id="txtIngresonew" name="txtIngresonew" data-thousands="," data-decimal="." data-prefix="$ " value="$ 0.00" tabindex="29" maxlength="12"/>
+															<script type="text/javascript">$("#txtIngresonew").maskMoney();</script>
+															<span id="txtIngresonewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -995,14 +1060,16 @@
 												</div>
 											</div>-->
 											<div class="col-md-6">
-												<div id="lisColoniaEmpresanewdiv">
+												<div>
 													<label class="control-label col-md-5" for="lisColoniaEmpresanew">Colonia*:</label>
 													<div class="col-md-6">          
-														<select class="form-control" name="lisColoniaEmpresanew" id="lisColoniaEmpresanew"tabindex="38">
-															<option value="0">Seleccióne...</option>
-														  
-														</select>
-														<span id="lisColoniaEmpresanewspan" ></span>
+														<div id="lisColoniaEmpresanewdiv">
+															<select class="form-control" name="lisColoniaEmpresanew" id="lisColoniaEmpresanew"tabindex="38">
+																<option value="0">Seleccióne...</option>
+															  
+															</select>
+															<span id="lisColoniaEmpresanewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -1013,7 +1080,7 @@
 													<label class="control-label col-md-5" for="pwd">Años de casado:</label>
 													<div class="col-md-6">          
 														<!--<input type="text" class="form-control" id="txtAosCasadonew" placeholder="Años de casado." name="txtAosCasadonew">-->
-														<input type="text" id="txtAosCasadonew" disabled="disabled" />
+														<input type="text" id="txtAosCasadonew" maxlength="2" />
 													</div>
 												</div>
 											</div>
@@ -1029,11 +1096,13 @@
 												</div>
 											</div>-->
 											<div class="col-md-6">
-												<div id="txtTelOficinanewdiv">
+												<div>
 													<label class="control-label col-md-5" for="txtTelOficinanew">Teléfono de oficina*:</label>
 													<div class="col-md-6">          
-														<input type="text" class="form-control" id="txtTelOficinanew" placeholder="Teléfono de oficina." name="txtTelOficinanew" maxlength="10" tabindex="39">
-														<span id="txtTelOficinanewspan" ></span>
+														<div id="txtTelOficinanewdiv">
+															<input type="text" class="form-control" id="txtTelOficinanew" placeholder="Teléfono de oficina." name="txtTelOficinanew" maxlength="10" tabindex="39">
+															<span id="txtTelOficinanewspan" ></span>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -1108,13 +1177,15 @@
 											</div>
 										</div>
 										<div class="row" style="margin-right: -15px;margin-left: 54px; display:none;" id="rowfunciondesempeñasolnew">											
-											<div id="txfuncionpoliticoSolicitantenewdiv">
+											<div>
 												<div class="col-md-7" style="text-align: -webkit-left;">
 													<label class="control-label" for="txfuncionpoliticoSolicitantenew">¿Que función desempeña o ha desempeñado?*</label>
 												</div>
 												<div class="col-md-3">          
-													<input type="text" class="form-control" id="txfuncionpoliticoSolicitantenew" placeholder="Función." name="txfuncionpoliticoSolicitantenew" maxlength="50">
-													<span id="txfuncionpoliticoSolicitantenewspan" ></span>
+													<div id="txfuncionpoliticoSolicitantenewdiv">
+														<input type="text" class="form-control" id="txfuncionpoliticoSolicitantenew" placeholder="Función." name="txfuncionpoliticoSolicitantenew" maxlength="50">
+														<span id="txfuncionpoliticoSolicitantenewspan" ></span>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -1135,24 +1206,28 @@
 												
 										</div>
 										<div class="row" style="margin-right: -15px;margin-left: 54px; display:none;" id="rowfunciondesempeñaparentescosolnew">
-											<div id="txparentescofuncionpoliticoSolicitantenewdiv">
+											<div>
 												<div class="col-md-7" style="text-align: -webkit-left;">
 														<label class="control-label" for="txparentescofuncionpoliticoSolicitantenew">¿Que función desempeña o ha desempeñado?</label>
 												</div>
 												<div class="col-md-3">          
-													<input type="text" class="form-control" id="txparentescofuncionpoliticoSolicitantenew" placeholder="Función." name="txparentescofuncionpoliticoSolicitantenew" maxlength="50">
-													<span id="txparentescofuncionpoliticoSolicitantenewspan" ></span>
+													<div id="txparentescofuncionpoliticoSolicitantenewdiv">
+														<input type="text" class="form-control" id="txparentescofuncionpoliticoSolicitantenew" placeholder="Función." name="txparentescofuncionpoliticoSolicitantenew" maxlength="50">
+														<span id="txparentescofuncionpoliticoSolicitantenewspan" ></span>
+													</div>
 												</div>
 											</div>
 										</div>
 										<div class="row" style="margin-right: -15px;margin-left: 54px; display:none;" id="rowqueparentescosolnew">
-											<div id="txqueparenfuncionpoliticoSolicitantenewdiv">
+											<div>
 												<div class="col-md-7" style="text-align: -webkit-left;">
 													<label class="control-label" for="txqueparenfuncionpoliticoSolicitantenew">¿Que parentesco?</label>
 												</div>
 												<div class="col-md-3">          
-													<input type="text" class="form-control" id="txqueparenfuncionpoliticoSolicitantenew" placeholder="Parentesco." name="txqueparenfuncionpoliticoSolicitantenew" maxlength="50">
-													<span id="txqueparenfuncionpoliticoSolicitantenewspan" ></span>
+													<div id="txqueparenfuncionpoliticoSolicitantenewdiv">
+														<input type="text" class="form-control" id="txqueparenfuncionpoliticoSolicitantenew" placeholder="Parentesco." name="txqueparenfuncionpoliticoSolicitantenew" maxlength="50">
+														<span id="txqueparenfuncionpoliticoSolicitantenewspan" ></span>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -1348,7 +1423,7 @@
 										<div class="row" style="margin-top: -1px;">
 											<div class="col-sm-6 col-md-3 isotope-item">
 												<div class="image-box">
-													<div class="overlay-container">
+													<div class="overlay-container" style="height:165px;">
 														<h4 class="modal-title" id="project-1-label">INE(Frente)</h4>
 														<IMG id="result_imagefin" >
 														<a class="overlay" data-toggle="modal" data-target="#INEFrente" tabindex="57">
@@ -1390,7 +1465,7 @@
 											
 											<div class="col-sm-6 col-md-3 isotope-item">
 												<div class="image-box">
-													<div class="overlay-container">
+													<div class="overlay-container" style="height:165px;">
 														<h4 class="modal-title" id="project-1-label">INE(Atras)</h4>
 														<IMG id="result_imagefinatras" >
 														<a class="overlay" data-toggle="modal" data-target="#INEAtras" tabindex="59">
@@ -1432,9 +1507,9 @@
 											
 											<div class="col-sm-6 col-md-3 isotope-item">
 												<div class="image-box">
-													<div class="overlay-container">
+													<div class="overlay-container" style="height: 165px;">
 														<h4 class="modal-title" id="project-1-label">Firma</h4>
-														<img src="images/fondo.jpg" id="imagenpresenta" style="height: 106px;width: 100%;">
+														<img src="images/fondo.jpg" id="imagenpresenta" style="height: 164px;">
 														<a id="linkmodalopen" data-toggle="modal" data-target="#Firma" tabindex="61">
 															<i class="glyphicon glyphicon-eye-open"></i>
 														</a>
@@ -1457,7 +1532,7 @@
 																				<div>
 																					<div id="DivdelaFirma">
 																						<div class="sig sigWrapper" id="firma-Electronica-sigWrapper">
-																							<canvas id="firma-canvas" class="pad" width="550" height="315px"></canvas>
+																							<canvas id="firma-canvas" class="pad" width="830" height="315px"></canvas>
 																							<img id="firma-img" src="" class="hide pad" width="550" height="315px" alt="Firma" style="height: 315px;width: 100%;"/>
 																						</div>
 																					</div>
@@ -1558,7 +1633,7 @@
 																						
 											<div class="col-sm-6 col-md-3 isotope-item" id="Imagesextras">
 												<div class="image-box">
-													<div class="overlay-container">
+													<div class="overlay-container" style="height:165px;">
 														<h4 class="modal-title" id="project-1-label">Extra 1</h4>
 														<img src="images/fondo.jpg" alt="" id="imaextramodal">
 														<a data-toggle="modal" data-target="#project-1" id="linkmodalopenextra">
@@ -1615,7 +1690,7 @@
 											
 											<div class="col-sm-6 col-md-3 isotope-item" style="display:none;" id="Imagesextras2">
 												<div class="image-box">
-													<div class="overlay-container">
+													<div class="overlay-container" style="height:165px;">
 														<h4 class="modal-title" id="project-1-label">Extra 2</h4>
 														<img src="images/fondo.jpg" alt="" id="imaextramodal2">
 														<a class="overlay" data-toggle="modal" data-target="#modalextra2">
@@ -1676,7 +1751,7 @@
 											
 											<div class="col-sm-6 col-md-3 isotope-item" style="display:none;" id="Imagesextras3">
 												<div class="image-box">
-													<div class="overlay-container">
+													<div class="overlay-container" style="height:165px;">
 														<h4 class="modal-title" id="project-1-label">Extra 3</h4>
 														<img src="images/fondo.jpg" alt="" id="imaextramodal3">
 														<a class="overlay" data-toggle="modal" data-target="#modalextra3">
@@ -1736,7 +1811,7 @@
 											
 											<div class="col-sm-6 col-md-3 isotope-item" style="display:none;" id="Imagesextras4">
 												<div class="image-box">
-													<div class="overlay-container">
+													<div class="overlay-container" style="height:165px;">
 														<h4 class="modal-title" id="project-1-label">Extra 4</h4>
 														<img src="images/fondo.jpg" alt="" id="imaextramodal4">
 														<a class="overlay" data-toggle="modal" data-target="#modalextra4">
@@ -1796,7 +1871,7 @@
 											
 											<div class="col-sm-6 col-md-3 isotope-item" style="display:none;" id="Imagesextras5">
 												<div class="image-box">
-													<div class="overlay-container">
+													<div class="overlay-container" style="height:165px;">
 														<h4 class="modal-title" id="project-1-label">Extra 5</h4>
 														<img src="images/fondo.jpg" alt="" id="imaextramodal5">
 														<a class="overlay" data-toggle="modal" data-target="#modalextra5">

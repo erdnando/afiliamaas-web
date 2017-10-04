@@ -9,7 +9,7 @@ $(document).ready(function(){
 			
 			
 			
-			var controles=['#txtCpSolicitantenew','#txtNombreEmpresanew','#txtGironew', '#txtPuestonew','#txtCalleEmpresanew','#txtNumeroExteriorEmpresa','#txtCpEmpresanew', '#txtCalleSolicitantenew','#txtNumExteriornew', '#txtCorreonew', '#txtNomSolicitantenew','#txtApePaternonew', '#txtNumIdentificanew','#txtRFCnew','#txfuncionpoliticoSolicitantenew','#txparentescofuncionpoliticoSolicitantenew', '#txqueparenfuncionpoliticoSolicitantenew','#txtNombreRef1new','#txtNombreRef2new', '#txtApellidoPaternoRef1new','#txtApellidoPaternoRef2new'];
+			var controles=['#txtCpSolicitantenew','#txtNombreEmpresanew','#txtGironew', '#txtPuestonew','#txtCalleEmpresanew','#txtNumeroExteriorEmpresa','#txtCpEmpresanew', '#txtCalleSolicitantenew','#txtNumExteriornew', '#txtNomSolicitantenew','#txtApePaternonew', '#txtNumIdentificanew','#txtRFCnew','#txfuncionpoliticoSolicitantenew','#txparentescofuncionpoliticoSolicitantenew', '#txqueparenfuncionpoliticoSolicitantenew','#txtNombreRef1new','#txtNombreRef2new', '#txtApellidoPaternoRef1new','#txtApellidoPaternoRef2new'];
 			$.each(controles, function (ind, elem) { 
 				agregaeventostextos(elem);
 			});
@@ -495,6 +495,8 @@ $(document).ready(function(){
 			// Hacer algo si el checkbox ha sido deseleccionado
 			console.log("El checkbox con valor " + $(this).val() + " ha sido deseleccionado");
 			$('#rowfunciondesempeñasolnew').hide();
+			$('#txfuncionpoliticoSolicitantenew').val('');
+			
 		}
 	  }
 	  
@@ -513,6 +515,10 @@ $(document).ready(function(){
 			console.log("El checkbox con valor " + $(this).val() + " ha sido deseleccionado");
 			$('#rowfunciondesempeñaparentescosolnew').hide();
 			$('#rowqueparentescosolnew').hide();
+			$('#txparentescofuncionpoliticoSolicitantenew').val('');
+			$('#txqueparenfuncionpoliticoSolicitantenew').val('');
+			
+			
 		}
 	  }
 	  
@@ -1245,9 +1251,8 @@ $(document).ready(function(){
 		  
 		});
 		
-		
 	
-
+	
 		
 		
 		

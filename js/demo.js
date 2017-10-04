@@ -181,7 +181,7 @@ function processCompress(input) {
 													$('#lnknombremodalINEFrente').text(result_imagefinmod.name);
 													$('#lnknombremodalINEFrente').attr("disabled", "disabled");
 													
-													if($('#result_image')[0].src != "https://stefaninimx.com/afiliamaas/images/shade.jpg" && $('#result_imageanver')[0].src != "https://stefaninimx.com/afiliamaas/images/shade.jpg"){
+													if($('#result_image')[0].src != "https://stefaninimx.com/afiliamaas-web/images/shade.jpg" && $('#result_imageanver')[0].src != "https://stefaninimx.com/afiliamaas-web/images/shade.jpg"){
 														$("#btnifeok").prop( "disabled", false );
 														$("#btnifeok").fadeIn();
 													}
@@ -201,8 +201,9 @@ function processCompress(input) {
 												   $("#txtTipIdentificacionnew option[value=2565]").attr("selected","selected");
 												   $("#txtTipIdentificacionnew").prop( "disabled", true );
 												   $("#lstNacionalidadnew option[value=2519]").attr("selected","selected");
+													validariconlistas($("#txtTipIdentificacionnew"));
 												   
-												   validariconlistas($("#txtTipIdentificacionnew"));
+												   validariconlistas($("#lstNacionalidadnew"));
 												   
 												   $.ajax({ 			
 															type: 'POST',
@@ -268,8 +269,10 @@ function processCompress(input) {
 												   
 												   $('#dateFechanacnew').val("19" + data.fechaDeNacimientoANIO +"-"+ data.fechaDeNacimientoMES +"-" + data.fechaDeNacimientoDIA);
 												   validariconfecha($('#dateFechanacnew'));
-												   document.getElementById('txtNumExteriornew').value=data.numeroExt;
-												   validaricontxt($('#txtNumExteriornew'));
+												   document.getElementById('txtNumExteriornew').value=data.numeroExt ? data.numeroExt : '';
+												   if($('#txtNumExteriornew').val() != ''){
+														validaricontxt($('#txtNumExteriornew'));
+												   }
 												   
 												   $('#txtRFCnew').val(CalcularRFC($('#txtNomSolicitantenew').val() + " " + $('#txtSegundonombrenew').val() ,$('#txtApePaternonew').val(),$('#txtApeMaternonew').val(),$('#dateFechanacnew').val()));
 												   validaricontxt($('#txtRFCnew'));
@@ -482,7 +485,8 @@ function processCompressanver(input) {
 											$('#lnknombremodalINEAtras').text(result_imagefinmodatras.name);
 											$('#lnknombremodalINEAtras').attr("disabled", "disabled");
 											document.getElementById('txtNumIdentificanew').value=data.ocr;
-											if($('#result_image')[0].src != "https://stefaninimx.com/afiliamaas/images/shade.jpg" && $('#result_imageanver')[0].src != "https://stefaninimx.com/afiliamaas/images/shade.jpg"){
+											validaricontxt($('#txtNumIdentificanew'));
+											if($('#result_image')[0].src != "https://stefaninimx.com/afiliamaas-web/images/shade.jpg" && $('#result_imageanver')[0].src != "https://stefaninimx.com/afiliamaas-web/images/shade.jpg"){
 													$("#btnifeok").prop( "disabled", false );
 													$("#btnifeok").fadeIn();
 												}

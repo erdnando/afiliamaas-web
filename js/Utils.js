@@ -1,60 +1,53 @@
 
-	function getParameterByName(name, url) {
-		if (!url) url = window.location.href;
-		name = name.replace(/[\[\]]/g, "\\$&");
-		var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-			results = regex.exec(url);
-		if (!results) return "ERRO";
-		if (!results[2]) return 'ERRO';
-		return decodeURIComponent(results[2].replace(/\+/g, " "));
+function getParameterByName(name, url) {
+	if (!url) url = window.location.href;
+	name = name.replace(/[\[\]]/g, "\\$&");
+	var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+		results = regex.exec(url);
+	if (!results) return "ERRO";
+	if (!results[2]) return 'ERRO';
+	return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+
+var hasSigned = false;
+
+function clearCanvasSign() {
+    hasSigned = false;
+    setTimeout(function () {
+        loading("hide");
+    },2000);
+}
+
+function signToImage() {
+	var canvas = document.getElementById("firma-canvas");
+	
+	if(canvas.toDataURL() === "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAiYAAAE7CAYAAADpbkqeAAAO0klEQVR4Xu3WQQ0AMAwDsZU/2iLYpKG4h4ugcvLI7O49jgABAgQIECAQEBjDJJCCFwgQIECAAIEvYJgoAgECBAgQIJARMEwyUXiEAAECBAgQMEx0gAABAgQIEMgIGCaZKDxCgAABAgQIGCY6QIAAAQIECGQEDJNMFB4hQIAAAQIEDBMdIECAAAECBDIChkkmCo8QIECAAAEChokOECBAgAABAhkBwyQThUcIECBAgAABw0QHCBAgQIAAgYyAYZKJwiMECBAgQICAYaIDBAgQIECAQEbAMMlE4RECBAgQIEDAMNEBAgQIECBAICNgmGSi8AgBAgQIECBgmOgAAQIECBAgkBEwTDJReIQAAQIECBAwTHSAAAECBAgQyAgYJpkoPEKAAAECBAgYJjpAgAABAgQIZAQMk0wUHiFAgAABAgQMEx0gQIAAAQIEMgKGSSYKjxAgQIAAAQKGiQ4QIECAAAECGQHDJBOFRwgQIECAAAHDRAcIECBAgACBjIBhkonCIwQIECBAgIBhogMECBAgQIBARsAwyUThEQIECBAgQMAw0QECBAgQIEAgI2CYZKLwCAECBAgQIGCY6AABAgQIECCQETBMMlF4hAABAgQIEDBMdIAAAQIECBDICBgmmSg8QoAAAQIECBgmOkCAAAECBAhkBAyTTBQeIUCAAAECBAwTHSBAgAABAgQyAoZJJgqPECBAgAABAoaJDhAgQIAAAQIZAcMkE4VHCBAgQIAAAcNEBwgQIECAAIGMgGGSicIjBAgQIECAgGGiAwQIECBAgEBGwDDJROERAgQIECBAwDDRAQIECBAgQCAjYJhkovAIAQIECBAgYJjoAAECBAgQIJARMEwyUXiEAAECBAgQMEx0gAABAgQIEMgIGCaZKDxCgAABAgQIGCY6QIAAAQIECGQEDJNMFB4hQIAAAQIEDBMdIECAAAECBDIChkkmCo8QIECAAAEChokOECBAgAABAhkBwyQThUcIECBAgAABw0QHCBAgQIAAgYyAYZKJwiMECBAgQICAYaIDBAgQIECAQEbAMMlE4RECBAgQIEDAMNEBAgQIECBAICNgmGSi8AgBAgQIECBgmOgAAQIECBAgkBEwTDJReIQAAQIECBAwTHSAAAECBAgQyAgYJpkoPEKAAAECBAgYJjpAgAABAgQIZAQMk0wUHiFAgAABAgQMEx0gQIAAAQIEMgKGSSYKjxAgQIAAAQKGiQ4QIECAAAECGQHDJBOFRwgQIECAAAHDRAcIECBAgACBjIBhkonCIwQIECBAgIBhogMECBAgQIBARsAwyUThEQIECBAgQMAw0QECBAgQIEAgI2CYZKLwCAECBAgQIGCY6AABAgQIECCQETBMMlF4hAABAgQIEDBMdIAAAQIECBDICBgmmSg8QoAAAQIECBgmOkCAAAECBAhkBAyTTBQeIUCAAAECBAwTHSBAgAABAgQyAoZJJgqPECBAgAABAoaJDhAgQIAAAQIZAcMkE4VHCBAgQIAAAcNEBwgQIECAAIGMgGGSicIjBAgQIECAgGGiAwQIECBAgEBGwDDJROERAgQIECBAwDDRAQIECBAgQCAjYJhkovAIAQIECBAgYJjoAAECBAgQIJARMEwyUXiEAAECBAgQMEx0gAABAgQIEMgIGCaZKDxCgAABAgQIGCY6QIAAAQIECGQEDJNMFB4hQIAAAQIEDBMdIECAAAECBDIChkkmCo8QIECAAAEChokOECBAgAABAhkBwyQThUcIECBAgAABw0QHCBAgQIAAgYyAYZKJwiMECBAgQICAYaIDBAgQIECAQEbAMMlE4RECBAgQIEDAMNEBAgQIECBAICNgmGSi8AgBAgQIECBgmOgAAQIECBAgkBEwTDJReIQAAQIECBAwTHSAAAECBAgQyAgYJpkoPEKAAAECBAgYJjpAgAABAgQIZAQMk0wUHiFAgAABAgQMEx0gQIAAAQIEMgKGSSYKjxAgQIAAAQKGiQ4QIECAAAECGQHDJBOFRwgQIECAAAHDRAcIECBAgACBjIBhkonCIwQIECBAgIBhogMECBAgQIBARsAwyUThEQIECBAgQMAw0QECBAgQIEAgI2CYZKLwCAECBAgQIGCY6AABAgQIECCQETBMMlF4hAABAgQIEDBMdIAAAQIECBDICBgmmSg8QoAAAQIECBgmOkCAAAECBAhkBAyTTBQeIUCAAAECBAwTHSBAgAABAgQyAoZJJgqPECBAgAABAoaJDhAgQIAAAQIZAcMkE4VHCBAgQIAAAcNEBwgQIECAAIGMgGGSicIjBAgQIECAgGGiAwQIECBAgEBGwDDJROERAgQIECBAwDDRAQIECBAgQCAjYJhkovAIAQIECBAgYJjoAAECBAgQIJARMEwyUXiEAAECBAgQMEx0gAABAgQIEMgIGCaZKDxCgAABAgQIGCY6QIAAAQIECGQEDJNMFB4hQIAAAQIEDBMdIECAAAECBDIChkkmCo8QIECAAAEChokOECBAgAABAhkBwyQThUcIECBAgAABw0QHCBAgQIAAgYyAYZKJwiMECBAgQICAYaIDBAgQIECAQEbAMMlE4RECBAgQIEDAMNEBAgQIECBAICNgmGSi8AgBAgQIECBgmOgAAQIECBAgkBEwTDJReIQAAQIECBAwTHSAAAECBAgQyAgYJpkoPEKAAAECBAgYJjpAgAABAgQIZAQMk0wUHiFAgAABAgQMEx0gQIAAAQIEMgKGSSYKjxAgQIAAAQKGiQ4QIECAAAECGQHDJBOFRwgQIECAAAHDRAcIECBAgACBjIBhkonCIwQIECBAgIBhogMECBAgQIBARsAwyUThEQIECBAgQMAw0QECBAgQIEAgI2CYZKLwCAECBAgQIGCY6AABAgQIECCQETBMMlF4hAABAgQIEDBMdIAAAQIECBDICBgmmSg8QoAAAQIECBgmOkCAAAECBAhkBAyTTBQeIUCAAAECBAwTHSBAgAABAgQyAoZJJgqPECBAgAABAoaJDhAgQIAAAQIZAcMkE4VHCBAgQIAAAcNEBwgQIECAAIGMgGGSicIjBAgQIECAgGGiAwQIECBAgEBGwDDJROERAgQIECBAwDDRAQIECBAgQCAjYJhkovAIAQIECBAgYJjoAAECBAgQIJARMEwyUXiEAAECBAgQMEx0gAABAgQIEMgIGCaZKDxCgAABAgQIGCY6QIAAAQIECGQEDJNMFB4hQIAAAQIEDBMdIECAAAECBDIChkkmCo8QIECAAAEChokOECBAgAABAhkBwyQThUcIECBAgAABw0QHCBAgQIAAgYyAYZKJwiMECBAgQICAYaIDBAgQIECAQEbAMMlE4RECBAgQIEDAMNEBAgQIECBAICNgmGSi8AgBAgQIECBgmOgAAQIECBAgkBEwTDJReIQAAQIECBAwTHSAAAECBAgQyAgYJpkoPEKAAAECBAgYJjpAgAABAgQIZAQMk0wUHiFAgAABAgQMEx0gQIAAAQIEMgKGSSYKjxAgQIAAAQKGiQ4QIECAAAECGQHDJBOFRwgQIECAAAHDRAcIECBAgACBjIBhkonCIwQIECBAgIBhogMECBAgQIBARsAwyUThEQIECBAgQMAw0QECBAgQIEAgI2CYZKLwCAECBAgQIGCY6AABAgQIECCQETBMMlF4hAABAgQIEDBMdIAAAQIECBDICBgmmSg8QoAAAQIECBgmOkCAAAECBAhkBAyTTBQeIUCAAAECBAwTHSBAgAABAgQyAoZJJgqPECBAgAABAoaJDhAgQIAAAQIZAcMkE4VHCBAgQIAAAcNEBwgQIECAAIGMgGGSicIjBAgQIECAgGGiAwQIECBAgEBGwDDJROERAgQIECBAwDDRAQIECBAgQCAjYJhkovAIAQIECBAgYJjoAAECBAgQIJARMEwyUXiEAAECBAgQMEx0gAABAgQIEMgIGCaZKDxCgAABAgQIGCY6QIAAAQIECGQEDJNMFB4hQIAAAQIEDBMdIECAAAECBDIChkkmCo8QIECAAAEChokOECBAgAABAhkBwyQThUcIECBAgAABw0QHCBAgQIAAgYyAYZKJwiMECBAgQICAYaIDBAgQIECAQEbAMMlE4RECBAgQIEDAMNEBAgQIECBAICNgmGSi8AgBAgQIECBgmOgAAQIECBAgkBEwTDJReIQAAQIECBAwTHSAAAECBAgQyAgYJpkoPEKAAAECBAgYJjpAgAABAgQIZAQMk0wUHiFAgAABAgQMEx0gQIAAAQIEMgKGSSYKjxAgQIAAAQKGiQ4QIECAAAECGQHDJBOFRwgQIECAAAHDRAcIECBAgACBjIBhkonCIwQIECBAgIBhogMECBAgQIBARsAwyUThEQIECBAgQMAw0QECBAgQIEAgI2CYZKLwCAECBAgQIGCY6AABAgQIECCQETBMMlF4hAABAgQIEDBMdIAAAQIECBDICBgmmSg8QoAAAQIECBgmOkCAAAECBAhkBAyTTBQeIUCAAAECBAwTHSBAgAABAgQyAoZJJgqPECBAgAABAoaJDhAgQIAAAQIZAcMkE4VHCBAgQIAAAcNEBwgQIECAAIGMgGGSicIjBAgQIECAgGGiAwQIECBAgEBGwDDJROERAgQIECBAwDDRAQIECBAgQCAjYJhkovAIAQIECBAgYJjoAAECBAgQIJARMEwyUXiEAAECBAgQMEx0gAABAgQIEMgIGCaZKDxCgAABAgQIGCY6QIAAAQIECGQEDJNMFB4hQIAAAQIEDBMdIECAAAECBDIChkkmCo8QIECAAAEChokOECBAgAABAhkBwyQThUcIECBAgAABw0QHCBAgQIAAgYyAYZKJwiMECBAgQICAYaIDBAgQIECAQEbAMMlE4RECBAgQIEDAMNEBAgQIECBAICNgmGSi8AgBAgQIECBgmOgAAQIECBAgkBEwTDJReIQAAQIECBAwTHSAAAECBAgQyAgYJpkoPEKAAAECBAgYJjpAgAABAgQIZAQMk0wUHiFAgAABAgQMEx0gQIAAAQIEMgKGSSYKjxAgQIAAAQKGiQ4QIECAAAECGYEHBgK03pAPpjYAAAAASUVORK5CYII="){
+		var demoTimeout;
+		clearTimeout(demoTimeout);
+		$('#firma-canvas').trigger('startRumble');
+		$("#firma-canvas").css('border', '1px solid red'); 
+		demoTimeout = setTimeout(function(){$('#firma-canvas').trigger('stopRumble');},1000);
+		
 	}
+	else{
 	
-	
-	var hasSigned = false;
-
-    function clearCanvasSign() {
-        hasSigned = false;
-        setTimeout(function () {
-            loading("hide");
-        },2000);
-    }
-
-    function signToImage() {
-        var canvas = document.getElementById("firma-canvas");
+		var image = $("#firma-img");
+		var image2 = $("#imagenpresenta")
+		image.attr("src", canvas.toDataURL());
+		var d = new Date();
+		image.attr("name", "TEC_" + d.getTime() +".jpg");
+		//image[0].name="TEC_" + d.getTime() +".jpg";
+		//canvas2.removeAttr("src");
+		image2.attr("src", canvas.toDataURL());
+		image2.attr("name", image[0].name);
+		$("#linkmodalopen").attr("class", "overlay");
+		$("#nomfirma").text(image[0].name);
+		$("#nomfirma").attr("disabled", "disabled");
+		$("#Firma").hide();
 		
-		if(canvas.toDataURL() === "data:image/png;base64,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"){
-			var demoTimeout;
-			clearTimeout(demoTimeout);
-			$('#firma-canvas').trigger('startRumble');
-			$("#firma-canvas").css('border', '1px solid red'); 
-			demoTimeout = setTimeout(function(){$('#firma-canvas').trigger('stopRumble');},1000);
-			
-		}
-		else{
-		
-			var image = $("#firma-img");
-			var image2 = $("#imagenpresenta")
-			image.attr("src", canvas.toDataURL());
-			var d = new Date();
-			image.attr("name", "TEC_" + d.getTime() +".jpg");
-			//image[0].name="TEC_" + d.getTime() +".jpg";
-			//canvas2.removeAttr("src");
-			image2.attr("src", canvas.toDataURL());
-			image2.attr("name", image[0].name);
-			$("#linkmodalopen").attr("class", "overlay");
-			$("#nomfirma").text(image[0].name);
-			$("#nomfirma").attr("disabled", "disabled");
-			$("#Firma").hide();
-			
-		}
-		
-		
-		
-		
-		
-		
-
-    }
+	}
+}
 
 function fncompaniamovil(){
 	$.ajax({ 			
@@ -193,7 +186,7 @@ function fntipocontrato(){
 	
 }
 
-#region RFC
+
 function fncargaEdo(){//(combo, tipoedo, Delesol, colsoli){
 	
 	$.ajax({ 			
@@ -483,7 +476,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 	} 
 	return rfc;
 }
-#endregion
+
 
 
 	function buscaCPemp( inpCP){
@@ -538,7 +531,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 				},
 				error: function (result) {  
 					console.log("errror....");  
-				}   
+				} ,
+				async: false  
 			}); 
 	}
 	
@@ -650,7 +644,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 				},
 				error: function (result) {  
 					console.log("errror....");  
-				}   
+				},
+				async: false				
 			}); 
 	}
 	
@@ -853,6 +848,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$('#nomfirma').attr("disabled","disabled");
 		
 		
+		
+		
 		/*$('#lnknombremodalINEFrente').text($IdentificacionFrentePath);
 		$('#titulomodalfinINEFrente').text($IdentificacionFrentePath);
 		
@@ -898,11 +895,15 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		
 		//$("#lisColoniaSolicitantenew option[text="+$Colonia+"]").attr("selected","selected");
 		
-		$("#lisColoniaSolicitantenew option").each(function () {
+		$("#lisColoniaSolicitantenew option:contains('"+ $Colonia +"')").attr("selected",true);
+		
+		/*$("#lisColoniaSolicitantenew option").each(function () {
+			
+			
 			if($("#lisColoniaSolicitantenew option").text == $Colonia){
 				$("#lisColoniaSolicitantenew option").attr("selected","selected");
 			}
-		});
+		});*/
 		$('#txtTiempoResidencianew').val($TiempoResidencia);
 		$("#lisEstatusResidencianew option[value="+$EstatusResidencia+"]").attr("selected","selected");
 		$('#txtMontoViviendanew').val($MontoVivienda);
@@ -998,8 +999,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$Puesto = validaexiste(xmlDoc.documentElement.getElementsByTagName("Deconominos")[0].getElementsByTagName("Puesto"),null);
 		
 		$("#lisTipoContratonew option[value="+$TipoContrato+"]").attr("selected","selected");
-		$('#txtantiguedadnew').val($AntiguedadEmpleo);
-		$('#txtAosCasadonew').val($AniosCasada);
+		$('#txtantiguedadnew').val(parseInt($AntiguedadEmpleo));
+		$('#txtAosCasadonew').val(parseInt($AniosCasada));
 		$("#txtIngresonew").val($Ingresos);
 		$('#txtNombreEmpresanew').val($NombreEmpresa);
 		$("#txtGironew").val($GiroEmpresa);
@@ -1030,16 +1031,16 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$("#lisEstadoEmpresanew option[value="+$Estadoemp+"]").attr("selected","selected");
 		$("#lisDelMuniEmpresanew option[value="+$Delegacionemp+"]").attr("selected","selected");
 		
-		//$("#lisColoniaEmpresanew option[text="+$Coloniaempresa+"]").attr("selected","selected");
 		
-		$("#lisColoniaEmpresanew option").each(function () {
+		$("#lisColoniaEmpresanew").find('option:contains("'+$Coloniaempresa+'")').attr("selected","selected");
+		/*$("#lisColoniaEmpresanew option").each(function () {
 			if($("#lisColoniaEmpresanew option").text == $Colonia){
 				$("#lisColoniaEmpresanew option").attr("selected","selected");
 			}
-		});
+		});*/
 		
 		
-		$("#txtantiguedadnew").val($TiempoResidenciaemp);
+		//$("#txtTiempoResidencianew").val($TiempoResidenciaemp);
 		$("#txtTelOficinanew").val($Telcasaemp);
 		$("#txtOtrosIngresosnew").val($OtrosIngresos);
 		$("#txtFuenteOtrosIngrenew").val($FuenteOtrosIngresos);
@@ -1168,6 +1169,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 								/*$Lattitude = validaexiste(xmlDoc.documentElement.getElementsByTagName("Lattitude"),null);
 								$Longuitud = validaexiste(xmlDoc.documentElement.getElementsByTagName("Longuitud"),null);*/
 		$('#DatGrales').modal();
+		$("#lisColoniaSolicitantenew option:contains('Benito Juárez (La Aurora)')").attr("selected",true);
 	}
 	
 	function NuevaSolicitud(){
@@ -1446,6 +1448,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$("#txtTelOficinanew").val(null);
 		$("#txtOtrosIngresosnew").val("$ 0.00");
 		$("#txtFuenteOtrosIngrenew").val(null);
+		$("#btnifeok").prop( "disabled", false );
+		$("#btnifeok").fadeOut();
 		
 		
 		
@@ -1645,6 +1649,9 @@ function validariconmonto(monto){
 }
 
 function validaricontelefonos(telefono){
+	
+	var valortelefono = $(telefono).val();
+	var valorfinal = valortelefono.unmask();
 
 	if($(telefono).val().replace('(', '').replace(')', '').replace(' ', '').length == 0 ){
 			var nombrecladiv = "#" + $(telefono)[0].id + "div";
@@ -2045,7 +2052,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 		
 			break;
 		case '2':
-			var controles=['#txtCalleSolicitantenew','#txtNumExteriornew', '#txtCorreonew'];
+			var controles=['#txtCalleSolicitantenew','#txtNumExteriornew'];
 			var contlisterror=[];
 			var controlesCP=['#txtCpSolicitantenew'];
 			var contlistCPerror=[];
@@ -2058,7 +2065,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 			var contlisterrorspiner=[];
 			var controleslist=['#lisEstadoSolicitantenew','#lisDelMuniSolicitantenew', '#lisColoniaSolicitantenew','#lisCompaniaMovilnew', '#lisEstatusResidencianew'];
 			var controleslisterror=[];
-			var totalvalidar = 13;
+			var totalvalidar = 12;
 			var controlvalidados=0;
 
 			$.each(controles, function (ind, elem) { 
