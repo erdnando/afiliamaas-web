@@ -2215,7 +2215,8 @@ function validacontrolespantall(pantalla, kinkheader, e){
 			var contlisterrorspiner=[];
 			var controleslist=['#lisEstadoSolicitantenew','#lisDelMuniSolicitantenew', '#lisColoniaSolicitantenew','#lisCompaniaMovilnew', '#lisEstatusResidencianew'];
 			var controleslisterror=[];
-			var totalvalidar = 12;
+            //TOTAL DE CONTROLES QUE SE VALIDAN, SI SE AGREGAN CONTROLES SE DEBE INCREMENTAR ESTA VARIABLE.
+			var totalvalidar = 13;
 			var controlvalidados=0;
 
 			$.each(controles, function (ind, elem) { 
