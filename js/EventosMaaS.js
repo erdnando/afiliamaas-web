@@ -606,8 +606,9 @@ $(document).ready(function(){
 				console.log("referencia igual a solicitante");
 				var demoTimeout;
 				clearTimeout(demoTimeout);
-				$('#txtNombreRef1new').trigger('startRumble');
-				$("#txtNombreRef1new").css('border', '1px solid red'); 
+                validaricontxt('#txtNombreRef1new');
+				/*$('#txtNombreRef1new').trigger('startRumble');
+				$("#txtNombreRef1new").css('border', '1px solid red'); */
 				demoTimeout = setTimeout(function(){$('#txtNombreRef1new').trigger('stopRumble');},1000);
 				//$('#txtNombreRef1new').focus();
 				
@@ -615,7 +616,8 @@ $(document).ready(function(){
 
 				clearTimeout(demoTimeout2);
 				$('#txtApellidoPaternoRef1new').trigger('startRumble');
-				$("#txtApellidoPaternoRef1new").css('border', '1px solid red'); 
+                validaricontxt("#txtApellidoPaternoRef1new");
+				//$("#txtApellidoPaternoRef1new").css('border', '1px solid red');
 				demoTimeout2 = setTimeout(function(){$('#txtApellidoPaternoRef1new').trigger('stopRumble')},1000);
 				//clearTimeout(demoTimeout);
 				
@@ -623,7 +625,8 @@ $(document).ready(function(){
 				
 				clearTimeout(demoTimeout3);
 				$('#txtApellidoMaternoRef1new').trigger('startRumble');
-				$("#txtApellidoMaternoRef1new").css('border', '1px solid red'); 
+				//$("#txtApellidoMaternoRef1new").css('border', '1px solid red');
+                validaricontxt("#txtApellidoMaternoRef1new");
 				demoTimeout3 = setTimeout(function(){$('#txtApellidoMaternoRef1new').trigger('stopRumble')},1000);
 				//clearTimeout(demoTimeout3);
 
@@ -644,34 +647,40 @@ $(document).ready(function(){
 		
 		$('#txtNombreRef1new').on({
 		click:	function () {
-			$("#txtNombreRef1new").css('border', 'none');
-			$("#txtNombreRef1new").css('border-bottom', '2px solid #cecfd3'); 
+            validaricontxt("#txtNombreRef1new");
+			/*$("#txtNombreRef1new").css('border', 'none');
+			$("#txtNombreRef1new").css('border-bottom', '2px solid #cecfd3'); */
 		},
 		focus:	function () {
-			$("#txtNombreRef1new").css('border', 'none');
-			$("#txtNombreRef1new").css('border-bottom', '2px solid #cecfd3'); 
+			validaricontxt("#txtNombreRef1new");
+			/*$("#txtNombreRef1new").css('border', 'none');
+			$("#txtNombreRef1new").css('border-bottom', '2px solid #cecfd3'); */
 		}
 	  
 		});
 		$('#txtApellidoPaternoRef1new').on({
 			click:	function () {
-				$("#txtApellidoPaternoRef1new").css('border', 'none');
-				$("#txtApellidoPaternoRef1new").css('border-bottom', '2px solid #cecfd3'); 
+                validaricontxt("#txtApellidoPaternoRef1new");
+				/*$("#txtApellidoPaternoRef1new").css('border', 'none');
+				$("#txtApellidoPaternoRef1new").css('border-bottom', '2px solid #cecfd3'); */
 			},
 			focus:	function () {
-				$("#txtApellidoPaternoRef1new").css('border', 'none');
-				$("#txtApellidoPaternoRef1new").css('border-bottom', '2px solid #cecfd3'); 
+				validaricontxt("#txtApellidoPaternoRef1new");
+				/*$("#txtApellidoPaternoRef1new").css('border', 'none');
+				$("#txtApellidoPaternoRef1new").css('border-bottom', '2px solid #cecfd3'); */
 			}
 		  
 		});
 		$('#txtApellidoMaternoRef1new').on({
 			click:	function () {
-				$("#txtApellidoMaternoRef1new").css('border', 'none');
-				$("#txtApellidoMaternoRef1new").css('border-bottom', '2px solid #cecfd3'); 
+                validaricontxt("#txtApellidoMaternoRef1new");
+				/*$("#txtApellidoMaternoRef1new").css('border', 'none');
+				$("#txtApellidoMaternoRef1new").css('border-bottom', '2px solid #cecfd3'); */
 			},
 			focus:	function () {
-				$("#txtApellidoMaternoRef1new").css('border', 'none');
-				$("#txtApellidoMaternoRef1new").css('border-bottom', '2px solid #cecfd3'); 
+				validaricontxt("#txtApellidoMaternoRef1new");
+				/*$("#txtApellidoMaternoRef1new").css('border', 'none');
+				$("#txtApellidoMaternoRef1new").css('border-bottom', '2px solid #cecfd3'); */
 			}
 		  
 		});
@@ -692,7 +701,8 @@ $(document).ready(function(){
 				var demoTimeout;
 				clearTimeout(demoTimeout);
 				$('#txtNombreRef2new').trigger('startRumble');
-				$("#txtNombreRef2new").css('border', '1px solid red'); 
+                validaricontxt("#txtNombreRef2new");
+				//$("#txtNombreRef2new").css('border', '1px solid red');
 				demoTimeout = setTimeout(function(){$('#txtNombreRef2new').trigger('stopRumble');},1000);
 				//$('#txtNombreRef2new').focus();
 				
@@ -700,7 +710,8 @@ $(document).ready(function(){
 
 				clearTimeout(demoTimeout2);
 				$('#txtApellidoPaternoRef2new').trigger('startRumble');
-				$("#txtApellidoPaternoRef2new").css('border', '1px solid red'); 
+                validaricontxt("#txtApellidoPaternoRef2new");
+				//$("#txtApellidoPaternoRef2new").css('border', '1px solid red');
 				demoTimeout2 = setTimeout(function(){$('#txtApellidoPaternoRef2new').trigger('stopRumble')},1000);
 				//clearTimeout(demoTimeout);
 				
@@ -708,7 +719,8 @@ $(document).ready(function(){
 				
 				clearTimeout(demoTimeout3);
 				$('#txtApellidoMaternoRef2new').trigger('startRumble');
-				$("#txtApellidoMaternoRef2new").css('border', '1px solid red'); 
+                validaricontxt("#txtApellidoMaternoRef2new");
+				//$("#txtApellidoMaternoRef2new").css('border', '1px solid red');
 				demoTimeout3 = setTimeout(function(){$('#txtApellidoMaternoRef2new').trigger('stopRumble')},1000);
 				//clearTimeout(demoTimeout3);
 
@@ -718,7 +730,8 @@ $(document).ready(function(){
 				var demoTimeout;
 				clearTimeout(demoTimeout);
 				$('#txtNombreRef2new').trigger('startRumble');
-				$("#txtNombreRef2new").css('border', '1px solid red'); 
+                validaricontxt("#txtNombreRef2new");
+				//$("#txtNombreRef2new").css('border', '1px solid red');
 				demoTimeout = setTimeout(function(){$('#txtNombreRef2new').trigger('stopRumble');},1000);
 				//$('#txtNombreRef2new').focus();
 				
@@ -726,7 +739,8 @@ $(document).ready(function(){
 
 				clearTimeout(demoTimeout2);
 				$('#txtApellidoPaternoRef2new').trigger('startRumble');
-				$("#txtApellidoPaternoRef2new").css('border', '1px solid red'); 
+                validaricontxt("#txtApellidoPaternoRef2new");
+				//$("#txtApellidoPaternoRef2new").css('border', '1px solid red');
 				demoTimeout2 = setTimeout(function(){$('#txtApellidoPaternoRef2new').trigger('stopRumble')},1000);
 				//clearTimeout(demoTimeout);
 				
@@ -734,7 +748,8 @@ $(document).ready(function(){
 				
 				clearTimeout(demoTimeout3);
 				$('#txtApellidoMaternoRef2new').trigger('startRumble');
-				$("#txtApellidoMaternoRef2new").css('border', '1px solid red'); 
+                validaricontxt("#txtApellidoMaternoRef2new");
+				//$("#txtApellidoMaternoRef2new").css('border', '1px solid red');
 				demoTimeout3 = setTimeout(function(){$('#txtApellidoMaternoRef2new').trigger('stopRumble')},1000);
 				//clearTimeout(demoTimeout3);
 

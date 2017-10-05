@@ -2070,7 +2070,7 @@ function navegasliderheaderatras(step){
 			$('#rowvalida6').addClass('rowvalida6').removeClass('rowiniciostepactivo6');
 
 
-            var controles=['#txtNombreRef1new','#txtNombreRef2new', '#txtApellidoPaternoRef1new','#txtApellidoPaternoRef2new','#txtTelCasaRef1new','#txtTelCasaRef2new'];
+            var controles=['#txtNombreRef1new','#txtNombreRef2new', '#txtApellidoPaternoRef1new','#txtApellidoPaternoRef2new','#txtApellidoMaternoRef1new','#txtApellidoMaternoRef2new','#txtTelCasaRef1new','#txtTelCasaRef2new'];
 			 $.each(controles, function (ind, elem) {
                 if($(controles[ind]).val() == ''){
                     enablecontrolesicon(elem);
@@ -2496,7 +2496,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 			
 			
 			$.each(controleslistspiners, function (ind, elem) { 
-				if(validalistas(elem) == 1 )
+				if(validaspiners(elem) == 1 )
 				{
 					controlvalidados += 1;
 				}else{
@@ -2564,7 +2564,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 					demoTimeout = setTimeout(function(){$(elem).trigger('stopRumble');},1500);							
 				});
 				
-				$.each(controleslistspiners, function (ind, elem) { 
+				$.each(controleslistspinerserror, function (ind, elem) {
 					var demoTimeout;
 					clearTimeout(demoTimeout);
 					$(elem).trigger('startRumble');
