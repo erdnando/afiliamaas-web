@@ -1675,6 +1675,14 @@ html .ui-field-contain>label+.ui-flipswitch, html .ui-popup .ui-field-contain>la
     top: 183px;
     right: 625px;
 }
+
+#cargando {
+    position: absolute;
+    width: 32%;
+    height: 49%;
+    text-align: -webkit-center;
+    bottom: 172px;
+}
 .imgloadingindex {
     position: absolute;
     top: 54px;
