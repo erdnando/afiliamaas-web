@@ -669,7 +669,7 @@ img{max-width:100%;}
 .head {
     width: 50%;
     margin: 11% auto 0;
-    background: #fff;
+    background: rgba(255, 255, 255, 0);
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -684,32 +684,33 @@ img{max-width:100%;}
     padding: 12.7% 0;
 }
 .login {
-    width: 55%;
+    width: 33%;
     float: right;
-    padding: 3.7% 0;
-	background:#fff;
+    padding: 2.7% 0;
+    background: rgba(255, 255, 255, 0);
 	/*border: 1px solid #cecfd3;*/
 }
 .login input[type="text"], .login input[type="password"] {
     outline: none;
     font-size: 16px;
-    color: #096484;
+    color: #ffffff;
     padding: 20px 30px 10px 10px;
     margin: 0;
     width: 89.87%;
     border: none;
-    border-bottom: 2px solid #cecfd3;
+    /*border-bottom: 2px solid #cecfd3;*/
     -webkit-appearance: none;
+        border-radius: 13px;
 }
 
 .login input.name {
-    background: url(../images/l1.png) no-repeat 98% 67%;
+    background: rgba(204, 204, 204, 0.62) url(../images/l1.png) no-repeat 95% 48%
 }
 .login input.empresa {
-    background: url(../images/l2.png) no-repeat 98% 67%;
+    background: rgba(204, 204, 204, 0.62) url(../images/l2.png) no-repeat 95% 48%
 }
 .login input.password {
-    background: url(../images/l3.png) no-repeat 98% 67%;
+    background: rgba(204, 204, 204, 0.62) url(../images/l3.png) no-repeat 95% 48%
 }
 
 .login-top {
@@ -764,10 +765,10 @@ img{max-width:100%;}
 	margin-top: 28%;
 }
 .submit input[type="submit"] {
-    font-size: 13px;
-    color: #44c7f4;
-    background: #fff;
-    border: 2px solid #44c7f4;
+        font-size: 13px;
+    color: #fff;
+    background: rgb(139, 150, 163);
+    border: 2px solid rgb(139, 150, 163);
     outline: none;
     cursor: pointer;
     border-radius: 20px;
@@ -775,10 +776,12 @@ img{max-width:100%;}
     -moz-border-radius: 20px;
     -o-border-radius: 20px;
     -ms-border-radius: 20px;
-    padding: 6px 13px;
-    font-family: 'SourceSansPro-Regular';
+    padding: 6px 43px;
+    margin-left: 54px;
+
+
 }
-.submit input[type="submit"]:hover{
+.submit input[type="submit"]:hover, .submit input[type="submit"]:focus{
 	background:#44c7f4;
 	color:#fff;
 	transition: 0.5s all ease;
@@ -1077,7 +1080,7 @@ section.sky-form {
 }
 .resp-tabs-container {
 	padding: 0px;
-	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0);
 	clear: left;
 }
 h2.resp-accordion {
@@ -1273,8 +1276,8 @@ section.sky-form {
     font-size: 2em;
 }
 .head {
-    margin: 16% auto 0;
-    width: 65%;
+    margin: 13% auto 0;
+    width: 100%;
 }
 .login-bottom ul li {
     margin-left: 3px;
