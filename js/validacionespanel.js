@@ -331,6 +331,7 @@ $(document).ready(function(){
 																);
 									}
 									$('#contenidogral').attr('class',"isotope-container row grid-space-20");
+                                    $("#cargandoafilia").hide();
 									/*document.write('<script type="text/javascript" src="./js/isotope.pkgd.js"></script>');
 									document.write('<script type="text/javascript" src="./js/isotope.pkgd.min.js"></script>');*/
 									

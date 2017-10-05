@@ -1670,12 +1670,10 @@ html .ui-field-contain>label+.ui-flipswitch, html .ui-popup .ui-field-contain>la
 	background: #f58;
 } */
 
-#cargando {
+.cargandoafilia {
     position: absolute;
-    width: 32%;
-    height: 49%;
-    text-align: -webkit-center;
-    bottom: 172px;
+    top: 183px;
+    right: 625px;
 }
 .imgloadingindex {
     position: absolute;
