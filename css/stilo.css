@@ -430,6 +430,12 @@ HEADER
     color: #f13333;
 }
 
+/*#slcNuevas {
+	background-color: #989898;
+    border-color: #55acee;
+    color: #ffffff;
+}*/
+
 #slcNuevas:hover,#slcNuevas:focus,#slcNuevas:hover {
 	background-color: #2c82c9;
     border-color: #55acee;
@@ -1673,9 +1679,15 @@ html .ui-field-contain>label+.ui-flipswitch, html .ui-popup .ui-field-contain>la
 .cargandoafilia {
     position: absolute;
     top: 183px;
-    right: 625px;
+    right: 438px;
 }
-
+.cargandoafiliadiv {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: -webkit-center;
+    bottom: 0px;
+}
 #cargando {
     position: absolute;
     width: 32%;
