@@ -1223,7 +1223,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 								/*$Lattitude = validaexiste(xmlDoc.documentElement.getElementsByTagName("Lattitude"),null);
 								$Longuitud = validaexiste(xmlDoc.documentElement.getElementsByTagName("Longuitud"),null);*/
 		$('#DatGrales').modal();
-		$("#lisColoniaSolicitantenew option:contains('Benito Juárez (La Aurora)')").attr("selected",true);
+		//$("#lisColoniaSolicitantenew option:contains('Benito Juárez (La Aurora)')").attr("selected",true);
 	}
 	
 	function NuevaSolicitud(){
@@ -1431,6 +1431,40 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
         $("#linkmodalopenextra").removeClass("overlay");
         $('#lblextra').text("Extra");
         $('#lblextra').attr("disabled",false);
+
+
+        $("#imaextramodal2").attr("src","images/fondo.jpg");
+        $("#result_imageextra2").attr("src",null);
+        $('#titulomodalfin2').text("Extra");
+        $("#linkmodalopenextra2").removeClass("overlay");
+        $('#lblextra2').text("Extra");
+        $('#lblextra2').attr("disabled",false);
+        $('#Imagesextras2').hide();
+
+        $("#imaextramodal3").attr("src","images/fondo.jpg");
+        $("#result_imageextra3").attr("src",null);
+        $('#titulomodalfin3').text("Extra");
+        $("#linkmodalopenextra3").removeClass("overlay");
+        $('#lblextra3').text("Extra");
+        $('#lblextra3').attr("disabled",false);
+        $('#Imagesextras3').hide();
+
+        $("#imaextramodal4").attr("src","images/fondo.jpg");
+        $("#result_imageextra4").attr("src",null);
+        $('#titulomodalfin4').text("Extra");
+        $("#linkmodalopenextra4").removeClass("overlay");
+        $('#lblextra4').text("Extra");
+        $('#lblextra4').attr("disabled",false);
+        $('#Imagesextras4').hide();
+
+        $("#imaextramodal5").attr("src","images/fondo.jpg");
+        $("#result_imageextra5").attr("src",null);
+        $('#titulomodalfin5').text("Extra");
+        $("#linkmodalopenextra5").removeClass("overlay");
+        $('#lblextra5').text("Extra");
+        $('#lblextra5').attr("disabled",false);
+        $('#Imagesextras5').hide();
+
 		
 		/*$("#result_imagefin").attr("src",datosgrales[5].toString());
 		$("#result_imagefinmod").attr("src",datosgrales[5].toString());
