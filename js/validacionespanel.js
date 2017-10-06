@@ -182,7 +182,8 @@ $(document).ready(function(){
 				if(Nomusuario != "ERRO" && token !== "ERRO" && compniare != "ERRO")
 				{
 					console.log(JSON.stringify({"objPromotor":{"Promotoria":"","RegPromotor":"","Compania":compniare,"Formato":"","Usuario":Nomusuario,"Contrasenia":pwd,"Coordinador":{"ClaveC":"","NombreC":""},"Gerente":{"ClaveG":"","NombreG":""},"TipoUsuario":"4"},"llave":{"idUsuario":idUsr,"Token":token}}));
-					$.ajax({ 			
+					$.ajax({
+                        timeout:10000,
 						type: 'POST',
 						url: 'https://stefaninimx.com/mx.com.stefanini.service.api.rest/Service1.svc/getBuzonWeb', 
 						data: JSON.stringify({"objPromotor":{"Promotoria":"","RegPromotor":"","Compania":compniare,"Formato":"","Usuario":Nomusuario,"Contrasenia":pwd,"Coordinador":{"ClaveC":"","NombreC":""},"Gerente":{"ClaveG":"","NombreG":""},"TipoUsuario":"4"},"llave":{"idUsuario":idUsr,"Token":token}}),
