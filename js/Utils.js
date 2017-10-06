@@ -1601,6 +1601,20 @@ function validatext(txtcontrol)
 	}
 }
 
+
+function validatextcorreo(txtcontrol)
+{
+    var texto=$(txtcontrol).val();
+    var reg=  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if(reg.test(texto)) {
+        return 1;
+
+    } else {
+        return 0;
+    }
+}
+
+
 function validatextCP(CP)
 {
 	if($(CP).val() != '' && $(CP).val().length == 5)
@@ -1703,6 +1717,28 @@ function validaricontxt(txt){
 			$(nombreclaspan).attr('class', 'glyphicon glyphicon-ok form-control-feedback');
 		}
 	
+}
+
+function validariconcorreo(correoctl){
+
+    var texto=$(correoctl).val();
+    var reg=  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if(texto == ''){
+        var nombrecladiv = "#" + $(correoctl)[0].id + "div";
+        var nombreclaspan = "#" + $(correoctl)[0].id + "span";
+        $(nombreclaspan).attr('class', 'glyphicon glyphicon-remove form-control-feedback');
+        $(nombrecladiv).attr('class', 'form-group has-error has-feedback');
+    }else if(reg.test(texto)) {
+        var nombrecladiv = "#" + $(correoctl)[0].id + "div";
+        $(nombrecladiv).attr('class', 'form-group has-success has-feedback');
+        var nombreclaspan = "#" + $(correoctl)[0].id + "span";
+        $(nombreclaspan).attr('class', 'glyphicon glyphicon-ok form-control-feedback');
+    } else {
+        var nombrecladiv = "#" + $(correoctl)[0].id + "div";
+        var nombreclaspan = "#" + $(correoctl)[0].id + "span";
+        $(nombreclaspan).attr('class', 'glyphicon glyphicon-warning-sign form-control-feedback');
+        $(nombrecladiv).attr('class', 'form-group has-warning has-feedback');
+    }
 }
 
 function validariconlistas(lista){
@@ -2255,7 +2291,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 		
 			break;
 		case '2':
-			var controles=['#txtCalleSolicitantenew','#txtNumExteriornew','#txtCorreonew'];
+			var controles=['#txtCalleSolicitantenew','#txtNumExteriornew'];
 			var contlisterror=[];
 			var controlesCP=['#txtCpSolicitantenew'];
 			var contlistCPerror=[];
@@ -2263,6 +2299,9 @@ function validacontrolespantall(pantalla, kinkheader, e){
 			var contlisterrormonto = [];
 			var controlestelefono=['#txtTelefonoCasanew','#txtTelefonoCelularnew'];
 			var contlisterrortelefono=[];
+
+            var controlescorreo=['#txtCorreonew'];
+			var contlisterrorcorreo=[];
 			
 			var controlesspiner=['#txtTiempoResidencianew'];
 			var contlisterrorspiner=[];
@@ -2285,6 +2324,22 @@ function validacontrolespantall(pantalla, kinkheader, e){
 						contlisterror[contlisterror.length] = elem;
 					}
 					
+				}
+			});
+
+            $.each(controlescorreo, function (ind, elem) {
+				if(validatextcorreo(elem) == 1)
+				{
+					controlvalidados += 1;
+				}else{
+					if(contlisterrorcorreo.length == 0)
+					{
+						contlisterrorcorreo[0] = elem;
+					}else
+					{
+						contlisterrorcorreo[contlisterrorcorreo.length] = elem;
+					}
+
 				}
 			});
 			
@@ -2395,7 +2450,17 @@ function validacontrolespantall(pantalla, kinkheader, e){
 					validariconlistas(elem);
 					demoTimeout = setTimeout(function(){$(elem).trigger('stopRumble');},1500);							
 				});
+
+                $.each(contlisterrorcorreo, function (ind, elem) {
 				
+					var demoTimeout;
+					clearTimeout(demoTimeout);
+					$(elem).trigger('startRumble');
+					//$(elem).css('border', '1px solid red');
+					validariconcorreo(elem);
+					demoTimeout = setTimeout(function(){$(elem).trigger('stopRumble');},1500);
+				});
+
 				$.each(contlisterror, function (ind, elem) { 
 				
 					var demoTimeout;
