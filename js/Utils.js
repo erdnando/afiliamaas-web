@@ -801,6 +801,23 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$Extra3= validaexiste(xmlDoc.documentElement.getElementsByTagName("doc")[0].getElementsByTagName("Extra3"),"Extra");
 		$Extra4= validaexiste(xmlDoc.documentElement.getElementsByTagName("doc")[0].getElementsByTagName("Extra4"),"Extra");
 		$Extra5= validaexiste(xmlDoc.documentElement.getElementsByTagName("doc")[0].getElementsByTagName("Extra5"),"Extra");
+
+        if($Extra1 == "................................................................"){
+            $Extra1 = "Extra";
+        }
+        if($Extra2 == "................................................................"){
+            $Extra2 = "Extra";
+        }
+        if($Extra3 == "................................................................"){
+            $Extra3 = "Extra";
+        }
+        if($Extra4 == "................................................................"){
+            $Extra4 = "Extra";
+        }
+        if($Extra5 == "................................................................"){
+            $Extra5 = "Extra";
+        }
+
 		
 		$('#txtNomSolicitantenew').val($Pnombre);
 		$('#txtSegundonombrenew').val($snombre);
