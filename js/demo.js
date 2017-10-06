@@ -214,7 +214,8 @@ function processCompress(input) {
 															success: function(data){
 																	var idest;
 																	var idpob;
-																	var cont= 0
+																	var cont= 0;
+                                                                    $("#txttokenWS").val(data.Token);
 																	//$("#lisColoniaSolicitantenew").removeOption(/./);
 																	$('#lisColoniaSolicitantenew').empty();
 																	$("#lisColoniaSolicitantenew").append('<option value="0">Seleccione...</option>');
@@ -235,6 +236,7 @@ function processCompress(input) {
 																			contentType: "application/json; charset=utf-8",
 																			dataType: "json",
 																			success: function(data){
+                                                                                $("#txttokenWS").val(data.Token);
 																					$.each(data, function(i, item) {
 																						$("#lisDelMuniSolicitantenew").append('<option value="' + item.IDPOBLACION + '">' + item.POBLACION + '</option>');	
 																						idest = item.IDESTADO
@@ -455,7 +457,7 @@ function processCompressanver(input) {
 													});
 											//location.href=("Index.html");
 											$("#txttokenWS").val(data.Token)
-										}
+										}else{
 
 
 									$("#txttokenWS").val(data.Token);
@@ -518,6 +520,7 @@ function processCompressanver(input) {
 												);*/
 											  }
 											});
+                                    }
 								},  
 								error: function (result) {  
 									console.log("errror...." + result);  
