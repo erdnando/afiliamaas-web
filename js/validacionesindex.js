@@ -26,7 +26,7 @@ $(document).ready(function(){
 						console.log(data.Compania);
 						
 						if(data.IdUsuario == 0){
-							swal("","Usuario, empresa y/o contraseña incorrectas. Verifique por favor.","error");
+							swal("","¡Acceso incorrecto, verifique por favor!","error");
 							//location.href='';
                             $('#cargando').hide();
 							return false;
