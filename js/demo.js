@@ -49,7 +49,7 @@
 
 
 function processCompress(input) {
-	$('#cargandomdlimg').show();
+	$('#cargandoafiliadiv').show();
 
 	var output_format = "jpg";
 	
@@ -164,7 +164,7 @@ function processCompress(input) {
 										   console.log('numeroExt...'+data.numeroExt);
 										   console.log('sexo...'+data.sexo);
 										   $("#txttokenWS").val(data.Token);
-										   $('#cargandomdlimg').hide();
+										   $('#cargandoafiliadiv').hide();
 										   swal({
 												  title: '<i style="font-style: normal;">Datos obtenidos</i>',											  
 												  html:
@@ -361,7 +361,7 @@ function processCompress(input) {
 }
 
 function processCompressanver(input) {
-	$('#cargandomdlimg').show();
+	$('#cargandoafiliadiv').show();
 	var output_format = "jpg";
 	
     if (input.files && input.files[0]) {
@@ -462,7 +462,7 @@ function processCompressanver(input) {
                                             if(data.Token != null && data.Token != "INVALID"){
 									           $("#txttokenWS").val(data.Token);
                                             }
-									$('#cargandomdlimg').hide();
+									$('#cargandoafiliadiv').hide();
 									var cicresult = validaexisteocr(data.cic, "sin datos")
 									if(cicresult == "sin datos" || cicresult == "no data"){
 										cicresult = "sin datos"
