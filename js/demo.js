@@ -456,11 +456,12 @@ function processCompressanver(input) {
 													  location.href=("Index.html");
 													});
 											//location.href=("Index.html");
-											$("#txttokenWS").val(data.Token)
+											//$("#txttokenWS").val(data.Token)
 										}else{
 
-
-									$("#txttokenWS").val(data.Token);
+                                            if(data.Token != null && data.Token != "INVALID"){
+									           $("#txttokenWS").val(data.Token);
+                                            }
 									$('#cargandomdlimg').hide();
 									var cicresult = validaexisteocr(data.cic, "sin datos")
 									if(cicresult == "sin datos" || cicresult == "no data"){
