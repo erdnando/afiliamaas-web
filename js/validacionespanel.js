@@ -202,6 +202,7 @@ $(document).ready(function(){
 			onBeforeFinishButtonClick:function (e, validation) {
 			   console.log('onBeforeFinishButtonClick1111111');
 			   console.log('validation '+validation);
+
 			   //e.preventDefault();
 			},
 			onAfterFinishButtonClick:function (e, validation) {

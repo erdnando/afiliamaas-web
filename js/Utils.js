@@ -477,8 +477,6 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 	return rfc;
 }
 
-
-
 	function buscaCPemp( inpCP){
 		$.ajax({ 			
 				type: 'POST',
@@ -997,11 +995,14 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		
 		if($EsPersonaPolitica =="SI"){
 			$('#optpersonapoliticonew').prop('checked', true);
+            $('#rowfunciondesempeñasolnew').show();
 
 			}
 			
 		if($TieneParentesco =="SI"){
 			$('#optparenpoliticonew').prop('checked', true);
+            $('#rowfunciondesempeñaparentescosolnew').show();
+            $('#rowqueparentescosolnew').show();
 		}
 		
 		$('#txfuncionpoliticoSolicitantenew').val($Descfuncion);
