@@ -100,16 +100,30 @@ $(document).ready(function(){
 						break;
 					case 2:
 						navegasliderheaderlibre($('#anumpasol2'), 2);
+                        document.getElementById("btnsiguiente").tabIndex = "26";
+                        document.getElementById("btnanterior").tabIndex = "27";
+                        $('#txtCalleSolicitantenew').focus();
+
 						break;
 					case 3:
 						navegasliderheaderlibre($('#anumpasol3'), 3);
+                        document.getElementById("btnsiguiente").tabIndex = "42";
+                        document.getElementById("btnanterior").tabIndex = "43";
+                        $('#txtNombreEmpresanew').focus();
 						break;
 					case 4:
 						navegasliderheaderlibre($('#anumpasol4'), 4);
+                        document.getElementById("btnsiguiente").tabIndex = "45";
+                        document.getElementById("btnanterior").tabIndex = "46";
+                        $('#sldpersopoli').focus();
 						break;
 					case 5:
 						navegasliderheaderlibre($('#anumpasol5'), 5);
+                        document.getElementById("btnfinalizar").tabIndex = "72";
+                        document.getElementById("btnanterior").tabIndex = "73";
+                        $('#nomfirma').focus();
 						break;
+
 					default:
 						break;
 				}

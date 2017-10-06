@@ -1169,8 +1169,8 @@
 												<div class="radio">
 													<label class="radio-inline">No</label>
 													<label class="switch">
-													  <input type="checkbox" id="optpersonapoliticonew" tabindex="40">
-													  <span class="slider round" id="sldpersopoli"></span>
+													  <input type="checkbox" id="optpersonapoliticonew" >
+													  <span class="slider round" id="sldpersopoli" tabindex="40"></span>
 													</label>
 													<label class="radio-inline">Si</label>
 												</div>
@@ -1183,7 +1183,7 @@
 												</div>
 												<div class="col-md-3">          
 													<div id="txfuncionpoliticoSolicitantenewdiv">
-														<input type="text" class="form-control" id="txfuncionpoliticoSolicitantenew" placeholder="Función." name="txfuncionpoliticoSolicitantenew" maxlength="50">
+														<input type="text" class="form-control" id="txfuncionpoliticoSolicitantenew" placeholder="Función." name="txfuncionpoliticoSolicitantenew" maxlength="50" tabindex="41">
 														<span id="txfuncionpoliticoSolicitantenewspan" ></span>
 													</div>
 												</div>
@@ -1197,8 +1197,8 @@
 												<div class="radio">
 													<label class="radio-inline">No</label>
 													<label class="switch">
-													  <input type="checkbox" name="optparenpoliticonew" id="optparenpoliticonew" tabindex="41">
-													  <span class="slider round" id="sldparentescopoli"></span>
+													  <input type="checkbox" name="optparenpoliticonew" id="optparenpoliticonew">
+													  <span class="slider round" id="sldparentescopoli" tabindex="42"></span>
 													</label>
 													<label class="radio-inline">Si</label>  
 												</div> 
@@ -1212,7 +1212,7 @@
 												</div>
 												<div class="col-md-3">          
 													<div id="txparentescofuncionpoliticoSolicitantenewdiv">
-														<input type="text" class="form-control" id="txparentescofuncionpoliticoSolicitantenew" placeholder="Función." name="txparentescofuncionpoliticoSolicitantenew" maxlength="50">
+														<input type="text" class="form-control" id="txparentescofuncionpoliticoSolicitantenew" placeholder="Función." name="txparentescofuncionpoliticoSolicitantenew" maxlength="50" tabindex="43">
 														<span id="txparentescofuncionpoliticoSolicitantenewspan" ></span>
 													</div>
 												</div>
@@ -1225,7 +1225,7 @@
 												</div>
 												<div class="col-md-3">          
 													<div id="txqueparenfuncionpoliticoSolicitantenewdiv">
-														<input type="text" class="form-control" id="txqueparenfuncionpoliticoSolicitantenew" placeholder="Parentesco." name="txqueparenfuncionpoliticoSolicitantenew" maxlength="50">
+														<input type="text" class="form-control" id="txqueparenfuncionpoliticoSolicitantenew" placeholder="Parentesco." name="txqueparenfuncionpoliticoSolicitantenew" maxlength="50" tabindex="44">
 														<span id="txqueparenfuncionpoliticoSolicitantenewspan" ></span>
 													</div>
 												</div>
@@ -1632,13 +1632,13 @@
 													<div class="overlay-container" style="height:135px; text-align: -webkit-center;">
 														<h4 class="modal-title" id="project-1-label">Extra 1</h4>
 														<img src="images/fondo.jpg" alt="" id="imaextramodal" style="max-width:75%;">
-														<a data-toggle="modal" data-target="#project-1" id="linkmodalopenextra">
+														<a data-toggle="modal" data-target="#project-1" id="linkmodalopenextra" tabindex="65">
 															<i class="glyphicon glyphicon-eye-open"></i>
 															<span>Ver Extra</span>
 														</a>
 													</div>
 													<input style="width:0px;" type="file" accept="image/*" capture="camera" name="inputextra[]" id="inputextra" class="inputfile inputfile-1" data-multiple-caption="{count} files selected" multiple=""/>								
-													<label name="lblextra" id="lblextra" for="inputextra" class="btn btn-default btn-block" style="border-radius: 5px;text-align: center !important;margin-top: 0px;margin-left: 0px;font-size: 11px;" tabindex="65">Agregar</label>
+													<label name="lblextra" id="lblextra" for="inputextra" class="btn btn-default btn-block" style="border-radius: 5px;text-align: center !important;margin-top: 0px;margin-left: 0px;font-size: 11px;" tabindex="66">Agregar</label>
 													<!--<a id="lnknombremodal"  class="btn btn-default btn-block" data-toggle="modal" data-target="#project-1" style="font-size: 11px;">Agregar</a>-->
 												</div>
 												<!-- Modal -->
@@ -1689,7 +1689,7 @@
 													<div class="overlay-container" style="height:135px; text-align: -webkit-center;">
 														<h4 class="modal-title" id="project-1-label">Extra 2</h4>
 														<img src="images/fondo.jpg" alt="" id="imaextramodal2" style="max-width:75%;">
-														<a class="overlay" data-toggle="modal" data-target="#modalextra2">
+														<a class="overlay" data-toggle="modal" data-target="#modalextra2" tabindex="67">
 															<i class="glyphicon glyphicon-eye-open"></i>
 															<span>Extra 2</span>
 														</a>
@@ -1697,7 +1697,7 @@
 													<!--<a id="lnknombremodal2" class="btn btn-default btn-block" data-toggle="modal" data-target="#modalextra2" style="font-size: 11px;" tabindex="66"></a>-->
 													<input style="width:0px;" type="file" accept="image/*" capture="camera" name="inputextra2[]" id="inputextra2" class="inputfile inputfile-1" data-multiple-caption="{count} files selected" multiple=""/>
 													
-													<label name="lblextra2" id="lblextra2" for="inputextra2" class="btn btn-default btn-block" style="border-radius: 5px;text-align: center !important;margin-top: 0px;margin-left: 0px;font-size: 11px;" tabindex="66">Agregar</label>
+													<label name="lblextra2" id="lblextra2" for="inputextra2" class="btn btn-default btn-block" style="border-radius: 5px;text-align: center !important;margin-top: 0px;margin-left: 0px;font-size: 11px;" tabindex="68">Agregar</label>
 												</div>
 												<!-- Modal -->
 												<div class="modal fade" id="modalextra2" tabindex="-1" role="dialog" aria-labelledby="project-1-label" aria-hidden="true">
@@ -1757,7 +1757,7 @@
 													</div>
 													<!--<a id="lnknombremodal3" class="btn btn-default btn-block" data-toggle="modal" data-target="#modalextra3" style="font-size: 11px;"></a>-->
 													<input style="width:0px;" type="file" accept="image/*" capture="camera" name="inputextra3[]" id="inputextra3" class="inputfile inputfile-1" data-multiple-caption="{count} files selected" multiple=""/>
-													<label name="lblextra3" id="lblextra3" for="inputextra3" class="btn btn-default btn-block" style="border-radius: 5px;text-align: center !important;margin-top: 0px;margin-left: 0px;font-size: 11px;" tabindex="67">Agregar</label>
+													<label name="lblextra3" id="lblextra3" for="inputextra3" class="btn btn-default btn-block" style="border-radius: 5px;text-align: center !important;margin-top: 0px;margin-left: 0px;font-size: 11px;" tabindex="69">Agregar</label>
 												</div>
 												<!-- Modal -->
 												<div class="modal fade" id="modalextra3" tabindex="-1" role="dialog" aria-labelledby="project-1-label" aria-hidden="true">
@@ -1817,7 +1817,7 @@
 													</div>
 													<!--<a id="lnknombremodal4" class="btn btn-default btn-block" data-toggle="modal" data-target="#modalextra4" style="font-size: 11px;"></a>-->
 													<input style="width:0px;" type="file" accept="image/*" capture="camera" name="inputextra4[]" id="inputextra4" class="inputfile inputfile-1" data-multiple-caption="{count} files selected" multiple=""/>
-													<label name="lblextra4" id="lblextra4" for="inputextra4" class="btn btn-default btn-block" style="border-radius: 5px;text-align: center !important;margin-top: 0px;margin-left: 0px;font-size: 11px;" tabindex="68">Agregar</label>
+													<label name="lblextra4" id="lblextra4" for="inputextra4" class="btn btn-default btn-block" style="border-radius: 5px;text-align: center !important;margin-top: 0px;margin-left: 0px;font-size: 11px;" tabindex="70">Agregar</label>
 												</div>
 												<!-- Modal -->
 												<div class="modal fade" id="modalextra4" tabindex="-1" role="dialog" aria-labelledby="project-1-label" aria-hidden="true">
@@ -1877,7 +1877,7 @@
 													</div>
 													<!--<a id="lnknombremodal5" class="btn btn-default btn-block" data-toggle="modal" data-target="#modalextra5" style="font-size: 11px;"></a>-->
 													<input style="width:0px;" type="file" accept="image/*" capture="camera" name="inputextra5[]" id="inputextra5" class="inputfile inputfile-1" data-multiple-caption="{count} files selected" multiple=""/>
-													<label name="lblextra5" id="lblextra5" for="inputextra5" class="btn btn-default btn-block" style="border-radius: 5px;text-align: center !important;margin-top: 0px;margin-left: 0px;font-size: 11px;" tabindex="69">Agregar</label>
+													<label name="lblextra5" id="lblextra5" for="inputextra5" class="btn btn-default btn-block" style="border-radius: 5px;text-align: center !important;margin-top: 0px;margin-left: 0px;font-size: 11px;" tabindex="71">Agregar</label>
 												</div>
 												<!-- Modal -->
 												<div class="modal fade" id="modalextra5" tabindex="-1" role="dialog" aria-labelledby="project-1-label" aria-hidden="true">
@@ -1937,18 +1937,18 @@
 							<!-- BEGIN CONTROLS-->
 							<div class="tsf-controls " style="display: block;">
 								<!-- BEGIN PREV BUTTTON--> 
-								<button type="button" data-type="prev" class="btn btn-left tsf-wizard-btn" style="position: absolute;left: 16px;">
+								<button type="button" data-type="prev" class="btn btn-left tsf-wizard-btn" style="position: absolute;left: 16px;" id="btnanterior">
 									
 								</button>
 								<!-- END PREV BUTTTON-->
 								<!-- BEGIN NEXT BUTTTON-->
-								<button type="button" data-type="next" class="btn btn-right tsf-wizard-btn" style="display: none;">
+								<button type="button" data-type="next" class="btn btn-right tsf-wizard-btn" style="display: none;" id="btnsiguiente">
 									
 								</button>
 								<!-- END NEXT BUTTTON-->
 								<!-- BEGIN FINISH BUTTTON-->
 								
-								<button type="button" data-type="finish" id="terminar" class="btn btn-right tsf-wizard-btn" data-toggle="tooltip" data-placement="top" title="Enviar!"></button>
+								<button type="button" data-type="finish" id="terminar" class="btn btn-right tsf-wizard-btn" data-toggle="tooltip" data-placement="top" title="Enviar!" id="btnfinalizar"></button>
 								<!-- END FINISH BUTTTON-->
 							</div>
 							<!-- END CONTROLS-->
