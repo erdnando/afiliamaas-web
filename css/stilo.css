@@ -1698,7 +1698,7 @@ html .ui-field-contain>label+.ui-flipswitch, html .ui-popup .ui-field-contain>la
     text-align: -webkit-center;
     top: 0;
     left: 0;
-    background-color: rgba(128, 128, 128, 0.62);
+    rgba(128, 128, 128, 0.38);
 }
 .imgloadingindex {
     position: absolute;
