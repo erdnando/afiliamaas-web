@@ -119,13 +119,13 @@ $(document).ready(function(){
 						break;
 					case 5:
 						navegasliderheaderlibre($('#anumpasol5'), 5);
-                        document.getElementById("btnfinalizar").tabIndex = "57";
+                        document.getElementById("btnsiguiente").tabIndex = "57";
                         document.getElementById("btnanterior").tabIndex = "58";
                         $('#txtNombreRef1new').focus();
 						break;
                     case 6:
 						navegasliderheaderlibre($('#anumpasol6'), 6);
-                        document.getElementById("btnfinalizar").tabIndex = "72";
+                        //document.getElementById("btnfinalizar").tabIndex = "72";
                         document.getElementById("btnanterior").tabIndex = "73";
                         $('#nomfirma').focus();
 						break;
