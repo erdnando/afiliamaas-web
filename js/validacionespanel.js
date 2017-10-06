@@ -119,10 +119,17 @@ $(document).ready(function(){
 						break;
 					case 5:
 						navegasliderheaderlibre($('#anumpasol5'), 5);
+                        document.getElementById("btnfinalizar").tabIndex = "57";
+                        document.getElementById("btnanterior").tabIndex = "58";
+                        $('#txtNombreRef1new').focus();
+						break;
+                    case 6:
+						navegasliderheaderlibre($('#anumpasol6'), 6);
                         document.getElementById("btnfinalizar").tabIndex = "72";
                         document.getElementById("btnanterior").tabIndex = "73";
                         $('#nomfirma').focus();
 						break;
+
 
 					default:
 						break;
@@ -168,6 +175,29 @@ $(document).ready(function(){
 			onAfterPrevButtonClick:function (e, from, to) {
 			   console.log('onAfterPrevButtonClick');
 			   console.log('validation '+from+' to '+to);
+
+                switch(to) {
+                    case 0:
+						$('#txtNomSolicitantenew').focus();
+						break;
+					case 1:
+						$('#txtCalleSolicitantenew').focus();
+						break;
+					case 2:
+						$('#txtNombreEmpresanew').focus();
+						break;
+					case 3:
+						$('#sldpersopoli').focus();
+						break;
+					case 4:
+						$('#txtNombreRef1new').focus();
+						break;
+					case 5:
+						('#nomfirma').focus();
+						break;
+					default:
+						break;
+				}
 			},
 			onBeforeFinishButtonClick:function (e, validation) {
 			   console.log('onBeforeFinishButtonClick1111111');
