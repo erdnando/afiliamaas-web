@@ -1687,16 +1687,21 @@ html .ui-field-contain>label+.ui-flipswitch, html .ui-popup .ui-field-contain>la
 } */
 
 .cargandoafilia {
-    position: absolute;
-    top: 183px;
-    right: 627px;
+position: absolute;
+    top: 45%;
+    left: 45%;
+    display: block;
+    margin: 0 auto;
+    width: 84px;
 }
 .cargandoafiliadiv {
     position: absolute;
     width: 100%;
     height: 100%;
     text-align: -webkit-center;
-    bottom: 0px;
+    top: 0;
+    left: 0;
+    background-color: rgba(128, 128, 128, 0.38);
 }
 #cargando {
     position: absolute;
