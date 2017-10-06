@@ -2029,11 +2029,11 @@ function navegasliderheaderatras(step){
 	switch(step) {
 		case 1:
 		
-			$('#rowvalida2').addClass('rowvalida2').removeClass('rowiniciostepactivo2');
-			$('#rowvalida3').addClass('rowvalida3').removeClass('rowiniciostepactivo3');
-			$('#rowvalida4').addClass('rowvalida4').removeClass('rowiniciostepactivo4');
-			$('#rowvalida5').addClass('rowvalida5').removeClass('rowiniciostepactivo5');
-			$('#rowvalida6').addClass('rowvalida6').removeClass('rowiniciostepactivo6');
+			$('#rowvalida2').addClass('rowvalida2').removeClass('rowiniciostepactivo2').removeClass('rowiniciostepactivosuccess2');
+			$('#rowvalida3').addClass('rowvalida3').removeClass('rowiniciostepactivo3').removeClass('rowiniciostepactivosuccess3');;
+			$('#rowvalida4').addClass('rowvalida4').removeClass('rowiniciostepactivo4').removeClass('rowiniciostepactivosuccess4');;
+			$('#rowvalida5').addClass('rowvalida5').removeClass('rowiniciostepactivo5').removeClass('rowiniciostepactivosuccess5');;
+			$('#rowvalida6').addClass('rowvalida6').removeClass('rowiniciostepactivo6').removeClass('rowiniciostepactivosuccess6');;
             var controles=['#txtCalleSolicitantenew','#txtNumExteriornew','#txtCpSolicitantenew','#txtTelefonoCasanew','#txtTelefonoCelularnew','#txtCorreonew'];
 
             $.each(controles, function (ind, elem) {
@@ -2064,10 +2064,10 @@ function navegasliderheaderatras(step){
 		case 2:
 
 			//$('#rowvalida2').addClass('rowiniciostepactivo2').removeClass('rowvalida2');
-			$('#rowvalida3').addClass('rowvalida3').removeClass('rowiniciostepactivo3');
-			$('#rowvalida4').addClass('rowvalida4').removeClass('rowiniciostepactivo4');
-			$('#rowvalida5').addClass('rowvalida5').removeClass('rowiniciostepactivo5');
-			$('#rowvalida6').addClass('rowvalida6').removeClass('rowiniciostepactivo6');
+			$('#rowvalida3').addClass('rowvalida3').removeClass('rowiniciostepactivo3').removeClass('rowiniciostepactivosuccess3');;
+			$('#rowvalida4').addClass('rowvalida4').removeClass('rowiniciostepactivo4').removeClass('rowiniciostepactivosuccess4');;
+			$('#rowvalida5').addClass('rowvalida5').removeClass('rowiniciostepactivo5').removeClass('rowiniciostepactivosuccess5');;
+			$('#rowvalida6').addClass('rowvalida6').removeClass('rowiniciostepactivo6').removeClass('rowiniciostepactivosuccess6');;
 
 
             var controles=['#txtNombreEmpresanew','#txtGironew', '#txtPuestonew','#txtCalleEmpresanew','#txtNumeroExteriorEmpresa','#txtCpEmpresanew','#txtTelOficinanew'];
@@ -2101,9 +2101,9 @@ function navegasliderheaderatras(step){
 		case 3:
 			/*$('#rowvalida2').addClass('rowiniciostepactivo2').removeClass('rowvalida2');
 			$('#rowvalida3').addClass('rowiniciostepactivo3').removeClass('rowvalida3');*/
-			$('#rowvalida4').addClass('rowvalida4').removeClass('rowiniciostepactivo4');
-			$('#rowvalida5').addClass('rowvalida5').removeClass('rowiniciostepactivo5');
-			$('#rowvalida6').addClass('rowvalida6').removeClass('rowiniciostepactivo6');
+			$('#rowvalida4').addClass('rowvalida4').removeClass('rowiniciostepactivo4').removeClass('rowiniciostepactivosuccess4');;
+			$('#rowvalida5').addClass('rowvalida5').removeClass('rowiniciostepactivo5').removeClass('rowiniciostepactivosuccess5');;
+			$('#rowvalida6').addClass('rowvalida6').removeClass('rowiniciostepactivo6').removeClass('rowiniciostepactivosuccess6');;
 
 
 
@@ -2150,7 +2150,7 @@ function navegasliderheaderatras(step){
 			$('#rowvalida3').addClass('rowiniciostepactivo3').removeClass('rowvalida3');
 			$('#rowvalida4').addClass('rowiniciostepactivo4').removeClass('rowvalida4');
 			$('#rowvalida5').addClass('rowiniciostepactivo5').removeClass('rowvalida5');*/
-			$('#rowvalida6').addClass('rowvalida6').removeClass('rowiniciostepactivo6');
+			$('#rowvalida6').addClass('rowvalida6').removeClass('rowiniciostepactivo6').removeClass('rowiniciostepactivosuccess6');;
 			break;
 		
 		default:
