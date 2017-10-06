@@ -443,6 +443,21 @@ function processCompressanver(input) {
 									console.log(data.fConsulta);
 									console.log(data.fRegistro);
 									console.log(data.fVigencia);
+                                    if(data.Token =="INVALID"){
+											swal({
+												  title: '<i>Sessión cerrada por inactividad</i>',
+												  showCloseButton: true,
+												  confirmButtonText:
+													'<i class="glyphicon glyphicon-ok"></i>',
+
+												}).then(function () {
+													  location.href=("Index.html");
+													});
+											//location.href=("Index.html");
+											$("#txttokenWS").val(data.Token)
+										}
+
+
 									$("#txttokenWS").val(data.Token);
 									$('#cargandomdlimg').hide();
 									var cicresult = validaexisteocr(data.cic, "sin datos")
