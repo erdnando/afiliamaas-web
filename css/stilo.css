@@ -644,6 +644,13 @@ img{max-width:100%;}
     -o-background-size: cover;
     background-size: cover;
 }
+.bodyAfiliaMaas {
+	background: url(../images/Panel/AfiliaFondo.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
 #element_to_pop_up { display:none; }
 
