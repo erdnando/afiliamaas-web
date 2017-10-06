@@ -1693,15 +1693,20 @@ html .ui-field-contain>label+.ui-flipswitch, html .ui-popup .ui-field-contain>la
 }
 #cargando {
     position: absolute;
-    width: 32%;
-    height: 49%;
+    width: 100%;
+    height: 100%;
     text-align: -webkit-center;
-    bottom: 172px;
+    top: 0;
+    left: 0;
+    background-color: rgba(128, 128, 128, 0.62);
 }
 .imgloadingindex {
     position: absolute;
-    top: 54px;
-    left: 77px;
+    top: 45%;
+    left: 45%;
+    display: block;
+    margin: 0 auto;
+    width: 84px;
 }
 .cargandomdlimgdiv {
 	display:none;
