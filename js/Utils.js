@@ -618,6 +618,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 							   
 							   });
 							$("#lisEstadoSolicitantenew option[value="+ idest +"]").attr("selected","selected");
+                            validariconlistas("#lisEstadoSolicitantenew");
 						
 						$.ajax({ 			
 								type: 'POST',
@@ -630,6 +631,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 											$("#lisDelMuniSolicitantenew").append('<option value="' + item.IDPOBLACION + '">' + item.POBLACION + '</option>');	
 										   });
 										$("#lisDelMuniSolicitantenew option[value="+ idpob +"]").attr("selected","selected");
+                                        validariconlistas("#lisDelMuniSolicitantenew");
 										
 										
 										
