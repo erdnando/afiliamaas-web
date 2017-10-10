@@ -165,7 +165,16 @@ function processCompress(input) {
 										   console.log('sexo...'+data.sexo);
 										   $("#txttokenWS").val(data.Token);
 										   $('#cargandoafiliadiv').hide();
-										   swal({
+
+
+
+
+                                            $('#tabladatosOCR').append("<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%;border-collapse: separate;border-spacing:  7px;'><tr><td align='left' valign='top' style='padding-right:2em;'>Nombre</td><td align='left' style='font-weight:bold;max-width: 250px;'>"+ data.Nombre+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Paterno</td><td align='left' style='font-weight:bold;max-width: 250px;'>"+data.Paterno+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Materno</td><td align='left' style='font-weight:bold;max-width: 250px;'>"+data.Materno+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Calle</td><td align='left' style='font-weight:bold;max-width: 250px;'>"+data.calle+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>CP</td><td align='left' style='font-weight:bold;max-width: 250px;'>"+data.codigoPostal+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Colonia</td><td align='left' style='font-weight:bold;max-width: 250px;'>"+data.colonia+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Fecha nac</td><td align='left' style='font-weight:bold;max-width: 250px;'>"+data.fechaDeNacimiento+"</td><td></td></tr></table>")
+
+                                            $("#DatosOCR").show();
+
+
+										   /*swal({
 												  title: '<i style="font-style: normal;">Datos obtenidos</i>',											  
 												  html:
 													"<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%;border-collapse: separate;border-spacing:  7px;'><tr><td align='left' valign='top' style='padding-right:2em;'>Nombre</td><td align='left' style='font-weight:bold;max-width: 250px;'>"+ data.Nombre+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Paterno</td><td align='left' style='font-weight:bold;max-width: 250px;'>"+data.Paterno+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Materno</td><td align='left' style='font-weight:bold;max-width: 250px;'>"+data.Materno+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Calle</td><td align='left' style='font-weight:bold;max-width: 250px;'>"+data.calle+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>CP</td><td align='left' style='font-weight:bold;max-width: 250px;'>"+data.codigoPostal+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Colonia</td><td align='left' style='font-weight:bold;max-width: 250px;'>"+data.colonia+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Fecha nac</td><td align='left' style='font-weight:bold;max-width: 250px;'>"+data.fechaDeNacimiento+"</td><td></td></tr></table>",
@@ -284,13 +293,9 @@ function processCompress(input) {
 												  // dismiss can be 'cancel', 'overlay',
 												  // 'close', and 'timer'
 												  if (dismiss === 'cancel' || dismiss === 'close') {
-													/*swal(
-													  'Cancelled',
-													  '¡Por favor captura nuevamente tu identificación!',
-													  'error'
-													);*/
+
 												  }
-												});
+												});*/
 										}
 											
 									   
