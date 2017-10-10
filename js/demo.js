@@ -297,47 +297,6 @@ function processCompress(input) {
 												  }
 												});*/
 										}
-											
-									   
-									   
-									   
-									   
-									   /*var divResultado = document.getElementById('divResultado');
-									   divResultado.style.position="absolute";
-									   divResultado.style.left="37px";
-									   divResultado.style.top= "19px";
-									   divResultado.style.width= "76%";
-									   divResultado.innerHTML = '<table cellpadding="0" cellspacing="0" border=0 style="margin-left:0px;margin-top:19px;border-color:transparent; font-size:11px; width: 275px;">'+
-																	   '<tr><td align="left" valign="top" style="padding-right:2em;">Nombre</td><td align="left" style="font-weight:bold">'+data.Nombre+'</td><td></td></tr>'+
-																	   '<tr><td align="left" valign="top" style="padding-right:2em;">Paterno</td><td align="left" style="font-weight:bold">'+data.Paterno+'</td><td></td></tr>'+
-																	   '<tr><td align="left" valign="top" style="padding-right:2em;">Materno</td><td align="left" style="font-weight:bold">'+data.Materno+'</td><td></td></tr>'+
-																	   '<tr><td align="left" valign="top" style="padding-right:2em;">Calle</td><td align="left" style="font-weight:bold">'+data.calle+'</td><td></td></tr>'+
-																	   '<tr><td align="left" valign="top" style="padding-right:2em;">CP</td><td align="left" style="font-weight:bold">'+data.codigoPostal+'</td><td></td></tr>'+
-																	   '<tr><td align="left" valign="top" style="padding-right:2em;">Colonia</td><td align="left" style="font-weight:bold">'+data.colonia+'</td><td></td></tr>'+
-																	   '<tr><td align="left" valign="top" style="padding-right:2em;">Fecha nac</td><td align="left" style="font-weight:bold">'+data.fechaDeNacimiento+'</td><td></td></tr>'+
-																'</table>';
-																
-																document.getElementById('divResultado');*/
-																
-										/*divResultado.innerHTML = '<code style="color:black;background-color:transparent"><ul id="double" style="font-family: helvetica;margin-top: -18px;width: 307px;margin-left: 23px;">'+
-																'<span class="code-comment">'+
-																  '<li>Nombre</li>'+
-																  '<li style="margin-left: -92px;">'+isNull(data.Nombre)+'</li>'+
-																  '<li>Paterno</li>'+
-																  '<li style="margin-left: -92px;">'+isNull(data.Paterno)+'</li>'+
-																  '<li>Materno</li>'+
-																  '<li style="margin-left: -92px;">'+isNull(data.Materno)+'</li>'+
-																  '<li>Sexo</li>'+
-																  '<li style="margin-left: -92px;">'+isNull(data.sexo)+'</li>'+
-																  '<li>Calle</li>'+
-																  '<li style="margin-left: -92px;">'+isNull(data.calle)+ ' ' +isNull(data.numeroExt)+'</li>'+
-																  '<li>CP</li>'+
-																  '<li style="margin-left: -92px;">'+isNull(data.codigoPostal)+'</li>'+
-																  '<li>Colonia</li>'+
-																  '<li style="margin-left: -92px;">'+isNull(data.colonia)+'</li>'+
-																  '<li>F Nac</li>'+
-																  '<li style="margin-left: -92px;">'+isNull(data.fechaDeNacimiento)+'</li>'+
-																'</ul></code>';		*/				
 																
 									},  
 									error: function (result) {  
