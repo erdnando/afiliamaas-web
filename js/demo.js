@@ -143,7 +143,7 @@ function processCompress(input) {
 													  location.href=("Index.html");
 													});
 											//location.href=("Index.html");
-											$("#txttokenWS").val(data.solicitudes[0].Token
+											$("#txttokenWS").val(data.solicitudes[0].Token);
 										}
 										else
 										{
