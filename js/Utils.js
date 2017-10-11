@@ -1128,7 +1128,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$('#sldsexosoli').css("background-color","#e2dede");
 		$('#sldpersopoli').css("background-color","#e2dede");
 		$('#sldparentescopoli').css("background-color","#e2dede");
-        $('#terminar').css("display", "none");
+        $('#terminar').attr("disabled","disabled");
 
 		
 		
@@ -1371,6 +1371,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$('#sldsexosoli').css("background-color","#2196f3");
 		$('#optpersonapoliticonew').removeAttr("disabled");
 		$('#sldpersopoli').css("background-color","#2196f3");
+
+        $('#terminar').removeAttr("disabled");
 		
 		$('#optparenpoliticonew').removeAttr("disabled");
 		$('#sldparentescopoli').css("background-color","#2196f3");
