@@ -77,7 +77,7 @@ var token = $('#txttokenWS').val();
 				tieneparen="SI";
 			}
 
-            if($("#imagenpresenta")[0].src == "file:///C:/Users/x/Documents/proyectos/afiliamaas-web/images/fondo.jpg"){
+            if($("#imagenpresenta")[0].src == "https://stefaninimx.com/afiliamaas-web/images/fondo.jpg"){
 
                     var demoTimeout;
 					clearTimeout(demoTimeout);
