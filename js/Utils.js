@@ -1128,6 +1128,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$('#sldsexosoli').css("background-color","#e2dede");
 		$('#sldpersopoli').css("background-color","#e2dede");
 		$('#sldparentescopoli').css("background-color","#e2dede");
+        $('#terminar').css("display", "none");
+
 		
 		
 		$('.glyphicon-circle-arrow-up').attr("disabled",true);
@@ -1269,6 +1271,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$("#firma-img").attr("class","hide");
 		
 		$("#DivdelaFirmaBorrar").css("display","");
+        $('#terminar').css("display", "");
 		$("#validarCliente").css("display","");
 		
 		
