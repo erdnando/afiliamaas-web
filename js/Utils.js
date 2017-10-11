@@ -1128,7 +1128,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$('#sldsexosoli').css("background-color","#e2dede");
 		$('#sldpersopoli').css("background-color","#e2dede");
 		$('#sldparentescopoli').css("background-color","#e2dede");
-        $('#terminar').attr("disabled","disabled");
+
 
 		
 		
@@ -2034,6 +2034,7 @@ function navegasliderheaderlibre(headlink, step){
 			$('#titulostep4').css('color','#96c03d');
 			$('#titulostep5').css('color','#96c03d');
 			$('#titulostep6').css('color','#96c03d');
+            $('#terminar').css("display","none");
 			break;
 		default:
 			break;

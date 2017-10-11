@@ -400,6 +400,7 @@ $(document).ready(function(){
 					location.href=("Index.html");
 				}
 		}else{
+            $("#cargandoafiliadiv").hide();
 			swal({
 				  title: '<i>Error de ingreso</i>',
 				  showCloseButton: true,
