@@ -1271,7 +1271,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$("#firma-img").attr("class","hide");
 		
 		$("#DivdelaFirmaBorrar").css("display","");
-        $('#terminar').css("display", "");
+        //$('#terminar').css("display", "");
 		$("#validarCliente").css("display","");
 		
 		
@@ -2034,7 +2034,7 @@ function navegasliderheaderlibre(headlink, step){
 			$('#titulostep4').css('color','#96c03d');
 			$('#titulostep5').css('color','#96c03d');
 			$('#titulostep6').css('color','#96c03d');
-            $('#terminar').css("display","none");
+            //$('#terminar').css("display","none");
 			break;
 		default:
 			break;
