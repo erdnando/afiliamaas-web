@@ -67,35 +67,53 @@ $(document).ready(function(){
 		});*/
 		
 		$('#txtCorreonew').on({
-		  keyup: function(tecla) {
-			var texto=$('#txtCorreonew').val(); 
-			var reg=  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
-		   if(reg.test(texto)) { 
-				console.log("coreovalido");
-				var nombrecladiv = "#txtCorreonewdiv";
-				$(nombrecladiv).attr('class', 'form-group has-success has-feedback');
-				var nombreclaspan = "#txtCorreonewspan";
-				$(nombreclaspan).attr('class', 'glyphicon glyphicon-ok form-control-feedback');
-		 
-			} else { 
-				console.log("coreoinvalido");
-				var nombrecladiv = "#txtCorreonewdiv";
-				var nombreclaspan = "#txtCorreonewspan";
-				$(nombreclaspan).attr('class', 'glyphicon glyphicon-warning-sign form-control-feedback');
-				$(nombrecladiv).attr('class', 'form-group has-warning has-feedback');
-				/*var demoTimeout;
-				clearTimeout(demoTimeout);
-				$('#txtCorreonew').trigger('startRumble');
-				demoTimeout = setTimeout(function(){$('#txtCorreonew').trigger('stopRumble');},1500);*/
-				//$('#txtCorreonew').focus();
-			}
+		  keypress: function(tecla) {
+
+            var valororigi = $('#txtCorreonew').val();
+
+            if (valororigi == ''){
+                    $('#txtCorreonew').val(null);
+
+            }else{
+
+
+
+                var texto=$('#txtCorreonew').val();
+                var reg=  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+               if(reg.test(texto)) {
+                    console.log("coreovalido");
+                    var nombrecladiv = "#txtCorreonewdiv";
+                    $(nombrecladiv).attr('class', 'form-group has-success has-feedback');
+                    var nombreclaspan = "#txtCorreonewspan";
+                    $(nombreclaspan).attr('class', 'glyphicon glyphicon-ok form-control-feedback');
+                   $('#txtCorreonew').val($('#txtCorreonew').val().trim());
+
+                } else {
+                    console.log("coreoinvalido");
+                    var nombrecladiv = "#txtCorreonewdiv";
+                    var nombreclaspan = "#txtCorreonewspan";
+                    $(nombreclaspan).attr('class', 'glyphicon glyphicon-warning-sign form-control-feedback');
+                    $(nombrecladiv).attr('class', 'form-group has-warning has-feedback');
+                    $('#txtCorreonew').val($('#txtCorreonew').val().trim());
+                    /*var demoTimeout;
+                    clearTimeout(demoTimeout);
+                    $('#txtCorreonew').trigger('startRumble');
+                    demoTimeout = setTimeout(function(){$('#txtCorreonew').trigger('stopRumble');},1500);*/
+                    //$('#txtCorreonew').focus();
+                }
+              }
 		  },
 		  blur: function(tecla) {
+              var valororigi = $('#txtCorreonew').val().trim();
+              $('#txtCorreonew').val(null);
+              $('#txtCorreonew').val(valororigi);
+
 			if($('#txtCorreonew').val().length == 0){
 				var nombrecladiv = "#txtCorreonewdiv";
 				var nombreclaspan = "#txtCorreonewspan";
 				$(nombreclaspan).attr('class', 'glyphicon glyphicon-remove form-control-feedback');
 				$(nombrecladiv).attr('class', 'form-group has-error has-feedback');
+
 			}
 		  }
 		  

@@ -1705,27 +1705,41 @@ function enablecontrolesiconspin(controles){
 
 
 function validaricontxt(txt){
+
+                  var valororigi = $(txt).val();
+    var posicion = valororigi.indexOf(' ');
+    if (posicion == 0){
+            $(txt).val(null);
+
+    }else{
+              $(txt).val(valororigi);
 	
 		if($(txt).val().length == 0){
 			var nombrecladiv = "#" + $(txt)[0].id + "div";
 			var nombreclaspan = "#" + $(txt)[0].id + "span";
 			$(nombreclaspan).attr('class', 'glyphicon glyphicon-remove form-control-feedback');
 			$(nombrecladiv).attr('class', 'form-group has-error has-feedback');
+            $(txt).val($(txt).val());
 			
 		}else if($(txt).val().length > 0 && $(txt).val().length < 1){
 			var nombrecladiv = "#" + $(txt)[0].id + "div";
 			var nombreclaspan = "#" + $(txt)[0].id + "span";
 			$(nombreclaspan).attr('class', 'glyphicon glyphicon-warning-sign form-control-feedback');
 			$(nombrecladiv).attr('class', 'form-group has-warning has-feedback');
+            $(txt).val($(txt).val());
 			
 		}else if($(txt).val().length > 0 && $(txt).val().length >= 1){
 			var nombrecladiv = "#" + $(txt)[0].id + "div";
 			$(nombrecladiv).attr('class', 'form-group has-success has-feedback');
 			var nombreclaspan = "#" + $(txt)[0].id + "span";
 			$(nombreclaspan).attr('class', 'glyphicon glyphicon-ok form-control-feedback');
+            $(txt).val($(txt).val());
 		}
+    }
 	
 }
+
+
 
 function validariconcorreo(correoctl){
 
@@ -1736,6 +1750,7 @@ function validariconcorreo(correoctl){
         var nombreclaspan = "#" + $(correoctl)[0].id + "span";
         $(nombreclaspan).attr('class', 'glyphicon glyphicon-remove form-control-feedback');
         $(nombrecladiv).attr('class', 'form-group has-error has-feedback');
+        $(correoctl).val()
     }else if(reg.test(texto)) {
         var nombrecladiv = "#" + $(correoctl)[0].id + "div";
         $(nombrecladiv).attr('class', 'form-group has-success has-feedback');
