@@ -3149,7 +3149,7 @@ function validacontrolespantallGral(){
         totalcontrolesheader[totalcontrolesheader.length]= "Domicilio";
         $('#rowvalida2').addClass('novalidorow').removeClass('rowiniciostepactivo');
         $('#anumpaso2').css('color','yellow');
-        ("#stOkTitstepDomicilio").attr('class', 'glyphicon glyphicon-warning-sign');
+        $("#stOkTitstepDomicilio").attr('class', 'glyphicon glyphicon-warning-sign');
 				$("#stOkTitstepDomicilio").show();
 
         $.each(controleslisterror2, function (ind, elem) {
@@ -3324,7 +3324,7 @@ function validacontrolespantallGral(){
         totalcontrolesheader[totalcontrolesheader.length]= "Datos Económicos";
         $('#rowvalida3').addClass('novalidorow').removeClass('rowiniciostepactivo');
         $('#anumpaso3').css('color','yellow');
-        ("#stOkTitstepDatEco").attr('class', 'glyphicon glyphicon-warning-sign');
+        $("#stOkTitstepDatEco").attr('class', 'glyphicon glyphicon-warning-sign');
 				$("#stOkTitstepDatEco").show();
 
 
@@ -3428,7 +3428,7 @@ function validacontrolespantallGral(){
             totalcontrolesheader[totalcontrolesheader.length]= "Persona Política";
             $('#rowvalida5').addClass('novalidorow').removeClass('rowiniciostepactivo');
             $('#anumpaso5').css('color','yellow');
-            ("#stOkTitstepPerPol").attr('class', 'glyphicon glyphicon-warning-sign');
+            $("#stOkTitstepPerPol").attr('class', 'glyphicon glyphicon-warning-sign');
 					$("#stOkTitstepPerPol").show();
 
             $.each(contlisterror14, function (ind, elem) {
