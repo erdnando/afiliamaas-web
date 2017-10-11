@@ -26,16 +26,7 @@ $(document).ready(function(){
 						console.log(data.Compania);
 						
 						if(data.IdUsuario == 0){
-							swal({
-
-                                 buttons: {confirm: "Aceptar"},
-                                 text: "Acceso incorrecto, por favor verifique!",
-                                  value: true,
-                                  visible: true,
-                                  className: "red-bg",
-                                  closeModal: true,
-
-                            });
+							swal("","Error de logueo por favor verifique!.","warning");
 							//location.href='';
                             $('#cargando').hide();
 							return false;
