@@ -2946,7 +2946,7 @@ function validacontrolespantallGral(){
         $('#rowvalida').addClass('novalidorow').removeClass('rowiniciostepactivo');
         $('#anumpaso1').css('color','yellow');
 
-        ("#stOkTitstepgrales").attr('class', 'glyphicon glyphicon-warning-sign');
+        $("#stOkTitstepgrales").attr('class', 'glyphicon glyphicon-warning-sign');
 				$("#stOkTitstepgrales").show();
 
         $.each(controleslisterror, function (ind, elem) {
