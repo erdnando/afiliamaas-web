@@ -32,7 +32,7 @@ $(document).ready(function(){
                                  text: "Acceso incorrecto, por favor verifique!",
                                   value: true,
                                   visible: true,
-                                  className: "red-bg,
+                                  className: "red-bg",
                                   closeModal: true,
 
                             });
