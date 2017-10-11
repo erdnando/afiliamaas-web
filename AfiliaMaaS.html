@@ -380,7 +380,7 @@
 							</label>
 						</div>-->
 						<div class="col-xs-12 col-sm-4 col-md4 col-lg-11" style="text-align:-webkit-right;">
-							<button data-toggle="modal" type="button" class="btnokeys" style="" id="btnifeok" name="btnifeok" >
+							<button data-toggle="modal" type="button" class="btnokeys" style="display: none;" id="btnifeok" name="btnifeok" disabled>
 								<i class="glyphicon glyphicon-ok"></i>
 							</button>
 							
@@ -795,7 +795,7 @@
 													<label class="control-label col-md-5" for="txtTelefonoCasanew">Teléfono de casa*:</label>
 													<div class="col-md-6">          
 														<div id="txtTelefonoCasanewdiv">
-															<input type="tel" class="form-control" id="txtTelefonoCasanew" placeholder="Teléfono de casa." name="txtTelefonoCasanew" maxlength="10" pattern="[0-9]{10}" tabindex="23">
+															<input type="tel" class="form-control" id="txtTelefonoCasanew" placeholder="(XX)XXXX-XXXX" name="txtTelefonoCasanew" maxlength="10" pattern="[0-9]{10}" tabindex="23">
 															<span id="txtTelefonoCasanewspan" ></span>
 														</div>
 													</div>
@@ -822,7 +822,7 @@
 													<label class="control-label col-md-5" for="txtTelefonoCelularnew">Teléfono celular*:</label>
 													<div class="col-md-6">          
 														<div id="txtTelefonoCelularnewdiv">
-															<input type="tel" class="form-control" id="txtTelefonoCelularnew" placeholder="Teléfono celular." name="txtTelefonoCelularnew" maxlength="10" tabindex="24">
+															<input type="tel" class="form-control" id="txtTelefonoCelularnew" placeholder="(XX)XXXX-XXXX" name="txtTelefonoCelularnew" maxlength="10" tabindex="24">
 															<span id="txtTelefonoCelularnewspan" ></span>
 														</div>
 													</div>
@@ -1100,7 +1100,7 @@
 													<label class="control-label col-md-5" for="txtTelOficinanew">Teléfono de oficina*:</label>
 													<div class="col-md-6">          
 														<div id="txtTelOficinanewdiv">
-															<input type="text" class="form-control" id="txtTelOficinanew" placeholder="Teléfono de oficina." name="txtTelOficinanew" maxlength="10" tabindex="40">
+															<input type="text" class="form-control" id="txtTelOficinanew" placeholder="(XX)XXXX-XXXX" name="txtTelOficinanew" maxlength="10" tabindex="40">
 															<span id="txtTelOficinanewspan" ></span>
 														</div>
 													</div>
@@ -1375,7 +1375,7 @@
 											<div class="col-md-3">
 												<div id="txtTelCasaRef1newdiv">
 													<div>
-														<input type="text" class="form-control" id="txtTelCasaRef1new" placeholder="Teléfono de casa." name="txtTelCasaRef1new" maxlength="10" tabindex="46" maxlength="50">
+														<input type="text" class="form-control" id="txtTelCasaRef1new" placeholder="(XX)XXXX-XXXX" name="txtTelCasaRef1new" maxlength="10" tabindex="46" maxlength="50">
 														<span id="txtTelCasaRef1newspan" ></span>	
 													</div>
 												</div>
@@ -1383,13 +1383,13 @@
 											<div class="col-md-3">
 												<div id="txtTelCasaRef2newdiv">
 													<div>
-														<input type="text" class="form-control" id="txtTelCasaRef2new" placeholder="Teléfono de casa." name="txtTelCasaRef2new" maxlength="10" tabindex="51" maxlength="50">
+														<input type="text" class="form-control" id="txtTelCasaRef2new" placeholder="(XX)XXXX-XXXX" name="txtTelCasaRef2new" maxlength="10" tabindex="51" maxlength="50">
 														<span id="txtTelCasaRef2newspan" ></span>
 													</div>
 												</div>
 											</div>
 											<div class="col-md-3">
-												<div><input type="text" class="form-control" id="txtTelCasaRef3new" placeholder="Teléfono de casa." name="txtTelCasaRef3new" maxlength="10" tabindex="56" maxlength="50"></div>
+												<div><input type="text" class="form-control" id="txtTelCasaRef3new" placeholder="(XX)XXXX-XXXX" name="txtTelCasaRef3new" maxlength="10" tabindex="56" maxlength="50"></div>
 											</div>
 										</div>	
 									</div>
@@ -1502,7 +1502,7 @@
 											
 											
 											<div class="col-sm-6 col-md-3 isotope-item">
-												<div class="image-box">
+												<div class="image-box" id="divfirmaagrega">
 													<div class="overlay-container" style="height: 135px; text-align: -webkit-center;">
 														<h4 class="modal-title" id="project-1-label">Firma</h4>
 														<img src="images/fondo.jpg" id="imagenpresenta" style="height: 164px; max-width:75%;">
@@ -1631,7 +1631,7 @@
 												<div class="image-box">
 													<div class="overlay-container" style="height:135px; text-align: -webkit-center;">
 														<h4 class="modal-title" id="project-1-label">Extra 1</h4>
-														<img src="images/fondo.jpg" alt="" id="imaextramodal" style="max-width:75%;">
+														<img src="images/fondo.jpg" alt="" id="imaextramodal" style="max-width:75%;    height: 114px;">
 														<a data-toggle="modal" data-target="#project-1" id="linkmodalopenextra" tabindex="65">
 															<i class="glyphicon glyphicon-eye-open"></i>
 															<span>Ver Extra</span>
@@ -1688,7 +1688,7 @@
 												<div class="image-box">
 													<div class="overlay-container" style="height:135px; text-align: -webkit-center;">
 														<h4 class="modal-title" id="project-1-label">Extra 2</h4>
-														<img src="images/fondo.jpg" alt="" id="imaextramodal2" style="max-width:75%;">
+														<img src="images/fondo.jpg" alt="" id="imaextramodal2" style="max-width:75%;    height: 114px;">
 														<a class="overlay" data-toggle="modal" data-target="#modalextra2" tabindex="67">
 															<i class="glyphicon glyphicon-eye-open"></i>
 															<span>Extra 2</span>
@@ -1749,7 +1749,7 @@
 												<div class="image-box">
 													<div class="overlay-container" style="height:135px;text-align: -webkit-center;">
 														<h4 class="modal-title" id="project-1-label">Extra 3</h4>
-														<img src="images/fondo.jpg" alt="" id="imaextramodal3" style="max-width:75%;">
+														<img src="images/fondo.jpg" alt="" id="imaextramodal3" style="max-width:75%;    height: 114px;">
 														<a class="overlay" data-toggle="modal" data-target="#modalextra3">
 															<i class="glyphicon glyphicon-eye-open"></i>
 															<span>Extra 3</span>
@@ -1809,7 +1809,7 @@
 												<div class="image-box">
 													<div class="overlay-container" style="height:135px; text-align: -webkit-center;">
 														<h4 class="modal-title" id="project-1-label">Extra 4</h4>
-														<img src="images/fondo.jpg" alt="" id="imaextramodal4" style="max-width:75%;">
+														<img src="images/fondo.jpg" alt="" id="imaextramodal4" style="max-width:75%;    height: 114px;">
 														<a class="overlay" data-toggle="modal" data-target="#modalextra4">
 															<i class="glyphicon glyphicon-eye-open"></i>
 															<span>Extra 4</span>
@@ -1869,7 +1869,7 @@
 												<div class="image-box">
 													<div class="overlay-container" style="height:135px;text-align: -webkit-center;">
 														<h4 class="modal-title" id="project-1-label">Extra 5</h4>
-														<img src="images/fondo.jpg" alt="" id="imaextramodal5" style="max-width:75%;">
+														<img src="images/fondo.jpg" alt="" id="imaextramodal5" style="max-width:75%;    height: 114px;">
 														<a class="overlay" data-toggle="modal" data-target="#modalextra5">
 															<i class="glyphicon glyphicon-eye-open"></i>
 															<span>Extra 5</span>
@@ -1948,7 +1948,7 @@
 								<!-- END NEXT BUTTTON-->
 								<!-- BEGIN FINISH BUTTTON-->
 								
-								<button type="button" data-type="finish" id="terminar" class="btn btn-right tsf-wizard-btn" data-toggle="tooltip" data-placement="top" title="Enviar!" id="btnfinalizar"></button>
+								<button type="button" data-type="finish" id="terminar" class="btn btn-right tsf-wizard-btn" data-toggle="tooltip" data-placement="top" title="Enviar!"></button>
 								<!-- END FINISH BUTTTON-->
 							</div>
 							<!-- END CONTROLS-->

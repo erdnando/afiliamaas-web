@@ -1805,21 +1805,31 @@ function validariconmonto(monto){
 function validaricontelefonos(telefono){
 	
 	var valortelefono = $(telefono).val();
+
+    valortelefono = replaceAll(valortelefono, "_", "" );
+    valortelefono = replaceAll(valortelefono, "(", "" );
+    valortelefono = replaceAll(valortelefono, ")", "" );
+    valortelefono = replaceAll(valortelefono, " ", "" );
+    valortelefono = valortelefono.trim();
 	//var valorfinal = $(valortelefono).unmask();
 
-	if($(telefono).val().replace('(', '').replace(')', '').replace(' ', '').length == 0 ){
+	//if($(telefono).val().replace('(', '').replace(')', '').replace(' ', '').length == 0 ){
+    if(valortelefono.length == 0 ){
 			var nombrecladiv = "#" + $(telefono)[0].id + "div";
 			var nombreclaspan = "#" + $(telefono)[0].id + "span";
 			$(nombreclaspan).attr('class', 'glyphicon glyphicon-remove form-control-feedback');
 			$(nombrecladiv).attr('class', 'form-group has-error has-feedback');
 			
-		}else if(($(telefono).val().replace('(', '').replace(')', '').replace(' ', '').length > 0) && ($(telefono).val().replace('(', '').replace(')', '').replace(' ', '').length < 10)){
-			var nombrecladiv = "#" + $(telefono)[0].id + "div";
-			var nombreclaspan = "#" + $(telefono)[0].id + "span";
-			$(nombreclaspan).attr('class', 'glyphicon glyphicon-warning-sign form-control-feedback');
-			$(nombrecladiv).attr('class', 'form-group has-warning has-feedback');
+		//}else if(($(telefono).val().replace('(', '').replace(')', '').replace(' ', '').length > 0) && ($(telefono).val().replace('(',
+        //'').replace(')', '').replace(' ', '').length < 10)){
+    }else if(valortelefono.length < 10){
+        var nombrecladiv = "#" + $(telefono)[0].id + "div";
+        var nombreclaspan = "#" + $(telefono)[0].id + "span";
+        $(nombreclaspan).attr('class', 'glyphicon glyphicon-warning-sign form-control-feedback');
+		$(nombrecladiv).attr('class', 'form-group has-warning has-feedback');
 			
-		}else if($(telefono).val().replace('(', '').replace(')', '').replace(' ', '').length == 10 ){
+    }
+    else if(valortelefono.length == 10 ){
 			var nombrecladiv = "#" + $(telefono)[0].id + "div";
 			$(nombrecladiv).attr('class', 'form-group has-success has-feedback');
 			var nombreclaspan = "#" + $(telefono)[0].id + "span";
@@ -2929,10 +2939,12 @@ function agregaeventostelefonos(telefono)
 			if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
 				(e.keyCode == 65 && e.ctrlKey === true) || 
 				(e.keyCode >= 35 && e.keyCode <= 39)) {
+                validaricontelefonos("#" + e.target.id);
 					 return;
 			}
 	 
 			if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                validaricontelefonos("#" + e.target.id);
 				e.preventDefault();
 			}
 		  },
@@ -2959,6 +2971,15 @@ function ValidaAcentos(controlelement){
 	controlelement = controlelement.replace('á', '&aacute').replace('é', '&eacute').replace('í', '&iacute').replace('ó', '&oacute').replace('ú', '&uacute').replace('Á', '&Aacute').replace('É', '&Eacute').replace('Í', '&Iacute').replace('Ó', '&Oacute').replace('Ú', '&Uacute');
 
 }
+
+
+function replaceAll( text, busca, reemplaza )
+{
+    while (text.toString().indexOf(busca) != -1)
+    text = text.toString().replace(busca,reemplaza);
+    return text;
+}
+
 
 
 	
