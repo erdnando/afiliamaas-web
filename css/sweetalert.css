@@ -17,7 +17,7 @@ body.stop-scrolling {
   z-index: 10000; }
 
 .sweet-alert {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.56);;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   width: 478px;
   padding: 17px;
@@ -50,7 +50,7 @@ body.stop-scrolling {
     line-height: 40px;
     display: block; }
   .sweet-alert p {
-    color: #797979;
+    color: #f9f9f9;
     font-size: 16px;
     text-align: center;
     font-weight: 300;
@@ -664,15 +664,15 @@ body.stop-scrolling {
 
 @-webkit-keyframes pulseWarning {
   0% {
-    border-color: #F8D486; }
+    border-color: #fbfaf9; }
   100% {
-    border-color: #F8BB86; } }
+    border-color: #d0cdca; } }
 
 @keyframes pulseWarning {
   0% {
-    border-color: #F8D486; }
+    border-color: #fbfaf9; }
   100% {
-    border-color: #F8BB86; } }
+    border-color: #d0cdca; } }
 
 .pulseWarning {
   -webkit-animation: pulseWarning 0.75s infinite alternate;
@@ -680,15 +680,15 @@ body.stop-scrolling {
 
 @-webkit-keyframes pulseWarningIns {
   0% {
-    background-color: #F8D486; }
+    background-color: #fbfaf9; }
   100% {
-    background-color: #F8BB86; } }
+    background-color: #d0cdca; } }
 
 @keyframes pulseWarningIns {
   0% {
-    background-color: #F8D486; }
+    background-color: #fbfaf9; }
   100% {
-    background-color: #F8BB86; } }
+    background-color: #d0cdca; } }
 
 .pulseWarningIns {
   -webkit-animation: pulseWarningIns 0.75s infinite alternate;
