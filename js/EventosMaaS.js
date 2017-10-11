@@ -972,10 +972,10 @@ $(document).ready(function(){
 				
 				if($("#mdlgralnombre")[0].innerText != "Nueva solicitud"){
 					
-					swal({
+					/*swal({
 						  title: '¡Atención!',
 						  text: "¿Salir de la ventana de solicitud?",
-						  /*type: 'warning',*/
+						  //type: 'warning',
 						  showCloseButton: true,
 						  confirmButtonColor: '#3085d6',
 						  confirmButtonText: 'Salir',
@@ -992,23 +992,15 @@ $(document).ready(function(){
 						  // 'close', and 'timer'
 						  if (dismiss === 'cancel') {
 							  
-							/*swal(
-							  'Cancelled',
-							  'Your imaginary file is safe :)',
-							  'error'
-							)*/
+
 						  }
 						  
 						  if (dismiss === 'close') {
 							  
-							 
-							/*swal(
-							  'Cancelled',
-							  'Your imaginary file is safe :)',
-							  'error'
-							)*/
+
 						  }
-						})
+						})*/
+                    $('#DatGrales').modal('hide');
 					
 				}else{
 					swal({
