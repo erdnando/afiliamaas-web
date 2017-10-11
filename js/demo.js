@@ -133,8 +133,9 @@ function processCompress(input) {
 									dataType: "json",						
 									success: function (data) {  
 										if(data.Token =="INVALID"){
+                                            $('#cargandoafiliadiv').hide();
 											swal({
-												  title: '<i>Sessión cerrada por inactividad</i>',
+												  title: '<i style="font-style: normal;">Sessión cerrada por inactividad</i>',
 												  showCloseButton: true,
 												  confirmButtonText:
 													'<i class="glyphicon glyphicon-ok"></i>',
@@ -410,8 +411,9 @@ function processCompressanver(input) {
 									console.log(data.fRegistro);
 									console.log(data.fVigencia);
                                     if(data.Token =="INVALID"){
+                                        $('#cargandoafiliadiv').hide();
 											swal({
-												  title: '<i>Sessión cerrada por inactividad</i>',
+												  title: '<i style="font-style: normal;">Sessión cerrada por inactividad</i>',
 												  showCloseButton: true,
 												  confirmButtonText:
 													'<i class="glyphicon glyphicon-ok"></i>',
