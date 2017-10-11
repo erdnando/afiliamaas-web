@@ -23,10 +23,13 @@ $(document).ready(function(){
 			console.log("sin CP");
 			$('#lisColoniaSolicitantenew').empty();
 			$("#lisColoniaSolicitantenew").append('<option value="0">Seleccione...</option>');
+            enablecontrolesicon("lisColoniaSolicitantenew");
 			$("#lisEstadoSolicitantenew option:selected").removeAttr("selected");
 			$("#lisEstadoSolicitantenew option[value=0]").attr("selected","selected");
+            enablecontrolesicon("lisEstadoSolicitantenew");
 			$('#lisDelMuniSolicitantenew').empty();
 			$("#lisDelMuniSolicitantenew").append('<option value="0">Seleccione...</option>');
+            enablecontrolesicon("lisDelMuniSolicitantenew");
 			
 		}
 
@@ -61,9 +64,12 @@ $(document).ready(function(){
 			 else{
 				 $('#lisColoniaSolicitantenew').empty();
 				$("#lisColoniaSolicitantenew").append('<option value="0">Seleccione...</option>');
+                 enablecontrolesicon("lisColoniaSolicitantenew");
 				$('#txtCpSolicitantenew').val("");
+                 enablecontrolesicon("txtCpSolicitantenew");
 				$('#lisDelMuniSolicitantenew').empty();
 				$("#lisDelMuniSolicitantenew").append('<option value="0">Seleccione...</option>');
+                 enablecontrolesicon("lisDelMuniSolicitantenew");
 			 }
 			 
 			 console.log(selectVal);
@@ -81,7 +87,9 @@ $(document).ready(function(){
 			 else{
 				 $('#lisColoniaSolicitantenew').empty();
 				$("#lisColoniaSolicitantenew").append('<option value="0">Seleccione...</option>');
+                 enablecontrolesicon("lisColoniaSolicitantenew");
 				$('#txtCpSolicitantenew').val("");
+                 enablecontrolesicon("txtCpSolicitantenew");
 				
 			 }
 			 
@@ -116,8 +124,10 @@ $(document).ready(function(){
 			$('#lisColoniaEmpresanew').empty();
 			$("#lisColoniaEmpresanew").append('<option value="0">Seleccione...</option>');
 			$("#lisEstadoEmpresanew option[value=0]").attr("selected","selected");
+            enablecontrolesicon("lisEstadoEmpresanew");
 			$('#lisDelMuniEmpresanew').empty();
 			$("#lisDelMuniEmpresanew").append('<option value="0">Seleccione...</option>');
+            enablecontrolesicon("lisDelMuniEmpresanew");
 			
 		}
 
@@ -140,9 +150,12 @@ $(document).ready(function(){
 			 else{
 				 $('#lisColoniaEmpresanew').empty();
 				$("#lisColoniaEmpresanew").append('<option value="0">Seleccione...</option>');
+                 enablecontrolesicon("lisColoniaEmpresanew");
 				$('#txtCpEmpresanew').val("");
+                 enablecontrolesicon("txtCpEmpresanew");
 				$('#lisDelMuniEmpresanew').empty();
 				$("#lisDelMuniEmpresanew").append('<option value="0">Seleccione...</option>');
+                 enablecontrolesicon("lisDelMuniEmpresanew");
 			 }
 			 
 			 console.log(selectVal);
@@ -160,7 +173,9 @@ $(document).ready(function(){
 			 else{
 				 $('#lisColoniaEmpresanew').empty();
 				$("#lisColoniaEmpresanew").append('<option value="0">Seleccione...</option>');
+                 enablecontrolesicon("lisColoniaEmpresanew");
 				$('#txtCpEmpresanew').val("");
+                 enablecontrolesicon("txtCpEmpresanew");
 				
 			 }
 			 
@@ -184,5 +199,4 @@ $(document).ready(function(){
 	});
 	
 });
-	
 	
