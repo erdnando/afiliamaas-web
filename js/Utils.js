@@ -1372,7 +1372,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$('#optpersonapoliticonew').removeAttr("disabled");
 		$('#sldpersopoli').css("background-color","#2196f3");
 
-        $('#terminar').removeAttr("disabled");
+        //$('#terminar').removeAttr("disabled");
 		
 		$('#optparenpoliticonew').removeAttr("disabled");
 		$('#sldparentescopoli').css("background-color","#2196f3");
