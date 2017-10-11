@@ -26,7 +26,7 @@ $(document).ready(function(){
 						console.log(data.Compania);
 						
 						if(data.IdUsuario == 0){
-							swal("","¡Acceso incorrecto, verifique por favor!","error");
+							swal("","¡Acceso incorrecto, verifique por favor!","warning", background:"rgba(255, 255, 255, 0.54)");
 							//location.href='';
                             $('#cargando').hide();
 							return false;
