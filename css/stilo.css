@@ -1711,7 +1711,7 @@ position: absolute;
     text-align: -webkit-center;
     top: 0;
     left: 0;
-    background-color: rgba(128, 128, 128, 0.38)
+    background-color: rgba(128, 128, 128, 0.38);
     display:none;
 }
 .imgloadingindex {
