@@ -966,7 +966,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		
 		//$("#lisColoniaSolicitantenew option[text="+$Colonia+"]").attr("selected","selected");
 		
-		$("#lisColoniaSolicitantenew option:contains('"+ $Colonia +"')").attr("selected",true);
+		$("#lisColoniaSolicitantenew option:contains('"+ $Colonia.replace("amp;aacute","á").replace("amp;eacute","é").replace("amp;íacute","í").replace("amp;oacute","ó").replace("amp;uacute","ú").replace("amp;Aacute","Á").replace("amp;Eacute","É").replace("amp;Iacute","Í").replace("amp;Oacute","Ó").replace("amp;Uacute","Ú") + "')").attr("selected",true);
 		
 		/*$("#lisColoniaSolicitantenew option").each(function () {
 			
@@ -1106,7 +1106,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$("#lisDelMuniEmpresanew option[value="+$Delegacionemp+"]").attr("selected","selected");
 		
 		
-		$("#lisColoniaEmpresanew").find('option:contains("'+$Coloniaempresa+'")').attr("selected","selected");
+		$("#lisColoniaEmpresanew").find('option:contains("'+$Coloniaempresa.replace("amp;aacute","á").replace("amp;eacute","é").replace("amp;íacute","í").replace("amp;oacute","ó").replace("amp;uacute","ú").replace("amp;Aacute","Á").replace("amp;Eacute","É").replace("amp;Iacute","Í").replace("amp;Oacute","Ó").replace("amp;Uacute","Ú") +'")').attr("selected","selected");
 		/*$("#lisColoniaEmpresanew option").each(function () {
 			if($("#lisColoniaEmpresanew option").text == $Colonia){
 				$("#lisColoniaEmpresanew option").attr("selected","selected");
