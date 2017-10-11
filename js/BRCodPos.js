@@ -23,13 +23,13 @@ $(document).ready(function(){
 			console.log("sin CP");
 			$('#lisColoniaSolicitantenew').empty();
 			$("#lisColoniaSolicitantenew").append('<option value="0">Seleccione...</option>');
-            enablecontrolesicon("lisColoniaSolicitantenew");
+            enablecontrolesicon($("#lisColoniaSolicitantenew"));
 			$("#lisEstadoSolicitantenew option:selected").removeAttr("selected");
 			$("#lisEstadoSolicitantenew option[value=0]").attr("selected","selected");
-            enablecontrolesicon("lisEstadoSolicitantenew");
+            enablecontrolesicon($("#lisEstadoSolicitantenew"));
 			$('#lisDelMuniSolicitantenew').empty();
 			$("#lisDelMuniSolicitantenew").append('<option value="0">Seleccione...</option>');
-            enablecontrolesicon("lisDelMuniSolicitantenew");
+            enablecontrolesicon($("#lisDelMuniSolicitantenew"));
 			
 		}
 
@@ -64,12 +64,12 @@ $(document).ready(function(){
 			 else{
 				 $('#lisColoniaSolicitantenew').empty();
 				$("#lisColoniaSolicitantenew").append('<option value="0">Seleccione...</option>');
-                 enablecontrolesicon("lisColoniaSolicitantenew");
+                 enablecontrolesicon($("#lisColoniaSolicitantenew"));
 				$('#txtCpSolicitantenew').val("");
-                 enablecontrolesicon("txtCpSolicitantenew");
+                 enablecontrolesicon($('#txtCpSolicitantenew'));
 				$('#lisDelMuniSolicitantenew').empty();
 				$("#lisDelMuniSolicitantenew").append('<option value="0">Seleccione...</option>');
-                 enablecontrolesicon("lisDelMuniSolicitantenew");
+                 enablecontrolesicon($("#lisDelMuniSolicitantenew"));
 			 }
 			 
 			 console.log(selectVal);
@@ -87,9 +87,9 @@ $(document).ready(function(){
 			 else{
 				 $('#lisColoniaSolicitantenew').empty();
 				$("#lisColoniaSolicitantenew").append('<option value="0">Seleccione...</option>');
-                 enablecontrolesicon("lisColoniaSolicitantenew");
+                 enablecontrolesicon($("#lisColoniaSolicitantenew"));
 				$('#txtCpSolicitantenew').val("");
-                 enablecontrolesicon("txtCpSolicitantenew");
+                 enablecontrolesicon($('#txtCpSolicitantenew'));
 				
 			 }
 			 
@@ -124,10 +124,10 @@ $(document).ready(function(){
 			$('#lisColoniaEmpresanew').empty();
 			$("#lisColoniaEmpresanew").append('<option value="0">Seleccione...</option>');
 			$("#lisEstadoEmpresanew option[value=0]").attr("selected","selected");
-            enablecontrolesicon("lisEstadoEmpresanew");
+            enablecontrolesicon($("#lisEstadoEmpresanew"));
 			$('#lisDelMuniEmpresanew').empty();
 			$("#lisDelMuniEmpresanew").append('<option value="0">Seleccione...</option>');
-            enablecontrolesicon("lisDelMuniEmpresanew");
+            enablecontrolesicon($("#lisDelMuniEmpresanew"));
 			
 		}
 
@@ -150,12 +150,12 @@ $(document).ready(function(){
 			 else{
 				 $('#lisColoniaEmpresanew').empty();
 				$("#lisColoniaEmpresanew").append('<option value="0">Seleccione...</option>');
-                 enablecontrolesicon("lisColoniaEmpresanew");
+                 enablecontrolesicon($("#lisColoniaEmpresanew"));
 				$('#txtCpEmpresanew').val("");
-                 enablecontrolesicon("txtCpEmpresanew");
+                 enablecontrolesicon($('#txtCpEmpresanew'));
 				$('#lisDelMuniEmpresanew').empty();
 				$("#lisDelMuniEmpresanew").append('<option value="0">Seleccione...</option>');
-                 enablecontrolesicon("lisDelMuniEmpresanew");
+                 enablecontrolesicon($("#lisDelMuniEmpresanew"));
 			 }
 			 
 			 console.log(selectVal);
@@ -173,9 +173,9 @@ $(document).ready(function(){
 			 else{
 				 $('#lisColoniaEmpresanew').empty();
 				$("#lisColoniaEmpresanew").append('<option value="0">Seleccione...</option>');
-                 enablecontrolesicon("lisColoniaEmpresanew");
+                 enablecontrolesicon($("#lisColoniaEmpresanew"));
 				$('#txtCpEmpresanew').val("");
-                 enablecontrolesicon("txtCpEmpresanew");
+                 enablecontrolesicon($('#txtCpEmpresanew'));
 				
 			 }
 			 
