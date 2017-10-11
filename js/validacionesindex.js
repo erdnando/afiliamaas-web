@@ -26,7 +26,16 @@ $(document).ready(function(){
 						console.log(data.Compania);
 						
 						if(data.IdUsuario == 0){
-							swal("","¡Acceso incorrecto, verifique por favor!","warning");
+							swal({
+
+                                 buttons: {confirm: "Aceptar"},
+                                 text: "Acceso incorrecto, por favor verifique!",
+                                  value: true,
+                                  visible: true,
+                                  className: "red-bg,
+                                  closeModal: true,
+
+                            });
 							//location.href='';
                             $('#cargando').hide();
 							return false;
