@@ -3140,7 +3140,7 @@ function validacontrolespantallGral(){
     $.each(controlesCP2, function (ind, elem) {
         if(validatelefono(elem) == 1 )
         {
-            controlvalidados += 1;
+            controlvalidados2 += 1;
             controlvalidadosgral += 1;
         }else{
 
