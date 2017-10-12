@@ -2867,6 +2867,253 @@ function validacontrolespantall(pantalla, kinkheader, e){
 					validaricontelefonos(elem);
 					demoTimeout = setTimeout(function(){$(elem).trigger('stopRumble');},1500);							
 				});
+
+                var textoref=$('#txtNombreRef1new').val() + " " + $('#txtApellidoPaternoRef1new').val() + " " + $('#txtApellidoMaternoRef1new').val();
+                var textoref2=$('#txtNombreRef2new').val() + " " + $('#txtApellidoPaternoRef2new').val() + " " + $('#txtApellidoMaternoRef2new').val();
+                var textoref3=$('#txtNombreRef3new').val() + " " + $('#txtApellidoPaternoRef3new').val() + " " + $('#txtApellidoMaternoRef3new').val();
+                var textosol;
+                if($('#txtSegundonombrenew').val().length > 0){
+                    textosol=$('#txtNomSolicitantenew').val() + " " + $('#txtSegundonombrenew').val() + " " + $('#txtApePaternonew').val() + " " + $('#txtApeMaternonew').val();
+                }else{
+                    textosol=$('#txtNomSolicitantenew').val() + " " + $('#txtApePaternonew').val() + " " + $('#txtApeMaternonew').val();
+                }
+
+                if(textoref.trim().length > 0){
+
+                    if(textoref === textosol ) {
+                        console.log("referencia igual a solicitante");
+                        var demoTimeout;
+                        clearTimeout(demoTimeout);
+                        validaricontxt('#txtNombreRef1new');
+                        $('#txtNombreRef1new').trigger('startRumble');
+                        /*$("#txtNombreRef1new").css('border', '1px solid red'); */
+                        demoTimeout = setTimeout(function(){$('#txtNombreRef1new').trigger('stopRumble');},1000);
+                        //$('#txtNombreRef1new').focus();
+
+                        var demoTimeout2;
+
+                        clearTimeout(demoTimeout2);
+                        $('#txtApellidoPaternoRef1new').trigger('startRumble');
+                        validaricontxt("#txtApellidoPaternoRef1new");
+                        //$("#txtApellidoPaternoRef1new").css('border', '1px solid red');
+                        demoTimeout2 = setTimeout(function(){$('#txtApellidoPaternoRef1new').trigger('stopRumble')},1000);
+                        //clearTimeout(demoTimeout);
+
+                        var demoTimeout3;
+
+                        clearTimeout(demoTimeout3);
+                        $('#txtApellidoMaternoRef1new').trigger('startRumble');
+                        //$("#txtApellidoMaternoRef1new").css('border', '1px solid red');
+                        validaricontxt("#txtApellidoMaternoRef1new");
+                        demoTimeout3 = setTimeout(function(){$('#txtApellidoMaternoRef1new').trigger('stopRumble')},1000);
+                        //clearTimeout(demoTimeout3);
+
+                       var demoTimeout4;
+
+                        clearTimeout(demoTimeout4);
+                        $('#lblreferenciassolicitante').trigger('startRumble');
+                       $("#lblreferenciassolicitante").css('color', 'red');
+                        demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
+
+                       $('#txtNombreRef1new').focus();
+
+
+                    }
+
+                }
+
+                if(textoref2.trim().length > 0){
+                    if(textoref2 === textoref ) {
+                        console.log("referencia1 igual a referencia2");
+                        var demoTimeout;
+                        clearTimeout(demoTimeout);
+                        $('#txtNombreRef2new').trigger('startRumble');
+                        validaricontxt("#txtNombreRef2new");
+                        //$("#txtNombreRef2new").css('border', '1px solid red');
+                        demoTimeout = setTimeout(function(){$('#txtNombreRef2new').trigger('stopRumble');},1000);
+                        $('#txtNombreRef2new').focus();
+
+                        var demoTimeout2;
+
+                        clearTimeout(demoTimeout2);
+                        $('#txtApellidoPaternoRef2new').trigger('startRumble');
+                        validaricontxt("#txtApellidoPaternoRef2new");
+                        //$("#txtApellidoPaternoRef2new").css('border', '1px solid red');
+                        demoTimeout2 = setTimeout(function(){$('#txtApellidoPaternoRef2new').trigger('stopRumble')},1000);
+                        //clearTimeout(demoTimeout);
+
+                        var demoTimeout3;
+
+                        clearTimeout(demoTimeout3);
+                        $('#txtApellidoMaternoRef2new').trigger('startRumble');
+                        validaricontxt("#txtApellidoMaternoRef2new");
+                        //$("#txtApellidoMaternoRef2new").css('border', '1px solid red');
+                        demoTimeout3 = setTimeout(function(){$('#txtApellidoMaternoRef2new').trigger('stopRumble')},1000);
+                        //clearTimeout(demoTimeout3);
+
+                        var demoTimeout4;
+
+                        clearTimeout(demoTimeout4);
+                        $('#lblreferenciassolicitante').trigger('startRumble');
+                       $("#lblreferenciassolicitante").css('color', 'red');
+                        demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
+
+
+                    } else if(textoref2 === textosol ) {
+                        console.log("referencia2 igual a solicitante");
+                        var demoTimeout;
+                        clearTimeout(demoTimeout);
+                        $('#txtNombreRef2new').trigger('startRumble');
+                        validaricontxt("#txtNombreRef2new");
+                        //$("#txtNombreRef2new").css('border', '1px solid red');
+                        demoTimeout = setTimeout(function(){$('#txtNombreRef2new').trigger('stopRumble');},1000);
+                        //$('#txtNombreRef2new').focus();
+
+                        var demoTimeout2;
+
+                        clearTimeout(demoTimeout2);
+                        $('#txtApellidoPaternoRef2new').trigger('startRumble');
+                        validaricontxt("#txtApellidoPaternoRef2new");
+                        //$("#txtApellidoPaternoRef2new").css('border', '1px solid red');
+                        demoTimeout2 = setTimeout(function(){$('#txtApellidoPaternoRef2new').trigger('stopRumble')},1000);
+                        //clearTimeout(demoTimeout);
+
+                        var demoTimeout3;
+
+                        clearTimeout(demoTimeout3);
+                        $('#txtApellidoMaternoRef2new').trigger('startRumble');
+                        validaricontxt("#txtApellidoMaternoRef2new");
+                        //$("#txtApellidoMaternoRef2new").css('border', '1px solid red');
+                        demoTimeout3 = setTimeout(function(){$('#txtApellidoMaternoRef2new').trigger('stopRumble')},1000);
+                        //clearTimeout(demoTimeout3);
+
+                         var demoTimeout4;
+
+                        clearTimeout(demoTimeout4);
+                        $('#lblreferenciassolicitante').trigger('startRumble');
+                        $("#lblreferenciassolicitante").css('color', 'red');
+                        demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
+                        $('#txtNombreRef2new').focus();
+
+
+
+                    }
+                }
+
+
+
+
+
+
+
+
+
+			 if(textoref3.trim().length > 0){
+               if(textoref3 === textoref2 ) {
+                    console.log("referencia3 igual a referencia2");
+                    var demoTimeout;
+                    clearTimeout(demoTimeout);
+                    $('#txtNombreRef3new').trigger('startRumble');
+                    $("#txtNombreRef3new").css('border', '1px solid red');
+                    demoTimeout = setTimeout(function(){$('#txtNombreRef3new').trigger('stopRumble');},1000);
+                    $('#txtNombreRef3new').focus();
+
+                    var demoTimeout2;
+
+                    clearTimeout(demoTimeout2);
+                    $('#txtApellidoPaternoRef3new').trigger('startRumble');
+                    $("#txtApellidoPaternoRef3new").css('border', '1px solid red');
+                    demoTimeout2 = setTimeout(function(){$('#txtApellidoPaternoRef3new').trigger('stopRumble')},1000);
+                    //clearTimeout(demoTimeout);
+
+                    var demoTimeout3;
+
+                    clearTimeout(demoTimeout3);
+                    $('#txtApellidoMaternoRef3new').trigger('startRumble');
+                    $("#txtApellidoMaternoRef3new").css('border', '1px solid red');
+                    demoTimeout3 = setTimeout(function(){$('#txtApellidoMaternoRef3new').trigger('stopRumble')},1000);
+                    //clearTimeout(demoTimeout3);
+
+                    var demoTimeout4;
+
+                    clearTimeout(demoTimeout4);
+                    $('#lblreferenciassolicitante').trigger('startRumble');
+                   $("#lblreferenciassolicitante").css('color', 'red');
+                    demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
+
+
+                }else if(textoref3 === textoref ) {
+                    console.log("referencia3 igual a referencia1");
+                    var demoTimeout;
+                    clearTimeout(demoTimeout);
+                    $('#txtNombreRef3new').trigger('startRumble');
+                    $("#txtNombreRef3new").css('border', '1px solid red');
+                    demoTimeout = setTimeout(function(){$('#txtNombreRef3new').trigger('stopRumble');},1000);
+                    //$('#txtNombreRef2new').focus();
+
+                    var demoTimeout2;
+
+                    clearTimeout(demoTimeout2);
+                    $('#txtApellidoPaternoRef3new').trigger('startRumble');
+                    $("#txtApellidoPaternoRef3new").css('border', '1px solid red');
+                    demoTimeout2 = setTimeout(function(){$('#txtApellidoPaternoRef3new').trigger('stopRumble')},1000);
+                    //clearTimeout(demoTimeout);
+
+                    var demoTimeout3;
+
+                    clearTimeout(demoTimeout3);
+                    $('#txtApellidoMaternoRef3new').trigger('startRumble');
+                    $("#txtApellidoMaternoRef3new").css('border', '1px solid red');
+                    demoTimeout3 = setTimeout(function(){$('#txtApellidoMaternoRef3new').trigger('stopRumble')},1000);
+                    //clearTimeout(demoTimeout3);
+
+                     var demoTimeout4;
+
+                    clearTimeout(demoTimeout4);
+                    $('#lblreferenciassolicitante').trigger('startRumble');
+                    $("#lblreferenciassolicitante").css('color', 'red');
+                    demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
+                    $('#txtNombreRef3new').focus();
+
+
+
+                }else if(textoref3 === textosol ) {
+                    console.log("referencia3 igual a solicitante");
+                    var demoTimeout;
+                    clearTimeout(demoTimeout);
+                    $('#txtNombreRef3new').trigger('startRumble');
+                    $("#txtNombreRef3new").css('border', '1px solid red');
+                    demoTimeout = setTimeout(function(){$('#txtNombreRef3new').trigger('stopRumble');},1000);
+                    //$('#txtNombreRef2new').focus();
+
+                    var demoTimeout2;
+
+                    clearTimeout(demoTimeout2);
+                    $('#txtApellidoPaternoRef3new').trigger('startRumble');
+                    $("#txtApellidoPaternoRef3new").css('border', '1px solid red');
+                    demoTimeout2 = setTimeout(function(){$('#txtApellidoPaternoRef3new').trigger('stopRumble')},1000);
+                    //clearTimeout(demoTimeout);
+
+                    var demoTimeout3;
+
+                    clearTimeout(demoTimeout3);
+                    $('#txtApellidoMaternoRef3new').trigger('startRumble');
+                    $("#txtApellidoMaternoRef3new").css('border', '1px solid red');
+                    demoTimeout3 = setTimeout(function(){$('#txtApellidoMaternoRef3new').trigger('stopRumble')},1000);
+                    //clearTimeout(demoTimeout3);
+
+                     var demoTimeout4;
+
+                    clearTimeout(demoTimeout4);
+                    $('#lblreferenciassolicitante').trigger('startRumble');
+                    $("#lblreferenciassolicitante").css('color', 'red');
+                    demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
+                    $('#txtNombreRef3new').focus();
+
+
+
+                }
+            }
 				
 				
 				/*$("#stOkTitstepRefFam").attr('class', 'glyphicon glyphicon-warning-sign');

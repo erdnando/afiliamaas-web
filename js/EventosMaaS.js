@@ -629,43 +629,19 @@ $(document).ready(function(){
 		}
 		});
 		
-		$('#txtNombreRef1new').on({
+		$('#txtNombreRef1new, #txtApellidoPaternoRef1new, #txtApellidoMaternoRef1new').on({
 		click:	function () {
-            validaricontxt("#txtNombreRef1new");
-			/*$("#txtNombreRef1new").css('border', 'none');
-			$("#txtNombreRef1new").css('border-bottom', '2px solid #cecfd3'); */
+            validaricontxt(this);
+			$("#lblreferenciassolicitante").css('border', 'none');
+			$("#lblreferenciassolicitante").css('border-bottom', '3px solid rgba(206, 206, 4, 0.86)');
+            $("#lblreferenciassolicitante").css('color', 'black');
 		},
-		focus:	function () {
-			validaricontxt("#txtNombreRef1new");
-			/*$("#txtNombreRef1new").css('border', 'none');
-			$("#txtNombreRef1new").css('border-bottom', '2px solid #cecfd3'); */
-		}
-
-		});
-		$('#txtApellidoPaternoRef1new').on({
-			click:	function () {
-                validaricontxt("#txtApellidoPaternoRef1new");
-				/*$("#txtApellidoPaternoRef1new").css('border', 'none');
-				$("#txtApellidoPaternoRef1new").css('border-bottom', '2px solid #cecfd3'); */
-			},
-			focus:	function () {
-				validaricontxt("#txtApellidoPaternoRef1new");
-				/*$("#txtApellidoPaternoRef1new").css('border', 'none');
-				$("#txtApellidoPaternoRef1new").css('border-bottom', '2px solid #cecfd3'); */
-			}
-
-		});
-		$('#txtApellidoMaternoRef1new').on({
-			click:	function () {
-                validaricontxt("#txtApellidoMaternoRef1new");
-				/*$("#txtApellidoMaternoRef1new").css('border', 'none');
-				$("#txtApellidoMaternoRef1new").css('border-bottom', '2px solid #cecfd3'); */
-			},
-			focus:	function () {
-				validaricontxt("#txtApellidoMaternoRef1new");
-				/*$("#txtApellidoMaternoRef1new").css('border', 'none');
-				$("#txtApellidoMaternoRef1new").css('border-bottom', '2px solid #cecfd3'); */
-			},
+		keypress:	function () {
+			validaricontxt(this);
+			$("#lblreferenciassolicitante").css('border', 'none');
+			$("#lblreferenciassolicitante").css('border-bottom', '3px solid rgba(206, 206, 4, 0.86)');
+            $("#lblreferenciassolicitante").css('color', 'black');
+		},
             blur: function() {
 			var textoref=$('#txtNombreRef1new').val() + " " + $('#txtApellidoPaternoRef1new').val() + " " + $('#txtApellidoMaternoRef1new').val(); 
 			var textosol;
@@ -708,19 +684,36 @@ $(document).ready(function(){
 
 				clearTimeout(demoTimeout4);
 				$('#lblreferenciassolicitante').trigger('startRumble');
-               $("#lblreferenciassolicitante").css('border', '1px solid red');
+               $("#lblreferenciassolicitante").css('color', 'red');
 				demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
+
+               $('#txtNombreRef1new').focus();
 
 		 
 			} else { 
 				
 			} 
 		  }
-		  
+
 		});
 		
 		
-		$('#txtApellidoMaternoRef2new').on({
+
+
+
+		$('#txtNombreRef2new, #txtApellidoPaternoRef2new, #txtApellidoMaternoRef2new').on({
+            click:	function () {
+            validaricontxt(this);
+			$("#lblreferenciassolicitante").css('border', 'none');
+			$("#lblreferenciassolicitante").css('border-bottom', '3px solid rgba(206, 206, 4, 0.86)');
+                $("#lblreferenciassolicitante").css('color', 'black');
+		},
+		keypress:	function () {
+			validaricontxt(this);
+			$("#lblreferenciassolicitante").css('border', 'none');
+			$("#lblreferenciassolicitante").css('border-bottom', '3px solid rgba(206, 206, 4, 0.86)');
+            $("#lblreferenciassolicitante").css('color', 'black');
+		},
 		  blur: function() {
 			var textoref=$('#txtNombreRef1new').val() + " " + $('#txtApellidoPaternoRef1new').val() + " " + $('#txtApellidoMaternoRef1new').val(); 
 			var textoref2=$('#txtNombreRef2new').val() + " " + $('#txtApellidoPaternoRef2new').val() + " " + $('#txtApellidoMaternoRef2new').val(); 
@@ -738,7 +731,7 @@ $(document).ready(function(){
                 validaricontxt("#txtNombreRef2new");
 				//$("#txtNombreRef2new").css('border', '1px solid red');
 				demoTimeout = setTimeout(function(){$('#txtNombreRef2new').trigger('stopRumble');},1000);
-				//$('#txtNombreRef2new').focus();
+				$('#txtNombreRef2new').focus();
 				
 				var demoTimeout2;
 
@@ -762,7 +755,7 @@ $(document).ready(function(){
 
 				clearTimeout(demoTimeout4);
 				$('#lblreferenciassolicitante').trigger('startRumble');
-               $("#lblreferenciassolicitante").css('border', '1px solid red');
+               $("#lblreferenciassolicitante").css('color', 'red');
 				demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
 
 		 
@@ -798,8 +791,9 @@ $(document).ready(function(){
 
 				clearTimeout(demoTimeout4);
 				$('#lblreferenciassolicitante').trigger('startRumble');
-                $("#lblreferenciassolicitante").css('border', '1px solid red');
+                $("#lblreferenciassolicitante").css('color', 'red');
 				demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
+                $('#txtNombreRef2new').focus();
 
 		  
 				
@@ -844,7 +838,19 @@ $(document).ready(function(){
 		
 		
 		
-		$('#txtApellidoMaternoRef3new').on({
+		$('#txtNombreRef3new, #txtApellidoPaternoRef3new, #txtApellidoMaternoRef3new').on({
+            click:	function () {
+            validaricontxt(this);
+			$("#lblreferenciassolicitante").css('border', 'none');
+			$("#lblreferenciassolicitante").css('border-bottom', '3px solid rgba(206, 206, 4, 0.86)');
+                $("#lblreferenciassolicitante").css('color', 'black');
+		},
+		keypress:	function () {
+			validaricontxt(this);
+			$("#lblreferenciassolicitante").css('border', 'none');
+			$("#lblreferenciassolicitante").css('border-bottom', '3px solid rgba(206, 206, 4, 0.86)');
+            $("#lblreferenciassolicitante").css('color', 'black');
+		},
 		  blur: function() {
 			var textoref=$('#txtNombreRef1new').val() + " " + $('#txtApellidoPaternoRef1new').val() + " " + $('#txtApellidoMaternoRef1new').val(); 
 			var textoref2=$('#txtNombreRef2new').val() + " " + $('#txtApellidoPaternoRef2new').val() + " " + $('#txtApellidoMaternoRef2new').val(); 
@@ -863,7 +869,7 @@ $(document).ready(function(){
 				$('#txtNombreRef3new').trigger('startRumble');
 				$("#txtNombreRef3new").css('border', '1px solid red'); 
 				demoTimeout = setTimeout(function(){$('#txtNombreRef3new').trigger('stopRumble');},1000);
-				//$('#txtNombreRef2new').focus();
+				$('#txtNombreRef3new').focus();
 				
 				var demoTimeout2;
 
@@ -885,7 +891,7 @@ $(document).ready(function(){
 
 				clearTimeout(demoTimeout4);
 				$('#lblreferenciassolicitante').trigger('startRumble');
-               $("#lblreferenciassolicitante").css('border', '1px solid red');
+               $("#lblreferenciassolicitante").css('color', 'red');
 				demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
 
 		 
@@ -918,8 +924,9 @@ $(document).ready(function(){
 
 				clearTimeout(demoTimeout4);
 				$('#lblreferenciassolicitante').trigger('startRumble');
-                $("#lblreferenciassolicitante").css('border', '1px solid red');
+                $("#lblreferenciassolicitante").css('color', 'red');
 				demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
+                $('#txtNombreRef3new').focus();
 
 		  
 				
@@ -952,8 +959,9 @@ $(document).ready(function(){
 
 				clearTimeout(demoTimeout4);
 				$('#lblreferenciassolicitante').trigger('startRumble');
-                $("#lblreferenciassolicitante").css('border', '1px solid red');
+                $("#lblreferenciassolicitante").css('color', 'red');
 				demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
+                $('#txtNombreRef3new').focus();
 
 		  
 				

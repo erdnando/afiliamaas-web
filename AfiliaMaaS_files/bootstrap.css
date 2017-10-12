@@ -625,6 +625,11 @@ th {
 .glyphicon-calendar:before {
   content: "\e109";
 }
+.glyphicon-option-horizontal{
+    content:"\e234";
+}
+
+
 .glyphicon-random:before {
   content: "\e110";
 }
