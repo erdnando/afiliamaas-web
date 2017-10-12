@@ -2959,6 +2959,8 @@ function validacontrolespantallGral(){
     });
 
     if(controlvalidados == totalvalidar ){
+         $('#titulostep').css('color','rgb(150, 192, 61)');
+        $("#stOkTitstepgrales").attr('class', 'glyphicon glyphicon-ok');
         $("#stOkTitstepgrales").show();
         $("#stOkTitModgrales").show();
         $('#rowvalida').addClass('rowiniciostepactivosuccess').removeClass('rowiniciostepactivo');
