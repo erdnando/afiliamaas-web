@@ -342,6 +342,8 @@ $(document).ready(function(){
 		//if((tecla.charCode < 97 || tecla.charCode > 122) && (tecla.charCode < 65 || tecla.charCode > 90) && (tecla.charCode != 45)) return false;
 	  },
 	  blur: function() {
+          var nomcompleto = 'Las referencias familiares deben ser diferentes entre sí y diferentes al solicitante: ' + $('#txtNomSolicitantenew').val() + ' ' + $('#txtSegundonombrenew').val() + ' ' + $('#txtApePaternonew').val() + ' ' + $('#txtApeMaternonew').val();
+          $('#lblreferenciassolicitante').text(nomcompleto.toUpperCase());
 		validaricontxt($('#txtNomSolicitantenew'));		
 	  },
 	  click: function() {
@@ -366,6 +368,11 @@ $(document).ready(function(){
 			return false;
 		} 
 		//if((tecla.charCode < 97 || tecla.charCode > 122) && (tecla.charCode < 65 || tecla.charCode > 90) && (tecla.charCode != 45)) return false;
+	  },
+	  blur: function() {
+          var nomcompleto = 'Las referencias familiares deben ser diferentes entre sí y diferentes al solicitante: ' + $('#txtNomSolicitantenew').val() + ' ' + $('#txtSegundonombrenew').val() + ' ' + $('#txtApePaternonew').val() + ' ' + $('#txtApeMaternonew').val();
+          $('#lblreferenciassolicitante').text(nomcompleto.toUpperCase());
+		//validaricontxt($('#txtNomSolicitantenew'));
 	  }
 	});
 	
@@ -391,6 +398,8 @@ $(document).ready(function(){
 		//if((tecla.charCode < 97 || tecla.charCode > 122) && (tecla.charCode < 65 || tecla.charCode > 90) && (tecla.charCode != 45)) return false;
 	  },
 	  blur: function() {
+          var nomcompleto = 'Las referencias familiares deben ser diferentes entre sí y diferentes al solicitante: ' + $('#txtNomSolicitantenew').val() + ' ' + $('#txtSegundonombrenew').val() + ' ' + $('#txtApePaternonew').val() + ' ' + $('#txtApeMaternonew').val();
+          $('#lblreferenciassolicitante').text(nomcompleto.toUpperCase());
 		validaricontxt($('#txtApePaternonew'));		
 	  },
 	  click: function() {
@@ -415,6 +424,11 @@ $(document).ready(function(){
 			return false;
 		} 
 		//if((tecla.charCode < 97 || tecla.charCode > 122) && (tecla.charCode < 65 || tecla.charCode > 90) && (tecla.charCode != 45)) return false;
+	  },
+	  blur: function() {
+          var nomcompleto = 'Las referencias familiares deben ser diferentes entre sí y diferentes al solicitante: ' + $('#txtNomSolicitantenew').val() + ' ' + $('#txtSegundonombrenew').val() + ' ' + $('#txtApePaternonew').val() + ' ' + $('#txtApeMaternonew').val();
+          $('#lblreferenciassolicitante').text(nomcompleto.toUpperCase());
+
 	  }  
 	});
 	/*$('#txtMontoViviendanew').on({

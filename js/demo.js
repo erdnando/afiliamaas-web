@@ -167,6 +167,12 @@ function processCompress(input) {
 										   $("#txttokenWS").val(data.Token);
 										   $('#cargandoafiliadiv').hide();
 
+                                            var nomcompletoocr = 'Las referencias familiares deben ser diferentes entre sí y diferentes al solicitante: ' + data.Nombre + ' ' + data.Paterno + ' ' + data.Materno
+                                            $('#lblreferenciassolicitante').text(nomcompletoocr.toUpperCase());
+
+
+
+
 
 
 
