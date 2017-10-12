@@ -622,9 +622,51 @@ $(document).ready(function(){
 		
 		
 		
+		$('#firma-canvas').on({
+		click:	function () {
+			$("#firma-canvas").css('border', 'none');
+			$("#firma-canvas").css('border-bottom', '2px solid #cecfd3');
+		}
+		});
 		
+		$('#txtNombreRef1new').on({
+		click:	function () {
+            validaricontxt("#txtNombreRef1new");
+			/*$("#txtNombreRef1new").css('border', 'none');
+			$("#txtNombreRef1new").css('border-bottom', '2px solid #cecfd3'); */
+		},
+		focus:	function () {
+			validaricontxt("#txtNombreRef1new");
+			/*$("#txtNombreRef1new").css('border', 'none');
+			$("#txtNombreRef1new").css('border-bottom', '2px solid #cecfd3'); */
+		}
+
+		});
+		$('#txtApellidoPaternoRef1new').on({
+			click:	function () {
+                validaricontxt("#txtApellidoPaternoRef1new");
+				/*$("#txtApellidoPaternoRef1new").css('border', 'none');
+				$("#txtApellidoPaternoRef1new").css('border-bottom', '2px solid #cecfd3'); */
+			},
+			focus:	function () {
+				validaricontxt("#txtApellidoPaternoRef1new");
+				/*$("#txtApellidoPaternoRef1new").css('border', 'none');
+				$("#txtApellidoPaternoRef1new").css('border-bottom', '2px solid #cecfd3'); */
+			}
+
+		});
 		$('#txtApellidoMaternoRef1new').on({
-		  blur: function() {
+			click:	function () {
+                validaricontxt("#txtApellidoMaternoRef1new");
+				/*$("#txtApellidoMaternoRef1new").css('border', 'none');
+				$("#txtApellidoMaternoRef1new").css('border-bottom', '2px solid #cecfd3'); */
+			},
+			focus:	function () {
+				validaricontxt("#txtApellidoMaternoRef1new");
+				/*$("#txtApellidoMaternoRef1new").css('border', 'none');
+				$("#txtApellidoMaternoRef1new").css('border-bottom', '2px solid #cecfd3'); */
+			},
+            blur: function() {
 			var textoref=$('#txtNombreRef1new').val() + " " + $('#txtApellidoPaternoRef1new').val() + " " + $('#txtApellidoMaternoRef1new').val(); 
 			var textosol;
 			if($('#txtSegundonombrenew').val().length >0){
@@ -639,8 +681,8 @@ $(document).ready(function(){
 				var demoTimeout;
 				clearTimeout(demoTimeout);
                 validaricontxt('#txtNombreRef1new');
-				/*$('#txtNombreRef1new').trigger('startRumble');
-				$("#txtNombreRef1new").css('border', '1px solid red'); */
+				$('#txtNombreRef1new').trigger('startRumble');
+				/*$("#txtNombreRef1new").css('border', '1px solid red'); */
 				demoTimeout = setTimeout(function(){$('#txtNombreRef1new').trigger('stopRumble');},1000);
 				//$('#txtNombreRef1new').focus();
 				
@@ -666,6 +708,7 @@ $(document).ready(function(){
 
 				clearTimeout(demoTimeout4);
 				$('#lblreferenciassolicitante').trigger('startRumble');
+               $("#lblreferenciassolicitante").css('border', '1px solid red');
 				demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
 
 		 
@@ -673,53 +716,6 @@ $(document).ready(function(){
 				
 			} 
 		  }
-		 
-		});
-		
-		$('#firma-canvas').on({
-		click:	function () {
-			$("#firma-canvas").css('border', 'none');
-			$("#firma-canvas").css('border-bottom', '2px solid #cecfd3'); 
-		}	  
-		});
-		
-		$('#txtNombreRef1new').on({
-		click:	function () {
-            validaricontxt("#txtNombreRef1new");
-			/*$("#txtNombreRef1new").css('border', 'none');
-			$("#txtNombreRef1new").css('border-bottom', '2px solid #cecfd3'); */
-		},
-		focus:	function () {
-			validaricontxt("#txtNombreRef1new");
-			/*$("#txtNombreRef1new").css('border', 'none');
-			$("#txtNombreRef1new").css('border-bottom', '2px solid #cecfd3'); */
-		}
-	  
-		});
-		$('#txtApellidoPaternoRef1new').on({
-			click:	function () {
-                validaricontxt("#txtApellidoPaternoRef1new");
-				/*$("#txtApellidoPaternoRef1new").css('border', 'none');
-				$("#txtApellidoPaternoRef1new").css('border-bottom', '2px solid #cecfd3'); */
-			},
-			focus:	function () {
-				validaricontxt("#txtApellidoPaternoRef1new");
-				/*$("#txtApellidoPaternoRef1new").css('border', 'none');
-				$("#txtApellidoPaternoRef1new").css('border-bottom', '2px solid #cecfd3'); */
-			}
-		  
-		});
-		$('#txtApellidoMaternoRef1new').on({
-			click:	function () {
-                validaricontxt("#txtApellidoMaternoRef1new");
-				/*$("#txtApellidoMaternoRef1new").css('border', 'none');
-				$("#txtApellidoMaternoRef1new").css('border-bottom', '2px solid #cecfd3'); */
-			},
-			focus:	function () {
-				validaricontxt("#txtApellidoMaternoRef1new");
-				/*$("#txtApellidoMaternoRef1new").css('border', 'none');
-				$("#txtApellidoMaternoRef1new").css('border-bottom', '2px solid #cecfd3'); */
-			}
 		  
 		});
 		
@@ -766,6 +762,7 @@ $(document).ready(function(){
 
 				clearTimeout(demoTimeout4);
 				$('#lblreferenciassolicitante').trigger('startRumble');
+               $("#lblreferenciassolicitante").css('border', '1px solid red');
 				demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
 
 		 
@@ -801,6 +798,7 @@ $(document).ready(function(){
 
 				clearTimeout(demoTimeout4);
 				$('#lblreferenciassolicitante').trigger('startRumble');
+                $("#lblreferenciassolicitante").css('border', '1px solid red');
 				demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
 
 		  
@@ -887,6 +885,7 @@ $(document).ready(function(){
 
 				clearTimeout(demoTimeout4);
 				$('#lblreferenciassolicitante').trigger('startRumble');
+               $("#lblreferenciassolicitante").css('border', '1px solid red');
 				demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
 
 		 
@@ -919,6 +918,7 @@ $(document).ready(function(){
 
 				clearTimeout(demoTimeout4);
 				$('#lblreferenciassolicitante').trigger('startRumble');
+                $("#lblreferenciassolicitante").css('border', '1px solid red');
 				demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
 
 		  
@@ -952,6 +952,7 @@ $(document).ready(function(){
 
 				clearTimeout(demoTimeout4);
 				$('#lblreferenciassolicitante').trigger('startRumble');
+                $("#lblreferenciassolicitante").css('border', '1px solid red');
 				demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
 
 		  
