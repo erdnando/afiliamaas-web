@@ -3164,6 +3164,8 @@ function validacontrolespantallGral(){
 
 
     if(controlvalidados2 == totalvalidar2 ){
+        $('#titulostep2').css('color','rgb(150, 192, 61)');
+        $("#stOkTitstepDomicilio").attr('class', 'glyphicon glyphicon-ok');
         $("#stOkTitstepDomicilio").show();
         $("#stOkTitModDomicilio").show();
         $('#rowvalida2').addClass('rowiniciostepactivosuccess2').removeClass('rowiniciostepactivo').removeClass('rowvalida2');
@@ -3340,6 +3342,8 @@ function validacontrolespantallGral(){
         }
     });
     if(controlvalidados3 == totalvalidar3 ){
+        $('#titulostep3').css('color','rgb(150, 192, 61)');
+        $("#stOkTitstepDatEco").attr('class', 'glyphicon glyphicon-ok');
         $("#stOkTitstepDatEco").show();
         $("#stOkTitModDatEco").show();
         $('#rowvalida3').addClass('rowiniciostepactivosuccess3').removeClass('rowiniciostepactivo').removeClass('rowvalida3');
@@ -3444,6 +3448,8 @@ function validacontrolespantallGral(){
     totalvalidargral = totalvalidargral + totalvalidar4;
 
     if(controlvalidados4 == totalvalidar4 ){
+            $('#titulostep4').css('color','rgb(150, 192, 61)');
+            $("#stOkTitstepPerPol").attr('class', 'glyphicon glyphicon-ok');
             $("#stOkTitstepPerPol").show();
             $("#stOkTitModPerPol").show();
             $('#rowvalida4').addClass('rowiniciostepactivosuccess4').removeClass('rowiniciostepactivo').removeClass('rowvalida4');
@@ -3517,6 +3523,8 @@ function validacontrolespantallGral(){
 
 
     if(controlvalidados5 == totalvalidar5 ){
+        $('#titulostep5').css('color','rgb(150, 192, 61)');
+        $("#stOkTitstepRefFam").attr('class', 'glyphicon glyphicon-ok');
         $("#stOkTitstepRefFam").show();
         $("#stOkTitModRefFam").show();
         $('#rowvalida5').addClass('rowiniciostepactivosuccess5').removeClass('rowiniciostepactivo').removeClass('rowvalida5');
