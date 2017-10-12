@@ -729,6 +729,10 @@ img{max-width:100%;}
     background: rgba(204, 204, 204, 0.62) url(../images/l3.png) no-repeat 95% 48%
 }
 
+.login input.ingresar {
+    background: rgba(204, 204, 204, 0.62) url(../images/LoginIngre.png) no-repeat 95% 48%
+}
+
 .login-top {
     padding: 0px 25px;
     margin-top: 3%;
@@ -783,7 +787,6 @@ img{max-width:100%;}
 .submit input[type="submit"] {
         font-size: 13px;
     color: #fff;
-    background: rgb(139, 150, 163);
     border: 2px solid rgb(139, 150, 163);
     outline: none;
     cursor: pointer;
@@ -798,7 +801,7 @@ img{max-width:100%;}
 
 }
 .submit input[type="submit"]:hover, .submit input[type="submit"]:focus{
-	background:#44c7f4;
+	background:#44c7f4 url(../images/LoginIngre.png) no-repeat 95% 48%;
 	color:#fff;
 	transition: 0.5s all ease;
 	-webkit-transition: 0.5s all ease;
