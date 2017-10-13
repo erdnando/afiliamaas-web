@@ -126,7 +126,7 @@ var idUsr =  $('#txtidUsrWS').val();
                                         "",
                                         "success");
 
-                                    $('#contenidogral')[0].children("div").remove();
+                                    $('#contenidogral').empty();
 
                                     consultasolicitudes(idUsr,token,Nomusuario,tipouser,pwd,compniare);
 
