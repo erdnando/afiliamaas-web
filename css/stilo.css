@@ -90,13 +90,13 @@ HEADER
     font-weight: 400;
     text-transform: uppercase;
     background: transparent;
-    color: #2881e0;
+    color: white;
     -webkit-transition: color 0.2s ease-out;
     transition: color 0.2s ease-out;
 	cursor: pointer;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
-    color: #2881e0;
+    color: white;
     background-color: transparent;
 }
 .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
@@ -1756,7 +1756,7 @@ position: absolute;
     position: absolute;
     left: 292px;
     top: 19px;
-    color: #2881e0;
+    color: white;
     font-size: 17px;
 }
 
