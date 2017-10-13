@@ -131,6 +131,9 @@ var idUsr =  $('#txtidUsrWS').val();
 
                                     consultasolicitudes(idUsr,token,Nomusuario,tipouser,pwd,compniare);
 
+                                    $("#contenidogral").load("./isotope.pkgd.min.js");
+                                    $("#contenidogral").load("./isotope.pkgd.js");
+
                                     $('#cargandoafiliadiv').hide();
 
 
