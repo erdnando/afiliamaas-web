@@ -127,6 +127,7 @@ var idUsr =  $('#txtidUsrWS').val();
                                         "success");
 
                                     $('#contenidogral').empty();
+                                    $('#contenidogral')..removeAttr('class',"isotope-container row grid-space-20");
 
                                     consultasolicitudes(idUsr,token,Nomusuario,tipouser,pwd,compniare);
 
