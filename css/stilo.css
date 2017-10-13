@@ -473,6 +473,7 @@ HEADER
 	background-color: #41a85f;
     border-color: #55acee;
     color: #ffffff;
+    border-radius: 5px;
 }
 .fs-titleAceptadas {
     font-size: 15px;
@@ -495,6 +496,7 @@ HEADER
 	background-color:#00c8c8;
     border-color: #55acee;
     color: #ffffff;
+    border-radius: 5px;
 }
 
 .fs-titleEnviadas {
@@ -517,6 +519,7 @@ HEADER
 	background-color: #b8312f;
     border-color: #55acee;
     color: #ffffff;
+    border-radius: 5px;
 }
 
 .fs-titleCanceladas {
@@ -540,6 +543,7 @@ HEADER
 	background-color:#fac51c;
     border-color: #55acee;
     color: #ffffff;
+    border-radius: 5px;
 }
 
 .fs-titleRechazadas {
