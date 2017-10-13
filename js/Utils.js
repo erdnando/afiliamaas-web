@@ -3829,6 +3829,8 @@ function agregaeventostextos(control)
 			validaricontxt($(control));		
 		  },
 		  blur: function() {
+            var valorcorrec = $(control).val().trim();
+              $(control).val(valorcorrec);
 			validaricontxt($(control));		
 		  },
 		  click: function() {
