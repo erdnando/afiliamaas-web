@@ -754,23 +754,24 @@ input:checked + .slider:before {
 	height: 124px;
 }
 .overlay {
-	position: absolute;
-	top: 0;
-	bottom: -1px;
-	left: 0;
-	right: -1px;
-	background-color: rgba(85, 172, 238, 0.66);
-	cursor: pointer;
-	overflow: hidden;
-	opacity: 0;
-	filter: alpha(opacity=0);
-	-webkit-transform: scale(0.8);
-	transform: scale(0.8);
-	-webkit-transition: all linear 0.2s;
-	-moz-transition: all linear 0.2s;
-	-ms-transition: all linear 0.2s;
-	-o-transition: all linear 0.2s;
-	transition: all linear 0.2s;
+    position: absolute;
+    top: 0;
+    bottom: -1px;
+    left: 0;
+    right: -1px;
+    cursor: pointer;
+    overflow: hidden;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    -webkit-transition: all linear 0.2s;
+    -moz-transition: all linear 0.2s;
+    -ms-transition: all linear 0.2s;
+    -o-transition: all linear 0.2s;
+    transition: all linear 0.2s;
+    background: rgba(254, 254, 254, 0.67) url(../images/Panel/zoom.png) center no-repeat;
+    border-radius: 10px;
 }
 .overlay:hover {
 	text-decoration: none;

@@ -4092,7 +4092,6 @@ function consultasolicitudes(idUsr,token,Nomusuario,tipouser,pwd,compniare){
 																		'</h4>'+
 																		"<input type='hidden' id='ResulConsulSolicitud" + r + "' name='ResulConsulSolicitud" + r + "' value='" + resulgral + "'/>"+
 																		'<a class="overlay" onclick="Generadatos(ResulConsulSolicitud' + r + ')">'+
-																			'<i class="glyphicon glyphicon-eye-open"></i>'+
 																			'<span>' + topoproy +'</span>'+
 																		'</a>'+
 																	'</div>'+
