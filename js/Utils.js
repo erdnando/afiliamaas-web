@@ -4077,11 +4077,11 @@ function consultasolicitudes(idUsr,token,Nomusuario,tipouser,pwd,compniare){
 
 
 										  $('#contenidogral').append('<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 isotope-item '+ tipoagrupa + '" style="position: absolute; left: 0px; top: 0px;">'+
-																'<div class="image-box" style="background-color: #ffffff;text-align: center;border: 1px solid rgb(117, 119, 119);">'+
+																'<div class="image-box '+ tiporow +'">'+
 																	'<div class="overlay-container">'+
-																		'<h4 class="modal-title '+ tiporow +'" id="project-1-label">ID: ' + topoproy +' <i class="' + icono + '"></i></h4>'+
-																		'<h4>' + $nomcompleto + '<h4>'+
-																		'<h4>'+
+																		'<h4 class="modal-title" id="project-1-label" style=" background-color: white;text-align: -webkit-center;color: #2c82c9;border-radius: 5px;">ID: ' + topoproy +' <i class="' + icono + '"></i></h4>'+
+																		'<h4 class="contenidoficha">' + $nomcompleto + '<h4>'+
+																		'<h4 class="contenidoficha">'+
 																			'<p>' + data.solicitudes[r].FECHA_ALTA +'<p>'+
 																			'<p></p>'+
 																			'<p>Comentario:'+ data.solicitudes[r].COMENTARIO +'<p>'+
