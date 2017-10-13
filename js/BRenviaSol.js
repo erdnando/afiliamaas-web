@@ -4,6 +4,7 @@ var tipouser="4";
 var pwd = $("#txtpwdWS").val();
 var compniare=$("#txtcompniareWS").val();
 var token = $('#txttokenWS').val();
+var idUsr =  $('#txtidUsrWS').val();
 
 	$('#terminar').on({
 	  click: function() {
@@ -124,6 +125,10 @@ var token = $('#txttokenWS').val();
                                         swal("¡Información guardada con número de ID: " + resulsoliingre[0] + "!",
                                         "",
                                         "success");
+
+                                    $('#contenidogral')[0].children("div").remove();
+
+                                    consultasolicitudes(idUsr,token,Nomusuario,tipouser,pwd,compniare);
 
 
 
