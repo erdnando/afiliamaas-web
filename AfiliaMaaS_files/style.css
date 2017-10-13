@@ -777,14 +777,14 @@ input:checked + .slider:before {
 	text-decoration: none;
 }
 .overlay span {
-	position: absolute;
-	display: block;
-	bottom: 10px;
-	text-align: center;
-	width: 100%;
-	color: #ffffff;
-	font-size: 13px;
-	font-weight: 300;
+    position: absolute;
+    display: block;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+    color: #2c82c9;
+    font-size: 16px;
+    font-weight: 400;
 }
 .overlay i {
 	position: absolute;
