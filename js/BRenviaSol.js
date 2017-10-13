@@ -121,7 +121,7 @@ var idUsr =  $('#txtidUsrWS').val();
                                     var resulsoliingre = [];
                                     resulsoliingre = data.split('@');
                                     $('#txttokenWS').val(resulsoliingre[1])
-                                    $('#cargandoafiliadiv').hide();
+
                                         swal("¡Información guardada con número de ID: " + resulsoliingre[0] + "!",
                                         "",
                                         "success");
@@ -129,6 +129,8 @@ var idUsr =  $('#txtidUsrWS').val();
                                     $('#contenidogral').empty();
 
                                     consultasolicitudes(idUsr,token,Nomusuario,tipouser,pwd,compniare);
+
+                                    $('#cargandoafiliadiv').hide();
 
 
 
