@@ -89,9 +89,12 @@ var token = $('#txttokenWS').val();
                 }
                 else
                 {
+                    $('#cargandoafiliadiv').show();
                     var validacionesheader = [];
                     validacionesheader = validacontrolespantallGral();
+
                    if(validacionesheader.length == 0) {
+                       $('#cargandoafiliadiv').hide();
 			
                         swal({
 
@@ -101,6 +104,7 @@ var token = $('#txttokenWS').val();
                                 '<i class="glyphicon glyphicon-ok"></i>',
 
                         }).then(function () {
+                            $('#cargandoafiliadiv').show();
                             console.log("Informacion guardada " + Nomusuario);
 
 
@@ -116,6 +120,7 @@ var token = $('#txttokenWS').val();
                                     var resulsoliingre = [];
                                     resulsoliingre = data.split('@');
                                     $('#txttokenWS').val(resulsoliingre[1])
+                                    $('#cargandoafiliadiv').hide();
                                         swal("¡Información guardada con número de ID: " + resulsoliingre[0] + "!",
                                         "",
                                         "success");

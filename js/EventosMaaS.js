@@ -632,12 +632,14 @@ $(document).ready(function(){
 		$('#txtNombreRef1new, #txtApellidoPaternoRef1new, #txtApellidoMaternoRef1new').on({
 		click:	function () {
             validaricontxt(this);
+            $("#lblreferenciassolicitante").css('display', 'none');
 			$("#lblreferenciassolicitante").css('border', 'none');
 			$("#lblreferenciassolicitante").css('border-bottom', '3px solid rgba(206, 206, 4, 0.86)');
             $("#lblreferenciassolicitante").css('color', 'black');
 		},
 		keypress:	function () {
 			validaricontxt(this);
+            $("#lblreferenciassolicitante").css('display', 'none');
 			$("#lblreferenciassolicitante").css('border', 'none');
 			$("#lblreferenciassolicitante").css('border-bottom', '3px solid rgba(206, 206, 4, 0.86)');
             $("#lblreferenciassolicitante").css('color', 'black');
@@ -705,12 +707,14 @@ $(document).ready(function(){
 		$('#txtNombreRef2new, #txtApellidoPaternoRef2new, #txtApellidoMaternoRef2new').on({
             click:	function () {
             validaricontxt(this);
+                $("#lblreferenciassolicitante").css('display', 'none');
 			$("#lblreferenciassolicitante").css('border', 'none');
 			$("#lblreferenciassolicitante").css('border-bottom', '3px solid rgba(206, 206, 4, 0.86)');
                 $("#lblreferenciassolicitante").css('color', 'black');
 		},
 		keypress:	function () {
 			validaricontxt(this);
+            $("#lblreferenciassolicitante").css('display', 'none');
 			$("#lblreferenciassolicitante").css('border', 'none');
 			$("#lblreferenciassolicitante").css('border-bottom', '3px solid rgba(206, 206, 4, 0.86)');
             $("#lblreferenciassolicitante").css('color', 'black');
@@ -843,12 +847,14 @@ $(document).ready(function(){
 		
 		$('#txtNombreRef3new, #txtApellidoPaternoRef3new, #txtApellidoMaternoRef3new').on({
             click:	function () {
+                $("#lblreferenciassolicitante").css('display', 'none');
             validaricontxt(this);
 			$("#lblreferenciassolicitante").css('border', 'none');
 			$("#lblreferenciassolicitante").css('border-bottom', '3px solid rgba(206, 206, 4, 0.86)');
                 $("#lblreferenciassolicitante").css('color', 'black');
 		},
 		keypress:	function () {
+            $("#lblreferenciassolicitante").css('display', 'none');
 			validaricontxt(this);
 			$("#lblreferenciassolicitante").css('border', 'none');
 			$("#lblreferenciassolicitante").css('border-bottom', '3px solid rgba(206, 206, 4, 0.86)');

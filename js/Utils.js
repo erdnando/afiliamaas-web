@@ -2911,6 +2911,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
                        var demoTimeout4;
 
                         clearTimeout(demoTimeout4);
+                        $("#lblreferenciassolicitante").css('display', 'inline');
                         $('#lblreferenciassolicitante').trigger('startRumble');
                        $("#lblreferenciassolicitante").css('color', 'red');
                         demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
@@ -2954,6 +2955,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
                         var demoTimeout4;
 
                         clearTimeout(demoTimeout4);
+                        $("#lblreferenciassolicitante").css('display', 'inline');
                         $('#lblreferenciassolicitante').trigger('startRumble');
                        $("#lblreferenciassolicitante").css('color', 'red');
                         demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
@@ -2990,6 +2992,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
                          var demoTimeout4;
 
                         clearTimeout(demoTimeout4);
+                        $("#lblreferenciassolicitante").css('display', 'inline');
                         $('#lblreferenciassolicitante').trigger('startRumble');
                         $("#lblreferenciassolicitante").css('color', 'red');
                         demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
@@ -3037,6 +3040,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
                     var demoTimeout4;
 
                     clearTimeout(demoTimeout4);
+                   $("#lblreferenciassolicitante").css('display', 'inline');
                     $('#lblreferenciassolicitante').trigger('startRumble');
                    $("#lblreferenciassolicitante").css('color', 'red');
                     demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
@@ -3070,6 +3074,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
                      var demoTimeout4;
 
                     clearTimeout(demoTimeout4);
+                    $("#lblreferenciassolicitante").css('display', 'inline');
                     $('#lblreferenciassolicitante').trigger('startRumble');
                     $("#lblreferenciassolicitante").css('color', 'red');
                     demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
@@ -3105,6 +3110,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
                      var demoTimeout4;
 
                     clearTimeout(demoTimeout4);
+                    $("#lblreferenciassolicitante").css('display', 'inline');
                     $('#lblreferenciassolicitante').trigger('startRumble');
                     $("#lblreferenciassolicitante").css('color', 'red');
                     demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
