@@ -470,8 +470,8 @@ HEADER
     color: #ffffff;
 }
 .rowAceptadas{
-	background-color: #41a85f;
-    border-color: #55acee;
+    background-color: rgba(13, 156, 2, 0.66);
+    /* border-color: #55acee; */
     color: #ffffff;
     border-radius: 5px;
 }
@@ -540,8 +540,8 @@ HEADER
 }
 
 .rowRechazadas {
-	background-color:#fac51c;
-    border-color: #55acee;
+    background-color: rgba(181, 73, 0, 0.63);
+    /* border-color: #55acee; */
     color: #ffffff;
     border-radius: 5px;
 }
