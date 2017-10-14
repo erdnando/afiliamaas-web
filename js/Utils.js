@@ -760,6 +760,9 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		var datosgrales = [];
 		datosgrales = NoIDSol.value.split('|');
 		$('#mdlgralnombre').text("Solicitud ID: " + datosgrales[2].toString());
+        $('#recreasolicitudinput').val("SI");
+
+
 		var xml = datosgrales[7],
 		xmlDoc = $.parseXML( xml ),
 		//generales
@@ -1249,6 +1252,9 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 	}
 	
 	function NuevaSolicitud(){
+
+        $('#recreasolicitudinput').val("NO");
+
 		$('#mdlgralnombre').text("Nueva solicitud");
 		$('#txtNomSolicitantenew').removeAttr("disabled");
 		$('#txtSegundonombrenew').removeAttr("disabled");

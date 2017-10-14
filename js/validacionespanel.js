@@ -69,31 +69,37 @@ $(document).ready(function(){
 			onBeforeNextButtonClick:function (e, from, to, validation) {
 			   console.log('onBeforeNextButtonClick');
 			   console.log(validation);
-			   var pantalla;
-			   if($('#modalpaso1').attr('class') == 'tsf-step step-1 active slide-left-right-effect'){
-				   pantalla = '1';
-			   }else if($('#modalpaso2').attr('class') == 'tsf-step step-2 active slide-left-right-effect'){
-				   pantalla = '2';
-			   }
-			   else if($('#modalpaso3').attr('class') == 'tsf-step step-3 active slide-left-right-effect'){
-				   pantalla = '3';
-			   }
-			   else if($('#modalpaso4').attr('class') == 'tsf-step step-4 active slide-left-right-effect'){
-				   pantalla = '4';
-			   }
-			   else if($('#modalpaso5').attr('class') == 'tsf-step step-5 active slide-left-right-effect'){
-				   pantalla = '5';
-			   }
-			   else if($('#modalpaso6').attr('class') == 'tsf-step step-6 active slide-left-right-effect'){
-				   pantalla = '6';
-			   }
-			   
-			   validacontrolespantall(pantalla,false,e);
+                if($('#recreasolicitudinput').val() == "NO")
+                {
+                   var pantalla;
+                   if($('#modalpaso1').attr('class') == 'tsf-step step-1 active slide-left-right-effect'){
+                       pantalla = '1';
+                   }else if($('#modalpaso2').attr('class') == 'tsf-step step-2 active slide-left-right-effect'){
+                       pantalla = '2';
+                   }
+                   else if($('#modalpaso3').attr('class') == 'tsf-step step-3 active slide-left-right-effect'){
+                       pantalla = '3';
+                   }
+                   else if($('#modalpaso4').attr('class') == 'tsf-step step-4 active slide-left-right-effect'){
+                       pantalla = '4';
+                   }
+                   else if($('#modalpaso5').attr('class') == 'tsf-step step-5 active slide-left-right-effect'){
+                       pantalla = '5';
+                   }
+                   else if($('#modalpaso6').attr('class') == 'tsf-step step-6 active slide-left-right-effect'){
+                       pantalla = '6';
+                   }
+
+                   validacontrolespantall(pantalla,false,e);
+                }
 				 
 			},
 			onAfterNextButtonClick:function (e, from, to, validation) {
 				console.log('Afternext from '+from+' to '+to);
-				
+
+
+			if($('#recreasolicitudinput').val() == "NO")
+            {
 				switch(to) {
 					case 1:
 						navegasliderheaderlibre($('#anumpasol'), 1)	;
@@ -134,6 +140,7 @@ $(document).ready(function(){
 					default:
 						break;
 				}
+            }
 				
 				
 			   /*console.log('onAfterNextButtonClick');
@@ -150,25 +157,30 @@ $(document).ready(function(){
 			onBeforePrevButtonClick:function (e, from, to) {
 			   console.log('onBeforePrevButtonClick');
 			   console.log('from '+from+' to '+to);
-			   switch(from) {
-					case 1:
-						navegasliderheaderatras(1);
-						break;
-					case 2:
-						navegasliderheaderatras(2);
-						break;
-					case 3:
-						navegasliderheaderatras(3);
-						break;
-					case 4:
-						navegasliderheaderatras(4);
-						break;
-					case 5:
-						navegasliderheaderatras(5);
-						break;
-					default:
-						break;
-				}
+
+                if($('#recreasolicitudinput').val() == "NO")
+                {
+
+                   switch(from) {
+                        case 1:
+                            navegasliderheaderatras(1);
+                            break;
+                        case 2:
+                            navegasliderheaderatras(2);
+                            break;
+                        case 3:
+                            navegasliderheaderatras(3);
+                            break;
+                        case 4:
+                            navegasliderheaderatras(4);
+                            break;
+                        case 5:
+                            navegasliderheaderatras(5);
+                            break;
+                        default:
+                            break;
+                    }
+                }
 			   
 			//  e.preventDefault();
 			},
@@ -176,28 +188,32 @@ $(document).ready(function(){
 			   console.log('onAfterPrevButtonClick');
 			   console.log('validation '+from+' to '+to);
 
-                switch(to) {
-                    case 0:
-						$('#txtNomSolicitantenew').focus();
-						break;
-					case 1:
-						$('#txtCalleSolicitantenew').focus();
-						break;
-					case 2:
-						$('#txtNombreEmpresanew').focus();
-						break;
-					case 3:
-						$('#sldpersopoli').focus();
-						break;
-					case 4:
-						$('#txtNombreRef1new').focus();
-						break;
-					case 5:
-						('#nomfirma').focus();
-						break;
-					default:
-						break;
-				}
+                if($('#recreasolicitudinput').val() == "NO")
+                {
+
+                    switch(to) {
+                        case 0:
+                            $('#txtNomSolicitantenew').focus();
+                            break;
+                        case 1:
+                            $('#txtCalleSolicitantenew').focus();
+                            break;
+                        case 2:
+                            $('#txtNombreEmpresanew').focus();
+                            break;
+                        case 3:
+                            $('#sldpersopoli').focus();
+                            break;
+                        case 4:
+                            $('#txtNombreRef1new').focus();
+                            break;
+                        case 5:
+                            ('#nomfirma').focus();
+                            break;
+                        default:
+                            break;
+                    }
+                }
 			},
 			onBeforeFinishButtonClick:function (e, validation) {
 			   console.log('onBeforeFinishButtonClick1111111');
