@@ -121,20 +121,21 @@ var idUsr =  $('#txtidUsrWS').val();
                                     var resulsoliingre = [];
                                     resulsoliingre = data.split('@');
                                     $('#txttokenWS').val(resulsoliingre[1])
+                                    $('#cargandoafiliadiv').hide();
 
                                         swal("¡Información guardada con número de ID: " + resulsoliingre[0] + "!",
                                         "",
                                         "success");
 
-                                    $('#contenidogral').empty();
+                                    /*$('#contenidogral').empty();
                                     $('#contenidogral').removeAttr('class',"isotope-container row grid-space-20");
 
                                     consultasolicitudes(idUsr,token,Nomusuario,tipouser,pwd,compniare);
 
                                     $("#contenidogral").load("./isotope.pkgd.min.js");
-                                    $("#contenidogral").load("./isotope.pkgd.js");
+                                    $("#contenidogral").load("./isotope.pkgd.js");*/
 
-                                    $('#cargandoafiliadiv').hide();
+
 
 
 
