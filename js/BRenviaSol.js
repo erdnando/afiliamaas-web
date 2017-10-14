@@ -90,12 +90,12 @@ var idUsr =  $('#txtidUsrWS').val();
                 }
                 else
                 {
-                    $('#cargandoafiliadiv').show();
+
                     var validacionesheader = [];
                     validacionesheader = validacontrolespantallGral();
 
                    if(validacionesheader.length == 0) {
-                       $('#cargandoafiliadiv').hide();
+
 			
                         swal({
 
