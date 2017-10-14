@@ -1255,6 +1255,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 
         $('#recreasolicitudinput').val("NO");
 
+        $('#2b').modal('show');
+
 		$('#mdlgralnombre').text("Nueva solicitud");
 		$('#txtNomSolicitantenew').removeAttr("disabled");
 		$('#txtSegundonombrenew').removeAttr("disabled");
