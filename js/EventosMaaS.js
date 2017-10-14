@@ -1029,8 +1029,8 @@ $(document).ready(function(){
 						  confirmButtonClass: 'btn btn-success',
 						  buttonsStyling: false
 						}).then(function () {
-							$('#result_image')[0].src = "https://stefaninimx.com/afiliamaas/images/shade.jpg"
-							$('#result_imageanver')[0].src = "https://stefaninimx.com/afiliamaas/images/shade.jpg"
+							$('#result_image')[0].src = "https://stefaninimx.com/afiliamaas/images/shade.jpg";
+							$('#result_imageanver')[0].src = "https://stefaninimx.com/afiliamaas/images/shade.jpg";
 							$('#3b').modal('hide');
 							$('#2b').modal('show');
 							

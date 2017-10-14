@@ -133,6 +133,8 @@ var idUsr =  $('#txtidUsrWS').val();
 
                                         }).then(function () {
                                               reseteavalores();
+                                        $('#result_image')[0].src = "https://stefaninimx.com/afiliamaas/images/shade.jpg";
+							            $('#result_imageanver')[0].src = "https://stefaninimx.com/afiliamaas/images/shade.jpg";
                                         $('#2b').modal('hide');
                                         $('#3b').modal('hide');
                                         $('#DatGrales').modal('hide');
