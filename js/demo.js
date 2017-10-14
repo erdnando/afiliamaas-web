@@ -139,6 +139,7 @@ function processCompress(input) {
 												  showCloseButton: true,
 												  confirmButtonText:
 													'<i class="glyphicon glyphicon-ok"></i>',
+                                                allowOutsideClick: false,
 												  
 												}).then(function () {
 													  location.href=("Index.html");
@@ -189,6 +190,7 @@ function processCompress(input) {
 												  confirmButtonText:
 													'<i class="glyphicon glyphicon-ok"></i>',
 												  width: "auto",
+                                                  allowOutsideClick: false,
 												}).then(function () {
 													var d = new Date();
 													result_imagefin.name= "TEC_" + d.getTime() +".jpg";
@@ -423,6 +425,7 @@ function processCompressanver(input) {
 												  showCloseButton: true,
 												  confirmButtonText:
 													'<i class="glyphicon glyphicon-ok"></i>',
+                                                allowOutsideClick: false,
 
 												}).then(function () {
 													  location.href=("Index.html");
@@ -466,6 +469,7 @@ function processCompressanver(input) {
 										confirmButtonText:
 											'<i class="glyphicon glyphicon-ok"></i>',
 											width: "455px",
+                                       allowOutsideClick: false,
 										  
 										}).then(function () {
 											var d = new Date();

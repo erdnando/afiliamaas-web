@@ -103,6 +103,7 @@ var idUsr =  $('#txtidUsrWS').val();
                             showCloseButton: true,
                             confirmButtonText:
                                 '<i class="glyphicon glyphicon-ok"></i>',
+                            allowOutsideClick: false,
 
                         }).then(function () {
                             $('#cargandoafiliadiv').show();
@@ -125,7 +126,7 @@ var idUsr =  $('#txtidUsrWS').val();
 
                                         swal("¡Información guardada con número de ID: " + resulsoliingre[0] + "!",
                                         "",
-                                        "success");
+                                        "success",allowOutsideClick: false);
 
                                     /*$('#contenidogral').empty();
                                     $('#contenidogral').removeAttr('class',"isotope-container row grid-space-20");
