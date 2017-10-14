@@ -124,9 +124,184 @@ var idUsr =  $('#txtidUsrWS').val();
                                     $('#txttokenWS').val(resulsoliingre[1])
                                     $('#cargandoafiliadiv').hide();
 
-                                        swal("¡Información guardada con número de ID: " + resulsoliingre[0] + "!",
-                                        "",
-                                        "success",allowOutsideClick: false);
+                                    swal({
+                                          title: '<i style="font-style: normal;">¡Información guardada con número de ID: ' + resulsoliingre[0] + '!</i>',
+                                          showCloseButton: true,
+                                          confirmButtonText:
+                                            '<i class="glyphicon glyphicon-ok"></i>',
+                                        allowOutsideClick: false,
+
+                                        }).then(function () {
+                                              reseteavalores();
+                                        $('#2b').modal('hide');
+                                        $('#3b').modal('hide');
+                                        $('#DatGrales').modal('hide');
+
+                                        var _tsfWizard = $('.tsf-wizard-1').tsfWizard({
+                                        stepEffect:'slideLeftRight',
+                                        stepStyle:'style12',
+                                        navPosition:'top',
+                                        validation:false,
+                                        stepTransition:false,
+                                        showButtons:true,
+                                        showStepNum:true,
+                                        //height:'auto',
+                                        prevBtn:'<i class="glyphicon glyphicon-chevron-left"></i><i class="glyphicon glyphicon-chevron-left"></i> ',
+                                        nextBtn:' <i class="glyphicon glyphicon-chevron-right"></i><i class="glyphicon glyphicon-chevron-right"></i>',
+                                        finishBtn:'<i class="glyphicon glyphicon-send"></i>',
+                                        disableSteps:'none',
+                                        onBeforeNextButtonClick:function (e, from, to, validation) {
+                                           console.log('onBeforeNextButtonClick');
+                                           console.log(validation);
+
+                                           var pantalla;
+                                           if($('#modalpaso1').attr('class') == 'tsf-step step-1 active slide-left-right-effect'){
+                                               pantalla = '1';
+                                           }else if($('#modalpaso2').attr('class') == 'tsf-step step-2 active slide-left-right-effect'){
+                                               pantalla = '2';
+                                           }
+                                           else if($('#modalpaso3').attr('class') == 'tsf-step step-3 active slide-left-right-effect'){
+                                               pantalla = '3';
+                                           }
+                                           else if($('#modalpaso4').attr('class') == 'tsf-step step-4 active slide-left-right-effect'){
+                                               pantalla = '4';
+                                           }
+                                           else if($('#modalpaso5').attr('class') == 'tsf-step step-5 active slide-left-right-effect'){
+                                               pantalla = '5';
+                                           }
+                                           else if($('#modalpaso6').attr('class') == 'tsf-step step-6 active slide-left-right-effect'){
+                                               pantalla = '6';
+                                           }
+
+                                            if($('#recreasolicitudinput').val() == "NO")
+                                            {
+
+                                               validacontrolespantall(pantalla,false,e);
+                                            }else{
+                                                navegasliderheaderlibre(null, pantalla);
+                                            }
+
+                                        },
+                                        onAfterNextButtonClick:function (e, from, to, validation) {
+                                            console.log('Afternext from '+from+' to '+to);
+
+
+
+                                            switch(to) {
+                                                case 1:
+                                                    navegasliderheaderlibre($('#anumpasol'), 1)	;
+                                                    break;
+                                                case 2:
+                                                    navegasliderheaderlibre($('#anumpasol2'), 2);
+                                                    document.getElementById("btnsiguiente").tabIndex = "26";
+                                                    document.getElementById("btnanterior").tabIndex = "27";
+                                                    $('#txtCalleSolicitantenew').focus();
+
+                                                    break;
+                                                case 3:
+                                                    navegasliderheaderlibre($('#anumpasol3'), 3);
+                                                    document.getElementById("btnsiguiente").tabIndex = "42";
+                                                    document.getElementById("btnanterior").tabIndex = "43";
+                                                    $('#txtNombreEmpresanew').focus();
+                                                    break;
+                                                case 4:
+                                                    navegasliderheaderlibre($('#anumpasol4'), 4);
+                                                    document.getElementById("btnsiguiente").tabIndex = "45";
+                                                    document.getElementById("btnanterior").tabIndex = "46";
+                                                    $('#sldpersopoli').focus();
+                                                    break;
+                                                case 5:
+                                                    navegasliderheaderlibre($('#anumpasol5'), 5);
+                                                    document.getElementById("btnsiguiente").tabIndex = "57";
+                                                    document.getElementById("btnanterior").tabIndex = "58";
+                                                    $('#txtNombreRef1new').focus();
+                                                    break;
+                                                case 6:
+                                                    navegasliderheaderlibre($('#anumpasol6'), 6);
+                                                    //document.getElementById("btnfinalizar").tabIndex = "72";
+                                                    document.getElementById("btnanterior").tabIndex = "73";
+                                                    $('#nomfirma').focus();
+                                                    break;
+
+
+                                                default:
+                                                    break;
+                                            }
+                                        },
+                                        onBeforePrevButtonClick:function (e, from, to) {
+                                           console.log('onBeforePrevButtonClick');
+                                           console.log('from '+from+' to '+to);
+
+
+                                               switch(from) {
+                                                    case 1:
+                                                        navegasliderheaderatras(1);
+                                                        break;
+                                                    case 2:
+                                                        navegasliderheaderatras(2);
+                                                        break;
+                                                    case 3:
+                                                        navegasliderheaderatras(3);
+                                                        break;
+                                                    case 4:
+                                                        navegasliderheaderatras(4);
+                                                        break;
+                                                    case 5:
+                                                        navegasliderheaderatras(5);
+                                                        break;
+                                                    default:
+                                                        break;
+                                                }
+
+
+                                        //  e.preventDefault();
+                                        },
+                                        onAfterPrevButtonClick:function (e, from, to) {
+                                           console.log('onAfterPrevButtonClick');
+                                           console.log('validation '+from+' to '+to);
+
+
+
+                                                switch(to) {
+                                                    case 0:
+                                                        $('#txtNomSolicitantenew').focus();
+                                                        break;
+                                                    case 1:
+                                                        $('#txtCalleSolicitantenew').focus();
+                                                        break;
+                                                    case 2:
+                                                        $('#txtNombreEmpresanew').focus();
+                                                        break;
+                                                    case 3:
+                                                        $('#sldpersopoli').focus();
+                                                        break;
+                                                    case 4:
+                                                        $('#txtNombreRef1new').focus();
+                                                        break;
+                                                    case 5:
+                                                        ('#nomfirma').focus();
+                                                        break;
+                                                    default:
+                                                        break;
+                                                }
+
+                                        },
+                                        onBeforeFinishButtonClick:function (e, validation) {
+                                           console.log('onBeforeFinishButtonClick1111111');
+                                           console.log('validation '+validation);
+
+                                           //e.preventDefault();
+                                        },
+                                        onAfterFinishButtonClick:function (e, validation) {
+                                           console.log('onAfterFinishButtonClick222222');
+                                           console.log('validation '+validation);
+                                        }
+                                        });
+
+
+                                        $("#rowvalida").click();
+
+                                    });
 
                                     /*$('#contenidogral').empty();
                                     $('#contenidogral').removeAttr('class',"isotope-container row grid-space-20");
