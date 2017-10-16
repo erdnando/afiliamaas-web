@@ -340,9 +340,12 @@ var idUsr =  $('#txtidUsrWS').val();
                         var texterroresgrales = "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%; border-collapse: separate;border-spacing:  7px;    height: 178px;'>" + trtextos + "</table>";
 
 
+                        $(".swal2-modal").attr("class","bottom: 10px;")
+
+
                         swal({
 
-                            title: '<i style="font-style: normal;">Por favor verificac las siguientes secciones:</i>',
+                            title: '<i style="font-style: normal;">Por favor verifica las siguientes secciones:</i>',
                             html: texterroresgrales,
                             showCloseButton: true,
                             confirmButtonText:
@@ -352,6 +355,8 @@ var idUsr =  $('#txtidUsrWS').val();
                         }).then(function () {
 
                             });
+
+                        $(".swal2-modal").attr("class","bottom: 147px;")
 
 
 
