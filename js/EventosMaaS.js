@@ -1332,6 +1332,7 @@ $(document).ready(function(){
 		
 		$('#nomfirma').on({
 			click:	function () {
+                $("#Firma").modal("show");
 
 					$("#imagenpresenta").css('border', '');
 
