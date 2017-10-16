@@ -2394,6 +2394,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 			});
 			
 			if(controlvalidados == totalvalidar ){
+                $('#titulostep').css('color','rgb(150, 192, 61)');
                 $("#stOkTitstepgrales").attr('class', 'glyphicon glyphicon-ok');
 				$("#stOkTitstepgrales").show();
 				$("#stOkTitstepgrales").show();
@@ -2598,6 +2599,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 			
 			
 			if(controlvalidados == totalvalidar ){
+                $('#titulostep2').css('color','rgb(150, 192, 61)');
                 $("#stOkTitstepDomicilio").attr('class', 'glyphicon glyphicon-ok');
 				$("#stOkTitstepDomicilio").show();
 				$("#stOkTitModDomicilio").show();
@@ -2779,6 +2781,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 				}
 			});
 			if(controlvalidados == totalvalidar ){
+                $('#titulostep3').css('color','rgb(150, 192, 61)');
                 $("#stOkTitstepDatEco").attr('class', 'glyphicon glyphicon-ok');
 				$("#stOkTitstepDatEco").show();
 				$("#stOkTitModDatEco").show();
@@ -2883,6 +2886,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 			}
 			
 			if(controlvalidados == totalvalidar ){
+                    $('#titulostep4').css('color','rgb(150, 192, 61)');
                 $("#stOkTitstepPerPol").attr('class', 'glyphicon glyphicon-ok');
 					$("#stOkTitstepPerPol").show();
 					$("#stOkTitModPerPol").show();
@@ -2967,6 +2971,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 			
 			
 			if(controlvalidados == totalvalidar ){
+                $('#titulostep5').css('color','rgb(150, 192, 61)');
                 $("#stOkTitstepRefFam").attr('class', 'glyphicon glyphicon-ok');
 				$("#stOkTitstepRefFam").show();
 				$("#stOkTitModRefFam").show();
