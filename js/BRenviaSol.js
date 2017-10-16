@@ -354,9 +354,7 @@ var idUsr =  $('#txtidUsrWS').val();
                             });
 
 
-                        }, function (dismiss) {
 
-                        });
 
                     }
 
