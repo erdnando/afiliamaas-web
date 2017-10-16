@@ -1094,6 +1094,7 @@ $(document).ready(function(){
 							$('#DatGrales').modal('hide');
 							$('#3b').modal('hide');
 							$('#2b').modal('show');
+                              $("#rowvalida").click();
 							  reseteavalores();
 							/*swal(
 							  'Cancelled',
