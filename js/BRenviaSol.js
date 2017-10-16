@@ -353,10 +353,11 @@ var idUsr =  $('#txtidUsrWS').val();
                             allowOutsideClick: false,
 
                         }).then(function () {
+                                                        $(".swal2-modal").attr("class","bottom: 147px;")
 
                             });
 
-                        $(".swal2-modal").attr("class","bottom: 147px;")
+
 
 
 
