@@ -99,7 +99,7 @@ var idUsr =  $('#txtidUsrWS').val();
 			
                         swal({
 
-                            title: '<i>¿Enviar la solicitud?</i>',
+                            title: '<i style="font-style: normal;">¿Enviar la solicitud?</i>',
                             showCloseButton: true,
                             confirmButtonText:
                                 '<i class="glyphicon glyphicon-ok"></i>',
@@ -342,7 +342,7 @@ var idUsr =  $('#txtidUsrWS').val();
 
                         swal({
 
-                            title: '<i>Por favor verificac las siguientes secciones:</i>',
+                            title: '<i style="font-style: normal;">Por favor verificac las siguientes secciones:</i>',
                             html: texterroresgrales,
                             showCloseButton: true,
                             confirmButtonText:
