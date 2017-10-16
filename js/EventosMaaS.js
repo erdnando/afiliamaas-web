@@ -1024,10 +1024,9 @@ $(document).ready(function(){
 						  /*type: 'warning',*/
 						  showCloseButton: true,
 						  confirmButtonColor: '#3085d6',
-						  confirmButtonText: 'Yes, delete it!',
+						  confirmButtonText: '<i class="glyphicon glyphicon-ok"></i>',
 						  
-						  confirmButtonClass: 'btn btn-success',
-						  buttonsStyling: false
+						  allowOutsideClick: false,
 						}).then(function () {
 							$('#result_image')[0].src = "https://stefaninimx.com/afiliamaas-web/images/shade.jpg";
 							$('#result_imageanver')[0].src = "https://stefaninimx.com/afiliamaas-web/images/shade.jpg";
