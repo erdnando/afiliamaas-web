@@ -45,7 +45,7 @@ function signToImage() {
 		$("#linkmodalopen").attr("class", "overlay");
 		$("#nomfirma").text(image[0].name);
 		$("#nomfirma").attr("disabled", "disabled");
-		$("#Firma").hide();
+		$("#Firma").modal('hide');
 		
 	}
 }
