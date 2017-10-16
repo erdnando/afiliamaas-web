@@ -1089,8 +1089,8 @@ $(document).ready(function(){
 						  // dismiss can be 'cancel', 'overlay',
 						  // 'close', and 'timer'
 						  if (dismiss === 'cancel') {
-							  $('#result_image')[0].src = "https://stefaninimx.com/afiliamaas/images/shade.jpg"
-							$('#result_imageanver')[0].src = "https://stefaninimx.com/afiliamaas/images/shade.jpg"
+							  $('#result_image')[0].src = "https://stefaninimx.com/afiliamaas-web/images/shade.jpg"
+							$('#result_imageanver')[0].src = "https://stefaninimx.com/afiliamaas-web/images/shade.jpg"
 							$('#DatGrales').modal('hide');
 							$('#3b').modal('hide');
 							$('#2b').modal('show');
