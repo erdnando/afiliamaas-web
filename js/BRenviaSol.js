@@ -133,8 +133,8 @@ var idUsr =  $('#txtidUsrWS').val();
 
                                         }).then(function () {
                                               reseteavalores();
-                                        $('#result_image')[0].src = "https://stefaninimx.com/afiliamaas/images/shade.jpg";
-							            $('#result_imageanver')[0].src = "https://stefaninimx.com/afiliamaas/images/shade.jpg";
+                                        $('#result_image')[0].src = "https://stefaninimx.com/afiliamaas-web/images/shade.jpg";
+							            $('#result_imageanver')[0].src = "https://stefaninimx.com/afiliamaas-web/images/shade.jpg";
                                         $('#2b').modal('hide');
                                         $('#3b').modal('hide');
                                         $('#DatGrales').modal('hide');
@@ -328,7 +328,34 @@ var idUsr =  $('#txtidUsrWS').val();
 
                         });
 
-                }
+                }else
+                    {
+                        var trtextos = "";
+
+                        var texterroresgrales = "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%; border-collapse: separate;border-spacing:  7px;    height: 178px;'><tr><td align='left' valign='top' style='padding-right:2em;'>CIC:</td><td align='left' style='font-weight:bold'>"+ cicresult +"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Clave de elector:</td><td align='left' style='font-weight:bold'>"+cveelecto+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Fecha actualización:</td><td align='left' style='font-weight:bold'>"+fecactua+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Fecha de Vigencia:</td><td align='left' style='font-weight:bold; width: 100%;'>"+fecvigen+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Fecha de Registro:</td><td align='left' style='font-weight:bold'>"+fecreg+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Fecha de Consulta:</td><td align='left' style='font-weight:bold'>"+fecconsul+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Número de Emisión:</td><td align='left' style='font-weight:bold'>"+numemision+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em; width: 40%;'>Número de Identificación:</td><td align='left' style='font-weight:bold'>"+resocr+"</td><td></td></tr></table>"
+
+
+                        swal({
+
+                            title: '<i>Por favor verificac las siguientes secciones:</i>',
+                            html:
+											 ,
+
+                            showCloseButton: true,
+                            confirmButtonText:
+                                '<i class="glyphicon glyphicon-ok"></i>',
+                            allowOutsideClick: false,
+
+                        }).then(function () {
+
+                            });
+
+
+                        }, function (dismiss) {
+
+                        });
+
+                    }
 
         }
 

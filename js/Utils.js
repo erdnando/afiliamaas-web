@@ -2275,6 +2275,8 @@ function validacontrolespantall(pantalla, kinkheader, e){
 			});
 			
 			if(controlvalidados == totalvalidar ){
+                $("#stOkTitstepgrales").attr('class', 'glyphicon glyphicon-ok');
+				$("#stOkTitstepgrales").show();
 				$("#stOkTitstepgrales").show();
 				$("#stOkTitModgrales").show();
 				$('#rowvalida').addClass('rowiniciostepactivosuccess').removeClass('rowiniciostepactivo');
@@ -2477,6 +2479,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 			
 			
 			if(controlvalidados == totalvalidar ){
+                $("#stOkTitstepDomicilio").attr('class', 'glyphicon glyphicon-ok');
 				$("#stOkTitstepDomicilio").show();
 				$("#stOkTitModDomicilio").show();
 				$('#rowvalida2').addClass('rowiniciostepactivosuccess2').removeClass('rowiniciostepactivo').removeClass('rowvalida2');
@@ -2657,6 +2660,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 				}
 			});
 			if(controlvalidados == totalvalidar ){
+                $("#stOkTitstepDatEco").attr('class', 'glyphicon glyphicon-ok');
 				$("#stOkTitstepDatEco").show();
 				$("#stOkTitModDatEco").show();
 				$('#rowvalida3').addClass('rowiniciostepactivosuccess3').removeClass('rowiniciostepactivo').removeClass('rowvalida3');
@@ -2760,6 +2764,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 			}
 			
 			if(controlvalidados == totalvalidar ){
+                $("#stOkTitstepPerPol").attr('class', 'glyphicon glyphicon-ok');
 					$("#stOkTitstepPerPol").show();
 					$("#stOkTitModPerPol").show();
 					$('#rowvalida4').addClass('rowiniciostepactivosuccess4').removeClass('rowiniciostepactivo').removeClass('rowvalida4');
@@ -2843,6 +2848,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 			
 			
 			if(controlvalidados == totalvalidar ){
+                $("#stOkTitstepRefFam").attr('class', 'glyphicon glyphicon-ok');
 				$("#stOkTitstepRefFam").show();
 				$("#stOkTitModRefFam").show();
 				$('#rowvalida5').addClass('rowiniciostepactivosuccess5').removeClass('rowiniciostepactivo').removeClass('rowvalida5');
