@@ -91,11 +91,13 @@ $('.tsf-wizard-1').tsfWizard({
 
                 if($('#recreasolicitudinput').val() == "NO")
                 {
-
+                    $('#terminar').css("display", "");
                    validacontrolespantall(pantalla,false,e);
+                    $('#terminar').css("display", "");
                 }else{
                     $('#terminar').css("display", "none");
                     navegasliderheaderlibre(null, pantalla);
+                    $('#terminar').css("display", "none");
                 }
 
 			},
