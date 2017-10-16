@@ -740,7 +740,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 					    E464 = data[0].E464;
 					    E564 = data[0].E564;
 					    F164 = data[0].F164;
-						$("#txttokenWS").val(data.Token);
+						$("#txttokenWS").val(data[0].Token);
 						muestramodalSolirecrea(NoIDSol, DOC_IF64, DOC_IA64, F164, DOC_C164, DOC_C264, E164, E264, E36, E464, E564 )					
 				},
 				error: function (result) {  
