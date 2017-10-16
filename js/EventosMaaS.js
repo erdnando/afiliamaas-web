@@ -1325,6 +1325,14 @@ $(document).ready(function(){
 				//navegasliderheader($('#anumpaso6'),6);	
 				//validacontrolespantall('5',true);	
 				navegasliderheaderlibre($('#anumpaso6'), 6)	;
+                if($('#recreasolicitudinput').val() == "NO")
+                        {
+                            $('#terminar').css("display", "");
+
+                        }else{
+                            $('#terminar').css("display", "none");
+
+                        }
 			}
 		  
 		});
