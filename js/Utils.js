@@ -1985,13 +1985,32 @@ function navegasliderheaderlibre(headlink, step){
 			$('#rowvalida4').addClass('rowvalida4').removeClass('rowiniciostepactivo4');
 			$('#rowvalida5').addClass('rowvalida5').removeClass('rowiniciostepactivo5');
 			$('#rowvalida6').addClass('rowvalida6').removeClass('rowiniciostepactivo6');
-			$('#titulostep').css('color','#96c03d');
+			/*$('#titulostep').css('color','#96c03d');
 			$('#titulostep2').css('color','#2c3f4c');
 			$('#titulostep3').css('color','#2c3f4c');
 			$('#titulostep4').css('color','#2c3f4c');
 			$('#titulostep5').css('color','#2c3f4c');
 			$('#titulostep6').css('color','#2c3f4c');
-			$('#titulostep').css('color','#96c03d');
+			$('#titulostep').css('color','#96c03d');*/
+
+            if($('#titulostep').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep').css('color','#96c03d');
+            }
+            if($('#titulostep2').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep2').css('color','#2c3f4c');
+            }
+            if($('#titulostep3').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep3').css('color','#2c3f4c');
+            }
+            if($('#titulostep4').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep4').css('color','#2c3f4c');
+            }
+            if($('#titulostep5').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep5').css('color','#2c3f4c');
+            }
+            if($('#titulostep6').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep6').css('color','#2c3f4c');
+            }
 			
 			break;
 		case 2:
@@ -2000,12 +2019,31 @@ function navegasliderheaderlibre(headlink, step){
 			$('#rowvalida4').addClass('rowvalida4').removeClass('rowiniciostepactivo4');
 			$('#rowvalida5').addClass('rowvalida5').removeClass('rowiniciostepactivo5');
 			$('#rowvalida6').addClass('rowvalida6').removeClass('rowiniciostepactivo6');
-			$('#titulostep').css('color','#96c03d');
+			/*$('#titulostep').css('color','#96c03d');
 			$('#titulostep2').css('color','#96c03d');
 			$('#titulostep3').css('color','#2c3f4c');
 			$('#titulostep4').css('color','#2c3f4c');
 			$('#titulostep5').css('color','#2c3f4c');
-			$('#titulostep6').css('color','#2c3f4c');
+			$('#titulostep6').css('color','#2c3f4c');*/
+            if($('#titulostep').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep').css('color','#96c03d');
+            }
+            if($('#titulostep2').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep2').css('color','#96c03d');
+            }
+            if($('#titulostep3').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep3').css('color','#2c3f4c');
+            }
+            if($('#titulostep4').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep4').css('color','#2c3f4c');
+            }
+            if($('#titulostep5').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep5').css('color','#2c3f4c');
+            }
+            if($('#titulostep6').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep6').css('color','#2c3f4c');
+            }
+
 			break;
 		case 3:
 			$('#rowvalida2').addClass('rowiniciostepactivo2').removeClass('rowvalida2');
@@ -2013,12 +2051,31 @@ function navegasliderheaderlibre(headlink, step){
 			$('#rowvalida4').addClass('rowvalida4').removeClass('rowiniciostepactivo4');
 			$('#rowvalida5').addClass('rowvalida5').removeClass('rowiniciostepactivo5');
 			$('#rowvalida6').addClass('rowvalida6').removeClass('rowiniciostepactivo6');
-			$('#titulostep').css('color','#96c03d');
+			/*$('#titulostep').css('color','#96c03d');
 			$('#titulostep2').css('color','#96c03d');
 			$('#titulostep3').css('color','#96c03d');
 			$('#titulostep4').css('color','#2c3f4c');
 			$('#titulostep5').css('color','#2c3f4c');
-			$('#titulostep6').css('color','#2c3f4c');
+			$('#titulostep6').css('color','#2c3f4c');*/
+
+            if($('#titulostep').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep').css('color','#96c03d');
+            }
+            if($('#titulostep2').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep2').css('color','#96c03d');
+            }
+            if($('#titulostep3').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep3').css('color','#96c03d');
+            }
+            if($('#titulostep4').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep4').css('color','#2c3f4c');
+            }
+            if($('#titulostep5').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep5').css('color','#2c3f4c');
+            }
+            if($('#titulostep6').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep6').css('color','#2c3f4c');
+            }
 			break;
 		case 4:
 			$('#rowvalida2').addClass('rowiniciostepactivo2').removeClass('rowvalida2');
@@ -2026,12 +2083,31 @@ function navegasliderheaderlibre(headlink, step){
 			$('#rowvalida4').addClass('rowiniciostepactivo4').removeClass('rowvalida4');
 			$('#rowvalida5').addClass('rowvalida5').removeClass('rowiniciostepactivo5');
 			$('#rowvalida6').addClass('rowvalida6').removeClass('rowiniciostepactivo6');
-			$('#titulostep').css('color','#96c03d');
+			/*$('#titulostep').css('color','#96c03d');
 			$('#titulostep2').css('color','#96c03d');
 			$('#titulostep3').css('color','#96c03d');
 			$('#titulostep4').css('color','#96c03d');
 			$('#titulostep5').css('color','#2c3f4c');
-			$('#titulostep6').css('color','#2c3f4c');
+			$('#titulostep6').css('color','#2c3f4c');*/
+
+            if($('#titulostep').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep').css('color','#96c03d');
+            }
+            if($('#titulostep2').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep2').css('color','#96c03d');
+            }
+            if($('#titulostep3').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep3').css('color','#96c03d');
+            }
+            if($('#titulostep4').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep4').css('color','#96c03d');
+            }
+            if($('#titulostep5').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep5').css('color','#2c3f4c');
+            }
+            if($('#titulostep6').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep6').css('color','#2c3f4c');
+            }
 			break;
 		case 5:
 			$('#rowvalida2').addClass('rowiniciostepactivo2').removeClass('rowvalida2');
@@ -2039,12 +2115,36 @@ function navegasliderheaderlibre(headlink, step){
 			$('#rowvalida4').addClass('rowiniciostepactivo4').removeClass('rowvalida4');
 			$('#rowvalida5').addClass('rowiniciostepactivo5').removeClass('rowvalida5');
 			$('#rowvalida6').addClass('rowvalida6').removeClass('rowiniciostepactivo6');
-			$('#titulostep').css('color','#96c03d');
-			$('#titulostep2').css('color','#96c03d');
-			$('#titulostep3').css('color','#96c03d');
-			$('#titulostep4').css('color','#96c03d');
-			$('#titulostep5').css('color','#96c03d');
-			$('#titulostep6').css('color','#2c3f4c');
+
+            /*if($('#titulostep2').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep').css('color','#96c03d');
+                $('#titulostep2').css('color','#96c03d');
+                $('#titulostep3').css('color','#96c03d');
+                $('#titulostep4').css('color','#96c03d');
+                $('#titulostep5').css('color','#96c03d');
+                $('#titulostep6').css('color','#2c3f4c');
+            }*/
+
+            if($('#titulostep').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep').css('color','#96c03d');
+            }
+            if($('#titulostep2').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep2').css('color','#96c03d');
+            }
+            if($('#titulostep3').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep3').css('color','#96c03d');
+            }
+            if($('#titulostep4').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep4').css('color','#96c03d');
+            }
+            if($('#titulostep5').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep5').css('color','#96c03d');
+            }
+            if($('#titulostep6').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep6').css('color','#2c3f4c');
+            }
+
+
 			break;
 		case 6:
 			$('#rowvalida2').addClass('rowiniciostepactivo2').removeClass('rowvalida2');
