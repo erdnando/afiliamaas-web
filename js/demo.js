@@ -113,7 +113,7 @@ function processCompress(input) {
 						
 								
 						result_image.onload = function(){
-							if($(result_image)[0].src != "https://stefaninimx.com/afiliamaas/images/shade.jpg")
+							if($(result_image)[0].src != "https://stefaninimx.com/afiliamaas-web/images/shade.jpg")
 							{
 								var image_width=$(result_image).width(),
 								image_height=$(result_image).height();
