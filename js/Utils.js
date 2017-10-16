@@ -2152,13 +2152,32 @@ function navegasliderheaderlibre(headlink, step){
 			$('#rowvalida4').addClass('rowiniciostepactivo4').removeClass('rowvalida4');
 			$('#rowvalida5').addClass('rowiniciostepactivo5').removeClass('rowvalida5');
 			$('#rowvalida6').addClass('rowiniciostepactivo6').removeClass('rowvalida6');
-			$('#titulostep').css('color','#96c03d');
+			/*$('#titulostep').css('color','#96c03d');
 			$('#titulostep2').css('color','#96c03d');
 			$('#titulostep3').css('color','#96c03d');
 			$('#titulostep4').css('color','#96c03d');
 			$('#titulostep5').css('color','#96c03d');
-			$('#titulostep6').css('color','#96c03d');
+			$('#titulostep6').css('color','#96c03d');*/
             //$('#terminar').css("display","none");
+
+            if($('#titulostep').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep').css('color','#96c03d');
+            }
+            if($('#titulostep2').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep2').css('color','#96c03d');
+            }
+            if($('#titulostep3').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep3').css('color','#96c03d');
+            }
+            if($('#titulostep4').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep4').css('color','#96c03d');
+            }
+            if($('#titulostep5').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep5').css('color','#96c03d');
+            }
+            if($('#titulostep6').css("color") != "rgb(245, 238, 11)"){
+                $('#titulostep6').css('color','#96c03d');
+            }
 			break;
 		default:
 			break;
