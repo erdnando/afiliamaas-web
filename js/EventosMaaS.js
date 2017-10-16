@@ -1122,6 +1122,7 @@ $(document).ready(function(){
 			click:	function () {
 				
 					$('#3b').modal('hide');
+                    $('#DatGrales').modal();
 					$('#DatGrales').modal('show');
 				
 			}
