@@ -94,6 +94,7 @@ $('.tsf-wizard-1').tsfWizard({
 
                    validacontrolespantall(pantalla,false,e);
                 }else{
+                    $('#terminar').css("display", "none");
                     navegasliderheaderlibre(null, pantalla);
                 }
 
