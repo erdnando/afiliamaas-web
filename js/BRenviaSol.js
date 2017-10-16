@@ -340,7 +340,7 @@ var idUsr =  $('#txtidUsrWS').val();
                         var texterroresgrales = "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%; border-collapse: separate;border-spacing:  7px;    height: 178px;'>" + trtextos + "</table>";
 
 
-                        $(".swal2-modal").css("bottom", "10px;");
+                        $(".swal2-modal").css("bottom","10px");
 
 
                         swal({
@@ -353,7 +353,7 @@ var idUsr =  $('#txtidUsrWS').val();
                             allowOutsideClick: false,
 
                         }).then(function () {
-                                                        $(".swal2-modal").css("bottom", "147px;");
+                                                        $(".swal2-modal").css("bottom","147px");
 
                             });
 
