@@ -1330,7 +1330,14 @@ $(document).ready(function(){
 	
 	
 		
-		
+		$('#nomfirma').on({
+			click:	function () {
+
+					$("#imagenpresenta").css('border', '');
+
+			}
+
+		});
 		
 		
 		
