@@ -1980,11 +1980,11 @@ function navegasliderheaderlibre(headlink, step){
 	switch(step) {
 		case 1:
 		
-			$('#rowvalida2').addClass('rowvalida2').removeClass('rowiniciostepactivo2');
-			$('#rowvalida3').addClass('rowvalida3').removeClass('rowiniciostepactivo3');
-			$('#rowvalida4').addClass('rowvalida4').removeClass('rowiniciostepactivo4');
-			$('#rowvalida5').addClass('rowvalida5').removeClass('rowiniciostepactivo5');
-			$('#rowvalida6').addClass('rowvalida6').removeClass('rowiniciostepactivo6');
+			$('#rowvalida2').addClass('rowvalida2').removeClass('rowiniciostepactivo2').removeClass('rowiniciostepactivosuccess2');
+			$('#rowvalida3').addClass('rowvalida3').removeClass('rowiniciostepactivo3').removeClass('rowiniciostepactivosuccess3');
+			$('#rowvalida4').addClass('rowvalida4').removeClass('rowiniciostepactivo4').removeClass('rowiniciostepactivosuccess4');
+			$('#rowvalida5').addClass('rowvalida5').removeClass('rowiniciostepactivo5').removeClass('rowiniciostepactivosuccess5');
+			$('#rowvalida6').addClass('rowvalida6').removeClass('rowiniciostepactivo6').removeClass('rowiniciostepactivosuccess6');
 			/*$('#titulostep').css('color','#96c03d');
 			$('#titulostep2').css('color','#2c3f4c');
 			$('#titulostep3').css('color','#2c3f4c');
@@ -2014,11 +2014,11 @@ function navegasliderheaderlibre(headlink, step){
 			
 			break;
 		case 2:
-			$('#rowvalida2').addClass('rowiniciostepactivo2').removeClass('rowvalida2');
-			$('#rowvalida3').addClass('rowvalida3').removeClass('rowiniciostepactivo3');
-			$('#rowvalida4').addClass('rowvalida4').removeClass('rowiniciostepactivo4');
-			$('#rowvalida5').addClass('rowvalida5').removeClass('rowiniciostepactivo5');
-			$('#rowvalida6').addClass('rowvalida6').removeClass('rowiniciostepactivo6');
+			$('#rowvalida2').addClass('rowiniciostepactivo2').removeClass('rowvalida2').removeClass('rowiniciostepactivosuccess2');
+			$('#rowvalida3').addClass('rowvalida3').removeClass('rowiniciostepactivo3').removeClass('rowiniciostepactivosuccess3');
+			$('#rowvalida4').addClass('rowvalida4').removeClass('rowiniciostepactivo4').removeClass('rowiniciostepactivosuccess4');
+			$('#rowvalida5').addClass('rowvalida5').removeClass('rowiniciostepactivo5').removeClass('rowiniciostepactivosuccess5');
+			$('#rowvalida6').addClass('rowvalida6').removeClass('rowiniciostepactivo6').removeClass('rowiniciostepactivosuccess6');
 			/*$('#titulostep').css('color','#96c03d');
 			$('#titulostep2').css('color','#96c03d');
 			$('#titulostep3').css('color','#2c3f4c');
@@ -2046,11 +2046,11 @@ function navegasliderheaderlibre(headlink, step){
 
 			break;
 		case 3:
-			$('#rowvalida2').addClass('rowiniciostepactivo2').removeClass('rowvalida2');
-			$('#rowvalida3').addClass('rowiniciostepactivo3').removeClass('rowvalida3');
-			$('#rowvalida4').addClass('rowvalida4').removeClass('rowiniciostepactivo4');
-			$('#rowvalida5').addClass('rowvalida5').removeClass('rowiniciostepactivo5');
-			$('#rowvalida6').addClass('rowvalida6').removeClass('rowiniciostepactivo6');
+			$('#rowvalida2').addClass('rowiniciostepactivo2').removeClass('rowvalida2').removeClass('rowiniciostepactivosuccess2');
+			$('#rowvalida3').addClass('rowiniciostepactivo3').removeClass('rowvalida3').removeClass('rowiniciostepactivosuccess3');
+			$('#rowvalida4').addClass('rowvalida4').removeClass('rowiniciostepactivo4').removeClass('rowiniciostepactivosuccess4');
+			$('#rowvalida5').addClass('rowvalida5').removeClass('rowiniciostepactivo5').removeClass('rowiniciostepactivosuccess5');
+			$('#rowvalida6').addClass('rowvalida6').removeClass('rowiniciostepactivo6').removeClass('rowiniciostepactivosuccess6');
 			/*$('#titulostep').css('color','#96c03d');
 			$('#titulostep2').css('color','#96c03d');
 			$('#titulostep3').css('color','#96c03d');
@@ -2078,11 +2078,11 @@ function navegasliderheaderlibre(headlink, step){
             }
 			break;
 		case 4:
-			$('#rowvalida2').addClass('rowiniciostepactivo2').removeClass('rowvalida2');
-			$('#rowvalida3').addClass('rowiniciostepactivo3').removeClass('rowvalida3');
-			$('#rowvalida4').addClass('rowiniciostepactivo4').removeClass('rowvalida4');
-			$('#rowvalida5').addClass('rowvalida5').removeClass('rowiniciostepactivo5');
-			$('#rowvalida6').addClass('rowvalida6').removeClass('rowiniciostepactivo6');
+			$('#rowvalida2').addClass('rowiniciostepactivo2').removeClass('rowvalida2').removeClass('rowiniciostepactivosuccess2');
+			$('#rowvalida3').addClass('rowiniciostepactivo3').removeClass('rowvalida3').removeClass('rowiniciostepactivosuccess3');
+			$('#rowvalida4').addClass('rowiniciostepactivo4').removeClass('rowvalida4').removeClass('rowiniciostepactivosuccess4');
+			$('#rowvalida5').addClass('rowvalida5').removeClass('rowiniciostepactivo5').removeClass('rowiniciostepactivosuccess5');
+			$('#rowvalida6').addClass('rowvalida6').removeClass('rowiniciostepactivo6').removeClass('rowiniciostepactivosuccess6');
 			/*$('#titulostep').css('color','#96c03d');
 			$('#titulostep2').css('color','#96c03d');
 			$('#titulostep3').css('color','#96c03d');
@@ -2110,11 +2110,11 @@ function navegasliderheaderlibre(headlink, step){
             }
 			break;
 		case 5:
-			$('#rowvalida2').addClass('rowiniciostepactivo2').removeClass('rowvalida2');
-			$('#rowvalida3').addClass('rowiniciostepactivo3').removeClass('rowvalida3');
-			$('#rowvalida4').addClass('rowiniciostepactivo4').removeClass('rowvalida4');
-			$('#rowvalida5').addClass('rowiniciostepactivo5').removeClass('rowvalida5');
-			$('#rowvalida6').addClass('rowvalida6').removeClass('rowiniciostepactivo6');
+			$('#rowvalida2').addClass('rowiniciostepactivo2').removeClass('rowvalida2').removeClass('rowiniciostepactivosuccess2');
+			$('#rowvalida3').addClass('rowiniciostepactivo3').removeClass('rowvalida3').removeClass('rowiniciostepactivosuccess3');
+			$('#rowvalida4').addClass('rowiniciostepactivo4').removeClass('rowvalida4').removeClass('rowiniciostepactivosuccess4');
+			$('#rowvalida5').addClass('rowiniciostepactivo5').removeClass('rowvalida5').removeClass('rowiniciostepactivosuccess5');
+			$('#rowvalida6').addClass('rowvalida6').removeClass('rowiniciostepactivo6').removeClass('rowiniciostepactivosuccess6');
 
             /*if($('#titulostep2').css("color") != "rgb(245, 238, 11)"){
                 $('#titulostep').css('color','#96c03d');
@@ -2147,11 +2147,11 @@ function navegasliderheaderlibre(headlink, step){
 
 			break;
 		case 6:
-			$('#rowvalida2').addClass('rowiniciostepactivo2').removeClass('rowvalida2');
-			$('#rowvalida3').addClass('rowiniciostepactivo3').removeClass('rowvalida3');
-			$('#rowvalida4').addClass('rowiniciostepactivo4').removeClass('rowvalida4');
-			$('#rowvalida5').addClass('rowiniciostepactivo5').removeClass('rowvalida5');
-			$('#rowvalida6').addClass('rowiniciostepactivo6').removeClass('rowvalida6');
+			$('#rowvalida2').addClass('rowiniciostepactivo2').removeClass('rowvalida2').removeClass('rowiniciostepactivosuccess2');
+			$('#rowvalida3').addClass('rowiniciostepactivo3').removeClass('rowvalida3').removeClass('rowiniciostepactivosuccess3');
+			$('#rowvalida4').addClass('rowiniciostepactivo4').removeClass('rowvalida4').removeClass('rowiniciostepactivosuccess4');
+			$('#rowvalida5').addClass('rowiniciostepactivo5').removeClass('rowvalida5').removeClass('rowiniciostepactivosuccess5');
+			$('#rowvalida6').addClass('rowiniciostepactivo6').removeClass('rowvalida6').removeClass('rowiniciostepactivosuccess6');
 			/*$('#titulostep').css('color','#96c03d');
 			$('#titulostep2').css('color','#96c03d');
 			$('#titulostep3').css('color','#96c03d');
