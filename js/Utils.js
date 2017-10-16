@@ -2178,6 +2178,17 @@ function navegasliderheaderlibre(headlink, step){
             if($('#titulostep6').css("color") != "rgb(245, 238, 11)"){
                 $('#titulostep6').css('color','#96c03d');
             }
+
+            if($('#recreasolicitudinput').val() == "NO")
+                {
+                    $('#terminar').css("display", "");
+                   validacontrolespantall(pantalla,false,e);
+                    $('#terminar').css("display", "");
+                }else{
+                    $('#terminar').css("display", "none");
+                    navegasliderheaderlibre(null, pantalla);
+                    $('#terminar').css("display", "none");
+                }
 			break;
 		default:
 			break;
