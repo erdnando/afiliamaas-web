@@ -139,6 +139,14 @@ $('.tsf-wizard-1').tsfWizard({
 						navegasliderheaderlibre($('#anumpasol6'), 6);
                         //document.getElementById("btnfinalizar").tabIndex = "72";
                         document.getElementById("btnanterior").tabIndex = "73";
+                        if($('#recreasolicitudinput').val() == "NO")
+                        {
+                            $('#terminar').css("display", "");
+
+                        }else{
+                            $('#terminar').css("display", "none");
+
+                        }
                         $('#nomfirma').focus();
 						break;
 
