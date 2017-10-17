@@ -254,6 +254,7 @@ $('.tsf-wizard-1').tsfWizard({
 				if(Nomusuario != "ERRO" && token !== "ERRO" && compniare != "ERRO")
 				{
 					consultasolicitudes(idUsr,token,Nomusuario,tipouser,pwd,compniare);
+                    $("#cargandoafiliadiv").hide();
 				}else{
 					location.href=("Index.html");
 				}
