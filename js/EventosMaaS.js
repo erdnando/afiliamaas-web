@@ -1077,8 +1077,8 @@ $(document).ready(function(){
 						  cancelButtonColor: '#d33',
 						  confirmButtonText: 'Guardar solicitud!',
 						  cancelButtonText: 'Salir',
-						  confirmButtonClass: 'btn btn-success',
-						  cancelButtonClass: 'btn btn-danger',
+						  //confirmButtonClass: 'btn btn-success',
+						  //cancelButtonClass: 'btn btn-danger',
 						  buttonsStyling: false
 						}).then(function () {
 							
@@ -1092,6 +1092,11 @@ $(document).ready(function(){
 							  $('#result_image')[0].src = "https://stefaninimx.com/afiliamaas-web/images/shade.jpg"
 							$('#result_imageanver')[0].src = "https://stefaninimx.com/afiliamaas-web/images/shade.jpg"
 							$('#DatGrales').modal('hide');
+                              for(var x=1;x<7;x++)
+                                {
+                                    navegasliderheaderatras(x);
+                                }
+
 							$('#3b').modal('hide');
 							$('#2b').modal('show');
                               $("#rowvalida").click();
