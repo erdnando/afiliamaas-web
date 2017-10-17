@@ -2182,11 +2182,11 @@ function navegasliderheaderlibre(headlink, step){
             if($('#recreasolicitudinput').val() == "NO")
                 {
                     $('#terminar').css("display", "");
-                   validacontrolespantall(pantalla,false,e);
+                   validacontrolespantall(6,false,e);
                     $('#terminar').css("display", "");
                 }else{
                     $('#terminar').css("display", "none");
-                    navegasliderheaderlibre(null, pantalla);
+                    navegasliderheaderlibre(null, 6);
                     $('#terminar').css("display", "none");
                 }
 			break;
