@@ -1335,7 +1335,11 @@ $(document).ready(function(){
                             $('#terminar').css("display", "");
 
                         }else{
-                            $('#terminar').css("display", "none");
+                            setTimeout(function(){
+                              $('#terminar').css("display", "none");
+                            }, 500);
+
+
 
                         }
 			}
