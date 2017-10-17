@@ -8,6 +8,12 @@ var idUsr =  $('#txtidUsrWS').val();
 
 	$('#terminar').on({
 	  click: function() {
+
+          if($('#recreasolicitudinput').val() == "SI")
+          {
+              console.log("paso el milagro");
+              return;
+          }
 			var lon;
 			var lat;
 		  if (navigator.geolocation)
@@ -213,6 +219,9 @@ var idUsr =  $('#txtidUsrWS').val();
                     }
 
         }
+
+
+      }
 
 
 	  }
