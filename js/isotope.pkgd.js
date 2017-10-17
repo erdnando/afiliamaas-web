@@ -3479,6 +3479,8 @@ function isotopeDefinition( Outlayer, getSize, matchesSelector, Item, LayoutMode
     var isInstant = this.options.isLayoutInstant !== undefined ?
       this.options.isLayoutInstant : !this._isLayoutInited;
     this._isInstant = isInstant;
+
+
     return isInstant;
   };
 

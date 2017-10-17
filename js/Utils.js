@@ -4264,7 +4264,7 @@ function consultasolicitudes(idUsr,token,Nomusuario,tipouser,pwd,compniare){
 						error: function (result) {
 							alert("errror....solicitudessss");
 						},
-						async: false
+						async: true
 					});
 }
 

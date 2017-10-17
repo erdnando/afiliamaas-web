@@ -31,9 +31,9 @@ $(document).ready(function(){
 
 (function($) { 
 
- window.onbeforeunload = function() {
+ /*window.onbeforeunload = function() {
       return "¿Estás seguro que deseas salir de la actual página?"
-  }
+  }*/
   
 		$('#txtDependientesnew').spinedit({
 			minimum: 0,
