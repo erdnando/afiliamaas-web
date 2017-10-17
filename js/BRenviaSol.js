@@ -147,6 +147,8 @@ var idUsr =  $('#txtidUsrWS').val();
 
                                     });
 
+                                    location.reload();
+
                                     /*$('#contenidogral').empty();
                                     $('#contenidogral').removeAttr('class',"isotope-container row grid-space-20");
 
