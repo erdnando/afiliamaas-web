@@ -221,7 +221,7 @@ var idUsr =  $('#txtidUsrWS').val();
         }
 
 
-      }
+
 
 
 	  }
