@@ -3480,7 +3480,7 @@ function isotopeDefinition( Outlayer, getSize, matchesSelector, Item, LayoutMode
       this.options.isLayoutInstant : !this._isLayoutInited;
     this._isInstant = isInstant;
 
-    document.getElementById('cargandoafiliadiv').style.visibility = "hidden";
+    //document.getElementById('cargandoafiliadiv').style.visibility = "hidden";
     return isInstant;
   };
 

@@ -24,7 +24,7 @@ $(document).ready(function(){
 			fntipocontrato();
 		}
 		
-		//$("#cargandoafiliadiv").hide();
+		$("#cargandoafiliadiv").hide();
 		
 });
 
