@@ -1349,6 +1349,18 @@ $(document).ready(function(){
 			}
 
 		});
+
+    $('#BtnSalir').on({
+			click:	function () {
+                location.href=("Index.html");
+
+			}
+
+		});
+
+
+
+
 		
 		
 		
