@@ -133,7 +133,9 @@ var idUsr =  $('#txtidUsrWS').val();
 
                                         }).then(function () {
 
-                                              reseteavalores();
+                                        location.reload();
+
+                                             /* reseteavalores();
                                         $('#result_image')[0].src = "https://stefaninimx.com/afiliamaas-web/images/shade.jpg";
 							            $('#result_imageanver')[0].src = "https://stefaninimx.com/afiliamaas-web/images/shade.jpg";
                                         $('#2b').modal('hide');
@@ -143,11 +145,11 @@ var idUsr =  $('#txtidUsrWS').val();
 
 
 
-                                        $("#rowvalida").click();
+                                        $("#rowvalida").click();*/
 
                                     });
 
-                                    location.reload();
+
 
                                     /*$('#contenidogral').empty();
                                     $('#contenidogral').removeAttr('class',"isotope-container row grid-space-20");
