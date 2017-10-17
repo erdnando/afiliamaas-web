@@ -1337,7 +1337,7 @@ $(document).ready(function(){
                         }else{
                             setTimeout(function(){
                               $('#terminar').css("display", "none");
-                            }, 100);
+                            }, 50);
 
 
 
