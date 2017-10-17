@@ -1268,7 +1268,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$('#dateFechanacnew').removeAttr("disabled");
 		$('#txtRFCnew').removeAttr("disabled");
 		$("#lstEdoCivilnew").removeAttr("disabled");
-		//$('#txtDependientesnew').removeAttr("disabled");
+		$('#txtDependientesnew').removeAttr("disabled");
 		$('#dateFechanacnewdia').removeAttr("disabled");
 		$('#dateFechanacnewmes').removeAttr("disabled");
 		$('#dateFechanacnewanio').removeAttr("disabled");
@@ -1330,7 +1330,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$('.glyphicon-circle-arrow-down').removeAttr("disabled");
 		
 		$("#lisColoniaSolicitantenew").removeAttr("disabled");
-		//$('#txtTiempoResidencianew').removeAttr("disabled");
+		$('#txtTiempoResidencianew').removeAttr("disabled");
 		$("#lisEstatusResidencianew").removeAttr("disabled");
 		$('#txtMontoViviendanew').removeAttr("disabled");
 		$('#txtCorreonew').removeAttr("disabled");
@@ -1357,8 +1357,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$('#txtTelCasaRef3new').removeAttr("disabled");
 
 		$("#lisTipoContratonew").removeAttr("disabled");
-		//$('#txtantiguedadnew').removeAttr("disabled");
-		//$('#txtAosCasadonew').removeAttr("disabled");
+		$('#txtantiguedadnew').removeAttr("disabled");
+		$('#txtAosCasadonew').removeAttr("disabled");
 		$("#txtIngresonew").removeAttr("disabled");
 		$('#txtNombreEmpresanew').removeAttr("disabled");
 		$("#txtGironew").removeAttr("disabled");
