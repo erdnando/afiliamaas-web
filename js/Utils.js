@@ -1851,6 +1851,7 @@ function validaricontelefonos(telefono){
 
 	//if($(telefono).val().replace('(', '').replace(')', '').replace(' ', '').length == 0 ){
     if(valortelefono.length == 0 ){
+            $("#lbltelefonosdiferentes").css('display', 'none');
 			var nombrecladiv = "#" + $(telefono)[0].id + "div";
 			var nombreclaspan = "#" + $(telefono)[0].id + "span";
 			$(nombreclaspan).attr('class', 'glyphicon glyphicon-remove form-control-feedback');
@@ -1859,6 +1860,7 @@ function validaricontelefonos(telefono){
 		//}else if(($(telefono).val().replace('(', '').replace(')', '').replace(' ', '').length > 0) && ($(telefono).val().replace('(',
         //'').replace(')', '').replace(' ', '').length < 10)){
     }else if(valortelefono.length < 10){
+        $("#lbltelefonosdiferentes").css('display', 'none');
         var nombrecladiv = "#" + $(telefono)[0].id + "div";
         var nombreclaspan = "#" + $(telefono)[0].id + "span";
         $(nombreclaspan).attr('class', 'glyphicon glyphicon-warning-sign form-control-feedback');
@@ -1866,10 +1868,65 @@ function validaricontelefonos(telefono){
 			
     }
     else if(valortelefono.length == 10 ){
+
+        if(telefono == "#txtTelefonoCelularnew"){
+
+            if($("#txtTelefonoCasanew").val() == $("#txtTelefonoCelularnew").val()){
+                /*$("#txtTelefonoCasanewspan").attr('class', 'glyphicon glyphicon-warning-sign form-control-feedback');
+                $("#txtTelefonoCasanewdiv").attr('class', 'form-group has-warning has-feedback');*/
+
+                $("#txtTelefonoCelularnewspan").attr('class', 'glyphicon glyphicon-warning-sign form-control-feedback');
+                $("#txtTelefonoCelularnewdiv").attr('class', 'form-group has-warning has-feedback');
+
+                var nomcompleto = 'Los teléfonos de casa y celular deben ser diferentes.';
+                $('#lbltelefonosdiferentes').text(nomcompleto);
+
+                /*var demoTimeout7;
+
+                clearTimeout(demoTimeout7);
+                //$("#txtTelefonoCasanewspan").css('display', 'inline');
+                $('#txtTelefonoCasanew').trigger('startRumble');
+                //$("#lblreferenciassolicitante").css('color', 'red');
+                demoTimeout7 = setTimeout(function(){$('#txtTelefonoCasanew').trigger('stopRumble')},1000);*/
+
+                var demoTimeout2;
+
+                clearTimeout(demoTimeout2);
+                //$("#txtTelefonoCasanewspan").css('display', 'inline');
+                $('#txtTelefonoCelularnew').trigger('startRumble');
+                //$("#lblreferenciassolicitante").css('color', 'red');
+                demoTimeout2 = setTimeout(function(){$('#txtTelefonoCelularnew').trigger('stopRumble')},1000);
+
+
+                var demoTimeout4;
+
+                        clearTimeout(demoTimeout4);
+                        $("#lbltelefonosdiferentes").css('display', 'inline');
+                        $('#lbltelefonosdiferentes').trigger('startRumble');
+                        $("#lbltelefonosdiferentes").css('color', 'red');
+                        demoTimeout4 = setTimeout(function(){$('#lbltelefonosdiferentes').trigger('stopRumble')},1000);
+
+            }else
+                {
+                     //var nombrecladiv = "#txtTelefonoCelularnewdiv";
+			         $("#txtTelefonoCelularnewdiv").attr('class', 'form-group has-success has-feedback');
+                     var nombreclaspan = "#txtTelefonoCelularnewspan";
+                     $(nombreclaspan).attr('class', 'glyphicon glyphicon-ok form-control-feedback');
+
+                }
+
+        }
+        else
+        {
+
 			var nombrecladiv = "#" + $(telefono)[0].id + "div";
 			$(nombrecladiv).attr('class', 'form-group has-success has-feedback');
 			var nombreclaspan = "#" + $(telefono)[0].id + "span";
 			$(nombreclaspan).attr('class', 'glyphicon glyphicon-ok form-control-feedback');
+        }
+
+
+
 		}
 	
 	
@@ -2575,7 +2632,20 @@ function validacontrolespantall(pantalla, kinkheader, e){
 			$.each(controlestelefono, function (ind, elem) { 
 				if(validatelefono(elem) == 1 )
 				{
-					controlvalidados += 1;
+                    if(elem=="#txtTelefonoCelularnew"){
+                       if($(elem).val() == $("#txtTelefonoCasanew").val())
+                           {
+                               contlisterrortelefono[contlisterrortelefono.length] = elem;
+                           }
+                        else
+                            {
+                                controlvalidados += 1;
+                            }
+
+                    }else
+                    {
+					   controlvalidados += 1;
+                    }
 				}else{
 					if(contlisterrortelefono.length == 0)
 					{
@@ -3530,8 +3600,31 @@ function validacontrolespantallGral(){
     $.each(controlestelefono2, function (ind, elem) {
         if(validatelefono(elem) == 1 )
         {
-            controlvalidados2 += 1;
-            controlvalidadosgral += 1;
+
+            if(elem=="#txtTelefonoCelularnew"){
+                if($(elem).val() == $("#txtTelefonoCasanew").val())
+                   {
+                       contlisterrortelefono2[contlisterrortelefono2.length] = elem;
+                       var demoTimeout4;
+
+                        clearTimeout(demoTimeout4);
+                        $("#lbltelefonosdiferentes").css('display', 'inline');
+                        $('#lbltelefonosdiferentes').trigger('startRumble');
+                        $("#lbltelefonosdiferentes").css('color', 'red');
+                        demoTimeout4 = setTimeout(function(){$('#lbltelefonosdiferentes').trigger('stopRumble')},1000);
+                   }
+                else
+                    {
+                        controlvalidados2 += 1;
+                        controlvalidadosgral += 1;
+                    }
+
+                }else
+                {
+                    controlvalidados2 += 1;
+                    controlvalidadosgral += 1;
+                }
+
         }else{
             if(contlisterrortelefono2.length == 0)
             {
@@ -3544,6 +3637,7 @@ function validacontrolespantallGral(){
 
         }
     });
+
 
     $.each(controlesCP2, function (ind, elem) {
         if(validatelefono(elem) == 1 )
@@ -4081,7 +4175,7 @@ function agregaeventostelefonos(telefono)
 			//if((tecla.charCode < 97 || tecla.charCode > 122) && (tecla.charCode < 65 || tecla.charCode > 90) && (tecla.charCode != 45)) return false;
 		  },
 		  blur: function() {
-			validaricontelefonos($(telefono));		
+			validaricontelefonos(telefono);
 		  },
 		 
 		});
