@@ -492,6 +492,10 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 						$('#lisColoniaEmpresanew').empty();
 						$("#lisColoniaEmpresanew").append('<option value="0">Seleccione...</option>');
 						$.each(data, function(i, item) {
+                            if(item.CTECP.length== 4){
+                                item.CTECP = "0" + item.CTECP;
+                            }
+
 							$("#lisColoniaEmpresanew").append('<option value="' + item.CTECP + '">' + item.COLONIA + '</option>');	
 							idest = item.IDESTADO
 							idpob = item.IDPOBLACION
