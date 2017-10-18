@@ -1018,7 +1018,7 @@ $(document).ready(function(){
 		
 		$('#btnClosemdlOcr').on({			
 			click:	function () {
-				if($('#result_image')[0].src != "https://stefaninimx.com/afiliamaas/images/shade.jpg" || $('#result_imageanver')[0].src != "https://stefaninimx.com/afiliamaas/images/shade.jpg"){
+				if($('#result_image')[0].src != "https://sminet.com.mx/afiliamaas/images/shade.jpg" || $('#result_imageanver')[0].src != "https://sminet.com.mx/afiliamaas/images/shade.jpg"){
 					swal({
 						  title: '¿Salir sin crear la solicitud?',
 						  /*type: 'warning',*/
@@ -1028,8 +1028,8 @@ $(document).ready(function(){
 						  
 						  allowOutsideClick: false,
 						}).then(function () {
-							$('#result_image')[0].src = "https://stefaninimx.com/afiliamaas-web/images/shade.jpg";
-							$('#result_imageanver')[0].src = "https://stefaninimx.com/afiliamaas-web/images/shade.jpg";
+							$('#result_image')[0].src = "https://sminet.com.mx/afiliamaas-web/images/shade.jpg";
+							$('#result_imageanver')[0].src = "https://sminet.com.mx/afiliamaas-web/images/shade.jpg";
 							$('#3b').modal('hide');
 							$('#2b').modal('show');
 							
@@ -1089,8 +1089,8 @@ $(document).ready(function(){
 						  // dismiss can be 'cancel', 'overlay',
 						  // 'close', and 'timer'
 						  if (dismiss === 'cancel') {
-							  $('#result_image')[0].src = "https://stefaninimx.com/afiliamaas-web/images/shade.jpg"
-							$('#result_imageanver')[0].src = "https://stefaninimx.com/afiliamaas-web/images/shade.jpg"
+							  $('#result_image')[0].src = "https://sminet.com.mx/afiliamaas-web/images/shade.jpg"
+							$('#result_imageanver')[0].src = "https://sminet.com.mx/afiliamaas-web/images/shade.jpg"
 							$('#DatGrales').modal('hide');
                               for(var x=1;x<7;x++)
                                 {

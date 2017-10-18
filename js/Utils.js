@@ -53,7 +53,7 @@ function signToImage() {
 function fncompaniamovil(){
 	$.ajax({ 			
 				type: 'POST',
-				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo', 
+				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo',
 				data: JSON.stringify({ 'tipocatalogo':'1'}),
 				contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -74,7 +74,7 @@ function fncargaNacionalidad(){
 	
 	$.ajax({ 			
 				type: 'POST',
-				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo', 
+				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo',
 				data: JSON.stringify({ 'tipocatalogo':'9'}),
 				contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -106,7 +106,7 @@ function fncargatipoidentificacion(){
 	
 	$.ajax({ 			
 				type: 'POST',
-				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo', 
+				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo',
 				data: JSON.stringify({ 'tipocatalogo':'2'}),
 				contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -127,7 +127,7 @@ function fncargatipoidentificacion(){
 function fncargaEdocivil(){
 	$.ajax({ 			
 				type: 'POST',
-				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo', 
+				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo',
 				data: JSON.stringify({ 'tipocatalogo':'3'}),
 				contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -148,7 +148,7 @@ function fnestatusrecidencia(){
 	
 	$.ajax({ 			
 				type: 'POST',
-				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo', 
+				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo',
 				data: JSON.stringify({ 'tipocatalogo':'4'}),
 				contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -169,7 +169,7 @@ function fntipocontrato(){
 	
 	$.ajax({ 			
 				type: 'POST',
-				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo', 
+				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo',
 				data: JSON.stringify({ 'tipocatalogo':'7'}),
 				contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -192,7 +192,7 @@ function fncargaEdo(){//(combo, tipoedo, Delesol, colsoli){
 	
 	$.ajax({ 			
 				type: 'POST',
-				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetallEstado', 
+				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetallEstado',
 				data: '{}',
 				contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -481,7 +481,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 	function buscaCPemp( inpCP){
 		$.ajax({ 			
 				type: 'POST',
-				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetCP', 
+				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCP',
 				data: JSON.stringify({"CP":inpCP}),
 				contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -511,7 +511,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 						
 						$.ajax({ 			
 								type: 'POST',
-								url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetMunicipio', 
+								url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetMunicipio',
 								data: JSON.stringify({"idestado":idest}),
 								contentType: "application/json; charset=utf-8",
 								dataType: "json",
@@ -547,7 +547,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$("#lisDelMuniEmpresanew").append('<option value="0">Seleccione...</option>');
 		$.ajax({ 			
 				type: 'POST',
-				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetMunicipio', 
+				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetMunicipio',
 				data: JSON.stringify({"idestado":inpMuni}),
 				contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -572,7 +572,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		
 		$.ajax({ 			
 				type: 'POST',
-				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetColonia', 
+				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetColonia',
 				data: JSON.stringify({"idpoblacion":inppoblacion, "idestado":inpoblaestado}),
 				contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -595,7 +595,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 	function buscaCP( inpCP){
 		$.ajax({ 			
 				type: 'POST',
-				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetCP', 
+				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCP',
 				data: JSON.stringify({"CP":inpCP}),
 				contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -628,7 +628,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 						
 						$.ajax({ 			
 								type: 'POST',
-								url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetMunicipio', 
+								url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetMunicipio',
 								data: JSON.stringify({"idestado":idest}),
 								contentType: "application/json; charset=utf-8",
 								dataType: "json",
@@ -665,7 +665,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$("#lisDelMuniSolicitantenew").append('<option value="0">Seleccione...</option>');
 		$.ajax({ 			
 				type: 'POST',
-				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetMunicipio', 
+				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetMunicipio',
 				data: JSON.stringify({"idestado":inpMuni}),
 				contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -690,7 +690,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		
 		$.ajax({ 			
 				type: 'POST',
-				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetColonia', 
+				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetColonia',
 				data: JSON.stringify({"idpoblacion":inppoblacion, "idestado":inpoblaestado}),
 				contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -730,7 +730,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		console.log(JSON.stringify({"img":{"imagen":"","tipoDoc":"IF","idSolicitud": datosgrales[2].toString() ,"nameImg":""},"llave":{"idUsuario":datosgrales[5],"Token":datosgrales[6]}}));
 		$.ajax({ 			
 				type: 'POST',
-				url: 'https://stefaninimx.com/mx.com.stefanini.service.api.rest/Service1.svc/GetImagenSol', 
+				url: 'https://sminet.com.mx/mx.com.stefanini.service.api.rest/Service1.svc/GetImagenSol',
 				//data: JSON.stringify({"Promotoria":"","RegPromotor":"","Compania":$("#Empresa").val(),"Formato":"","Usuario":$("#Usuario").val(),"Contrasenia":$("#Password").val(),"Coordinador":{"ClaveC":"","NombreC":""},"Gerente":{"ClaveG":"","NombreG":""},"TipoUsuario":"4"}),
 				data: JSON.stringify({"idSolicitud": datosgrales[2].toString(),"llave":{"idUsuario":datosgrales[5],"Token":datosgrales[6]}}),
 				contentType: "application/json; charset=utf-8",
@@ -4201,7 +4201,7 @@ function consultasolicitudes(idUsr,token,Nomusuario,tipouser,pwd,compniare){
 					$.ajax({
                         timeout:10000,
 						type: 'POST',
-						url: 'https://stefaninimx.com/mx.com.stefanini.service.api.rest/Service1.svc/getBuzonWeb',
+						url: 'https://sminet.com.mx/mx.com.stefanini.service.api.rest/Service1.svc/getBuzonWeb',
 						data: JSON.stringify({"objPromotor":{"Promotoria":"","RegPromotor":"","Compania":compniare,"Formato":"","Usuario":Nomusuario,"Contrasenia":pwd,"Coordinador":{"ClaveC":"","NombreC":""},"Gerente":{"ClaveG":"","NombreG":""},"TipoUsuario":"4"},"llave":{"idUsuario":idUsr,"Token":token}}),
 						contentType: "application/json; charset=utf-8",
 						dataType: "json",

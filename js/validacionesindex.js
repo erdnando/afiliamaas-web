@@ -11,7 +11,7 @@ $(document).ready(function(){
 			var Idusrlog = '', companiausrlog = '',estatusLogin = '',nombreusrlog ='',tipousuario ='';
 			$.ajax({ 			
 				type: 'POST',
-				url: 'https://stefaninimx.com/mx.com.stefanini.service.api.rest/Service1.svc/Login', 
+				url: 'https://sminet.com.mx/mx.com.stefanini.service.api.rest/Service1.svc/Login',
 				data: JSON.stringify({"Promotoria":"","RegPromotor":"","Compania":$("#Empresa").val(),"Formato":"","Usuario":$("#Usuario").val(),"Contrasenia":$("#Password").val(),"Coordinador":{"ClaveC":"","NombreC":""},"Gerente":{"ClaveG":"","NombreG":""},"TipoUsuario":"4"}),
 				contentType: "application/json; charset=utf-8",
                 dataType: "json",

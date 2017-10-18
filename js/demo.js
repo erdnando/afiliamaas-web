@@ -113,7 +113,7 @@ function processCompress(input) {
 						
 								
 						result_image.onload = function(){
-							if($(result_image)[0].src != "https://stefaninimx.com/afiliamaas-web/images/shade.jpg")
+							if($(result_image)[0].src != "https://sminet.com.mx/afiliamaas-web/images/shade.jpg")
 							{
 								var image_width=$(result_image).width(),
 								image_height=$(result_image).height();
@@ -127,7 +127,7 @@ function processCompress(input) {
 							   console.log(JSON.stringify({ "strImg64":this.src.replace("data:image/jpeg;base64,", ""),"llave":{"idUsuario":$("#txtidUsrWS").val(),"Token":$("#txttokenWS").val()}}),);
 							   $.ajax({  
 									type: "POST",  
-									url: 'https://stefaninimx.com/mx.com.stefanini.service.api.rest/Service1.svc/loadimagesoap',
+									url: 'https://sminet.com.mx/mx.com.stefanini.service.api.rest/Service1.svc/loadimagesoap',
 									data: JSON.stringify({ "strImg64":this.src.replace("data:image/jpeg;base64,", ""),"llave":{"idUsuario":$("#txtidUsrWS").val(),"Token":$("#txttokenWS").val()}}),
 									contentType: "application/json; charset=utf-8",
 									dataType: "json",						
@@ -199,7 +199,7 @@ function processCompress(input) {
 													$('#lnknombremodalINEFrente').text(result_imagefinmod.name);
 													$('#lnknombremodalINEFrente').attr("disabled", "disabled");
 													
-													if($('#result_image')[0].src != "https://stefaninimx.com/afiliamaas-web/images/shade.jpg" && $('#result_imageanver')[0].src != "https://stefaninimx.com/afiliamaas-web/images/shade.jpg"){
+													if($('#result_image')[0].src != "https://sminet.com.mx/afiliamaas-web/images/shade.jpg" && $('#result_imageanver')[0].src != "https://sminet.com.mx/afiliamaas-web/images/shade.jpg"){
 														$("#btnifeok").prop( "disabled", false );
 														$("#btnifeok").fadeIn();
 													}
@@ -225,7 +225,7 @@ function processCompress(input) {
 												   
 												   $.ajax({ 			
 															type: 'POST',
-															url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetCP', 
+															url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCP',
 															data: JSON.stringify({"CP":data.codigoPostal}),
 															contentType: "application/json; charset=utf-8",
 															dataType: "json",
@@ -249,7 +249,7 @@ function processCompress(input) {
 																	
 																	$.ajax({ 			
 																			type: 'POST',
-																			url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetMunicipio', 
+																			url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetMunicipio',
 																			data: JSON.stringify({"idestado":idest}),
 																			contentType: "application/json; charset=utf-8",
 																			dataType: "json",
@@ -407,7 +407,7 @@ function processCompressanver(input) {
 						   
 						   $.ajax({  
 								type: "POST",  
-								url: 'https://stefaninimx.com/mx.com.stefanini.service.api.rest/Service1.svc/getINEDataString',
+								url: 'https://sminet.com.mx/mx.com.stefanini.service.api.rest/Service1.svc/getINEDataString',
                                 data: JSON.stringify({ "strImg64":this.src.replace("data:image/jpeg;base64,", ""), "llave":{"idUsuario":$("#txtidUsrWS").val(),"Token":$("#txttokenWS").val()}}),
 								contentType: "application/json; charset=utf-8",
                                 dataType: "json",						
@@ -480,7 +480,7 @@ function processCompressanver(input) {
 											$('#lnknombremodalINEAtras').attr("disabled", "disabled");
 											document.getElementById('txtNumIdentificanew').value=data.ocr;
 											validaricontxt($('#txtNumIdentificanew'));
-											if($('#result_image')[0].src != "https://stefaninimx.com/afiliamaas-web/images/shade.jpg" && $('#result_imageanver')[0].src != "https://stefaninimx.com/afiliamaas-web/images/shade.jpg"){
+											if($('#result_image')[0].src != "https://sminet.com.mx/afiliamaas-web/images/shade.jpg" && $('#result_imageanver')[0].src != "https://sminet.com.mx/afiliamaas-web/images/shade.jpg"){
 													$("#btnifeok").prop( "disabled", false );
 													$("#btnifeok").fadeIn();
 												}
