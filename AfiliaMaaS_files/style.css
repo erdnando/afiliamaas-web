@@ -507,12 +507,13 @@ input:checked + .slider:before {
 	border-radius: 10px;
 }
 .modal-header {
-	background-color: #55acee;
+	/*background-color: #55acee;*/
+    background-color: #ffffff;
 	color: #ffffff;
 	border-radius: 5px 5px 0px 0px;
 }
 .modal-header h4 {
-	color: #ffffff;
+	color: #0469d2;
 }
 .modal-header .close {
 	font-weight: 300;

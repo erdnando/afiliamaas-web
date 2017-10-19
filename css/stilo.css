@@ -277,12 +277,12 @@ HEADER
 
 #holder_result {
 	/* margin: 20px 207px 0px auto; */ 
-	border: 7px dashed rgb(204, 204, 204); 
-	border-image: none; 
-	width: 100%; 
-	height: 172px; 
-	float: right;    
-	border-radius: 10px;
+    border: 4px dashed rgb(204, 204, 204);
+    border-image: none;
+    width: 100%;
+    height: 172px;
+    float: right;
+    border-radius: 10px;
 }
 
 #holder_resultDatos {
