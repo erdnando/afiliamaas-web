@@ -2471,7 +2471,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 				$("#stOkTitstepgrales").show();
 				$("#stOkTitModgrales").show();
 				$('#rowvalida').addClass('rowiniciostepactivosuccess').removeClass('rowiniciostepactivo');
-                $('#rowvalida').css('color','#96c03d');
+                $('#rowvalida').css('background-color','#96c03d');
 			}else{
 				//$('#rowvalida').addClass('novalidorow').removeClass('rowiniciostepactivo');
 				//$('#anumpaso1').css('color','yellow');
@@ -2689,7 +2689,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 				$("#stOkTitstepDomicilio").show();
 				$("#stOkTitModDomicilio").show();
 				$('#rowvalida2').addClass('rowiniciostepactivosuccess2').removeClass('rowiniciostepactivo').removeClass('rowvalida2');
-                $('#rowvalida2').css('color','#96c03d');
+                $('#rowvalida2').css('background-color','#96c03d');
 			}else{
 				//$('#rowvalida2').addClass('novalidorow').removeClass('rowiniciostepactivo');
 				//$('#anumpaso2').css('color','yellow')
@@ -2872,7 +2872,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 				$("#stOkTitstepDatEco").show();
 				$("#stOkTitModDatEco").show();
 				$('#rowvalida3').addClass('rowiniciostepactivosuccess3').removeClass('rowiniciostepactivo').removeClass('rowvalida3');
-                $('#rowvalida3').css('color','#96c03d');
+                $('#rowvalida3').css('background-color','#96c03d');
 			}else{
 				//$('#rowvalida3').addClass('novalidorow').removeClass('rowiniciostepactivo');
 				//$('#anumpaso3').css('color','yellow')
@@ -2978,7 +2978,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 					$("#stOkTitstepPerPol").show();
 					$("#stOkTitModPerPol").show();
 					$('#rowvalida4').addClass('rowiniciostepactivosuccess4').removeClass('rowiniciostepactivo').removeClass('rowvalida4');
-                    $('#rowvalida4').css('color','#96c03d');
+                    $('#rowvalida4').css('background-color','#96c03d');
 				}else{
 					//$('#rowvalida5').addClass('novalidorow').removeClass('rowiniciostepactivo');
 					//$('#anumpaso5').css('color','yellow')
@@ -3064,7 +3064,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 				$("#stOkTitstepRefFam").show();
 				$("#stOkTitModRefFam").show();
 				$('#rowvalida5').addClass('rowiniciostepactivosuccess5').removeClass('rowiniciostepactivo').removeClass('rowvalida5');
-                $('#rowvalida5').css('color','#96c03d');
+                $('#rowvalida5').css('background-color','#96c03d');
 			}else{
 				//$('#rowvalida5').addClass('novalidorow').removeClass('rowiniciostepactivo');
 				//$('#anumpaso5').css('color','yellow')
@@ -3445,7 +3445,7 @@ function validacontrolespantallGral(){
         $("#stOkTitstepgrales").show();
         $("#stOkTitModgrales").show();
         $('#rowvalida').addClass('rowiniciostepactivosuccess').removeClass('rowiniciostepactivo');
-        $('#rowvalida').css('color','#96c03d');
+        $('#rowvalida').css('background-color','#96c03d');
     }else{
         totalcontrolesheader[totalcontrolesheader.length]= "Generales";
         $('#rowvalida').css('background-color','#f5ee0b');
@@ -3675,7 +3675,7 @@ function validacontrolespantallGral(){
         $("#stOkTitstepDomicilio").show();
         $("#stOkTitModDomicilio").show();
         $('#rowvalida2').addClass('rowiniciostepactivosuccess2').removeClass('rowiniciostepactivo').removeClass('rowvalida2');
-        $('#rowvalida2').css('color','#96c03d');
+        $('#rowvalida2').css('background-color','#96c03d');
     }else{
 
         totalcontrolesheader[totalcontrolesheader.length]= "Domicilio";
@@ -3855,7 +3855,7 @@ function validacontrolespantallGral(){
         $("#stOkTitstepDatEco").show();
         $("#stOkTitModDatEco").show();
         $('#rowvalida3').addClass('rowiniciostepactivosuccess3').removeClass('rowiniciostepactivo').removeClass('rowvalida3');
-        $('#rowvalida3').css('color','#96c03d');
+        $('#rowvalida3').css('background-color','#96c03d');
     }else{
         totalcontrolesheader[totalcontrolesheader.length]= "Datos Económicos";
         //$('#rowvalida3').addClass('novalidorow').removeClass('rowiniciostepactivo');
@@ -3963,7 +3963,7 @@ function validacontrolespantallGral(){
             $("#stOkTitstepPerPol").show();
             $("#stOkTitModPerPol").show();
             $('#rowvalida4').addClass('rowiniciostepactivosuccess4').removeClass('rowiniciostepactivo').removeClass('rowvalida4');
-            $('#rowvalida4').css('color','#96c03d');
+            $('#rowvalida4').css('background-color','#96c03d');
         }else{
             totalcontrolesheader[totalcontrolesheader.length]= "Persona Política";
             //$('#rowvalida5').addClass('novalidorow').removeClass('rowiniciostepactivo');
@@ -4040,7 +4040,7 @@ function validacontrolespantallGral(){
         $("#stOkTitstepRefFam").show();
         $("#stOkTitModRefFam").show();
         $('#rowvalida5').addClass('rowiniciostepactivosuccess5').removeClass('rowiniciostepactivo').removeClass('rowvalida5');
-        $('#rowvalida5').css('color','#96c03d');
+        $('#rowvalida5').css('background-color','#96c03d');
     }else{
         totalcontrolesheader[totalcontrolesheader.length]= "Referencias Familiares";
         //$('#rowvalida5').addClass('novalidorow').removeClass('rowiniciostepactivo');
