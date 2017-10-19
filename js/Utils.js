@@ -4345,7 +4345,7 @@ function consultasolicitudes(idUsr,token,Nomusuario,tipouser,pwd,compniare){
 																		'<h4 class="contenidoficha">'+
 																			'<p>' + data.solicitudes[r].FECHA_ALTA +'<p>'+
 																			'<p></p>'+
-																			'<p>Comentario:'+ data.solicitudes[r].COMENTARIO +'<p>'+
+																			'<p>Comentario:'+ data.solicitudes[r].COMENTARIO ? data.solicitudes[r].COMENTARIO: "Ninguno" +'<p>'+
 																			'<p></p>'+
 																			'<div>'+
 																				'<div></div>'+
