@@ -4336,7 +4336,8 @@ function consultasolicitudes(idUsr,token,Nomusuario,tipouser,pwd,compniare){
 										$Apellidomaterno = xmlDoc.documentElement.getElementsByTagName("generales")[0].getElementsByTagName("Amaterno")[0].textContent;
 										$nomcompleto = $Pnombre + ' ' + $snombre + ' ' + $Apellidopaterno + ' ' + $Apellidomaterno;
 
-                                        var MSGcomen = data.solicitudes[r].COMENTARIO ? data.solicitudes[r].COMENTARIO:"Ninguno";
+                                        var MSGcomen = data.solicitudes[r].COMENTARIO ? data.solicitudes[r].COMENTARIO: 'Ninguno';
+
 
 
 										  $('#contenidogral').append('<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 isotope-item '+ tipoagrupa + '" style="position: absolute; left: 0px; top: 0px;">'+
