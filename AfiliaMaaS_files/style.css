@@ -517,7 +517,7 @@ input:checked + .slider:before {
 }
 .modal-header .close {
 	font-weight: 300;
-	color: #FFFFFF;
+	color: #0469d2;
 	text-shadow: none;
 	filter: alpha(opacity=100);
 	opacity: 1;
