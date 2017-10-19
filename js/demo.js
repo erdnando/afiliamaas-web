@@ -225,7 +225,7 @@ function processCompress(input) {
 												   
 												   $.ajax({ 			
 															type: 'POST',
-															url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetCP',
+															url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCP',
 															data: JSON.stringify({"CP":data.codigoPostal}),
 															contentType: "application/json; charset=utf-8",
 															dataType: "json",
@@ -249,7 +249,7 @@ function processCompress(input) {
 																	
 																	$.ajax({ 			
 																			type: 'POST',
-																			url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetMunicipio',
+																			url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetMunicipio',
 																			data: JSON.stringify({"idestado":idest}),
 																			contentType: "application/json; charset=utf-8",
 																			dataType: "json",

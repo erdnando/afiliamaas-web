@@ -53,7 +53,7 @@ function signToImage() {
 function fncompaniamovil(){
 	$.ajax({ 			
 				type: 'POST',
-				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo',
+				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo',
 				data: JSON.stringify({ 'tipocatalogo':'1'}),
 				contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -74,7 +74,7 @@ function fncargaNacionalidad(){
 	
 	$.ajax({ 			
 				type: 'POST',
-				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo',
+				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo',
 				data: JSON.stringify({ 'tipocatalogo':'9'}),
 				contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -106,7 +106,7 @@ function fncargatipoidentificacion(){
 	
 	$.ajax({ 			
 				type: 'POST',
-				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo',
+				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo',
 				data: JSON.stringify({ 'tipocatalogo':'2'}),
 				contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -127,7 +127,7 @@ function fncargatipoidentificacion(){
 function fncargaEdocivil(){
 	$.ajax({ 			
 				type: 'POST',
-				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo',
+				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo',
 				data: JSON.stringify({ 'tipocatalogo':'3'}),
 				contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -148,7 +148,7 @@ function fnestatusrecidencia(){
 	
 	$.ajax({ 			
 				type: 'POST',
-				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo',
+				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo',
 				data: JSON.stringify({ 'tipocatalogo':'4'}),
 				contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -169,7 +169,7 @@ function fntipocontrato(){
 	
 	$.ajax({ 			
 				type: 'POST',
-				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo',
+				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo',
 				data: JSON.stringify({ 'tipocatalogo':'7'}),
 				contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -192,7 +192,7 @@ function fncargaEdo(){//(combo, tipoedo, Delesol, colsoli){
 	
 	$.ajax({ 			
 				type: 'POST',
-				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetallEstado',
+				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetallEstado',
 				data: '{}',
 				contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -481,7 +481,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 	function buscaCPemp( inpCP){
 		$.ajax({ 			
 				type: 'POST',
-				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetCP',
+				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCP',
 				data: JSON.stringify({"CP":inpCP}),
 				contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -547,7 +547,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$("#lisDelMuniEmpresanew").append('<option value="0">Seleccione...</option>');
 		$.ajax({ 			
 				type: 'POST',
-				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetMunicipio',
+				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetMunicipio',
 				data: JSON.stringify({"idestado":inpMuni}),
 				contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -572,7 +572,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		
 		$.ajax({ 			
 				type: 'POST',
-				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetColonia',
+				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetColonia',
 				data: JSON.stringify({"idpoblacion":inppoblacion, "idestado":inpoblaestado}),
 				contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -595,7 +595,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 	function buscaCP( inpCP){
 		$.ajax({ 			
 				type: 'POST',
-				url: 'https://stefaninimx.com/AfiliaMaaS.ws/Service1.svc/GetCP',
+				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCP',
 				data: JSON.stringify({"CP":inpCP}),
 				contentType: "application/json; charset=utf-8",
                 dataType: "json",
