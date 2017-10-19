@@ -465,7 +465,7 @@ HEADER
     color: #ffffff;
 }
 #slcAceptadas:hover,#slcAceptadas:focus,#slcAceptadas:hover {
-	background-color: #41a85f;
+	background-color: rgba(13, 156, 2, 0.66);
     border-color: #55acee;
     color: #ffffff;
 }

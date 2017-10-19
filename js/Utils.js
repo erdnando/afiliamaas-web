@@ -3442,7 +3442,7 @@ function validacontrolespantallGral(){
         $('#rowvalida').addClass('rowiniciostepactivosuccess').removeClass('rowiniciostepactivo');
     }else{
         totalcontrolesheader[totalcontrolesheader.length]= "Generales";
-        //$('#rowvalida').addClass('novalidorow').removeClass('rowiniciostepactivo');
+        $('#rowvalida').css('background-color','#f5ee0b');
         $('#titulostep').css('color','#f5ee0b');
 
         $("#stOkTitstepgrales").attr('class', 'glyphicon glyphicon-warning-sign');
@@ -3673,6 +3673,7 @@ function validacontrolespantallGral(){
 
         totalcontrolesheader[totalcontrolesheader.length]= "Domicilio";
         //$('#rowvalida2').addClass('novalidorow').removeClass('rowiniciostepactivo');
+        $('#rowvalida2').css('background-color','#f5ee0b');
         $('#titulostep2').css('color','#f5ee0b');
         $("#stOkTitstepDomicilio").attr('class', 'glyphicon glyphicon-warning-sign');
 				$("#stOkTitstepDomicilio").show();
@@ -3850,6 +3851,7 @@ function validacontrolespantallGral(){
     }else{
         totalcontrolesheader[totalcontrolesheader.length]= "Datos Económicos";
         //$('#rowvalida3').addClass('novalidorow').removeClass('rowiniciostepactivo');
+        $('#rowvalida3').css('background-color','#f5ee0b');
         $('#titulostep3').css('color','#f5ee0b');
         $("#stOkTitstepDatEco").attr('class', 'glyphicon glyphicon-warning-sign');
 				$("#stOkTitstepDatEco").show();
@@ -3956,6 +3958,7 @@ function validacontrolespantallGral(){
         }else{
             totalcontrolesheader[totalcontrolesheader.length]= "Persona Política";
             //$('#rowvalida5').addClass('novalidorow').removeClass('rowiniciostepactivo');
+            $('#rowvalida4').css('background-color','#f5ee0b');
             $('#titulostep4').css('color','#f5ee0b');
             $("#stOkTitstepPerPol").attr('class', 'glyphicon glyphicon-warning-sign');
 					$("#stOkTitstepPerPol").show();
@@ -4031,6 +4034,7 @@ function validacontrolespantallGral(){
     }else{
         totalcontrolesheader[totalcontrolesheader.length]= "Referencias Familiares";
         //$('#rowvalida5').addClass('novalidorow').removeClass('rowiniciostepactivo');
+        $('#rowvalida5').css('background-color','#f5ee0b');
         $('#titulostep5').css('color','#f5ee0b');
         $("#stOkTitstepRefFam").attr('class', 'glyphicon glyphicon-warning-sign');
 				$("#stOkTitstepRefFam").show();
