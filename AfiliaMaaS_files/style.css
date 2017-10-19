@@ -300,10 +300,10 @@ blockquote {
 
 
 .btnokeys{
-	border-radius: 5px;
+border-radius: 5px;
     background-color: rgba(0, 0, 255, 0);
     border: 0px solid rgba(0, 255, 255, 0);
-    color: #2c82c9;;
+    color: #fff;
     font-size: x-large;
 }
 
@@ -311,7 +311,7 @@ blockquote {
 	border-radius: 5px;
     background-color: rgba(0, 0, 255, 0);
     border: 0px solid rgba(0, 255, 255, 0);
-    color: #0c5996!important;
+    color: #d0caca!important;
     font-size: x-large;
 }
 .btn {
@@ -427,7 +427,7 @@ blockquote {
 	height: 30px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
-	border-radius: 5px;
+	border-radius: 10px;
 	margin-bottom: 11px;
 	text-transform:uppercase;
 }
@@ -507,13 +507,14 @@ input:checked + .slider:before {
 	border-radius: 10px;
 }
 .modal-header {
-	/*background-color: #55acee;*/
+	    /* background-color: #55acee; */
     background-color: #ffffff;
-	color: #ffffff;
-	border-radius: 5px 5px 0px 0px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #55acee;
 }
 .modal-header h4 {
-	color: #0469d2;
+	color: #2196f3;
 }
 .modal-header .close {
 	font-weight: 300;

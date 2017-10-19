@@ -412,17 +412,17 @@ HEADER
 }
 /*headings*/
 .fs-title {
-	font-size: 15px;
-	text-transform: uppercase;
-	/*color: #2C3E50;*/
-	margin-bottom: 17px;
-	border: 7px solid #55acee;
-    border-radius: 5px;
-    background-color: #55acee;
-    color: white;
+    font-size: 15px;
+    text-transform: uppercase;
+    /* color: #2C3E50; */
+    margin-bottom: 17px;
+    border: 7px solid #fff;
+    border-radius: 20px;
+    background-color: #fff;
+    color: #2196f3;
     height: 30px;
-	margin-top: 8px;
-	    margin-right: 36px;
+    margin-top: 8px;
+    margin-right: 36px;
 }
 #slcTodas:hover,#slcTodas:focus,#slcTodas:hover {
 	background-color: #f3f9f9;

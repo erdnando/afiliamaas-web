@@ -2338,6 +2338,7 @@ label {
   text-align: left !important;
   margin-top: 6px;
   font-size: 13px;
+    color: #e0e2e4;
 }
 input[type="search"] {
   -webkit-box-sizing: border-box;
