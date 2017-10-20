@@ -198,7 +198,6 @@ function processCompress(input) {
 
                                                     $('#holder_result').attr("class", "overlay-containerOCR");
                                                     $('#inefrenteoverlay').css("visibility", "visible");
-
 													
 													$('#lnknombremodalINEFrente').text(result_imagefinmod.name);
 													$('#lnknombremodalINEFrente').attr("disabled", "disabled");
@@ -479,6 +478,12 @@ function processCompressanver(input) {
 											var d = new Date();
 											result_imagefinatras.name= "TEC_" + d.getTime() +".jpg";
 											result_imagefinmodatras.name = result_imagefinatras.name;
+
+
+                                                    $('#holder_resultanver').attr("class", "overlay-containerOCR");
+                                                    $('#inefrenteoverlay').css("visibility", "visible");
+
+
 											
 											$('#lnknombremodalINEAtras').text(result_imagefinmodatras.name);
 											$('#lnknombremodalINEAtras').attr("disabled", "disabled");
