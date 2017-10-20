@@ -138,7 +138,7 @@ function processCompress(input) {
 												  title: '<i style="font-style: normal;">Sessión cerrada por inactividad</i>',
 												  showCloseButton: true,
 												  confirmButtonText:
-													'Aceptar',
+													'Aceptar glyphicon glyphicon-log-out',
                                                 allowOutsideClick: false,
 												  
 												}).then(function () {
@@ -189,9 +189,9 @@ function processCompress(input) {
 												  showCloseButton: true,
                                                   showCancelButton:true,
 												  confirmButtonText:
-													'Correcto',
+													'Correcto <i class="glyphicon glyphicon-ok"></i>',
                                                   cancelButtonText:
-                                                    'Reintentar',
+                                                    'Reintentar <i class="glyphicon glyphicon-repeat"></i>',
 												  width: "auto",
                                                   allowOutsideClick: false,
 												}).then(function () {
@@ -433,7 +433,7 @@ function processCompressanver(input) {
 												  title: '<i style="font-style: normal;">Sessión cerrada por inactividad</i>',
 												  showCloseButton: true,
 												  confirmButtonText:
-													'Aceptar',
+													'Aceptar <i class="glyphicon glyphicon-log-out"></i>',
                                                 allowOutsideClick: false,
 
 												}).then(function () {
@@ -476,10 +476,10 @@ function processCompressanver(input) {
 											 "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%; border-collapse: separate;border-spacing:  7px;    height: 178px;'><tr><td align='left' valign='top' style='padding-right:2em;'>CIC:</td><td align='left' style='font-weight:bold'>"+ cicresult +"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Clave de elector:</td><td align='left' style='font-weight:bold'>"+cveelecto+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Fecha actualización:</td><td align='left' style='font-weight:bold'>"+fecactua+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Fecha de Vigencia:</td><td align='left' style='font-weight:bold; width: 100%;'>"+fecvigen+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Fecha de Registro:</td><td align='left' style='font-weight:bold'>"+fecreg+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Fecha de Consulta:</td><td align='left' style='font-weight:bold'>"+fecconsul+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Número de Emisión:</td><td align='left' style='font-weight:bold'>"+numemision+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em; width: 40%;'>Número de Identificación:</td><td align='left' style='font-weight:bold'>"+resocr+"</td><td></td></tr></table>",
 										showCloseButton: true,
                                        showCancelButton:true,
-										confirmButtonText:
-                                            'Correcto',
-                                          cancelButtonText:
-                                            'Reintentar',
+												  confirmButtonText:
+													'Correcto <i class="glyphicon glyphicon-ok"></i>',
+                                                  cancelButtonText:
+                                                    'Reintentar <i class="glyphicon glyphicon-repeat"></i>',
 											width: "455px",
                                        allowOutsideClick: false,
 										  
