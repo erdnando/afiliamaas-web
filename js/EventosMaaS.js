@@ -1078,13 +1078,11 @@ $(document).ready(function(){
 						  /*type: 'warning',*/
 						  showCloseButton: true,
 						  showCancelButton: true,
-						  confirmButtonColor: '#3085d6',
-						  cancelButtonColor: '#d33',
-						  confirmButtonText: 'Guardar solicitud!',
-						  cancelButtonText: 'Salir',
-						  //confirmButtonClass: 'btn btn-success',
-						  //cancelButtonClass: 'btn btn-danger',
-						  buttonsStyling: false
+						  confirmButtonText: 'Guardar solicitud <i class="glyphicon glyphicon-floppy-saved"></i>',
+						  cancelButtonText: 'Salir <i class="glyphicon glyphicon-floppy-remove"></i>',
+                        cancelButtonColor:"#b9a107",
+												  width: "auto",
+                                                  allowOutsideClick: false,
 						}).then(function () {
 							
 							

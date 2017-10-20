@@ -2625,6 +2625,32 @@ blockquote.nk - blockquote - style - 1 cite {
 	color:#efe93f;;
 }
 
+.btnfirmaaceptar{
+        top: 405px;
+    height: 25px;
+    background-color: rgb(48, 133, 214);
+    border: 0;
+    border-radius: 10px;
+    box-shadow: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.btnfirmalimpiar{
+        top: 405px;
+    height: 25px;
+    background-color: rgb(48, 133, 214);
+    border: 0;
+    border-radius: 10px;
+    box-shadow: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 400;
+}
+
 
 
 
