@@ -144,7 +144,16 @@ var idUsr =  $('#txtidUsrWS').val();
 
                                         }).then(function () {
 
-                                        location.reload();
+                                        //location.reload();
+
+
+                                        var nomCompleto =$("#pnompromo").text();
+
+
+
+                                        var cadena = Base64.encode($("#txttokenWS").val() + "|" + $("#txtidUsrWS").val() + "|" + $("#txtNomusuarioWS").val() + "|" +  $("#txtcompniareWS").val() + "|" + $("#txtpwdWS").val() + "|" + nomCompleto);
+
+                                        location.href=('AfiliaMaaS.html?exml2340=' + cadena);
 
                                              /* reseteavalores();
                                         $('#result_image')[0].src = "https://sminet.com.mx/afiliamaas-web/images/shade.jpg";

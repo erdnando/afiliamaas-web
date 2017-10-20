@@ -193,6 +193,8 @@ function processCompress(input) {
                                                   cancelButtonText:
                                                     'Reintentar <i class="glyphicon glyphicon-repeat"></i>',
                                                     cancelButtonColor:"#b9a107",
+                                                  confirmButtonClass: 'btn btn-success',
+                                                  cancelButtonClass: 'btn btn-danger',
 												  width: "auto",
                                                   allowOutsideClick: false,
 												}).then(function () {
