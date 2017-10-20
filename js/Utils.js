@@ -4250,6 +4250,7 @@ function consultasolicitudes(idUsr,token,Nomusuario,tipouser,pwd,compniare){
 													'<i class="glyphicon glyphicon-ok"></i>',
 
 												}).then(function () {
+                                                $("#cargandoafiliadiv").show();
 													  location.href=("Index.html");
 													});
 									//location.href=("Index.html");

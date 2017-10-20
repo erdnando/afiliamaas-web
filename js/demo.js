@@ -142,6 +142,7 @@ function processCompress(input) {
                                                 allowOutsideClick: false,
 												  
 												}).then(function () {
+                                                    $("#cargandoafiliadiv").show();
 													  location.href=("Index.html");
 													});
 											//location.href=("Index.html");
@@ -440,6 +441,7 @@ function processCompressanver(input) {
                                                 allowOutsideClick: false,
 
 												}).then(function () {
+                                                    $("#cargandoafiliadiv").show();
 													  location.href=("Index.html");
 													});
 											//location.href=("Index.html");
