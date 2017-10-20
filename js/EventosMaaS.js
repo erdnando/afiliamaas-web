@@ -1036,7 +1036,15 @@ $(document).ready(function(){
                             $('#ineATRASoverlay').css("visibility", "hidden");
 							$('#3b').modal('hide');
 							$('#2b').modal('show');*/
-                        location.reload();
+                        //location.reload();
+
+                        var nomCompleto =$("#pnompromo").text();
+
+
+
+							var cadena = Base64.encode($("#txttokenWS").val() + "|" + $("#txtidUsrWS").val() + "|" + $("#txtNomusuarioWS").val() + "|" +  $("#txtcompniareWS").val() + "|" + $("#txtpwdWS").val() + "|" + nomCompleto);
+
+							location.href=('AfiliaMaaS.html?exml2340=' + cadena);
 							
 						  
 						  
@@ -1108,7 +1116,18 @@ $(document).ready(function(){
 							$('#2b').modal('show');
                               $("#rowvalida").click();
 							  reseteavalores();*/
-                              location.reload();
+
+
+
+                              //location.reload();
+
+                              var nomCompleto =$("#pnompromo").text();
+
+
+
+							var cadena = Base64.encode($("#txttokenWS").val() + "|" + $("#txtidUsrWS").val() + "|" + $("#txtNomusuarioWS").val() + "|" +  $("#txtcompniareWS").val() + "|" + $("#txtpwdWS").val() + "|" + nomCompleto);
+
+							location.href=('AfiliaMaaS.html?exml2340=' + cadena);
 
 						  }
 						  
