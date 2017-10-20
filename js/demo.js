@@ -192,7 +192,7 @@ function processCompress(input) {
 													'Correcto <i class="glyphicon glyphicon-ok"></i>',
                                                   cancelButtonText:
                                                     'Reintentar <i class="glyphicon glyphicon-repeat"></i>',
-                                                    cancelButtonColor:"#b9a107",
+                                                    //cancelButtonColor:"#b9a107",
                                                   confirmButtonClass: 'btn btn-success',
                                                   cancelButtonClass: 'btn btn-danger',
 												  width: "auto",

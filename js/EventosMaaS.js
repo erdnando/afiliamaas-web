@@ -1023,7 +1023,7 @@ $(document).ready(function(){
 						  title: '¿Salir sin crear la solicitud?',
 						  /*type: 'warning',*/
 						  showCloseButton: true,
-						  confirmButtonColor: '#3085d6',
+						  //confirmButtonColor: '#3085d6',
 						  confirmButtonText: 'Aceptar <i class="glyphicon glyphicon-ok"></i>',
 						  
 						  allowOutsideClick: false,
@@ -1088,7 +1088,7 @@ $(document).ready(function(){
 						  showCancelButton: true,
 						  confirmButtonText: 'Guardar solicitud <i class="glyphicon glyphicon-floppy-saved"></i>',
 						  cancelButtonText: 'Salir <i class="glyphicon glyphicon-floppy-remove"></i>',
-                        cancelButtonColor:"#b9a107",
+                        //cancelButtonColor:"#b9a107",
 												  width: "auto",
                                                   allowOutsideClick: false,
 						}).then(function () {
