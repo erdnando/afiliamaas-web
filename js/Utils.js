@@ -2078,6 +2078,8 @@ function navegasliderheaderlibre(headlink, step){
 			
 			break;
 		case 2:
+            document.getElementById("btnsiguiente").tabIndex = "28";
+            document.getElementById("btnanterior").tabIndex = "29";
 			$('#rowvalida2').addClass('rowiniciostepactivo2').removeClass('rowvalida2').removeClass('rowiniciostepactivosuccess2');
 			$('#rowvalida3').addClass('rowvalida3').removeClass('rowiniciostepactivo3').removeClass('rowiniciostepactivosuccess3');
 			$('#rowvalida4').addClass('rowvalida4').removeClass('rowiniciostepactivo4').removeClass('rowiniciostepactivosuccess4');
@@ -2110,6 +2112,8 @@ function navegasliderheaderlibre(headlink, step){
 
 			break;
 		case 3:
+            document.getElementById("btnsiguiente").tabIndex = "47";
+                        document.getElementById("btnanterior").tabIndex = "48";
 			$('#rowvalida2').addClass('rowiniciostepactivo2').removeClass('rowvalida2').removeClass('rowiniciostepactivosuccess2');
 			$('#rowvalida3').addClass('rowiniciostepactivo3').removeClass('rowvalida3').removeClass('rowiniciostepactivosuccess3');
 			$('#rowvalida4').addClass('rowvalida4').removeClass('rowiniciostepactivo4').removeClass('rowiniciostepactivosuccess4');
@@ -2142,6 +2146,8 @@ function navegasliderheaderlibre(headlink, step){
             }
 			break;
 		case 4:
+            document.getElementById("btnsiguiente").tabIndex = "54";
+                        document.getElementById("btnanterior").tabIndex = "55";
 			$('#rowvalida2').addClass('rowiniciostepactivo2').removeClass('rowvalida2').removeClass('rowiniciostepactivosuccess2');
 			$('#rowvalida3').addClass('rowiniciostepactivo3').removeClass('rowvalida3').removeClass('rowiniciostepactivosuccess3');
 			$('#rowvalida4').addClass('rowiniciostepactivo4').removeClass('rowvalida4').removeClass('rowiniciostepactivosuccess4');
@@ -2174,6 +2180,8 @@ function navegasliderheaderlibre(headlink, step){
             }
 			break;
 		case 5:
+            document.getElementById("btnsiguiente").tabIndex = "71";
+                        document.getElementById("btnanterior").tabIndex = "72";
 			$('#rowvalida2').addClass('rowiniciostepactivo2').removeClass('rowvalida2').removeClass('rowiniciostepactivosuccess2');
 			$('#rowvalida3').addClass('rowiniciostepactivo3').removeClass('rowvalida3').removeClass('rowiniciostepactivosuccess3');
 			$('#rowvalida4').addClass('rowiniciostepactivo4').removeClass('rowvalida4').removeClass('rowiniciostepactivosuccess4');
