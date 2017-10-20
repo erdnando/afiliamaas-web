@@ -1384,14 +1384,14 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$("#txtOtrosIngresosnew").removeAttr("disabled");
 		$("#txtFuenteOtrosIngrenew").removeAttr("disabled");
 		$('#chksexosolicitante').removeAttr("disabled");
-		$('#sldsexosoli').css("background-color","#2196f3");
+		$('#sldsexosoli').css("background-color","#ffffff");
 		$('#optpersonapoliticonew').removeAttr("disabled");
-		$('#sldpersopoli').css("background-color","#2196f3");
+		$('#sldpersopoli').css("background-color","#ffffff");
 
         //$('#terminar').removeAttr("disabled");
 		
 		$('#optparenpoliticonew').removeAttr("disabled");
-		$('#sldparentescopoli').css("background-color","#2196f3");
+		$('#sldparentescopoli').css("background-color","#ffffff");
 
         document.getElementById("btnsiguiente").tabIndex = "13";
 		reseteavalores();

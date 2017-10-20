@@ -6444,7 +6444,7 @@ button.close {
 	top: 125%;
 	z-index: 2;
 	text-align: center;
-	color: #2c3f4c;
+	color: #ffffff;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	border-radius: 50%;
@@ -6472,7 +6472,7 @@ button.close {
 	top: 125%;
 	z-index: 2;
 	text-align: center;
-	color: #2c3f4c;
+	color: #ffffff;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	border-radius: 50%;
@@ -6481,11 +6481,11 @@ button.close {
 .rowiniciostepactivo2:before {
     position: absolute;
     content: '';
-    height: 5px;
+    height: 2px;
     background: #96c03d;
     margin: 0;
     width: 456%;
-    top: 44%;
+    top: 49%;
     right: 19px;
 }
 
@@ -6548,11 +6548,11 @@ button.close {
 .rowvalida2:before {
     position: absolute;
     content: '';
-    height: 5px;
+    height: 2px;
     background: #edeff0;
     margin: 0;
     width: 437%;
-    top: 44%;
+    top: 49%;
     right: 19px;
 }
 
@@ -6576,11 +6576,11 @@ button.close {
 .rowvalida3:before {
     position: absolute;
     content: '';
-    height: 5px;
+    height: 2px;
     background: #edeff0;
     margin: 0;
     width: 523%;
-    top: 44%;
+    top: 49%;
     right: 19px;
 }
 .rowvalida4 {
@@ -6603,11 +6603,11 @@ button.close {
 .rowvalida4:before {
     position: absolute;
     content: '';
-    height: 5px;
+    height: 2px;
     background: #edeff0;
     margin: 0;
     width: 692%;
-    top: 44%;
+    top: 49%;
     right: 20px;
 }
 .rowvalida5 {
@@ -6630,11 +6630,11 @@ button.close {
 .rowvalida5:before {
 	position: absolute;
     content: '';
-    height: 5px;
+    height: 2px;
     background: #edeff0;
     margin: 0;
     width: 709%;
-    top: 44%;
+    top: 49%;
     right: 19px;
 }
 
@@ -6658,11 +6658,11 @@ button.close {
 .rowvalida6:before {
     position: absolute;
     content: '';
-    height: 5px;
+    height: 2px;
     background: #edeff0;
     margin: 0;
     width: 763%;
-    top: 44%;
+    top: 49%;
     right: 17px;
 }
 
@@ -6677,7 +6677,7 @@ button.close {
 	top: 125%;
 	z-index: 2;
 	text-align: center;
-	color: #2c3f4c;
+	color: #ffffff;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	border-radius: 50%;
@@ -6686,11 +6686,11 @@ button.close {
 .rowiniciostepactivo3:before {
     position: absolute;
     content: '';
-    height: 5px;
+    height: 2px;
     background: #96c03d;
     margin: 0;
     width: 533%;
-    top: 44%;
+    top: 49%;
     right: 18px;
 }
 .rowiniciostepactivo4 {
@@ -6704,7 +6704,7 @@ button.close {
 	top: 125%;
 	z-index: 2;
 	text-align: center;
-	color: #2c3f4c;
+	color: #ffffff;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	border-radius: 50%;
@@ -6713,11 +6713,11 @@ button.close {
 .rowiniciostepactivo4:before {
     position: absolute;
     content: '';
-    height: 5px;
+    height: 2px;
     background: #96c03d;
     margin: 0;
     width: 708%;
-    top: 44%;
+    top: 49%;
     right: 18px;
 }
 
@@ -6732,7 +6732,7 @@ button.close {
 	top: 125%;
 	z-index: 2;
 	text-align: center;
-	color: #2c3f4c;
+	color: #ffffff;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	border-radius: 50%;
@@ -6741,11 +6741,11 @@ button.close {
 .rowiniciostepactivo5:before {
     position: absolute;
     content: '';
-    height: 5px;
+    height: 2px;
     background: #96c03d;
     margin: 0;
     width: 744%;
-    top: 39%;
+    top: 49%;
     right: 19px;
 }
 
@@ -6760,7 +6760,7 @@ button.close {
 	top: 125%;
 	z-index: 2;
 	text-align: center;
-	color: #2c3f4c;
+	color: #ffffff;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	border-radius: 50%;
@@ -6769,11 +6769,11 @@ button.close {
 .rowiniciostepactivo6:before {
     position: absolute;
     content: '';
-    height: 5px;
+    height: 2px;
     background: #96c03d;
     margin: 0;
     width: 768%;
-    top: 44%;
+    top: 49%;
     right: 17px;
 }
 
@@ -6833,11 +6833,11 @@ button.close {
 .rowiniciostepactivosuccess3:before {
     position: absolute;
     content: '';
-    height: 5px;
+    height: 2px;
     background: #96c03d;
     margin: 0;
     width: 597%;
-    top: 44%;
+    top: 49%;
     right: 18px;
 }
 
@@ -6860,11 +6860,11 @@ button.close {
 .rowiniciostepactivosuccess4:before {
     position: absolute;
     content: '';
-    height: 5px;
+    height: 2px;
     background: #96c03d;
     margin: 0;
     width: 760%;
-    top: 44%;
+    top: 49%;
     right: 18px;
 }
 
