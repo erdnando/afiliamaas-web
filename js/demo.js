@@ -196,8 +196,8 @@ function processCompress(input) {
 													result_imagefin.name= "TEC_" + d.getTime() +".jpg";
 													result_imagefinmod.name = result_imagefin.name;
 
-                                                    $('#holder_result').attr("class", "overlay-container");
-                                                    $('#inefrenteoverlay').attr("visibility", "visible;");
+                                                    $('#holder_result').attr("class", "overlay-containerOCR");
+                                                    $('#inefrenteoverlay').css("visibility", "visible;");
 
 													
 													$('#lnknombremodalINEFrente').text(result_imagefinmod.name);

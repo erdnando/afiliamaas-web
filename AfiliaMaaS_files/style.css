@@ -755,6 +755,13 @@ input:checked + .slider:before {
 	overflow: hidden;
 	height: 124px;
 }
+
+
+.overlay-containerOCR{
+	position: relative;
+	display: block;
+	height: 124px;
+}
 .overlay {
     position: absolute;
     top: 0;
