@@ -1024,7 +1024,7 @@ $(document).ready(function(){
 						  /*type: 'warning',*/
 						  showCloseButton: true,
 						  confirmButtonColor: '#3085d6',
-						  confirmButtonText: '<i class="glyphicon glyphicon-ok"></i>',
+						  confirmButtonText: 'Aceptar <i class="glyphicon glyphicon-ok"></i>',
 						  
 						  allowOutsideClick: false,
 						}).then(function () {
