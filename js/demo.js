@@ -138,7 +138,7 @@ function processCompress(input) {
 												  title: '<i style="font-style: normal;">Sessión cerrada por inactividad</i>',
 												  showCloseButton: true,
 												  confirmButtonText:
-													'Aceptar glyphicon glyphicon-log-out',
+													'Aceptar <i class="glyphicon glyphicon-log-out"></i>',
                                                 allowOutsideClick: false,
 												  
 												}).then(function () {
