@@ -121,33 +121,33 @@ $('.tsf-wizard-1').tsfWizard({
 						break;
 					case 2:
 						navegasliderheaderlibre($('#anumpasol2'), 2);
-                        document.getElementById("btnsiguiente").tabIndex = "26";
-                        document.getElementById("btnanterior").tabIndex = "27";
+                        document.getElementById("btnsiguiente").tabIndex = "28";
+                        document.getElementById("btnanterior").tabIndex = "29";
                         $('#txtCalleSolicitantenew').focus();
 
 						break;
 					case 3:
 						navegasliderheaderlibre($('#anumpasol3'), 3);
-                        document.getElementById("btnsiguiente").tabIndex = "42";
-                        document.getElementById("btnanterior").tabIndex = "43";
+                        document.getElementById("btnsiguiente").tabIndex = "47";
+                        document.getElementById("btnanterior").tabIndex = "48";
                         $('#txtNombreEmpresanew').focus();
 						break;
 					case 4:
 						navegasliderheaderlibre($('#anumpasol4'), 4);
-                        document.getElementById("btnsiguiente").tabIndex = "45";
-                        document.getElementById("btnanterior").tabIndex = "46";
+                        document.getElementById("btnsiguiente").tabIndex = "54";
+                        document.getElementById("btnanterior").tabIndex = "55";
                         $('#sldpersopoli').focus();
 						break;
 					case 5:
 						navegasliderheaderlibre($('#anumpasol5'), 5);
-                        document.getElementById("btnsiguiente").tabIndex = "57";
-                        document.getElementById("btnanterior").tabIndex = "58";
+                        document.getElementById("btnsiguiente").tabIndex = "71";
+                        document.getElementById("btnanterior").tabIndex = "72";
                         $('#txtNombreRef1new').focus();
 						break;
                     case 6:
 						navegasliderheaderlibre($('#anumpasol6'), 6);
                         //document.getElementById("btnfinalizar").tabIndex = "72";
-                        document.getElementById("btnanterior").tabIndex = "73";
+                        document.getElementById("btnanterior").tabIndex = "78";
                         if($('#recreasolicitudinput').val() == "NO")
                         {
                             $('#terminar').css("display", "");
