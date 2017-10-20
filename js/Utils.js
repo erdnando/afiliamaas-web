@@ -2528,6 +2528,8 @@ function validacontrolespantall(pantalla, kinkheader, e){
 		
 			break;
 		case '2':
+            document.getElementById("btnsiguiente").tabIndex = "28";
+            document.getElementById("btnanterior").tabIndex = "29";
 			var controles=['#txtCalleSolicitantenew','#txtNumExteriornew'];
 			var contlisterror=[];
 			var controlesCP=['#txtCpSolicitantenew'];
@@ -2778,6 +2780,9 @@ function validacontrolespantall(pantalla, kinkheader, e){
 			}
 			break;
 		case '3':
+
+            document.getElementById("btnsiguiente").tabIndex = "47";
+                        document.getElementById("btnanterior").tabIndex = "48";
 			var controles=['#txtNombreEmpresanew','#txtGironew', '#txtPuestonew','#txtCalleEmpresanew','#txtNumeroExteriorEmpresa','#txtCpEmpresanew'];
 			var contlisterror=[];
 			
@@ -2928,6 +2933,8 @@ function validacontrolespantall(pantalla, kinkheader, e){
 			}
 			break;
 		case '4':
+            document.getElementById("btnsiguiente").tabIndex = "54";
+                        document.getElementById("btnanterior").tabIndex = "55";
 		
 			var totalvalidar1 = 1;
 			var totalvalidar2 = 2;
@@ -3012,6 +3019,9 @@ function validacontrolespantall(pantalla, kinkheader, e){
 			//validar que es requerido
 			break;
 		case '5':
+
+            document.getElementById("btnsiguiente").tabIndex = "71";
+                        document.getElementById("btnanterior").tabIndex = "72";
 			var controles=['#txtNombreRef1new','#txtNombreRef2new', '#txtApellidoPaternoRef1new','#txtApellidoPaternoRef2new'];
 			var contlisterror=[]
 			
