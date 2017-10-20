@@ -490,12 +490,12 @@ HEADER
 }
 
 #slcEnviadas:hover,#slcEnviadas:focus,#slcEnviadas:hover {
-	background-color:#00c8c8;
+	background-color:#29aae1;
     border-color: #55acee;
     color: #ffffff;
 }
 .rowEnviadas {
-	background-color:#00c8c8;
+	background-color:#29aae1;
     border-color: #55acee;
     color: #ffffff;
     border-radius: 5px;
