@@ -536,7 +536,7 @@ HEADER
     color: #ffffff;
 }
 #slcRechazadas:hover,#slcRechazadas:focus,#slcRechazadas:hover {
-	background-color: #fac51c;
+	background-color: rgba(181, 73, 0, 0.63);
     border-color: #55acee;
     color: #ffffff;
 }
