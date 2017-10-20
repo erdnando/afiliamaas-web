@@ -779,7 +779,7 @@ input:checked + .slider:before {
     -ms-transition: all linear 0.2s;
     -o-transition: all linear 0.2s;
     transition: all linear 0.2s;
-    background: rgba(254, 254, 254, 0.67) url(../images/Panel/zoom.png) center no-repeat;
+    background: rgba(254, 254, 254, 0.86) url(../images/Panel/zoom.png) center no-repeat;
     border-radius: 10px;
 }
 
