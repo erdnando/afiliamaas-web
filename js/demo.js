@@ -481,7 +481,7 @@ function processCompressanver(input) {
 
 
                                                     $('#holder_resultanver').attr("class", "overlay-containerOCR");
-                                                    $('#inefrenteoverlay').css("visibility", "visible");
+                                                    $('#ineATRASoverlay').css("visibility", "visible");
 
 
 											
