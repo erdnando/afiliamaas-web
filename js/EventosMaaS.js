@@ -1028,14 +1028,15 @@ $(document).ready(function(){
 						  
 						  allowOutsideClick: false,
 						}).then(function () {
-							$('#result_image')[0].src = "https://sminet.com.mx/afiliamaas-web/images/shade.jpg";
+							/*$('#result_image')[0].src = "https://sminet.com.mx/afiliamaas-web/images/shade.jpg";
 							$('#result_imageanver')[0].src = "https://sminet.com.mx/afiliamaas-web/images/shade.jpg";
                             $('#holder_result').removeAttr("class", "overlay-containerOCR");
                             $('#inefrenteoverlay').css("visibility", "hidden");
                             $('#holder_resultanver').removeAttr("class", "overlay-containerOCR");
                             $('#ineATRASoverlay').css("visibility", "hidden");
 							$('#3b').modal('hide');
-							$('#2b').modal('show');
+							$('#2b').modal('show');*/
+                        location.reload();
 							
 						  
 						  
