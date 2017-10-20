@@ -1037,6 +1037,7 @@ $(document).ready(function(){
 							$('#3b').modal('hide');
 							$('#2b').modal('show');*/
                         //location.reload();
+                        $("#cargandoafiliadiv").show();
 
                         var nomCompleto =$("#pnompromo").text();
 
@@ -1120,6 +1121,7 @@ $(document).ready(function(){
 
 
                               //location.reload();
+                              $("#cargandoafiliadiv").show();
 
                               var nomCompleto =$("#pnompromo").text();
 
