@@ -4335,8 +4335,11 @@ function consultasolicitudes(idUsr,token,Nomusuario,tipouser,pwd,compniare){
 										$Apellidopaterno = xmlDoc.documentElement.getElementsByTagName("generales")[0].getElementsByTagName("Apaterno")[0].textContent;
 										$Apellidomaterno = xmlDoc.documentElement.getElementsByTagName("generales")[0].getElementsByTagName("Amaterno")[0].textContent;
 										$nomcompleto = $Pnombre + ' ' + $snombre + ' ' + $Apellidopaterno + ' ' + $Apellidomaterno;
+                                        $nomcompleto = $nomcompleto.replace("amp;aacute","á").replace("amp;eacute","é").replace("amp;íacute","í").replace("amp;oacute","ó").replace("amp;uacute","ú").replace("amp;Aacute","Á").replace("amp;Eacute","É").replace("amp;Iacute","Í").replace("amp;Oacute","Ó").replace("amp;Uacute","Ú");
 
                                         var MSGcomen = data.solicitudes[r].COMENTARIO ? data.solicitudes[r].COMENTARIO: 'Ninguno';
+
+                                        MSGcomen = MSGcomen.replace("amp;aacute","á").replace("amp;eacute","é").replace("amp;íacute","í").replace("amp;oacute","ó").replace("amp;uacute","ú").replace("amp;Aacute","Á").replace("amp;Eacute","É").replace("amp;Iacute","Í").replace("amp;Oacute","Ó").replace("amp;Uacute","Ú");
 
 
 
