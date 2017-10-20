@@ -343,9 +343,9 @@ HEADER
 	padding: 5px 20px; 
 	border-radius: 10px; 
 	width: 100%; 
-	border-top-color: rgb(255, 255, 255); 
+	/*border-top-color: rgb(255, 255, 255);
 	border-top-width: 1px; 
-	border-top-style: solid; 
+	border-top-style: solid; */
 	-moz-border-radius: 10px; 
 	-webkit-border-radius: 10px;
 }
