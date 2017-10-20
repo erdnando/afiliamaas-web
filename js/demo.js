@@ -198,6 +198,7 @@ function processCompress(input) {
 
                                                     $('#holder_result').attr("class", "overlay-containerOCR");
                                                     $('#inefrenteoverlay').css("visibility", "visible");
+
 													
 													$('#lnknombremodalINEFrente').text(result_imagefinmod.name);
 													$('#lnknombremodalINEFrente').attr("disabled", "disabled");

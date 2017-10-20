@@ -1030,6 +1030,10 @@ $(document).ready(function(){
 						}).then(function () {
 							$('#result_image')[0].src = "https://sminet.com.mx/afiliamaas-web/images/shade.jpg";
 							$('#result_imageanver')[0].src = "https://sminet.com.mx/afiliamaas-web/images/shade.jpg";
+                            $('#holder_result').removeAttr("class", "overlay-containerOCR");
+                            $('#inefrenteoverlay').css("visibility", "hidden");
+                            $('#holder_resultanver').removeAttr("class", "overlay-containerOCR");
+                            $('#ineATRASoverlay').css("visibility", "hidden");
 							$('#3b').modal('hide');
 							$('#2b').modal('show');
 							
@@ -1089,8 +1093,12 @@ $(document).ready(function(){
 						  // dismiss can be 'cancel', 'overlay',
 						  // 'close', and 'timer'
 						  if (dismiss === 'cancel') {
-							  $('#result_image')[0].src = "https://sminet.com.mx/afiliamaas-web/images/shade.jpg"
+							  /*$('#result_image')[0].src = "https://sminet.com.mx/afiliamaas-web/images/shade.jpg"
 							$('#result_imageanver')[0].src = "https://sminet.com.mx/afiliamaas-web/images/shade.jpg"
+                              $('#holder_result').removeAttr("class", "overlay-containerOCR");
+                            $('#inefrenteoverlay').css("visibility", "hidden");
+                            $('#holder_resultanver').removeAttr("class", "overlay-containerOCR");
+                            $('#ineATRASoverlay').css("visibility", "hidden");
 							$('#DatGrales').modal('hide');
                               for(var x=1;x<7;x++)
                                 {
@@ -1100,22 +1108,15 @@ $(document).ready(function(){
 							$('#3b').modal('hide');
 							$('#2b').modal('show');
                               $("#rowvalida").click();
-							  reseteavalores();
-							/*swal(
-							  'Cancelled',
-							  'Your imaginary file is safe :)',
-							  'error'
-							)*/
+							  reseteavalores();*/
+                              location.reload();
+
 						  }
 						  
 						  if (dismiss === 'close') {
 							  
 							 
-							/*swal(
-							  'Cancelled',
-							  'Your imaginary file is safe :)',
-							  'error'
-							)*/
+
 						  }
 						})
 				}
