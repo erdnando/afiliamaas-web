@@ -192,6 +192,7 @@ function processCompress(input) {
 													'Correcto <i class="glyphicon glyphicon-ok"></i>',
                                                   cancelButtonText:
                                                     'Reintentar <i class="glyphicon glyphicon-repeat"></i>',
+                                                    cancelButtonColor:"#b9a107",
 												  width: "auto",
                                                   allowOutsideClick: false,
 												}).then(function () {
@@ -480,6 +481,7 @@ function processCompressanver(input) {
 													'Correcto <i class="glyphicon glyphicon-ok"></i>',
                                                   cancelButtonText:
                                                     'Reintentar <i class="glyphicon glyphicon-repeat"></i>',
+                                       cancelButtonColor:"#b9a107",
 											width: "455px",
                                        allowOutsideClick: false,
 										  
