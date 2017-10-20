@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	
-		var cadenacif = Base64.decode(getParameterByName('exml2340'));
+		/*var cadenacif = Base64.decode(getParameterByName('exml2340'));
 		var cadsincif = [];
 		cadsincif = cadenacif.split('|');
 		
@@ -9,7 +9,7 @@ $(document).ready(function(){
 		$("#txtNomusuarioWS").val(cadsincif[2].toString());//.val(getParameterByName ("exml2345"));
 		$("#txtpwdWS").val(cadsincif[4].toString());//.val(getParameterByName("exml2347"));
 		$("#txtcompniareWS").val(cadsincif[3].toString());//.val(getParameterByName("exml2346"));
-		$("#pnompromo").text(cadsincif[5].toString());//getParameterByName("exml2348"));
+		$("#pnompromo").text(cadsincif[5].toString());//getParameterByName("exml2348"));*/
 		
 		
 		
@@ -259,6 +259,13 @@ $('.tsf-wizard-1').tsfWizard({
 			var tipouser= "4";
 			var pwd = cadsincif1[4].toString();//getParameterByName("exml2347");
 			var compniare=cadsincif1[3].toString();//getParameterByName("exml2346");
+
+            $('#txtidUsrWS').val(cadsincif[1].toString());//.val(getParameterByName('exml2344'));
+            $("#txttokenWS").val(cadsincif[0].toString());//.val(getParameterByName('exml2342'));
+            $("#txtNomusuarioWS").val(cadsincif[2].toString());//.val(getParameterByName ("exml2345"));
+            $("#txtpwdWS").val(cadsincif[4].toString());//.val(getParameterByName("exml2347"));
+            $("#txtcompniareWS").val(cadsincif[3].toString());//.val(getParameterByName("exml2346"));
+            $("#pnompromo").text(cadsincif[5].toString());//getParameterByName("exml2348"));
 
 				if(Nomusuario != "ERRO" && token !== "ERRO" && compniare != "ERRO")
 				{

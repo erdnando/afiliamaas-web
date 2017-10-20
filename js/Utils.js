@@ -738,16 +738,16 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 				success: function(data){
 						console.log('Imagen IF');
 						console.log(data);
-						DOC_IF64 = data[0].DOC_IF64;
-						DOC_C164 = data[0].DOC_C164;
-						DOC_C264 = data[0].DOC_C264;
-					    DOC_IA64 = data[0].DOC_IA64;
-					    E164 = data[0].E164;
-					    E264 = data[0].E264;
-					    E364 = data[0].E364;
-					    E464 = data[0].E464;
-					    E564 = data[0].E564;
-					    F164 = data[0].F164;
+						DOC_IF64 = data[0].DOC_IF64.replace('stefaninimx.com','sminet.com.mx');
+						DOC_C164 = data[0].DOC_C164.replace('stefaninimx.com','sminet.com.mx');
+						DOC_C264 = data[0].DOC_C264.replace('stefaninimx.com','sminet.com.mx');
+					    DOC_IA64 = data[0].DOC_IA64.replace('stefaninimx.com','sminet.com.mx');
+					    E164 = data[0].E164.replace('stefaninimx.com','sminet.com.mx');
+					    E264 = data[0].E264.replace('stefaninimx.com','sminet.com.mx');
+					    E364 = data[0].E364.replace('stefaninimx.com','sminet.com.mx');
+					    E464 = data[0].E464.replace('stefaninimx.com','sminet.com.mx');
+					    E564 = data[0].E564.replace('stefaninimx.com','sminet.com.mx');
+					    F164 = data[0].F164.replace('stefaninimx.com','sminet.com.mx');
 						$("#txttokenWS").val(data[0].Token);
 						muestramodalSolirecrea(NoIDSol, DOC_IF64, DOC_IA64, F164, DOC_C164, DOC_C264, E164, E264, E36, E464, E564 )					
 				},
