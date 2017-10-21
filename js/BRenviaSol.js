@@ -146,6 +146,8 @@ var idUsr =  $('#txtidUsrWS').val();
 
                                         //location.reload();
 
+                                        $("#cargandoafiliadiv").show();
+
 
                                         var nomCompleto =$("#pnompromo").text();
 
