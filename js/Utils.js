@@ -4285,135 +4285,145 @@ function consultasolicitudes(idUsr,token,Nomusuario,tipouser,pwd,compniare){
 								{
 									$("#numerosolspan").text(data.solicitudes.length);
 
-									for(var r=0; r < data.solicitudes.length; r++){
-										//console.log(data.solicitudes[r].ID_SOLICITUD);
-										//console.log(data.solicitudes[r].ID_SOLICITUD);
+                                    if(data.solicitudes.length > 0){
+
+                                        for(var r=0; r < data.solicitudes.length; r++){
+                                            //console.log(data.solicitudes[r].ID_SOLICITUD);
+                                            //console.log(data.solicitudes[r].ID_SOLICITUD);
 
 
-										var tipoagrupa;
-										var tiporow;
-										var topoproy;
-										var icono;
-										var fstitulo;
-										switch(data.solicitudes[r].ESTATUS) {
-											case '1':
-												tipoagrupa = 'Nuevas';
-												tiporow = 'rowNuevas';
-												topoproy = data.solicitudes[r].ID_SOLICITUD;
-												icono = 'glyphicon glyphicon-file';
-												fstitulo ='fs-titleNuevas';
-												break;
-											case '2':
-												tipoagrupa = 'Aceptadas';
-												tiporow = 'rowAceptadas';
-												topoproy = data.solicitudes[r].ID_SOLICITUD;
-												icono = 'glyphicon glyphicon-ok';
-												fstitulo ='fs-titleAceptadas';
-												break;
-											case '3':
-												tipoagrupa = 'Rechazadas';
-												tiporow = 'rowRechazadas';
-												topoproy = data.solicitudes[r].ID_SOLICITUD;
-												icono = 'glyphicon glyphicon-ban-circle';
-												fstitulo ='fs-titleRechazadas';
-												break;
-											case '4':
-												tipoagrupa = 'Canceladas';
-												tiporow = 'rowCanceladas';
-												topoproy = data.solicitudes[r].ID_SOLICITUD;
-												icono = 'glyphicon glyphicon-remove';
-												fstitulo ='fs-titleCanceladas';
-												break;
-											case '5':
-												tipoagrupa = 'Enviadas';
-												tiporow = 'rowEnviadas';
-												topoproy = data.solicitudes[r].ID_SOLICITUD;
-												icono = 'glyphicon glyphicon-send';
-												fstitulo ='fs-titleEnviadas';
-												break;
-											default:
-												break;
-										}
+                                            var tipoagrupa;
+                                            var tiporow;
+                                            var topoproy;
+                                            var icono;
+                                            var fstitulo;
+                                            switch(data.solicitudes[r].ESTATUS) {
+                                                case '1':
+                                                    tipoagrupa = 'Nuevas';
+                                                    tiporow = 'rowNuevas';
+                                                    topoproy = data.solicitudes[r].ID_SOLICITUD;
+                                                    icono = 'glyphicon glyphicon-file';
+                                                    fstitulo ='fs-titleNuevas';
+                                                    break;
+                                                case '2':
+                                                    tipoagrupa = 'Aceptadas';
+                                                    tiporow = 'rowAceptadas';
+                                                    topoproy = data.solicitudes[r].ID_SOLICITUD;
+                                                    icono = 'glyphicon glyphicon-ok';
+                                                    fstitulo ='fs-titleAceptadas';
+                                                    break;
+                                                case '3':
+                                                    tipoagrupa = 'Rechazadas';
+                                                    tiporow = 'rowRechazadas';
+                                                    topoproy = data.solicitudes[r].ID_SOLICITUD;
+                                                    icono = 'glyphicon glyphicon-ban-circle';
+                                                    fstitulo ='fs-titleRechazadas';
+                                                    break;
+                                                case '4':
+                                                    tipoagrupa = 'Canceladas';
+                                                    tiporow = 'rowCanceladas';
+                                                    topoproy = data.solicitudes[r].ID_SOLICITUD;
+                                                    icono = 'glyphicon glyphicon-remove';
+                                                    fstitulo ='fs-titleCanceladas';
+                                                    break;
+                                                case '5':
+                                                    tipoagrupa = 'Enviadas';
+                                                    tiporow = 'rowEnviadas';
+                                                    topoproy = data.solicitudes[r].ID_SOLICITUD;
+                                                    icono = 'glyphicon glyphicon-send';
+                                                    fstitulo ='fs-titleEnviadas';
+                                                    break;
+                                                default:
+                                                    break;
+                                            }
 
-										tipoagrupa +'|' + tiporow +'|' +  topoproy  +'|' + icono +'|' + fstitulo
-
-
-
-										/*var DOC_IF64 = data.solicitudes[r].DOC_IF64;
-										var DOC_IA64 = data.solicitudes[r].DOC_IA64;
-										var F164 = data.solicitudes[r].F164;
-										var DOC_C164 = data.solicitudes[r].DOC_C164;
-										var DOC_C264 = data.solicitudes[r].DOC_C264;
-										var E164 = data.solicitudes[r].E164;
-										var E264 = data.solicitudes[r].E264;
-										var E364 = data.solicitudes[r].E364;
-										var E464 = data.solicitudes[r].E464;
-										var E564 = data.solicitudes[r].E564;
+                                            tipoagrupa +'|' + tiporow +'|' +  topoproy  +'|' + icono +'|' + fstitulo
 
 
 
-
-
-										DOC_IF64 = "data:image/jpeg;base64," + DOC_IF64;
-										DOC_IA64 = "data:image/jpeg;base64," + DOC_IA64;
-										F164 = "data:image/png;base64,"+F164;
-										DOC_C164 = "data:image/jpeg;base64," + DOC_C164
-										DOC_C264 = "data:image/jpeg;base64," + DOC_C264
-										E164 = "data:image/jpeg;base64," + E164
-										E264 = "data:image/jpeg;base64," + E264
-										E364 = "data:image/jpeg;base64," + E364
-										E464 = "data:image/jpeg;base64," + E464
-										E564 = "data:image/jpeg;base64," + E564 */
+                                            /*var DOC_IF64 = data.solicitudes[r].DOC_IF64;
+                                            var DOC_IA64 = data.solicitudes[r].DOC_IA64;
+                                            var F164 = data.solicitudes[r].F164;
+                                            var DOC_C164 = data.solicitudes[r].DOC_C164;
+                                            var DOC_C264 = data.solicitudes[r].DOC_C264;
+                                            var E164 = data.solicitudes[r].E164;
+                                            var E264 = data.solicitudes[r].E264;
+                                            var E364 = data.solicitudes[r].E364;
+                                            var E464 = data.solicitudes[r].E464;
+                                            var E564 = data.solicitudes[r].E564;
 
 
 
 
 
-										//var resulgral = tipoagrupa +'|' + tiporow +'|' +  topoproy  +'|' + icono +'|' + fstitulo +'|' + DOC_IF64 +'|' + DOC_IA64 +'|' + F164 +'|' + DOC_C164 +'|' + DOC_C264 +'|' + E164 +'|' + E264 +'|' + E364 +'|' + E464 +'|' + E564 +'|' + data.solicitudes[r].SOLICITUD_XML.toString();
-										var resulgral = tipoagrupa +'|' + tiporow +'|' +  topoproy  + '|' + icono +'|' + fstitulo  + '|' + idUsr + '|' + token + '|' + data.solicitudes[r].SOLICITUD_XML.toString();
-										var xml = data.solicitudes[r].SOLICITUD_XML.toString(),
-										xmlDoc = $.parseXML( xml ),
-										//generales
-										$Pnombre = xmlDoc.documentElement.getElementsByTagName("generales")[0].getElementsByTagName("Pmrnombre")[0].textContent;
-										$snombre = xmlDoc.documentElement.getElementsByTagName("generales")[0].getElementsByTagName("Sdonombre")[0].textContent;
-										$Apellidopaterno = xmlDoc.documentElement.getElementsByTagName("generales")[0].getElementsByTagName("Apaterno")[0].textContent;
-										$Apellidomaterno = xmlDoc.documentElement.getElementsByTagName("generales")[0].getElementsByTagName("Amaterno")[0].textContent;
-										$nomcompleto = $Pnombre + ' ' + $snombre + ' ' + $Apellidopaterno + ' ' + $Apellidomaterno;
-                                        $nomcompleto = $nomcompleto.replace("amp;aacute","á").replace("amp;eacute","é").replace("amp;íacute","í").replace("amp;oacute","ó").replace("amp;uacute","ú").replace("amp;Aacute","Á").replace("amp;Eacute","É").replace("amp;Iacute","Í").replace("amp;Oacute","Ó").replace("amp;Uacute","Ú");
-
-                                        var MSGcomen = data.solicitudes[r].COMENTARIO ? data.solicitudes[r].COMENTARIO: 'Ninguno';
-
-                                        MSGcomen = MSGcomen.replace("amp;aacute","á").replace("amp;eacute","é").replace("amp;íacute","í").replace("amp;oacute","ó").replace("amp;uacute","ú").replace("amp;Aacute","Á").replace("amp;Eacute","É").replace("amp;Iacute","Í").replace("amp;Oacute","Ó").replace("amp;Uacute","Ú");
+                                            DOC_IF64 = "data:image/jpeg;base64," + DOC_IF64;
+                                            DOC_IA64 = "data:image/jpeg;base64," + DOC_IA64;
+                                            F164 = "data:image/png;base64,"+F164;
+                                            DOC_C164 = "data:image/jpeg;base64," + DOC_C164
+                                            DOC_C264 = "data:image/jpeg;base64," + DOC_C264
+                                            E164 = "data:image/jpeg;base64," + E164
+                                            E264 = "data:image/jpeg;base64," + E264
+                                            E364 = "data:image/jpeg;base64," + E364
+                                            E464 = "data:image/jpeg;base64," + E464
+                                            E564 = "data:image/jpeg;base64," + E564 */
 
 
 
-										  $('#contenidogral').append('<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 isotope-item '+ tipoagrupa + '" style="position: absolute; left: 0px; top: 0px;">'+
-																'<div class="image-box '+ tiporow +'">'+
-																	'<div class="overlay-container">'+
-																		'<h4 class="modal-title" id="project-1-label" style=" background-color: white;text-align: -webkit-center;color: #2c82c9;border-radius: 5px;">ID: ' + topoproy +' <i class="' + icono + '"></i></h4>'+
-																		'<h4 class="contenidoficha">' + $nomcompleto + '<h4>'+
-																		'<h4 class="contenidoficha">'+
-																			'<p>' + data.solicitudes[r].FECHA_ALTA +'<p>'+
-																			'<p></p>'+
-																			'<p>Comentario:'+ MSGcomen +'<p>'+
-																			'<p></p>'+
-																			'<div>'+
-																				'<div></div>'+
-																			'</div>'+
-																		'</h4>'+
-																		"<input type='hidden' id='ResulConsulSolicitud" + r + "' name='ResulConsulSolicitud" + r + "' value='" + resulgral + "'/>"+
-																		'<a class="overlay" onclick="Generadatos(ResulConsulSolicitud' + r + ')">'+
-																			'<span>' + topoproy +'</span>'+
-																		'</a>'+
-																	'</div>'+
-																'</div>'+
-															'</div>'
-																);
-									}
-									$('#contenidogral').attr('class',"isotope-container row grid-space-20");
 
-									/*document.write('<script type="text/javascript" src="./js/isotope.pkgd.js"></script>');
-									document.write('<script type="text/javascript" src="./js/isotope.pkgd.min.js"></script>');*/
+
+                                            //var resulgral = tipoagrupa +'|' + tiporow +'|' +  topoproy  +'|' + icono +'|' + fstitulo +'|' + DOC_IF64 +'|' + DOC_IA64 +'|' + F164 +'|' + DOC_C164 +'|' + DOC_C264 +'|' + E164 +'|' + E264 +'|' + E364 +'|' + E464 +'|' + E564 +'|' + data.solicitudes[r].SOLICITUD_XML.toString();
+                                            var resulgral = tipoagrupa +'|' + tiporow +'|' +  topoproy  + '|' + icono +'|' + fstitulo  + '|' + idUsr + '|' + token + '|' + data.solicitudes[r].SOLICITUD_XML.toString();
+                                            var xml = data.solicitudes[r].SOLICITUD_XML.toString(),
+                                            xmlDoc = $.parseXML( xml ),
+                                            //generales
+                                            $Pnombre = xmlDoc.documentElement.getElementsByTagName("generales")[0].getElementsByTagName("Pmrnombre")[0].textContent;
+                                            $snombre = xmlDoc.documentElement.getElementsByTagName("generales")[0].getElementsByTagName("Sdonombre")[0].textContent;
+                                            $Apellidopaterno = xmlDoc.documentElement.getElementsByTagName("generales")[0].getElementsByTagName("Apaterno")[0].textContent;
+                                            $Apellidomaterno = xmlDoc.documentElement.getElementsByTagName("generales")[0].getElementsByTagName("Amaterno")[0].textContent;
+                                            $nomcompleto = $Pnombre + ' ' + $snombre + ' ' + $Apellidopaterno + ' ' + $Apellidomaterno;
+                                            $nomcompleto = $nomcompleto.replace("amp;aacute","á").replace("amp;eacute","é").replace("amp;íacute","í").replace("amp;oacute","ó").replace("amp;uacute","ú").replace("amp;Aacute","Á").replace("amp;Eacute","É").replace("amp;Iacute","Í").replace("amp;Oacute","Ó").replace("amp;Uacute","Ú");
+
+                                            var MSGcomen = data.solicitudes[r].COMENTARIO ? data.solicitudes[r].COMENTARIO: 'Ninguno';
+
+                                            MSGcomen = MSGcomen.replace("amp;aacute","á").replace("amp;eacute","é").replace("amp;íacute","í").replace("amp;oacute","ó").replace("amp;uacute","ú").replace("amp;Aacute","Á").replace("amp;Eacute","É").replace("amp;Iacute","Í").replace("amp;Oacute","Ó").replace("amp;Uacute","Ú");
+
+
+
+                                              $('#contenidogral').append('<div class="col-xs-6 col-sm-6 col-md-4 col-lg-3 isotope-item '+ tipoagrupa + '" style="position: absolute; left: 0px; top: 0px;">'+
+                                                                    '<div class="image-box '+ tiporow +'">'+
+                                                                        '<div class="overlay-container">'+
+                                                                            '<h4 class="modal-title" id="project-1-label" style=" background-color: white;text-align: -webkit-center;color: #2c82c9;border-radius: 5px;">ID: ' + topoproy +' <i class="' + icono + '"></i></h4>'+
+                                                                            '<h4 class="contenidoficha">' + $nomcompleto + '<h4>'+
+                                                                            '<h4 class="contenidoficha">'+
+                                                                                '<p>' + data.solicitudes[r].FECHA_ALTA +'<p>'+
+                                                                                '<p></p>'+
+                                                                                '<p>Comentario:'+ MSGcomen +'<p>'+
+                                                                                '<p></p>'+
+                                                                                '<div>'+
+                                                                                    '<div></div>'+
+                                                                                '</div>'+
+                                                                            '</h4>'+
+                                                                            "<input type='hidden' id='ResulConsulSolicitud" + r + "' name='ResulConsulSolicitud" + r + "' value='" + resulgral + "'/>"+
+                                                                            '<a class="overlay" onclick="Generadatos(ResulConsulSolicitud' + r + ')">'+
+                                                                                '<span>' + topoproy +'</span>'+
+                                                                            '</a>'+
+                                                                        '</div>'+
+                                                                    '</div>'+
+                                                                '</div>'
+                                                                    );
+                                        }
+                                        $('#contenidogral').attr('class',"isotope-container row grid-space-20");
+
+                                        /*document.write('<script type="text/javascript" src="./js/isotope.pkgd.js"></script>');
+                                        document.write('<script type="text/javascript" src="./js/isotope.pkgd.min.js"></script>');*/
+
+
+                                    }else{
+
+                                        $("#lblsinsolicitudes").show();
+
+
+                                    }
 
 
 
