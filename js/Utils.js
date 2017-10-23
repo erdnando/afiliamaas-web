@@ -540,6 +540,10 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 	}
 	
 	function buscaMunicipioemp(inpMuni){
+
+        setTimeout(function(){
+                              $('#lisColoniaEmpresanew').empty();
+                            }, 50);
 		$('#lisColoniaEmpresanew').empty();
 		$("#lisColoniaEmpresanew").append('<option value="0">Seleccione...</option>');
 		$('#txtCpEmpresanew').val("");

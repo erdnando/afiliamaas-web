@@ -343,6 +343,8 @@ function processCompress(input) {
         return false;
     }else{
 		console.log('nobody to process...');
+        $('#cargandoafiliadiv').hide();
+
 	}
 }
 
@@ -540,6 +542,7 @@ function processCompressanver(input) {
         return false;
     }else{
 		console.log('nobody to process...');
+        $('#cargandoafiliadiv').hide();
 	}
 }
 
