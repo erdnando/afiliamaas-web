@@ -172,7 +172,10 @@ $(document).ready(function(){
 			//validaricontxt($(this));
               validariconspinereditjsblur(this);
 
-		  }
+		  },
+		  blur: function() {
+			validariconspinereditjsblur(this);
+		  },
 		 
 		});
 		
