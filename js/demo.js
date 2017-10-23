@@ -724,7 +724,10 @@ function processCompressextra2(input) {
 							result_imagefinmodatras.src = result_image.src;
 							$('#lnknombremodal2').text(result_imagefinatras.name);
 							$('#titulomodalfin2').text(result_imagefinatras.name);
-							$('#Imagesextras3').show()
+							$('#linkmodalopenextra2').attr("class", "overlay");
+							$('#lblextra2').text("Modificar");
+                            $('#Imagesextras3').show()
+
 						   }
 						
 						var duration = new Date().getTime() - time_start;
@@ -812,9 +815,12 @@ function processCompressextra3(input) {
 						    //console.log(this.src);
 						    result_imagefinatras.src = result_image.src;
 							result_imagefinmodatras.src = result_image.src;
-							$('#lnknombremodal3').text(result_imagefinatras.name);
+
+                            $('#lnknombremodal3').text(result_imagefinatras.name);
 							$('#titulomodalfin3').text(result_imagefinatras.name);
-							$('#Imagesextras4').show()
+							$('#linkmodalopenextra3').attr("class", "overlay");
+							$('#lblextra3').text("Modificar");
+                            $('#Imagesextras4').show()
 						   }
 						
 						var duration = new Date().getTime() - time_start;
@@ -905,7 +911,9 @@ function processCompressextra4(input) {
 							result_imagefinmodatras.src = result_image.src;
 							$('#lnknombremodal4').text(result_imagefinatras.name);
 							$('#titulomodalfin4').text(result_imagefinatras.name);
-							$('#Imagesextras5').show()
+							$('#linkmodalopenextra4').attr("class", "overlay");
+							$('#lblextra4').text("Modificar");
+                            $('#Imagesextras5').show()
 						   }
 						
 						var duration = new Date().getTime() - time_start;
@@ -996,6 +1004,9 @@ function processCompressextra5(input) {
 							result_imagefinmodatras.src = result_image.src;
 							$('#lnknombremodal5').text(result_imagefinatras.name);
 							$('#titulomodalfin5').text(result_imagefinatras.name);
+							$('#linkmodalopenextra5').attr("class", "overlay");
+							$('#lblextra5').text("Modificar");
+
 							
 						   }
 						
