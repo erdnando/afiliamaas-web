@@ -170,7 +170,7 @@ $(document).ready(function(){
 				e.preventDefault();
 			}
 			//validaricontxt($(this));
-              validariconspinereditjs($(this));
+              validariconspinereditjs(this);
 
 		  }
 		 
