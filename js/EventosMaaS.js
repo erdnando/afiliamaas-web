@@ -687,7 +687,7 @@ $(document).ready(function(){
 				clearTimeout(demoTimeout4);
                $("#lblreferenciassolicitante").css('display', 'inline');
 				$('#lblreferenciassolicitante').trigger('startRumble');
-               $("#lblreferenciassolicitante").css('color', 'red');
+               $("#lblreferenciassolicitante").css('color', 'rgba(206, 206, 4, 0.86)');
 				demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
 
                $('#txtNombreRef1new').focus();
@@ -761,7 +761,7 @@ $(document).ready(function(){
 				clearTimeout(demoTimeout4);
                $("#lblreferenciassolicitante").css('display', 'inline');
 				$('#lblreferenciassolicitante').trigger('startRumble');
-               $("#lblreferenciassolicitante").css('color', 'red');
+               $("#lblreferenciassolicitante").css('color', 'rgba(206, 206, 4, 0.86)');
 				demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
 
 		 
@@ -798,7 +798,7 @@ $(document).ready(function(){
 				clearTimeout(demoTimeout4);
                 $("#lblreferenciassolicitante").css('display', 'inline');
 				$('#lblreferenciassolicitante').trigger('startRumble');
-                $("#lblreferenciassolicitante").css('color', 'red');
+                $("#lblreferenciassolicitante").css('color', 'rgba(206, 206, 4, 0.86)');
 				demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
                 $('#txtNombreRef2new').focus();
 
@@ -901,7 +901,7 @@ $(document).ready(function(){
 				clearTimeout(demoTimeout4);
                $("#lblreferenciassolicitante").css('display', 'inline');
 				$('#lblreferenciassolicitante').trigger('startRumble');
-               $("#lblreferenciassolicitante").css('color', 'red');
+               $("#lblreferenciassolicitante").css('color', 'rgba(206, 206, 4, 0.86)');
 				demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
 
 		 
@@ -935,7 +935,7 @@ $(document).ready(function(){
 				clearTimeout(demoTimeout4);
                 $("#lblreferenciassolicitante").css('display', 'inline');
 				$('#lblreferenciassolicitante').trigger('startRumble');
-                $("#lblreferenciassolicitante").css('color', 'red');
+                $("#lblreferenciassolicitante").css('color', 'rgba(206, 206, 4, 0.86)');
 				demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
                 $('#txtNombreRef3new').focus();
 
@@ -971,7 +971,7 @@ $(document).ready(function(){
 				clearTimeout(demoTimeout4);
                 $("#lblreferenciassolicitante").css('display', 'inline');
 				$('#lblreferenciassolicitante').trigger('startRumble');
-                $("#lblreferenciassolicitante").css('color', 'red');
+                $("#lblreferenciassolicitante").css('color', 'rgba(206, 206, 4, 0.86)');
 				demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
                 $('#txtNombreRef3new').focus();
 
