@@ -4267,6 +4267,8 @@ function consultasolicitudes(idUsr,token,Nomusuario,tipouser,pwd,compniare){
 								//console.log(data);
 								var regTD=0;
 								var regTR=1;
+
+                            if(data.solicitudes.length > 0){
 								if(data.solicitudes[0].Token =="INVALID"){
 											swal({
 												  title: '<i>Sessión cerrada por inactividad</i>',
@@ -4285,7 +4287,7 @@ function consultasolicitudes(idUsr,token,Nomusuario,tipouser,pwd,compniare){
 								{
 									$("#numerosolspan").text(data.solicitudes.length);
 
-                                    if(data.solicitudes.length > 0){
+
 
                                         for(var r=0; r < data.solicitudes.length; r++){
                                             //console.log(data.solicitudes[r].ID_SOLICITUD);
@@ -4418,18 +4420,20 @@ function consultasolicitudes(idUsr,token,Nomusuario,tipouser,pwd,compniare){
                                         document.write('<script type="text/javascript" src="./js/isotope.pkgd.min.js"></script>');*/
 
 
-                                    }else{
 
-                                        $("#lblsinsolicitudes").css('display','inline-block');
-
-
-                                    }
 
 
 
 
 
 								}
+
+                            }else{
+
+                                        $("#lblsinsolicitudes").css('display','inline-block');
+
+
+                                    }
 
 						},
 						error: function (result) {
