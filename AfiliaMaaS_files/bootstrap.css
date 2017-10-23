@@ -6440,7 +6440,7 @@ button.close {
 	width: 20px;
 	height: 20px;
 	background-color: #96c03d;
-	left: 33%;
+	left: 28%;
 	top: 125%;
 	z-index: 2;
 	text-align: center;
@@ -6484,7 +6484,7 @@ button.close {
     height: 2px;
     background: #96c03d;
     margin: 0;
-    width: 456%;
+    width: 485%;
     top: 49%;
     right: 19px;
 }
@@ -6689,7 +6689,7 @@ button.close {
     height: 2px;
     background: #96c03d;
     margin: 0;
-    width: 533%;
+    width: 575%;
     top: 49%;
     right: 18px;
 }
