@@ -4286,6 +4286,7 @@ function consultasolicitudes(idUsr,token,Nomusuario,tipouser,pwd,compniare){
 								else
 								{
 									$("#numerosolspan").text(data.solicitudes.length);
+                                    $("#txttokenWS").val(data.solicitudes[0].Token)
 
 
 
