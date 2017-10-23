@@ -1903,7 +1903,7 @@ function validaricontelefonos(telefono){
                         clearTimeout(demoTimeout4);
                         $("#lbltelefonosdiferentes").css('display', 'inline');
                         $('#lbltelefonosdiferentes').trigger('startRumble');
-                        $("#lbltelefonosdiferentes").css('color', 'txtTelefonoCelularnew');
+                        $("#lbltelefonosdiferentes").css('color', 'rgba(206, 206, 4, 0.86)');
                         demoTimeout4 = setTimeout(function(){$('#lbltelefonosdiferentes').trigger('stopRumble')},1000);
 
             }else
