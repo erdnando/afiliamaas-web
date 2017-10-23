@@ -4420,7 +4420,7 @@ function consultasolicitudes(idUsr,token,Nomusuario,tipouser,pwd,compniare){
 
                                     }else{
 
-                                        $("#lblsinsolicitudes").show();
+                                        $("#lblsinsolicitudes").css('display','inline-block');
 
 
                                     }
