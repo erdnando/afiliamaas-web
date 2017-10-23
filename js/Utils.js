@@ -2723,7 +2723,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
                 $("#stOkTitstepDomicilio").attr('class', 'glyphicon glyphicon-ok');
 				$("#stOkTitstepDomicilio").show();
 				$("#stOkTitModDomicilio").show();
-				$('#rowvalida2').addClass('rowiniciostepactivosuccess2').removeClass('rowiniciostepactivo').removeClass('rowvalida2');
+				$('#rowvalida2').addClass('rowiniciostepactivosuccess2').removeClass('rowiniciostepactivo2').removeClass('rowvalida2');
                 $('#rowvalida2').css('background-color','#96c03d');
 			}else{
 				//$('#rowvalida2').addClass('novalidorow').removeClass('rowiniciostepactivo');
@@ -2909,7 +2909,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
                 $("#stOkTitstepDatEco").attr('class', 'glyphicon glyphicon-ok');
 				$("#stOkTitstepDatEco").show();
 				$("#stOkTitModDatEco").show();
-				$('#rowvalida3').addClass('rowiniciostepactivosuccess3').removeClass('rowiniciostepactivo').removeClass('rowvalida3');
+				$('#rowvalida3').addClass('rowiniciostepactivosuccess3').removeClass('rowiniciostepactivo3').removeClass('rowvalida3');
                 $('#rowvalida3').css('background-color','#96c03d');
 			}else{
 				//$('#rowvalida3').addClass('novalidorow').removeClass('rowiniciostepactivo');
@@ -3017,7 +3017,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
                 $("#stOkTitstepPerPol").attr('class', 'glyphicon glyphicon-ok');
 					$("#stOkTitstepPerPol").show();
 					$("#stOkTitModPerPol").show();
-					$('#rowvalida4').addClass('rowiniciostepactivosuccess4').removeClass('rowiniciostepactivo').removeClass('rowvalida4');
+					$('#rowvalida4').addClass('rowiniciostepactivosuccess4').removeClass('rowiniciostepactivo4').removeClass('rowvalida4');
                     $('#rowvalida4').css('background-color','#96c03d');
 				}else{
 					//$('#rowvalida5').addClass('novalidorow').removeClass('rowiniciostepactivo');
@@ -3106,7 +3106,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
                 $("#stOkTitstepRefFam").attr('class', 'glyphicon glyphicon-ok');
 				$("#stOkTitstepRefFam").show();
 				$("#stOkTitModRefFam").show();
-				$('#rowvalida5').addClass('rowiniciostepactivosuccess5').removeClass('rowiniciostepactivo').removeClass('rowvalida5');
+				$('#rowvalida5').addClass('rowiniciostepactivosuccess5').removeClass('rowiniciostepactivo5').removeClass('rowvalida5');
                 $('#rowvalida5').css('background-color','#96c03d');
 			}else{
 				//$('#rowvalida5').addClass('novalidorow').removeClass('rowiniciostepactivo');
