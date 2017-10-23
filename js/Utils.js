@@ -1963,6 +1963,24 @@ function validariconspinereditjs(txtespiner){
 			var nombreclaspan = "#" + $(txtespiner)[0].element[0].id + "span";
 			$(nombreclaspan).attr('class', 'glyphicon glyphicon-remove form-control-feedback');
 			$(nombrecladiv).attr('class', 'form-group has-error has-feedback');
+
+		}else if(parseInt($(txtespiner)[0].element[0].value) > 0 ){
+			var nombrecladiv = "#" + $(txtespiner)[0].element[0].id + "div";
+			$(nombrecladiv).attr('class', 'form-group has-success has-feedback');
+			var nombreclaspan = "#" + $(txtespiner)[0].element[0].id + "span";
+			$(nombreclaspan).attr('class', 'glyphicon glyphicon-ok form-control-feedback');
+		}
+
+}
+
+
+function validariconspinereditjsblur(txtespiner){
+
+	if(parseInt($(txtespiner)[0].element[0].value) == 0 ){
+			var nombrecladiv = "#" + $(txtespiner)[0].element[0].id + "div";
+			var nombreclaspan = "#" + $(txtespiner)[0].element[0].id + "span";
+			$(nombreclaspan).attr('class', 'glyphicon glyphicon-remove form-control-feedback');
+			$(nombrecladiv).attr('class', 'form-group has-error has-feedback');
 			
 		}else if(parseInt($(txtespiner)[0].element[0].value) > 0 ){
 			var nombrecladiv = "#" + $(txtespiner)[0].element[0].id + "div";
