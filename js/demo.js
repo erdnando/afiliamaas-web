@@ -254,8 +254,17 @@ function processCompress(input) {
 																		console.log( item.CTECP);
 																		idpob = item.IDPOBLACION
 																	   });
-																	   $("#lisEstadoSolicitantenew option:selected").removeAttr("selected");
-																		$("#lisEstadoSolicitantenew option[value="+ idest +"]").attr("selected","selected");
+
+                                                                $('#lisEstadoEmpresanew').empty();
+                                                                   $("#lisEstadotem option").each(function () {
+                                                                       $("#lisEstadoSolicitantenew").append("<option value='" + this.value + "'>" + this.text + '</option>');
+
+                                                                       });
+                                                                    $("#lisEstadoSolicitantenew option[value="+ idest +"]").attr("selected","selected");
+
+
+																	   //$("#lisEstadoSolicitantenew option:selected").removeAttr("selected");
+																		//$("#lisEstadoSolicitantenew option[value="+ idest +"]").attr("selected","selected");
 																		validariconlistas($("#lisEstadoSolicitantenew"));
 																	
 																	$.ajax({ 			
@@ -265,6 +274,8 @@ function processCompress(input) {
 																			contentType: "application/json; charset=utf-8",
 																			dataType: "json",
 																			success: function(data){
+
+                                                                                $("#lisDelMuniSolicitantenew").empty();
                                                                                 //$("#txttokenWS").val(data.Token);
 																					$.each(data, function(i, item) {
 																						$("#lisDelMuniSolicitantenew").append('<option value="' + item.IDPOBLACION + '">' + item.POBLACION + '</option>');	

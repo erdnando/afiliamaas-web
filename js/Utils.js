@@ -662,6 +662,9 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 	}
 	
 	function buscaMunicipio(inpMuni){
+        setTimeout(function(){
+                              $('#lisColoniaSolicitantenew').empty();
+                            }, 50);
 		$('#lisColoniaSolicitantenew').empty();
 		$("#lisColoniaSolicitantenew").append('<option value="0">Seleccione...</option>');
 		$('#txtCpSolicitantenew').val("");
