@@ -902,6 +902,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 			$('#lblextra').attr("disabled","disabled");
             }
             else{
+                $('#lblextra').attr("disabled",false);
                 $('#lblextra').text("Modificar");
 
             }
@@ -921,6 +922,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 			$('#Imagesextras2').show();
             }
             else{
+                $('#lblextra2').attr("disabled",false);
                 $('#lblextra2').text("Modificar");
                 $('#Imagesextras2').show();
             }
@@ -939,6 +941,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 			$('#Imagesextras3').show();
             }
             else{
+                $('#lblextra3').attr("disabled",false);
                 $('#lblextra3').text("Modificar");
                 $('#Imagesextras3').show();
             }
@@ -956,6 +959,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 			$('#lblextra4').attr("disabled","disabled");
 			$('#Imagesextras4').show();
             }else{
+                $('#lblextra4').attr("disabled",false);
                 $('#lblextra4').text("Modificar");
                 $('#Imagesextras4').show();
             }
@@ -973,6 +977,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 			$('#lblextra5').attr("disabled","disabled");
 			$('#Imagesextras5').show();
             }else{
+                $('#lblextra5').attr("disabled",false);
                 $('#lblextra5').text("Modificar");
                 $('#Imagesextras5').show();
             }
