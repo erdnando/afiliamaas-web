@@ -4615,7 +4615,19 @@ function consultasolicitudes(idUsr,token,Nomusuario,tipouser,pwd,compniare){
 
 						},
 						error: function (result) {
-							alert("errror....solicitudessss");
+							console.log("errror....solicitudessss");
+
+                            swal({
+                                                                      title: '<i style="font-style: normal;">Atención</i>',
+                                                                    text: 'Error de comunicación, por favor contacte a su administrador de red',
+                                                                      showCloseButton: true,
+                                                                      confirmButtonText:
+                                                                        'Aceptar <i class="glyphicon glyphicon-ok"></i>',
+                                                                    allowOutsideClick: false,
+
+                                                                    }).then(function () {
+
+                                                                        });
 						},
 						async: false
 					});

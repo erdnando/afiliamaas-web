@@ -309,8 +309,7 @@ function processCompress(input) {
                                                                     allowOutsideClick: false,
 
                                                                     }).then(function () {
-                                                                        $("#cargandoafiliadiv").show();
-                                                                          location.href=("Index.html");
+
                                                                         });
                                                                                 }
                                                                 });
