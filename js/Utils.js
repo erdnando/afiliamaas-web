@@ -1067,9 +1067,11 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
             $('#nomfirma').text("Agregar firma");
         }
 
+
 		if(E164){
 
 			$("#imaextramodal").attr("src",E164);
+            $("#imaextramodal").attr("name", $Extra1);
 			$("#result_imageextra").attr("src",E164);
             if(datosgrales[0] != "Rechazadas"){
 			$('#titulomodalfin').text($Extra1);
@@ -1088,6 +1090,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		if(E264){
 
 			$("#imaextramodal2").attr("src",E264);
+            $("#imaextramodal2").attr("name", $Extra2);
 			$("#result_imageextra2").attr("src",E264);
 			$('#titulomodalfin2').text($Extra2);
 
@@ -1107,6 +1110,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		if(E364){
 
 			$("#imaextramodal3").attr("src",E364);
+            $("#imaextramodal3").attr("name", $Extra3);
 			$("#result_imageextra3").attr("src",E364);
 			$('#titulomodalfin3').text($Extra3);
 
@@ -1126,6 +1130,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		if(E464){
 
 			$("#imaextramodal4").attr("src",E464);
+            $("#imaextramodal4").attr("name", $Extra4);
 			$("#result_imageextra4").attr("src",E464);
 			$('#titulomodalfin4').text($Extra4);
 
@@ -1144,6 +1149,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		if(E564){
 
 			$("#imaextramodal5").attr("src",E564);
+            $("#imaextramodal5").attr("name", $Extra5);
 			$("#result_imageextra5").attr("src",E564);
 			$('#titulomodalfin5').text($Extra5);
 
