@@ -1085,6 +1085,8 @@ $(document).ready(function(){
                     $("#rowvalida").click();
 					
 				}else{
+
+                    if($("#tipostatusrecreasol").val()!="Rechazadas"){
 					swal({
 						  title: '¡Atención!',
 						  text: "¿Salir sin concluir la solicitud?",
@@ -1142,7 +1144,70 @@ $(document).ready(function(){
 							 
 
 						  }
-						})
+						});
+
+                    }else{
+
+                        swal({
+						  title: '¡Atención!',
+						  text: "¿Salir sin reenviar la solicitud actual?",
+						  /*type: 'warning',*/
+						  showCloseButton: true,
+						  showCancelButton: true,
+						  confirmButtonText: 'Reenviar solicitud <i class="glyphicon glyphicon-floppy-send"></i>',
+						  cancelButtonText: 'Salir <i class="glyphicon glyphicon-floppy-remove"></i>',
+                        //cancelButtonColor:"#b9a107",
+												  width: "auto",
+                                                  allowOutsideClick: false,
+						}).then(function () {
+							$('#terminar').click();
+
+
+
+						}, function (dismiss) {
+						  // dismiss can be 'cancel', 'overlay',
+						  // 'close', and 'timer'
+						  if (dismiss === 'cancel') {
+							  /*$('#result_image')[0].src = "https://sminet.com.mx/afiliamaas-web/images/shade.jpg"
+							$('#result_imageanver')[0].src = "https://sminet.com.mx/afiliamaas-web/images/shade.jpg"
+                              $('#holder_result').removeAttr("class", "overlay-containerOCR");
+                            $('#inefrenteoverlay').css("visibility", "hidden");
+                            $('#holder_resultanver').removeAttr("class", "overlay-containerOCR");
+                            $('#ineATRASoverlay').css("visibility", "hidden");
+							$('#DatGrales').modal('hide');
+                              for(var x=1;x<7;x++)
+                                {
+                                    navegasliderheaderatras(x);
+                                }
+
+							$('#3b').modal('hide');
+							$('#2b').modal('show');
+                              $("#rowvalida").click();
+							  reseteavalores();*/
+
+
+
+                              //location.reload();
+                              $("#cargandoafiliadiv").show();
+
+                              var nomCompleto =$("#pnompromo").text();
+
+
+
+							var cadena = Base64.encode($("#txttokenWS").val() + "|" + $("#txtidUsrWS").val() + "|" + $("#txtNomusuarioWS").val() + "|" +  $("#txtcompniareWS").val() + "|" + $("#txtpwdWS").val() + "|" + nomCompleto);
+
+							location.href=('AfiliaMaaS.html?exml2340=' + cadena);
+
+						  }
+
+						  if (dismiss === 'close') {
+
+
+
+						  }
+						});
+
+                    }
 				}
 			}
 		  
