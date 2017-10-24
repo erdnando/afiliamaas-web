@@ -298,7 +298,7 @@ function processCompress(input) {
 																	
 															},
 															error: function (result) {  
-																console.log("errror....");  
+																console.log("error....");
 															}   
 														});
 												   

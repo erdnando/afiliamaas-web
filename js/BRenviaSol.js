@@ -157,7 +157,7 @@ var idUsr =  $('#txtidUsrWS').val();
 
 
                                     }else{
-                                        titulomsg = '<i style="font-style: normal;">¡La información de la solicitud con número de id ' + resulsoliingre[0] + ' se actualizó correctamente!</i>';
+                                        titulomsg = '<i style="font-style: normal;">¡Solicitud ' + resulsoliingre[0] + ' actualizada correctamente!</i>';
 
                                     }
 
