@@ -118,7 +118,7 @@ var idUsr =  $('#txtidUsrWS').val();
 
                         }).then(function () {
                             $('#cargandoafiliadiv').show();
-                            console.log("Informacion guardada " + Nomusuario);}
+                            console.log("Informacion guardada " + Nomusuario);
 
                                 var statussol, idsolievia = "";
 
