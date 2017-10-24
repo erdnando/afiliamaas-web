@@ -771,7 +771,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 	}
 	
 	function muestramodalSolirecrea(NoIDSol, DOC_IF64, DOC_IA64, F164, DOC_C164, DOC_C264, E164, E264, E36, E464, E564 ){
-		reseteavalores();
+		//reseteavalores();
 		var datosgrales = [];
 		datosgrales = NoIDSol.value.split('|');
 		$('#mdlgralnombre').text("Solicitud ID: " + datosgrales[2].toString());
