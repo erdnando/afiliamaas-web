@@ -162,7 +162,7 @@ var idUsr =  $('#txtidUsrWS').val();
                                     }
 
                                     swal({
-                                          title: ,
+                                          title: titulomsg,
                                           showCloseButton: true,
                                           confirmButtonText:
                                             '<i class="glyphicon glyphicon-ok"></i>',
