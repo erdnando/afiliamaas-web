@@ -25,14 +25,14 @@ $(document).ready(function(){
 		}
 
 
-		if(cadsincif1.length > 1){
+		if(cadsincif.length > 1){
 
-			var idUsr = cadsincif1[1].toString();//getParameterByName('exml2344');
-			var token = cadsincif1[0].toString();//getParameterByName('exml2342');
-			var Nomusuario = cadsincif1[2].toString();//getParameterByName ("exml2345");
+			var idUsr = cadsincif[1].toString();//getParameterByName('exml2344');
+			var token = cadsincif[0].toString();//getParameterByName('exml2342');
+			var Nomusuario = cadsincif[2].toString();//getParameterByName ("exml2345");
 			var tipouser= "4";
-			var pwd = cadsincif1[4].toString();//getParameterByName("exml2347");
-			var compniare=cadsincif1[3].toString();//getParameterByName("exml2346");
+			var pwd = cadsincif[4].toString();//getParameterByName("exml2347");
+			var compniare=cadsincif[3].toString();//getParameterByName("exml2346");
 
 				if(Nomusuario != "ERRO" && token !== "ERRO" && compniare != "ERRO")
 				{
