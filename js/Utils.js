@@ -870,10 +870,13 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		
 		$("#imagenpresenta").attr("src",F164);
 		$("#firma-img").attr("src",F164);
+
+        if(datosgrales[0] != "Rechazadas"){
 		$("#firma-img").removeAttr("class","hide");
 		
 		$("#DivdelaFirmaBorrar").css("display","none");
 		$("#validarCliente").css("display","none");
+        }
 		
 		
 		
@@ -886,10 +889,16 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 
 			$("#imaextramodal").attr("src",E164);
 			$("#result_imageextra").attr("src",E164);
+            if(datosgrales[0] != "Rechazadas"){
 			$('#titulomodalfin').text($Extra1);
 			$("#linkmodalopenextra").attr("class", "overlay");
 			$('#lblextra').text($Extra1);
 			$('#lblextra').attr("disabled","disabled");
+            }
+            else{
+                $('#lblextra').text("Modificar");
+
+            }
 
 		}
 
@@ -898,10 +907,16 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 			$("#imaextramodal2").attr("src",E264);
 			$("#result_imageextra2").attr("src",E264);
 			$('#titulomodalfin2').text($Extra2);
+
+            if(datosgrales[0] != "Rechazadas"){
 			$("#linkmodalopenextra2").attr("class", "overlay");
 			$('#lblextra2').text($Extra2);
 			$('#lblextra2').attr("disabled","disabled");
 			$('#Imagesextras2').show();
+            }
+            else{
+                $('#lblextra2').text("Modificar");
+            }
 		}
 		
 		if(E364){
@@ -909,10 +924,16 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 			$("#imaextramodal3").attr("src",E364);
 			$("#result_imageextra3").attr("src",E364);
 			$('#titulomodalfin3').text($Extra3);
+
+            if(datosgrales[0] != "Rechazadas"){
 			$("#linkmodalopenextra3").attr("class", "overlay");
 			$('#lblextra3').text($Extra3);
 			$('#lblextra3').attr("disabled","disabled");
 			$('#Imagesextras3').show();
+            }
+            else{
+                $('#lblextra3').text("Modificar");
+            }
 		}
 
 		if(E464){
@@ -920,10 +941,15 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 			$("#imaextramodal4").attr("src",E464);
 			$("#result_imageextra4").attr("src",E464);
 			$('#titulomodalfin4').text($Extra4);
+
+            if(datosgrales[0] != "Rechazadas"){
 			$("#linkmodalopenextra4").attr("class", "overlay");
 			$('#lblextra4').text($Extra4);
 			$('#lblextra4').attr("disabled","disabled");
 			$('#Imagesextras4').show();
+            }else{
+                $('#lblextra4').text("Modificar");
+            }
 		}
 
 		if(E564){
@@ -931,10 +957,15 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 			$("#imaextramodal5").attr("src",E564);
 			$("#result_imageextra5").attr("src",E564);
 			$('#titulomodalfin5').text($Extra5);
+
+            if(datosgrales[0] != "Rechazadas"){
 			$("#linkmodalopenextra5").attr("class", "overlay");
 			$('#lblextra5').text($Extra5);
 			$('#lblextra5').attr("disabled","disabled");
 			$('#Imagesextras5').show();
+            }else{
+                $('#lblextra5').text("Modificar");
+            }
 		}
 		
 		
