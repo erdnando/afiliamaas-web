@@ -899,7 +899,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		
 		var datosgrales = [];
 		datosgrales = NoIDSol.value.split('|');
-		console.log(JSON.stringify({"idSolicitud": datosgrales[2].toString(),"llave":{"idUsuario":datosgrales[5],"Token":datosgrales[6]}}));
+		console.log(JSON.stringify({"idSolicitud": datosgrales[2].toString(),"llave":{"idUsuario":datosgrales[5],"Token":$('#txttokenWS').val()}}));
 		$.ajax({ 			
 				type: 'POST',
 				url: 'https://sminet.com.mx/mx.com.stefanini.service.api.rest/Service1.svc/GetImagenSol',
