@@ -1361,7 +1361,7 @@ $(document).ready(function(){
 
                         }else{
 
-                            if(datosgrales[0] != "Rechazadas"){
+
                             setTimeout(function(){
                               $('#terminar').css("display", "none");
                             }, 50);
