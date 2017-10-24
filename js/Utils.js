@@ -1068,7 +1068,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
         }
 
 
-		if(E164){
+		if($Extra1 != "Extra"){
 
 			$("#imaextramodal").attr("src",E164);
             $("#imaextramodal").attr("name", $Extra1);
@@ -1087,7 +1087,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 
 		}
 
-		if(E264){
+		if($Extra2 != "Extra"){
 
 			$("#imaextramodal2").attr("src",E264);
             $("#imaextramodal2").attr("name", $Extra2);
@@ -1107,7 +1107,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
             }
 		}
 		
-		if(E364){
+		if($Extra3 != "Extra"){
 
 			$("#imaextramodal3").attr("src",E364);
             $("#imaextramodal3").attr("name", $Extra3);
@@ -1127,7 +1127,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
             }
 		}
 
-		if(E464){
+		if($Extra4 != "Extra"){
 
 			$("#imaextramodal4").attr("src",E464);
             $("#imaextramodal4").attr("name", $Extra4);
@@ -1146,7 +1146,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
             }
 		}
 
-		if(E564){
+		if($Extra5 != "Extra"){
 
 			$("#imaextramodal5").attr("src",E564);
             $("#imaextramodal5").attr("name", $Extra5);
