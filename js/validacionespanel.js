@@ -54,6 +54,42 @@ $(document).ready(function(){
 					});
 		}
 
+
+
+
+		  if (navigator.geolocation)
+			{
+				navigator.geolocation.getCurrentPosition(function(objPosition)
+				{
+					 $("#txtlat").val(objPosition.coords.longitude);
+					 $("#txtlong").val(objPosition.coords.latitude);
+
+				}, function(objPositionError)
+				{
+					switch (objPositionError.code)
+					{
+						case objPositionError.PERMISSION_DENIED:
+							content.innerHTML = "No se ha permitido el acceso a la posición del usuario.";
+						break;
+						case objPositionError.POSITION_UNAVAILABLE:
+							content.innerHTML = "No se ha podido acceder a la información de su posición.";
+						break;
+						case objPositionError.TIMEOUT:
+							content.innerHTML = "El servicio ha tardado demasiado tiempo en responder.";
+						break;
+						default:
+							content.innerHTML = "Error desconocido.";
+					}
+				}, {
+					maximumAge: 75000,
+					timeout: 15000
+				});
+			}
+			else
+			{
+				content.innerHTML = "Su navegador no soporta la API de geolocalización.";
+			}
+
 		
 		$("#cargandoafiliadiv").hide();
 
