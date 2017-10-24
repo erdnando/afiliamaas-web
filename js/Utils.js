@@ -65,7 +65,18 @@ function fncompaniamovil(){
 						   });	
 				},
 				error: function (result) {  
-					console.log("errror....companiamovil");  
+					console.log("errror....companiamovil");
+                    swal({
+                                                                      title: '<i style="font-style: normal;">Atención</i>',
+                                                                    text: 'Error de comunicación, por favor contacte a su administrador de red',
+                                                                      showCloseButton: true,
+                                                                      confirmButtonText:
+                                                                        'Aceptar <i class="glyphicon glyphicon-ok"></i>',
+                                                                    allowOutsideClick: false,
+
+                                                                    }).then(function () {
+
+                                                                        });
 				}   
 			});
 }
@@ -97,6 +108,17 @@ function fncargaNacionalidad(){
 				},
 				error: function (result) {  
 					console.log("errror....nacionalidad");  
+                    swal({
+                                                                      title: '<i style="font-style: normal;">Atención</i>',
+                                                                    text: 'Error de comunicación, por favor contacte a su administrador de red',
+                                                                      showCloseButton: true,
+                                                                      confirmButtonText:
+                                                                        'Aceptar <i class="glyphicon glyphicon-ok"></i>',
+                                                                    allowOutsideClick: false,
+
+                                                                    }).then(function () {
+
+                                                                        });
 				}   
 			});
 	
@@ -119,6 +141,17 @@ function fncargatipoidentificacion(){
 				},
 				error: function (result) {  
 					console.log("errror....tipoiden");  
+                    swal({
+                                                                      title: '<i style="font-style: normal;">Atención</i>',
+                                                                    text: 'Error de comunicación, por favor contacte a su administrador de red',
+                                                                      showCloseButton: true,
+                                                                      confirmButtonText:
+                                                                        'Aceptar <i class="glyphicon glyphicon-ok"></i>',
+                                                                    allowOutsideClick: false,
+
+                                                                    }).then(function () {
+
+                                                                        });
 				}   
 			});
 	
@@ -140,6 +173,17 @@ function fncargaEdocivil(){
 				},
 				error: function (result) {  
 					console.log("errror....edocivil");  
+                    swal({
+                                                                      title: '<i style="font-style: normal;">Atención</i>',
+                                                                    text: 'Error de comunicación, por favor contacte a su administrador de red',
+                                                                      showCloseButton: true,
+                                                                      confirmButtonText:
+                                                                        'Aceptar <i class="glyphicon glyphicon-ok"></i>',
+                                                                    allowOutsideClick: false,
+
+                                                                    }).then(function () {
+
+                                                                        });
 				}   
 			});
 	
@@ -160,7 +204,18 @@ function fnestatusrecidencia(){
 						   });	
 				},
 				error: function (result) {  
-					console.log("errror....statusrecidencia");  
+					console.log("errror....statusrecidencia");
+                    swal({
+                                                                      title: '<i style="font-style: normal;">Atención</i>',
+                                                                    text: 'Error de comunicación, por favor contacte a su administrador de red',
+                                                                      showCloseButton: true,
+                                                                      confirmButtonText:
+                                                                        'Aceptar <i class="glyphicon glyphicon-ok"></i>',
+                                                                    allowOutsideClick: false,
+
+                                                                    }).then(function () {
+
+                                                                        });
 				}   
 			});
 	
@@ -182,6 +237,17 @@ function fntipocontrato(){
 				},
 				error: function (result) {  
 					console.log("errror....tipocontrato");  
+                    swal({
+                                                                      title: '<i style="font-style: normal;">Atención</i>',
+                                                                    text: 'Error de comunicación, por favor contacte a su administrador de red',
+                                                                      showCloseButton: true,
+                                                                      confirmButtonText:
+                                                                        'Aceptar <i class="glyphicon glyphicon-ok"></i>',
+                                                                    allowOutsideClick: false,
+
+                                                                    }).then(function () {
+
+                                                                        });
 				}   
 			});
 	
@@ -225,6 +291,17 @@ function fncargaEdo(){//(combo, tipoedo, Delesol, colsoli){
 				},
 				error: function (result) {  
 					console.log("errror....cargaestado");  
+                    swal({
+                                                                      title: '<i style="font-style: normal;">Atención</i>',
+                                                                    text: 'Error de comunicación, por favor contacte a su administrador de red',
+                                                                      showCloseButton: true,
+                                                                      confirmButtonText:
+                                                                        'Aceptar <i class="glyphicon glyphicon-ok"></i>',
+                                                                    allowOutsideClick: false,
+
+                                                                    }).then(function () {
+
+                                                                        });
 				}   
 			});
 }
@@ -526,6 +603,17 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 								},
 								error: function (result) {  
 									console.log("errror....");  
+                                    swal({
+                                                                      title: '<i style="font-style: normal;">Atención</i>',
+                                                                    text: 'Error de comunicación, por favor contacte a su administrador de red',
+                                                                      showCloseButton: true,
+                                                                      confirmButtonText:
+                                                                        'Aceptar <i class="glyphicon glyphicon-ok"></i>',
+                                                                    allowOutsideClick: false,
+
+                                                                    }).then(function () {
+
+                                                                        });
 								}   
 							}); 
 						
@@ -534,6 +622,17 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 				},
 				error: function (result) {  
 					console.log("errror....");  
+                    swal({
+                                                                      title: '<i style="font-style: normal;">Atención</i>',
+                                                                    text: 'Error de comunicación, por favor contacte a su administrador de red',
+                                                                      showCloseButton: true,
+                                                                      confirmButtonText:
+                                                                        'Aceptar <i class="glyphicon glyphicon-ok"></i>',
+                                                                    allowOutsideClick: false,
+
+                                                                    }).then(function () {
+
+                                                                        });
 				} ,
 				async: false  
 			}); 
@@ -564,7 +663,18 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 					   });	
 				},
 				error: function (result) {  
-					console.log("errror....");  
+					console.log("errror....");
+                    swal({
+                                                                      title: '<i style="font-style: normal;">Atención</i>',
+                                                                    text: 'Error de comunicación, por favor contacte a su administrador de red',
+                                                                      showCloseButton: true,
+                                                                      confirmButtonText:
+                                                                        'Aceptar <i class="glyphicon glyphicon-ok"></i>',
+                                                                    allowOutsideClick: false,
+
+                                                                    }).then(function () {
+
+                                                                        });
 				}   
 			}); 
 	}
@@ -592,6 +702,17 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 				},
 				error: function (result) {  
 					console.log("errror....");  
+                    swal({
+                                                                      title: '<i style="font-style: normal;">Atención</i>',
+                                                                    text: 'Error de comunicación, por favor contacte a su administrador de red',
+                                                                      showCloseButton: true,
+                                                                      confirmButtonText:
+                                                                        'Aceptar <i class="glyphicon glyphicon-ok"></i>',
+                                                                    allowOutsideClick: false,
+
+                                                                    }).then(function () {
+
+                                                                        });
 				}   
 			}); 
 	}
@@ -648,6 +769,17 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 								},
 								error: function (result) {  
 									console.log("errror....");  
+                                    swal({
+                                                                      title: '<i style="font-style: normal;">Atención</i>',
+                                                                    text: 'Error de comunicación, por favor contacte a su administrador de red',
+                                                                      showCloseButton: true,
+                                                                      confirmButtonText:
+                                                                        'Aceptar <i class="glyphicon glyphicon-ok"></i>',
+                                                                    allowOutsideClick: false,
+
+                                                                    }).then(function () {
+
+                                                                        });
 								}   
 							}); 
 						
@@ -656,6 +788,17 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 				},
 				error: function (result) {  
 					console.log("errror....");  
+                    swal({
+                                                                      title: '<i style="font-style: normal;">Atención</i>',
+                                                                    text: 'Error de comunicación, por favor contacte a su administrador de red',
+                                                                      showCloseButton: true,
+                                                                      confirmButtonText:
+                                                                        'Aceptar <i class="glyphicon glyphicon-ok"></i>',
+                                                                    allowOutsideClick: false,
+
+                                                                    }).then(function () {
+
+                                                                        });
 				},
 				async: false				
 			}); 
@@ -686,6 +829,17 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 				},
 				error: function (result) {  
 					console.log("errror....");  
+                    swal({
+                                                                      title: '<i style="font-style: normal;">Atención</i>',
+                                                                    text: 'Error de comunicación, por favor contacte a su administrador de red',
+                                                                      showCloseButton: true,
+                                                                      confirmButtonText:
+                                                                        'Aceptar <i class="glyphicon glyphicon-ok"></i>',
+                                                                    allowOutsideClick: false,
+
+                                                                    }).then(function () {
+
+                                                                        });
 				}   
 			}); 
 	}
@@ -713,6 +867,17 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 				},
 				error: function (result) {  
 					console.log("errror....");  
+                    swal({
+                                                                      title: '<i style="font-style: normal;">Atención</i>',
+                                                                    text: 'Error de comunicación, por favor contacte a su administrador de red',
+                                                                      showCloseButton: true,
+                                                                      confirmButtonText:
+                                                                        'Aceptar <i class="glyphicon glyphicon-ok"></i>',
+                                                                    allowOutsideClick: false,
+
+                                                                    }).then(function () {
+
+                                                                        });
 				}   
 			}); 
 	}
@@ -760,6 +925,17 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 				},
 				error: function (result) {  
 					console.log("errror" + result);  
+                    swal({
+                                                                      title: '<i style="font-style: normal;">Atención</i>',
+                                                                    text: 'Error de comunicación, por favor contacte a su administrador de red',
+                                                                      showCloseButton: true,
+                                                                      confirmButtonText:
+                                                                        'Aceptar <i class="glyphicon glyphicon-ok"></i>',
+                                                                    allowOutsideClick: false,
+
+                                                                    }).then(function () {
+
+                                                                        });
 				},
 				async: false   
 			}); 

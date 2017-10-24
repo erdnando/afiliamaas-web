@@ -290,7 +290,19 @@ function processCompress(input) {
 																					
 																			},
 																			error: function (result) {  
-																				console.log("errror....");  
+																				console.log("errror....");
+                                                                                swal({
+                                                                                  title: '<i style="font-style: normal;">Atención</i>',
+                                                                                text: 'Error de comunicación, por favor contacte a su administrador de red',
+                                                                                  showCloseButton: true,
+                                                                                  confirmButtonText:
+                                                                                    'Aceptar <i class="glyphicon glyphicon-ok"></i>',
+                                                                                allowOutsideClick: false,
+
+                                                                                }).then(function () {
+
+                                                                                    });
+
 																			}   
 																		}); 
 																	
@@ -345,7 +357,18 @@ function processCompress(input) {
 																
 									},  
 									error: function (result) {  
-										alert("errror....");  
+										console.log("errror....");
+                                        swal({
+                                                                      title: '<i style="font-style: normal;">Atención</i>',
+                                                                    text: 'Error de comunicación, por favor contacte a su administrador de red',
+                                                                      showCloseButton: true,
+                                                                      confirmButtonText:
+                                                                        'Aceptar <i class="glyphicon glyphicon-ok"></i>',
+                                                                    allowOutsideClick: false,
+
+                                                                    }).then(function () {
+
+                                                                        });
 									}  
 								});  
 							   
@@ -547,6 +570,17 @@ function processCompressanver(input) {
 								},  
 								error: function (result) {  
 									console.log("errror...." + result);  
+                                    swal({
+                                                                      title: '<i style="font-style: normal;">Atención</i>',
+                                                                    text: 'Error de comunicación, por favor contacte a su administrador de red',
+                                                                      showCloseButton: true,
+                                                                      confirmButtonText:
+                                                                        'Aceptar <i class="glyphicon glyphicon-ok"></i>',
+                                                                    allowOutsideClick: false,
+
+                                                                    }).then(function () {
+
+                                                                        });
 								}  
 							});  
 						   
