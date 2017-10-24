@@ -178,7 +178,7 @@ HEADER
 ***********************************/
 
 .ImaHome{
-	width: 80%;
+	width: 60%;
 	margin-top: 0px;
 }
 
@@ -650,7 +650,7 @@ img{max-width:100%;}
 }
 
 .body {
-	background: url(../images/Login/FondoLogin.jpg) no-repeat center center fixed;
+	background: url(../images/Login/FondoLogin.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -696,13 +696,21 @@ img{max-width:100%;}
 
 .head {
     width: auto;
-    margin: 11% auto 0;
+    margin: 2% auto 0;
     background: rgba(255, 255, 255, 0);
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     -o-border-radius: 4px;
     -ms-border-radius: 4px;
+}
+
+.imgmass{
+        display: inline-block;
+    width: 100%;
+    float: right;
+    padding: 1% 8% 0%;
+    text-align: -webkit-right;
 }
 .logo {
     width: 45%;
@@ -714,7 +722,7 @@ img{max-width:100%;}
 .login {
     width: 33%;
     float: right;
-    padding: 2.7% 0;
+    padding: 3.7% 0;
     background: rgba(255, 255, 255, 0);
 	/*border: 1px solid #cecfd3;*/
 }
@@ -1221,7 +1229,7 @@ h2.resp-accordion {
     width: 1140px;
   }
 .ImaHome{
-	width: 80%;
+	width: 60%;
 	margin-top: 0px;
 }
 .logo-top h1 {
@@ -1229,7 +1237,7 @@ h2.resp-accordion {
 }
 .head {
     width: auto;
-	margin: 10.5% auto 0;
+	margin: 2% auto 0;
 }
 .logo-top {
     margin-top: 1.1%;
@@ -1253,7 +1261,7 @@ h2.resp-accordion {
     width: 90%;
   }
 .ImaHome{
-	width: 80%;
+	width: 60%;
 	margin-top: 0px;
 }
 .logo {
@@ -1297,7 +1305,7 @@ section.sky-form {
     width: 90%;
   }
 .ImaHome{
-	width: 80%;
+	width: 60%;
 	margin-top: 0px;
 }
 .logo {
