@@ -4847,6 +4847,19 @@ function deshabilitaRetroceso(){
     window.onhashchange=function(){window.location.hash="no-back-button";}
 }
 
+function refrescasolicitudes(){
+    $("#cargandoafiliadiv").show();
+
+
+                                        var nomCompleto =$("#pnompromo").text();
+
+
+
+                                        var cadena = Base64.encode($("#txttokenWS").val() + "|" + $("#txtidUsrWS").val() + "|" + $("#txtNomusuarioWS").val() + "|" +  $("#txtcompniareWS").val() + "|" + $("#txtpwdWS").val() + "|" + nomCompleto);
+
+                                        location.href=('AfiliaMaaS.html?exml2340=' + cadena);
+}
+
 
 	
 

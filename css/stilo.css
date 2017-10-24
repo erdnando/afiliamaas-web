@@ -2659,6 +2659,17 @@ blockquote.nk - blockquote - style - 1 cite {
     font-weight: 400;
 }
 
+.btnrefres{
+    font-size: 23px;
+    border: 0px solid #cacaca;
+    top: 5px;
+}
+.btnrefres:hover, #slcrefrescar:hover{
+    background-color: rgba(85, 172, 238, 0);
+    border-color: #55acee;
+    color: #ffffff;
+}
+
 
 
 
