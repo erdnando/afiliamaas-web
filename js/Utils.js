@@ -1138,6 +1138,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$("#txtFuenteOtrosIngrenew").val($FuenteOtrosIngresos);
 		
 		//disabled
+
+        if(datosgrales[0] != "Rechazadas"){
 		$('#txtNomSolicitantenew').attr("disabled","disabled");
 		$('#txtSegundonombrenew').attr("disabled","disabled");
 		$('#txtApePaternonew').attr("disabled","disabled");
@@ -1247,6 +1249,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$("#txtTelOficinanew").attr("disabled","disabled");
 		$("#txtOtrosIngresosnew").attr("disabled","disabled");
 		$("#txtFuenteOtrosIngrenew").attr("disabled","disabled");
+        }
 		
 		
 		
