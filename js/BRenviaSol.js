@@ -243,7 +243,7 @@ var idUsr =  $('#txtidUsrWS').val();
                             trtextos +="<tr><td align='left' valign='top' style='padding-right:2em;'>Sección:</td><td align='left' style='font-weight:bold'>"+ elem +"</td><td></td></tr>"
                         });
 
-                        var texterroresgrales = "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%; border-collapse: separate;border-spacing:  7px;    height: 178px;'>" + trtextos + "</table>";
+                        var texterroresgrales = "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%; border-collapse: separate;border-spacing:  7px;    height: auto;'>" + trtextos + "</table>";
 
 
 
@@ -256,6 +256,7 @@ var idUsr =  $('#txtidUsrWS').val();
                             showCloseButton: true,
                             confirmButtonText:
                                 '<i class="glyphicon glyphicon-ok"></i>',
+                            width: "auto",
                             allowOutsideClick: false,
 
                         }).then(function () {
