@@ -61,8 +61,8 @@ $(document).ready(function(){
 			{
 				navigator.geolocation.getCurrentPosition(function(objPosition)
 				{
-					 $("#txtlat").val(objPosition.coords.longitude);
-					 $("#txtlong").val(objPosition.coords.latitude);
+					 $("#txtlong").val(objPosition.coords.longitude);
+					 $("#txtlat").val(objPosition.coords.latitude);
 
 				}, function(objPositionError)
 				{
