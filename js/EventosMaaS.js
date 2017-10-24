@@ -1361,10 +1361,11 @@ $(document).ready(function(){
 
                         }else{
 
-
-                            setTimeout(function(){
-                              $('#terminar').css("display", "none");
-                            }, 50);
+                            if($("#tipostatusrecreasol").val()!="Rechazadas"){
+                                setTimeout(function(){
+                                  $('#terminar').css("display", "none");
+                                }, 50);
+                            }
 
 
 
