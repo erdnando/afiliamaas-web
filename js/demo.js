@@ -299,8 +299,21 @@ function processCompress(input) {
 															},
 															error: function (result) {  
 																console.log("error....");
-															}   
-														});
+
+                                                                swal({
+                                                                      title: '<i style="font-style: normal;">Atención</i>',
+                                                                    text: 'Error de comunicación, por favor contacte a su administrador de red',
+                                                                      showCloseButton: true,
+                                                                      confirmButtonText:
+                                                                        'Aceptar <i class="glyphicon glyphicon-ok"></i>',
+                                                                    allowOutsideClick: false,
+
+                                                                    }).then(function () {
+                                                                        $("#cargandoafiliadiv").show();
+                                                                          location.href=("Index.html");
+                                                                        });
+                                                                                }
+                                                                });
 												   
 												   //document.getElementById('lisDelMuniSolicitantenew').value=data.colonia;
 												   $('#dateFechanacnewdia').val(data.fechaDeNacimientoDIA);
