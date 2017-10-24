@@ -9,11 +9,11 @@ var idUsr =  $('#txtidUsrWS').val();
 	$('#terminar').on({
 	  click: function() {
 
-          if($('#recreasolicitudinput').val() == "SI")
+          /*if($('#recreasolicitudinput').val() == "SI")
           {
               console.log("paso el milagro");
               return;
-          }
+          }*/
 
 
 
