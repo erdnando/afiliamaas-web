@@ -150,8 +150,19 @@ var idUsr =  $('#txtidUsrWS').val();
                                     $('#txttokenWS').val(resulsoliingre[1])
                                     $('#cargandoafiliadiv').hide();
 
+                                    var titulomsg="";
+
+                                    if($("#tipostatusrecreasol").val()!="Rechazadas"){
+                                        titulomsg = '<i style="font-style: normal;">¡Información guardada con número de ID: ' + resulsoliingre[0] + '!</i>';
+
+
+                                    }else{
+                                        titulomsg = '<i style="font-style: normal;">¡La información de la solicitud con número de id ' + resulsoliingre[0] + ' se actualizó correctamente!</i>';
+
+                                    }
+
                                     swal({
-                                          title: '<i style="font-style: normal;">¡Información guardada con número de ID: ' + resulsoliingre[0] + '!</i>',
+                                          title: ,
                                           showCloseButton: true,
                                           confirmButtonText:
                                             '<i class="glyphicon glyphicon-ok"></i>',
@@ -202,7 +213,7 @@ var idUsr =  $('#txtidUsrWS').val();
 
                                 },
                                 error: function (result) {
-                                    console.log("errror....");
+                                    console.log("error....");
                                 }
                             });
 
