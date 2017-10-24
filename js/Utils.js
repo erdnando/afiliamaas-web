@@ -879,11 +879,14 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
         }
 		
 		
-		
+		if(datosgrales[0] != "Rechazadas"){
 		$("#firma-canvas").css("display","none");
 		$("#linkmodalopen").attr("class", "overlay");
 		$('#nomfirma').text($FirmaPath);
 		$('#nomfirma').attr("disabled","disabled");
+        }else{
+            $('#nomfirma').text("Agregar firma");
+        }
 
 		if(E164){
 
@@ -916,6 +919,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
             }
             else{
                 $('#lblextra2').text("Modificar");
+                $('#Imagesextras2').show();
             }
 		}
 		
@@ -933,6 +937,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
             }
             else{
                 $('#lblextra3').text("Modificar");
+                $('#Imagesextras3').show();
             }
 		}
 
@@ -949,6 +954,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 			$('#Imagesextras4').show();
             }else{
                 $('#lblextra4').text("Modificar");
+                $('#Imagesextras4').show();
             }
 		}
 
@@ -965,6 +971,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 			$('#Imagesextras5').show();
             }else{
                 $('#lblextra5').text("Modificar");
+                $('#Imagesextras5').show();
             }
 		}
 		
