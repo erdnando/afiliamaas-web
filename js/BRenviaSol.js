@@ -256,7 +256,7 @@ var idUsr =  $('#txtidUsrWS').val();
                             showCloseButton: true,
                             confirmButtonText:
                                 '<i class="glyphicon glyphicon-ok"></i>',
-                            width: "380",
+                            width: "380px",
                             allowOutsideClick: false,
 
                         }).then(function () {
