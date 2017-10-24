@@ -1360,6 +1360,8 @@ $(document).ready(function(){
                             $('#terminar').css("display", "");
 
                         }else{
+
+                            if(datosgrales[0] != "Rechazadas"){
                             setTimeout(function(){
                               $('#terminar').css("display", "none");
                             }, 50);

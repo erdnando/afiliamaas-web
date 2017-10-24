@@ -23,6 +23,37 @@ $(document).ready(function(){
 			fncompaniamovil();
 			fntipocontrato();
 		}
+
+
+		if(cadsincif1.length > 1){
+
+			var idUsr = cadsincif1[1].toString();//getParameterByName('exml2344');
+			var token = cadsincif1[0].toString();//getParameterByName('exml2342');
+			var Nomusuario = cadsincif1[2].toString();//getParameterByName ("exml2345");
+			var tipouser= "4";
+			var pwd = cadsincif1[4].toString();//getParameterByName("exml2347");
+			var compniare=cadsincif1[3].toString();//getParameterByName("exml2346");
+
+				if(Nomusuario != "ERRO" && token !== "ERRO" && compniare != "ERRO")
+				{
+					consultasolicitudes(idUsr,token,Nomusuario,tipouser,pwd,compniare);
+                    $("#cargandoafiliadiv").hide();
+				}else{
+					location.href=("Index.html");
+				}
+		}else{
+            $("#cargandoafiliadiv").hide();
+			swal({
+				  title: '<i>Error de ingreso</i>',
+				  showCloseButton: true,
+				  confirmButtonText:
+					'<i class="glyphicon glyphicon-ok"></i>',
+
+				}).then(function () {
+					  location.href=("Index.html");
+					});
+		}
+
 		
 		$("#cargandoafiliadiv").hide();
 
@@ -247,7 +278,7 @@ $('.tsf-wizard-1').tsfWizard({
 			}
 			});
 			
-	var cadenacif1 = Base64.decode(getParameterByName('exml2340'));
+	/*var cadenacif1 = Base64.decode(getParameterByName('exml2340'));
 		var cadsincif1 = [];
 		cadsincif1 = cadenacif1.split('|');
 		
@@ -259,13 +290,6 @@ $('.tsf-wizard-1').tsfWizard({
 			var tipouser= "4";
 			var pwd = cadsincif1[4].toString();//getParameterByName("exml2347");
 			var compniare=cadsincif1[3].toString();//getParameterByName("exml2346");
-
-            /*$('#txtidUsrWS').val(cadsincif1[1].toString());//.val(getParameterByName('exml2344'));
-            $("#txttokenWS").val(cadsincif1[0].toString());//.val(getParameterByName('exml2342'));
-            $("#txtNomusuarioWS").val(cadsincif1[2].toString());//.val(getParameterByName ("exml2345"));
-            $("#txtpwdWS").val(cadsincif1[4].toString());//.val(getParameterByName("exml2347"));
-            $("#txtcompniareWS").val(cadsincif1[3].toString());//.val(getParameterByName("exml2346"));
-            $("#pnompromo").text(cadsincif1[5].toString());//getParameterByName("exml2348"));*/
 
 				if(Nomusuario != "ERRO" && token !== "ERRO" && compniare != "ERRO")
 				{
@@ -285,7 +309,7 @@ $('.tsf-wizard-1').tsfWizard({
 				}).then(function () {
 					  location.href=("Index.html");
 					});
-		}
+		}*/
 
 		
 		
