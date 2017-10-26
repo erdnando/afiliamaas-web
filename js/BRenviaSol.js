@@ -47,12 +47,12 @@ var idUsr =  $('#txtidUsrWS').val();
           var espolitico, tieneparen = "NO";
 
 
-            if($("#optpersonapoliticonew").is(':checked')){
+            if($("#optpersonapoliticonew").is('checked')){
 				espolitico="SI";
 
 			}
 
-			if($("#optparenpoliticonew").is(':checked')){
+			if($("#optparenpoliticonew").is('checked')){
 				tieneparen="SI";
 			}
 
