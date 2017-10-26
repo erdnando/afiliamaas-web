@@ -44,7 +44,8 @@ var idUsr =  $('#txtidUsrWS').val();
 				sexosoli = "MASCULINO";
 				console.log(sexosoli);
 			}
-          var espolitico, tieneparen = "NO";
+          var espolitico="NO";
+          var tieneparen = "NO";
 
 
             if($("#optpersonapoliticonew").is('checked')){
