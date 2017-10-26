@@ -124,11 +124,13 @@ function processCompress(input) {
 							   //result_image.style.position="absolute";
 							   result_image.style.left="30px";
 							   //--------cal ws ocr-----------------
-							   console.log(JSON.stringify({ "strImg64":this.src.replace("data:image/jpeg;base64,", ""),"llave":{"idUsuario":$("#txtidUsrWS").val(),"Token":$("#txttokenWS").val()}}),);
+							   console.log(JSON.stringify({ "strImg64":this.src.replace("data:image/jpeg;base64,", "")}));
 							   $.ajax({  
 									type: "POST",  
-									url: 'https://sminet.com.mx/mx.com.stefanini.service.api.rest/Service1.svc/loadimagesoap',
-									data: JSON.stringify({ "strImg64":this.src.replace("data:image/jpeg;base64,", ""),"llave":{"idUsuario":$("#txtidUsrWS").val(),"Token":$("#txttokenWS").val()}}),
+									//url: 'https://sminet.com.mx/mx.com.stefanini.service.api.rest/Service1.svc/loadimagesoap',
+                                    url: 'https://sminet.com.mx/mx.com.stefanini.service.api.rest/Service1.svc/ocrProcess',
+									//data: JSON.stringify({ "strImg64":this.src.replace("data:image/jpeg;base64,", ""),"llave":{"idUsuario":$("#txtidUsrWS").val(),"Token":$("#txttokenWS").val()}}),
+                                    data: JSON.stringify({ "strImg64":this.src.replace("data:image/jpeg;base64,", "")}),
 									contentType: "application/json; charset=utf-8",
 									dataType: "json",						
 									success: function (data) {  
@@ -206,6 +208,7 @@ function processCompress(input) {
                                                     $("#wrapper").css("width", "100%");
                                                     $("#identificacioninicial").attr("class","col-xs-12 col-sm-6 col-md-6 col-lg-6");
                                                     $("#identificacioninicial2").css("display","");
+
 
 
 
