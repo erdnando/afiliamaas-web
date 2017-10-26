@@ -152,216 +152,386 @@ function processCompress(input) {
 										}
 										else
 										{
-										   console.log('======================');
-										   console.log('Resultado OCR');
-										   console.log('======================');
-										   console.log(data);
-										   console.log('Nombre...'+data.Nombre);
-										   console.log('Paterno...'+data.Paterno);
-										   console.log('Materno...'+data.Materno);
-										   console.log('calle...'+data.calle);
-										   console.log('codigoPostal...'+data.codigoPostal);
-										   console.log('colonia...'+data.colonia);
-										   console.log('fechaDeNacimiento...'+data.fechaDeNacimiento);
-										   console.log('fechaDeNacimientoANIO...'+data.fechaDeNacimientoANIO);
-										   console.log('fechaDeNacimientoDIA...'+data.fechaDeNacimientoDIA);
-										   console.log('fechaDeNacimientoMES...'+data.fechaDeNacimientoMES);
-										   console.log('numeroExt...'+data.numeroExt);
-										   console.log('sexo...'+data.sexo);
-										   $("#txttokenWS").val(data.Token);
-										   $('#cargandoafiliadiv').hide();
-
-                                            var nomcompletoocr = 'Las referencias familiares deben ser diferentes entre sí y diferentes al solicitante: ' + data.Nombre + ' ' + data.Paterno + ' ' + data.Materno
-                                            $('#lblreferenciassolicitante').text(nomcompletoocr.toUpperCase());
-
-
+                                            switch(data.__type) {
+                                                case "INEIFE:#mx.com.stefanini.service.api.rest":
+                                                    CURP:null
+                                                    Materno:"VARGAS"
+                                                    Nacionalidad:"MEXICANA"
+                                                    Nombre:"ERDNANDO"
+                                                    Paterno:"RODRIGUEZ"
+                                                    calle:"C PALOMA NEGRA 277"
+                                                    claveElector:"12115H500"
+                                                    codigoPostal:"57000"
+                                                    colonia:"BENITO JUAREZ "
+                                                    estado:null
+                                                    fechaDeNacimiento:"21/01/73"
+                                                    fechaDeNacimientoANIO:"73"
+                                                    fechaDeNacimientoDIA:"21"
+                                                    fechaDeNacimientoMES:"01"
+                                                    municipio:null
+                                                    numeroExt:null
+                                                    numeroInt:null
+                                                    sexo:"H"
+                                                    vigencia:"2025"
 
 
+                                                    console.log('======================');
+                                                   console.log('Resultado OCR');
+                                                   console.log('======================');
+                                                   console.log(data);
+                                                   console.log('Nombre...'+data.Nombre);
+                                                   console.log('Paterno...'+data.Paterno);
+                                                   console.log('Materno...'+data.Materno);
+                                                   console.log('calle...'+data.calle);
+                                                   console.log('codigoPostal...'+data.codigoPostal);
+                                                   console.log('colonia...'+data.colonia);
+                                                   console.log('fechaDeNacimiento...'+data.fechaDeNacimiento);
+                                                   console.log('fechaDeNacimientoANIO...'+data.fechaDeNacimientoANIO);
+                                                   console.log('fechaDeNacimientoDIA...'+data.fechaDeNacimientoDIA);
+                                                   console.log('fechaDeNacimientoMES...'+data.fechaDeNacimientoMES);
+                                                   console.log('numeroExt...'+data.numeroExt);
+                                                   console.log('sexo...'+data.sexo);
+                                                   $("#txttokenWS").val(data.Token);
+                                                   $('#cargandoafiliadiv').hide();
 
-
-
-                                           /* $('#tabladatosOCR').append("<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%;border-collapse: separate;border-spacing:  7px;'><tr><td align='left' valign='top' style='padding-right:2em;'>Nombre</td><td align='left' style='font-weight:bold;max-width: 250px;'>"+ data.Nombre+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Paterno</td><td align='left' style='font-weight:bold;max-width: 250px;'>"+data.Paterno+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Materno</td><td align='left' style='font-weight:bold;max-width: 250px;'>"+data.Materno+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Calle</td><td align='left' style='font-weight:bold;max-width: 250px;'>"+data.calle+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>CP</td><td align='left' style='font-weight:bold;max-width: 250px;'>"+data.codigoPostal+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Colonia</td><td align='left' style='font-weight:bold;max-width: 250px;'>"+data.colonia+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Fecha nac</td><td align='left' style='font-weight:bold;max-width: 250px;'>"+data.fechaDeNacimiento+"</td><td></td></tr></table>")
-
-                                            $("#DatosOCR").show();*/
-
-
-										   swal({
-												  title: '<i style="font-style: normal;">Datos obtenidos</i>',
-												  html:
-													"<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%;border-collapse: separate;border-spacing:  7px;'><tr><td align='left' valign='top' style='padding-right:2em;'>Nombre</td><td align='left' style='font-weight:bold;max-width: 250px;'>"+ data.Nombre+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Paterno</td><td align='left' style='font-weight:bold;max-width: 250px;'>"+data.Paterno+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Materno</td><td align='left' style='font-weight:bold;max-width: 250px;'>"+data.Materno+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Calle</td><td align='left' style='font-weight:bold;max-width: 250px;'>"+data.calle+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>CP</td><td align='left' style='font-weight:bold;max-width: 250px;'>"+data.codigoPostal+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Colonia</td><td align='left' style='font-weight:bold;max-width: 250px;'>"+data.colonia+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Fecha nac</td><td align='left' style='font-weight:bold;max-width: 250px;'>"+data.fechaDeNacimiento+"</td><td></td></tr></table>",
-												  showCloseButton: true,
-                                                  showCancelButton:true,
-												  confirmButtonText:
-													'Correcto <i class="glyphicon glyphicon-ok"></i>',
-                                                  cancelButtonText:
-                                                    'Reintentar <i class="glyphicon glyphicon-repeat"></i>',
-                                                    //cancelButtonColor:"#b9a107",
-                                                  confirmButtonClass: 'btn btn-success',
-                                                  cancelButtonClass: 'btn btn-danger',
-												  width: "auto",
-                                                  allowOutsideClick: false,
-												}).then(function () {
-													var d = new Date();
-													result_imagefin.name= "TEC_" + d.getTime() +".jpg";
-													result_imagefinmod.name = result_imagefin.name;
+                                                    var nomcompletoocr = 'Las referencias familiares deben ser diferentes entre sí y diferentes al solicitante: ' + data.Nombre + ' ' + data.Paterno + ' ' + data.Materno
+                                                    $('#lblreferenciassolicitante').text(nomcompletoocr.toUpperCase());
 
                                                     $("#wrapper").css("width", "100%");
-                                                    $("#identificacioninicial").attr("class","col-xs-12 col-sm-6 col-md-6 col-lg-6");
-                                                    $("#identificacioninicial2").css("display","");
+                                                            $("#identificacioninicial").attr("class","col-xs-12 col-sm-6 col-md-6 col-lg-6");
+                                                            $("#identificacioninicial2").css("display","");
 
 
 
 
-                                                    $('#holder_result').attr("class", "overlay-containerOCR");
-                                                    $('#inefrenteoverlay').css("visibility", "visible");
 
-													
-													$('#lnknombremodalINEFrente').text(result_imagefinmod.name);
-													$('#lnknombremodalINEFrente').attr("disabled", "disabled");
-													
-													if($('#result_image')[0].src != "https://sminet.com.mx/afiliamaas-web/images/shade.jpg" && $('#result_imageanver')[0].src != "https://sminet.com.mx/afiliamaas-web/images/shade.jpg"){
-														$("#btnifeok").prop( "disabled", false );
-														$("#btnifeok").fadeIn();
-													}
-													document.getElementById('txtNomSolicitantenew').value=data.Nombre;
-													validaricontxt($('#txtNomSolicitantenew'));
-												   document.getElementById('txtApePaternonew').value=data.Paterno;
-												   validaricontxt($('#txtApePaternonew'));
-												   document.getElementById('txtApeMaternonew').value=data.Materno;
-												   document.getElementById('txtCalleSolicitantenew').value=data.calle;
-												   validaricontxt($('#txtCalleSolicitantenew'));
-												   document.getElementById('txtCpSolicitantenew').value=data.codigoPostal;
-												   validariconCP($('#txtCpSolicitantenew'));
-												   result_imagefin.src = result_image.src;
-													result_imagefinmod.src = result_image.src;
-												   
-												   //para INE chear para los otros tipos de identificacion
-												   $("#txtTipIdentificacionnew option[value=2565]").attr("selected","selected");
-												   $("#txtTipIdentificacionnew").prop( "disabled", true );
-												   $("#lstNacionalidadnew option[value=2519]").attr("selected","selected");
-													validariconlistas($("#txtTipIdentificacionnew"));
-												   
-												   validariconlistas($("#lstNacionalidadnew"));
-												   
-												   $.ajax({ 			
-															type: 'POST',
-															url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCP',
-															data: JSON.stringify({"CP":data.codigoPostal}),
-															contentType: "application/json; charset=utf-8",
-															dataType: "json",
-															success: function(data){
-																	var idest;
-																	var idpob;
-																	var cont= 0;
-                                                                    //$("#txttokenWS").val(data.Token);
-																	//$("#lisColoniaSolicitantenew").removeOption(/./);
-																	$('#lisColoniaSolicitantenew').empty();
-																	$("#lisColoniaSolicitantenew").append('<option value="0">Seleccione...</option>');
-																	$.each(data, function(i, item) {
-																		$("#lisColoniaSolicitantenew").append('<option value="' + item.CTECP + '">' + item.COLONIA + '</option>');	
-																		idest = item.IDESTADO
-																		console.log( item.CTECP);
-																		idpob = item.IDPOBLACION
-																	   });
+                                                   swal({
+                                                          title: '<i style="font-style: normal;">Datos obtenidos</i>',
+                                                          html:
+                                                            "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%;border-collapse: separate;border-spacing:  7px;'>"+
+                                                        "<tr>"+
+                                                            "<td align='left' valign='top' style='padding-right:2em;'>Nombre</td>"+
+                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+ data.Nombre+"</td>"+
+                                                            "<td></td>"+
+                                                        "</tr>"+
+                                                        "<tr>"+
+                                                            "<td align='left' valign='top' style='padding-right:2em;'>Paterno</td>"+
+                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+data.Paterno+"</td>"+
+                                                            "<td></td>"+
+                                                        "</tr>"+
+                                                        "<tr>"+
+                                                            "<td align='left' valign='top' style='padding-right:2em;'>Materno</td>"+
+                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+data.Materno+"</td>"+
+                                                            "<td></td>"+
+                                                        "</tr>"+
+                                                       "<tr>"+
+                                                            "<td align='left' valign='top' style='padding-right:2em;'>Sexo</td>"+
+                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+data.sexo+"</td>"+
+                                                            "<td></td>"+
+                                                        "</tr>"+
+                                                       "<tr>"+
+                                                            "<td align='left' valign='top' style='padding-right:2em;'>Nacionalidad</td>"+
+                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+data.Nacionalidad+"</td>"+
+                                                            "<td></td>"+
+                                                        "</tr>"+
+                                                        "<tr>"+
+                                                            "<td align='left' valign='top' style='padding-right:2em;'>Calle</td>"+
+                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+data.calle+"</td>"+
+                                                            "<td></td>"+
+                                                        "</tr>"+
+                                                        "<tr>"+
+                                                            "<td align='left' valign='top' style='padding-right:2em;'>CP</td>"+
+                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+data.codigoPostal+"</td>"+
+                                                            "<td></td>"+
+                                                        "</tr>"+
+                                                        "<tr>"+
+                                                            "<td align='left' valign='top' style='padding-right:2em;'>Colonia</td>"+
+                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+data.colonia+"</td>"+
+                                                            "<td></td>"+
+                                                        "</tr>"+
+                                                        "<tr>"+
+                                                            "<td align='left' valign='top' style='padding-right:2em;'>Fecha nac</td>"+
+                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+data.fechaDeNacimiento+"</td>"+
+                                                            "<td></td>"+
+                                                        "</tr>"+
+                                                        "<tr>"+
+                                                            "<td align='left' valign='top' style='padding-right:2em;'>Clave elector</td>"+
+                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+data.claveElector+"</td>"+
+                                                            "<td></td>"+
+                                                        "</tr>"+
+                                                        "<tr>"+
+                                                            "<td align='left' valign='top' style='padding-right:2em;'>Vigencia</td>"+
+                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+data.vigencia+"</td>"+
+                                                            "<td></td>"+
+                                                        "</tr>"+
+                                                    "</table>",
+                                                          showCloseButton: true,
+                                                          showCancelButton:true,
+                                                          confirmButtonText:
+                                                            'Correcto <i class="glyphicon glyphicon-ok"></i>',
+                                                          cancelButtonText:
+                                                            'Reintentar <i class="glyphicon glyphicon-repeat"></i>',
+                                                            //cancelButtonColor:"#b9a107",
+                                                          confirmButtonClass: 'btn btn-success',
+                                                          cancelButtonClass: 'btn btn-danger',
+                                                          width: "auto",
+                                                          allowOutsideClick: false,
+                                                        }).then(function () {
+                                                            var d = new Date();
+                                                            result_imagefin.name= "TEC_" + d.getTime() +".jpg";
+                                                            result_imagefinmod.name = result_imagefin.name;
 
-                                                                $('#lisEstadoEmpresanew').empty();
-                                                                   $("#lisEstadotem option").each(function () {
-                                                                       $("#lisEstadoSolicitantenew").append("<option value='" + this.value + "'>" + this.text + '</option>');
-
-                                                                       });
-                                                                    $("#lisEstadoSolicitantenew option[value="+ idest +"]").attr("selected","selected");
+                                                            $("#wrapper").css("width", "100%");
+                                                            $("#identificacioninicial").attr("class","col-xs-12 col-sm-6 col-md-6 col-lg-6");
+                                                            $("#identificacioninicial2").css("display","");
 
 
-																	   //$("#lisEstadoSolicitantenew option:selected").removeAttr("selected");
-																		//$("#lisEstadoSolicitantenew option[value="+ idest +"]").attr("selected","selected");
-																		validariconlistas($("#lisEstadoSolicitantenew"));
-																	
-																	$.ajax({ 			
-																			type: 'POST',
-																			url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetMunicipio',
-																			data: JSON.stringify({"idestado":idest}),
-																			contentType: "application/json; charset=utf-8",
-																			dataType: "json",
-																			success: function(data){
 
-                                                                                $("#lisDelMuniSolicitantenew").empty();
-                                                                                //$("#txttokenWS").val(data.Token);
-																					$.each(data, function(i, item) {
-																						$("#lisDelMuniSolicitantenew").append('<option value="' + item.IDPOBLACION + '">' + item.POBLACION + '</option>');	
-																						idest = item.IDESTADO
-																						
-																						
-																					   });
-																					$("#lisDelMuniSolicitantenew option[value="+ idpob +"]").attr("selected","selected");
-																					validariconlistas($("#lisDelMuniSolicitantenew"));
-																					
-																					
-																					
-																			},
-																			error: function (result) {  
-																				console.log("errror....");
-                                                                                swal({
-                                                                                  title: '<i style="font-style: normal;">Atención</i>',
-                                                                                text: 'Error de comunicación, por favor contacte a su administrador de red',
-                                                                                  showCloseButton: true,
-                                                                                  confirmButtonText:
-                                                                                    'Aceptar <i class="glyphicon glyphicon-ok"></i>',
-                                                                                allowOutsideClick: false,
 
-                                                                                }).then(function () {
+                                                            $('#holder_result').attr("class", "overlay-containerOCR");
+                                                            $('#inefrenteoverlay').css("visibility", "visible");
 
-                                                                                    });
 
-																			}   
-																		}); 
-																	
-																	
-																	
-															},
-															error: function (result) {  
-																console.log("error....");
+                                                            $('#lnknombremodalINEFrente').text(result_imagefinmod.name);
+                                                            $('#lnknombremodalINEFrente').attr("disabled", "disabled");
 
-                                                                swal({
-                                                                      title: '<i style="font-style: normal;">Atención</i>',
-                                                                    text: 'Error de comunicación, por favor contacte a su administrador de red',
-                                                                      showCloseButton: true,
-                                                                      confirmButtonText:
-                                                                        'Aceptar <i class="glyphicon glyphicon-ok"></i>',
-                                                                    allowOutsideClick: false,
+                                                            if($('#result_image')[0].src != "https://sminet.com.mx/afiliamaas-web/images/shade.jpg" && $('#result_imageanver')[0].src != "https://sminet.com.mx/afiliamaas-web/images/shade.jpg"){
+                                                                $("#btnifeok").prop( "disabled", false );
+                                                                $("#btnifeok").fadeIn();
+                                                            }
+                                                            document.getElementById('txtNomSolicitantenew').value=data.Nombre;
+                                                            validaricontxt($('#txtNomSolicitantenew'));
+                                                           document.getElementById('txtApePaternonew').value=data.Paterno;
+                                                           validaricontxt($('#txtApePaternonew'));
+                                                           document.getElementById('txtApeMaternonew').value=data.Materno;
+                                                           document.getElementById('txtCalleSolicitantenew').value=data.calle;
+                                                           validaricontxt($('#txtCalleSolicitantenew'));
+                                                           document.getElementById('txtCpSolicitantenew').value=data.codigoPostal;
+                                                           validariconCP($('#txtCpSolicitantenew'));
+                                                           result_imagefin.src = result_image.src;
+                                                            result_imagefinmod.src = result_image.src;
 
-                                                                    }).then(function () {
+                                                           //para INE chear para los otros tipos de identificacion
+                                                           $("#txtTipIdentificacionnew option[value=2565]").attr("selected","selected");
+                                                           $("#txtTipIdentificacionnew").prop( "disabled", true );
+                                                           $("#lstNacionalidadnew option[value=2519]").attr("selected","selected");
+                                                            validariconlistas($("#txtTipIdentificacionnew"));
 
-                                                                        });
-                                                                                }
-                                                                });
-												   
-												   //document.getElementById('lisDelMuniSolicitantenew').value=data.colonia;
-												   $('#dateFechanacnewdia').val(data.fechaDeNacimientoDIA);
-												   $('#dateFechanacnewmes').val(data.fechaDeNacimientoMES);
-												   $('#dateFechanacnewanio').val("19" + data.fechaDeNacimientoANIO);
-																		
-																		
-												   
-												   $('#dateFechanacnew').val("19" + data.fechaDeNacimientoANIO +"-"+ data.fechaDeNacimientoMES +"-" + data.fechaDeNacimientoDIA);
-												   validariconfecha($('#dateFechanacnew'));
-												   document.getElementById('txtNumExteriornew').value=data.numeroExt ? data.numeroExt : '';
-												   if($('#txtNumExteriornew').val() != ''){
-														validaricontxt($('#txtNumExteriornew'));
-												   }
-												   
-												   $('#txtRFCnew').val(CalcularRFC($('#txtNomSolicitantenew').val() + " " + $('#txtSegundonombrenew').val() ,$('#txtApePaternonew').val(),$('#txtApeMaternonew').val(),$('#dateFechanacnew').val()));
-												   validaricontxt($('#txtRFCnew'));
-												   //document.getElementById('cpresult').value=data.codigoPostal;
-												   
-												}, function (dismiss) {
-												  // dismiss can be 'cancel', 'overlay',
-												  // 'close', and 'timer'
-												  if (dismiss === 'cancel' || dismiss === 'close') {
-                                                      $('#result_image')[0].src = "https://sminet.com.mx/afiliamaas-web/images/shade.jpg";
-                                                      $('#identificacion-ine').click();
+                                                           validariconlistas($("#lstNacionalidadnew"));
 
-												  }
-												});
+                                                           $.ajax({
+                                                                    type: 'POST',
+                                                                    url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCP',
+                                                                    data: JSON.stringify({"CP":data.codigoPostal}),
+                                                                    contentType: "application/json; charset=utf-8",
+                                                                    dataType: "json",
+                                                                    success: function(data){
+                                                                            var idest;
+                                                                            var idpob;
+                                                                            var cont= 0;
+                                                                            //$("#txttokenWS").val(data.Token);
+                                                                            //$("#lisColoniaSolicitantenew").removeOption(/./);
+                                                                            $('#lisColoniaSolicitantenew').empty();
+                                                                            $("#lisColoniaSolicitantenew").append('<option value="0">Seleccione...</option>');
+                                                                            $.each(data, function(i, item) {
+                                                                                $("#lisColoniaSolicitantenew").append('<option value="' + item.CTECP + '">' + item.COLONIA + '</option>');
+                                                                                idest = item.IDESTADO
+                                                                                console.log( item.CTECP);
+                                                                                idpob = item.IDPOBLACION
+                                                                               });
+
+                                                                        $('#lisEstadoEmpresanew').empty();
+                                                                           $("#lisEstadotem option").each(function () {
+                                                                               $("#lisEstadoSolicitantenew").append("<option value='" + this.value + "'>" + this.text + '</option>');
+
+                                                                               });
+                                                                            $("#lisEstadoSolicitantenew option[value="+ idest +"]").attr("selected","selected");
+
+
+                                                                               //$("#lisEstadoSolicitantenew option:selected").removeAttr("selected");
+                                                                                //$("#lisEstadoSolicitantenew option[value="+ idest +"]").attr("selected","selected");
+                                                                                validariconlistas($("#lisEstadoSolicitantenew"));
+
+                                                                            $.ajax({
+                                                                                    type: 'POST',
+                                                                                    url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetMunicipio',
+                                                                                    data: JSON.stringify({"idestado":idest}),
+                                                                                    contentType: "application/json; charset=utf-8",
+                                                                                    dataType: "json",
+                                                                                    success: function(data){
+
+                                                                                        $("#lisDelMuniSolicitantenew").empty();
+                                                                                        //$("#txttokenWS").val(data.Token);
+                                                                                            $.each(data, function(i, item) {
+                                                                                                $("#lisDelMuniSolicitantenew").append('<option value="' + item.IDPOBLACION + '">' + item.POBLACION + '</option>');
+                                                                                                idest = item.IDESTADO
+
+
+                                                                                               });
+                                                                                            $("#lisDelMuniSolicitantenew option[value="+ idpob +"]").attr("selected","selected");
+                                                                                            validariconlistas($("#lisDelMuniSolicitantenew"));
+
+
+
+                                                                                    },
+                                                                                    error: function (result) {
+                                                                                        console.log("errror....");
+                                                                                        swal({
+                                                                                          title: '<i style="font-style: normal;">Atención</i>',
+                                                                                        text: 'Error de comunicación, por favor contacte a su administrador de red',
+                                                                                          showCloseButton: true,
+                                                                                          confirmButtonText:
+                                                                                            'Aceptar <i class="glyphicon glyphicon-ok"></i>',
+                                                                                        allowOutsideClick: false,
+
+                                                                                        }).then(function () {
+
+                                                                                            });
+
+                                                                                    }
+                                                                                });
+
+
+
+                                                                    },
+                                                                    error: function (result) {
+                                                                        console.log("error....");
+
+                                                                        swal({
+                                                                              title: '<i style="font-style: normal;">Atención</i>',
+                                                                            text: 'Error de comunicación, por favor contacte a su administrador de red',
+                                                                              showCloseButton: true,
+                                                                              confirmButtonText:
+                                                                                'Aceptar <i class="glyphicon glyphicon-ok"></i>',
+                                                                            allowOutsideClick: false,
+
+                                                                            }).then(function () {
+
+                                                                                });
+                                                                    }
+                                                            });
+
+                                                           //document.getElementById('lisDelMuniSolicitantenew').value=data.colonia;
+                                                           $('#dateFechanacnewdia').val(data.fechaDeNacimientoDIA);
+                                                           $('#dateFechanacnewmes').val(data.fechaDeNacimientoMES);
+                                                           $('#dateFechanacnewanio').val("19" + data.fechaDeNacimientoANIO);
+
+
+
+                                                           $('#dateFechanacnew').val("19" + data.fechaDeNacimientoANIO +"-"+ data.fechaDeNacimientoMES +"-" + data.fechaDeNacimientoDIA);
+                                                           validariconfecha($('#dateFechanacnew'));
+                                                           document.getElementById('txtNumExteriornew').value=data.numeroExt ? data.numeroExt : '';
+                                                           if($('#txtNumExteriornew').val() != ''){
+                                                                validaricontxt($('#txtNumExteriornew'));
+                                                           }
+
+                                                           $('#txtRFCnew').val(CalcularRFC($('#txtNomSolicitantenew').val() + " " + $('#txtSegundonombrenew').val() ,$('#txtApePaternonew').val(),$('#txtApeMaternonew').val(),$('#dateFechanacnew').val()));
+                                                           validaricontxt($('#txtRFCnew'));
+                                                           //document.getElementById('cpresult').value=data.codigoPostal;
+
+                                                            if(data.sexo =="M"){
+                                                            // Hacer algo si el checkbox ha sido seleccionado
+                                                                $('#chksexosolicitante').prop('checked', true)
+                                                                console.log("FEMENINO");
+                                                            }else{
+                                                                // Hacer algo si el checkbox ha sido deseleccionado
+                                                                $('#chksexosolicitante').prop('checked', false)
+                                                                console.log("MASCULINO");
+                                                            }
+
+                                                        }, function (dismiss) {
+                                                          // dismiss can be 'cancel', 'overlay',
+                                                          // 'close', and 'timer'
+                                                          if (dismiss === 'cancel' || dismiss === 'close') {
+                                                              $('#result_image')[0].src = "https://sminet.com.mx/afiliamaas-web/images/shade.jpg";
+                                                              $('#identificacion-ine').click();
+
+                                                          }
+                                                        });
+
+
+
+                                                    break;
+                                                case "INEREVERSO:#mx.com.stefanini.service.api.rest":
+                                                    Materno:null
+                                                    Nombre:null
+                                                    Paterno:null
+                                                    cic:"109261438"
+                                                    claveElector:"ALALOM83091215H700"
+                                                    fActualiza:" 24 de octubre    de 2017 "
+                                                    fConsulta:" 26/10/17"
+                                                    fRegistro:"AÑO DE REGISTRO 2002"
+                                                    fVigencia:"Será válida hasta el 31 de diciembre de 2023"
+                                                    numeroEmision:"1"
+                                                    ocr:"5296085057488"
+                                                    break;
+                                                case "Consulrar:#mx.com.stefanini.service.api.rest":
+                                                    tipoagrupa = 'Rechazadas';
+                                                    tiporow = 'rowRechazadas';
+                                                    topoproy = data.solicitudes[r].ID_SOLICITUD;
+                                                    icono = 'glyphicon glyphicon-ban-circle';
+                                                    fstitulo ='fs-titleRechazadas';
+                                                    break;
+                                                case "ConsulrarReverso:#mx.com.stefanini.service.api.rest":
+                                                    Cabello:"ONDULADO#MEDIANO#CASTANO OBSCURO"
+                                                    Cara:"MEDIA"
+                                                    Complexion:null
+                                                    Materno:"ACOSTA"
+                                                    Nombre:"FERNANDO ALFREDO"
+                                                    Ojos:null
+                                                    Paterno:"AVALOS"
+                                                    Peso:"75.0"
+                                                    Piel:"BLANCA"
+                                                    Tez:"ALTERNADOS"
+                                                    Vigencia:"MATRICULA DE ALTA SEGURIDAD 5 AÑOS"
+                                                    fechaDeNacimiento:"14/07/1981"
+                                                    fechaDeNacimientoANIO:"1981"
+                                                    fechaDeNacimientoDIA:"14"
+                                                    fechaDeNacimientoMES:"07"
+                                                    noCedula:"10395"
+
+                                                    break;
+                                                case "PassportA:#mx.com.stefanini.service.api.rest":
+                                                    Cabello:"RIZADO¡MEDIANO¡CASTANO OBSCURO"
+                                                    Cara:"DELGADA"
+                                                    Estatura:"1.79"
+                                                    Materno:"MONTIEL"
+                                                    Nacionalidad:"MEXICANA"
+                                                    Nombre:"MARIO"
+                                                    Observaciones:"ESTADOS"
+                                                    Paterno:"ROBLEDO"
+                                                    Peso:"75.0"
+                                                    Piel:"MORENA CLARA"
+                                                    Tez:"CAFE CLARO"
+                                                    calle:null
+                                                    fechaCaducidad:"I"
+                                                    fechaDeNacimiento:"10/08/1997"
+                                                    fechaDeNacimientoANIO:"1997"
+                                                    fechaDeNacimientoDIA:"10"
+                                                    fechaDeNacimientoMES:"08"
+                                                    fechaExpedicion:"Q"
+                                                    noPasaporte:"E00002526"
+                                                    sexo:null
+                                                    vigencia:"PASAPORTE 3 AÑOS"
+
+                                                    break;
+                                                case "PassportB:#mx.com.stefanini.service.api.rest":
+                                                    Materno:null
+                                                    Nombre:null
+                                                    Paterno:null
+                                                    fechaCaducidad:null
+                                                    fechaDeNacimiento:"17/01/1981"
+                                                    fechaDeNacimientoANIO:"1981"
+                                                    fechaDeNacimientoDIA:"17"
+                                                    fechaDeNacimientoMES:"01"
+                                                    fechaExpedicion:null
+                                                    noPasaporte:null
+                                                    sexo:null
+
+                                                    break;
+                                                default:
+                                                    break;
+                                            }
 										}
 																
 									},  
