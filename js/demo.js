@@ -463,6 +463,10 @@ function processCompress(input) {
                                                     result_image.src = result_image1.src;
                                                     result_image1.src=null;
 
+                                                    $("#wrapper").css("width", "100%");
+                                                            $("#identificacioninicial").attr("class","col-xs-12 col-sm-6 col-md-6 col-lg-6");
+                                                            $("#identificacioninicial2").css("display","");
+
                                                     console.log(data);
                                                     console.log(data.claveElector);
                                                     console.log(data.fActualiza);
