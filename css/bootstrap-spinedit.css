@@ -1,5 +1,5 @@
 ﻿div.spinedit { display: inline-block; position: relative; }
-input[type="text"].spinedit { width: 35px; text-align: -webkit-center; }
+input[type="text"].spinedit { width: 35px; text-align:center; }
 div.spinedit .glyphicon-circle-arrow-up,
 div.spinedit .glyphicon-circle-arrow-down { position: absolute;    cursor: pointer;    width: 12px;    left: -70px; font-size: 25px; }
 div.spinedit .glyphicon-circle-arrow-up { top: -16px; }
