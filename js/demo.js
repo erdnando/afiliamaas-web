@@ -193,6 +193,7 @@ function processCompress(input) {
                                                     var result_imagefin = document.getElementById('result_imagefin');
                                                     var result_imagefinmod=document.getElementById('result_imagefinmod');
                                                     result_image.src = result_image1.src;
+                                                    result_image1.src=null;
 
                                                     var nomcompletoocr = 'Las referencias familiares deben ser diferentes entre sí y diferentes al solicitante: ' + data.Nombre + ' ' + data.Paterno + ' ' + data.Materno
                                                     $('#lblreferenciassolicitante').text(nomcompletoocr.toUpperCase());
@@ -310,6 +311,7 @@ function processCompress(input) {
                                                            validariconCP($('#txtCpSolicitantenew'));
                                                            result_imagefin.src = result_image.src;
                                                             result_imagefinmod.src = result_image.src;
+
 
                                                            //para INE chear para los otros tipos de identificacion
                                                            $("#txtTipIdentificacionnew option[value=2565]").attr("selected","selected");
@@ -459,6 +461,7 @@ function processCompress(input) {
                                                     var result_imagefinatras = document.getElementById('result_imagefinatras');
                                                     var result_imagefinmodatras = document.getElementById('result_imagefinmodatras');
                                                     result_image.src = result_image1.src;
+                                                    result_image1.src=null;
 
                                                     console.log(data);
                                                     console.log(data.claveElector);
