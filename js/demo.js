@@ -9,6 +9,18 @@
 			//al recibir una imagen
 			var divResultado = document.getElementById('divResultado');
 			divResultado.innerHTML = '';
+
+
+			processCompress(this);
+		});
+
+
+
+
+$("#imgcompresa").change(function(){
+			//al recibir una imagen
+			var divResultado = document.getElementById('divResultado');
+			divResultado.innerHTML = '';
 			
 			
 			processCompress(this);
