@@ -168,22 +168,31 @@ function processCompress(input) {
 										{
                                             switch(data.__type) {
                                                 case "INEIFE:#mx.com.stefanini.service.api.rest":
-                                                    /*console.log('======================');
+                                                    console.log('======================');
                                                    console.log('Resultado OCR');
                                                    console.log('======================');
                                                    console.log(data);
-                                                   console.log('Nombre...'+data.Nombre);
-                                                   console.log('Paterno...'+data.Paterno);
-                                                   console.log('Materno...'+data.Materno);
-                                                   console.log('calle...'+data.calle);
-                                                   console.log('codigoPostal...'+data.codigoPostal);
-                                                   console.log('colonia...'+data.colonia);
-                                                   console.log('fechaDeNacimiento...'+data.fechaDeNacimiento);
-                                                   console.log('fechaDeNacimientoANIO...'+data.fechaDeNacimientoANIO);
-                                                   console.log('fechaDeNacimientoDIA...'+data.fechaDeNacimientoDIA);
-                                                   console.log('fechaDeNacimientoMES...'+data.fechaDeNacimientoMES);
-                                                   console.log('numeroExt...'+data.numeroExt);
-                                                   console.log('sexo...'+data.sexo);*/
+
+                                                      /*CURP:"R0VE730121HMCDRRO9"
+                                                    Materno:"VARGAS"
+                                                    Nacionalidad:"MEXICANA"
+                                                    Nombre:"ERDNANDO"
+                                                    Paterno:"RODRIGUEZ"
+                                                    calle:"C PALOMA NEGRA 277"
+                                                    claveElector:"RDVRER73O12115H500"
+                                                    codigoPostal:"57000"
+                                                    colonia:"BENITO JUAREZ "
+                                                    estado:"MEX"
+                                                    fechaDeNacimiento:"21/01/73"
+                                                    fechaDeNacimientoANIO:"73"
+                                                    fechaDeNacimientoDIA:"21"
+                                                    fechaDeNacimientoMES:"01"
+                                                    municipio:"NEZAHUALCOYOTL"
+                                                    numeroExt:null
+                                                    numeroInt:null
+                                                    sexo:"H"
+                                                    vigencia:"2025"*/
+
                                                    //$("#txttokenWS").val(data.Token);
                                                    $('#cargandoafiliadiv').hide();
 
@@ -213,7 +222,7 @@ function processCompress(input) {
                                                                 var existe = validaexisteocr(elem, "sin datos");
                                                                 if(existe != "sin datos"){
                                                                     iniciotabla += "<tr>"+
-                                                                    "<td align='left' valign='top' style='padding-right:2em;'>" + ind + "</td>"+
+                                                                    "<td align='left' valign='top' style='padding-right:2em;'>" + ind.replace("_", " ") + "</td>"+
                                                                     "<td align='left' style='font-weight:bold;max-width: 250px;'>"+ elem+"</td>"+
                                                                     "<td></td>"+
                                                                 "</tr>";
@@ -224,25 +233,7 @@ function processCompress(input) {
 
                                                         var tablagral = iniciotabla + fintabla;
 
-                                                    /*CURP:"R0VE730121HMCDRRO9"
-                                                    Materno:"VARGAS"
-                                                    Nacionalidad:"MEXICANA"
-                                                    Nombre:"ERDNANDO"
-                                                    Paterno:"RODRIGUEZ"
-                                                    calle:"C PALOMA NEGRA 277"
-                                                    claveElector:"RDVRER73O12115H500"
-                                                    codigoPostal:"57000"
-                                                    colonia:"BENITO JUAREZ "
-                                                    estado:"MEX"
-                                                    fechaDeNacimiento:"21/01/73"
-                                                    fechaDeNacimientoANIO:"73"
-                                                    fechaDeNacimientoDIA:"21"
-                                                    fechaDeNacimientoMES:"01"
-                                                    municipio:"NEZAHUALCOYOTL"
-                                                    numeroExt:null
-                                                    numeroInt:null
-                                                    sexo:"H"
-                                                    vigencia:"2025"*/
+
 
                                                    swal({
                                                           title: '<i style="font-style: normal;">Datos obtenidos</i>',
@@ -450,11 +441,6 @@ function processCompress(input) {
                                                             $("#identificacioninicial2").css("display","");
 
                                                     console.log(data);
-                                                    /*console.log(data.claveElector);
-                                                    console.log(data.fActualiza);
-                                                    console.log(data.fConsulta);
-                                                    console.log(data.fRegistro);
-                                                    console.log(data.fVigencia);*/
                                                     if(data.Token =="INVALID"){
                                                         $('#cargandoafiliadiv').hide();
                                                             swal({
@@ -489,13 +475,13 @@ function processCompress(input) {
                                                                         if(existe != "sin datos"){
                                                                             if(ind =="cic"){
                                                                                 iniciotabla += "<tr>"+
-                                                                                    "<td align='left' valign='top' style='padding-right:2em;'>"+ ind + "</td>"+
+                                                                                    "<td align='left' valign='top' style='padding-right:2em;'>"+ ind.replace("_", " ") + "</td>"+
                                                                                     "<td align='left' style='font-weight:bold'> IDMEX"+ elem +"</td>"+
                                                                                     "<td></td>"+
                                                                                 "</tr>";
                                                                             }else{
                                                                                 iniciotabla += "<tr>"+
-                                                                                    "<td align='left' valign='top' style='padding-right:2em;'>"+ ind + "</td>"+
+                                                                                    "<td align='left' valign='top' style='padding-right:2em;'>"+ ind.replace("_", " ") + "</td>"+
                                                                                     "<td align='left' style='font-weight:bold'>"+ elem +"</td>"+
                                                                                     "<td></td>"+
                                                                                 "</tr>";
@@ -507,41 +493,9 @@ function processCompress(input) {
 
                                                         var tablagral = iniciotabla + fintabla;
 
-
-
-
-
-
-
-
-                                                            /*var cicresult = validaexisteocr(data.cic, "sin datos")
-                                                            if(cicresult == "sin datos" || cicresult == "no data"){
-                                                                cicresult = "sin datos"
-                                                            }else{
-                                                                cicresult = "IDMEX" + cicresult;
-                                                            }
-
-                                                            var cveelecto = validaexisteocr(data.claveElector, "sin datos");
-
-                                                            if(cveelecto == "sin datos" || cveelecto == "no data"){
-                                                                cveelecto = "sin datos";
-                                                            }
-                                                            var fecactua = validaexisteocr(data.fActualiza, "sin datos");
-                                                            var fecvigen = validaexisteocr(data.fVigencia, "sin datos");
-                                                            var fecreg = validaexisteocr(data.fRegistro, "sin datos");
-                                                            var fecconsul = validaexisteocr(data.fConsulta, "sin datos");
-                                                            var numemision = validaexisteocr(data.numeroEmision, "sin datos");
-                                                            var resocr = validaexisteocr(data.ocr, "sin datos");*/
-
-
-
-
                                                            swal({
                                                                 title: '<i style="font-style: normal;">Datos obtenidos</i>',
                                                                html: tablagral,
-
-                                                                /*html:
-                                                                     "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%; border-collapse: separate;border-spacing:  7px;    height: 178px;'><tr><td align='left' valign='top' style='padding-right:2em;'>CIC:</td><td align='left' style='font-weight:bold'>"+ cicresult +"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Clave de elector:</td><td align='left' style='font-weight:bold'>"+cveelecto+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Fecha actualización:</td><td align='left' style='font-weight:bold'>"+fecactua+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Fecha de Vigencia:</td><td align='left' style='font-weight:bold; width: 100%;'>"+fecvigen+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Fecha de Registro:</td><td align='left' style='font-weight:bold'>"+fecreg+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Fecha de Consulta:</td><td align='left' style='font-weight:bold'>"+fecconsul+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Número de Emisión:</td><td align='left' style='font-weight:bold'>"+numemision+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em; width: 40%;'>Número de Identificación:</td><td align='left' style='font-weight:bold'>"+resocr+"</td><td></td></tr></table>",*/
                                                                 showCloseButton: true,
                                                                showCancelButton:true,
                                                                           confirmButtonText:
@@ -593,7 +547,7 @@ function processCompress(input) {
                                                     fstitulo ='fs-titleRechazadas';
                                                     break;
                                                 case "ConsulrarReverso:#mx.com.stefanini.service.api.rest":
-                                                    Cabello:"ONDULADO#MEDIANO#CASTANO OBSCURO"
+                                                    /*Cabello:"ONDULADO#MEDIANO#CASTANO OBSCURO"
                                                     Cara:"MEDIA"
                                                     Complexion:null
                                                     Materno:"ACOSTA"
@@ -609,6 +563,114 @@ function processCompress(input) {
                                                     fechaDeNacimientoDIA:"14"
                                                     fechaDeNacimientoMES:"07"
                                                     noCedula:"10395"
+                                                    */
+
+
+
+
+                                                    var source_image = document.getElementById('source_imageanver');
+                                                    var result_image = document.getElementById('result_imageanver');
+                                                    var result_imagefinatras = document.getElementById('result_imagefinatras');
+                                                    var result_imagefinmodatras = document.getElementById('result_imagefinmodatras');
+                                                    result_image.src = result_image1.src;
+                                                    result_image1.src="";
+                                                    source_image1.src="";
+
+                                                    $("#wrapper").css("width", "100%");
+                                                            $("#identificacioninicial").attr("class","col-xs-12 col-sm-6 col-md-6 col-lg-6");
+                                                            $("#identificacioninicial2").css("display","");
+
+                                                    console.log(data);
+                                                    if(data.Token =="INVALID"){
+                                                        $('#cargandoafiliadiv').hide();
+                                                            swal({
+                                                                  title: '<i style="font-style: normal;">Sessión cerrada por inactividad</i>',
+                                                                  showCloseButton: true,
+                                                                  confirmButtonText:
+                                                                    'Aceptar <i class="glyphicon glyphicon-log-out"></i>',
+                                                                allowOutsideClick: false,
+
+                                                                }).then(function () {
+                                                                    $("#cargandoafiliadiv").show();
+                                                                      location.href=("Index.html");
+                                                                    });
+                                                            //location.href=("Index.html");
+                                                            //$("#txttokenWS").val(data.Token)
+                                                        }else{
+
+                                                            /*if(data.Token != null && data.Token != "INVALID"){
+                                                               $("#txttokenWS").val(data.Token);
+                                                            }*/
+                                                            $('#cargandoafiliadiv').hide();
+
+
+                                                            var iniciotabla = "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%; border-collapse: separate;border-spacing:  7px;    height: 178px;'>";
+                                                            var fintabla ="</table>";
+
+                                                            $.each(data, function (ind, elem) {
+                                                                if(ind != "__type"){
+                                                                    if(ind == "Materno" || ind == "Nombre" || ind == "Paterno"){
+                                                                    }else{
+                                                                        var existe = validaexisteocr(elem, "sin datos");
+                                                                        if(existe != "sin datos"){
+
+                                                                            iniciotabla += "<tr>"+
+                                                                                "<td align='left' valign='top' style='padding-right:2em;'>"+ ind.replace("_", " ") + "</td>"+
+                                                                                "<td align='left' style='font-weight:bold'>"+ elem +"</td>"+
+                                                                                "<td></td>"+
+                                                                            "</tr>";
+
+                                                                        }
+                                                                    }
+                                                                }
+                                                            });
+
+                                                        var tablagral = iniciotabla + fintabla;
+
+                                                           swal({
+                                                                title: '<i style="font-style: normal;">Datos obtenidos</i>',
+                                                               html: tablagral,
+                                                                showCloseButton: true,
+                                                               showCancelButton:true,
+                                                                          confirmButtonText:
+                                                                            'Correcto <i class="glyphicon glyphicon-ok"></i>',
+                                                                          cancelButtonText:
+                                                                            'Reintentar <i class="glyphicon glyphicon-repeat"></i>',
+                                                               //cancelButtonColor:"#b9a107",
+                                                                    width: "455px",
+                                                               allowOutsideClick: false,
+
+                                                                }).then(function () {
+                                                                    var d = new Date();
+                                                                    result_imagefinatras.name= "TEC_" + d.getTime() +".jpg";
+                                                                    result_imagefinmodatras.name = result_imagefinatras.name;
+
+
+                                                                            $('#holder_resultanver').attr("class", "overlay-containerOCR");
+                                                                            $('#ineATRASoverlay').css("visibility", "visible");
+
+
+
+                                                                    $('#lnknombremodalINEAtras').text(result_imagefinmodatras.name);
+                                                                    $('#lnknombremodalINEAtras').attr("disabled", "disabled");
+                                                                    document.getElementById('txtNumIdentificanew').value=data.noCedula;
+                                                                    validaricontxt($('#txtNumIdentificanew'));
+                                                                    if($('#result_image')[0].src != "https://sminet.com.mx/afiliamaasweb/images/shade.jpg" && $('#result_imageanver')[0].src != "https://sminet.com.mx/afiliamaasweb/images/shade.jpg"){
+                                                                            $("#btnifeok").prop( "disabled", false );
+                                                                            $("#btnifeok").fadeIn();
+                                                                        }
+                                                                    result_imagefinatras.src = result_image.src;
+                                                                    result_imagefinmodatras.src = result_image.src;
+                                                                }, function (dismiss) {
+                                                                      // dismiss can be 'cancel', 'overlay',
+                                                                      // 'close', and 'timer'
+                                                                      if (dismiss === 'cancel' || dismiss === 'close') {
+                                                                        $('#result_imageanver')[0].src = "https://sminet.com.mx/afiliamaasweb/images/shade.jpg";
+                                                                              $('#imgcompresa').click();
+                                                                      }
+                                                                    });
+                                                            }
+
 
                                                     break;
                                                 case "PassportA:#mx.com.stefanini.service.api.rest":
@@ -633,6 +695,245 @@ function processCompress(input) {
                                                     noPasaporte:"E00002526"
                                                     sexo:null
                                                     vigencia:"PASAPORTE 3 AÑOS"
+
+
+
+
+                                                    console.log('======================');
+                                                   console.log('Resultado OCR');
+                                                   console.log('======================');
+                                                   console.log(data);
+
+                                                   //$("#txttokenWS").val(data.Token);
+                                                   $('#cargandoafiliadiv').hide();
+
+
+                                                    var source_image = document.getElementById("source_image");
+                                                    var result_image = document.getElementById('result_image');
+                                                    var result_imagefin = document.getElementById('result_imagefin');
+                                                    var result_imagefinmod=document.getElementById('result_imagefinmod');
+                                                    result_image.src = result_image1.src;
+                                                    result_image1.src="";
+                                                    source_image1.src="";
+
+                                                    var nomcompletoocr = 'Las referencias familiares deben ser diferentes entre sí y diferentes al solicitante: ' + data.Nombre + ' ' + data.Paterno + ' ' + data.Materno
+                                                    $('#lblreferenciassolicitante').text(nomcompletoocr.toUpperCase());
+
+                                                    $("#wrapper").css("width", "100%");
+                                                            $("#identificacioninicial").attr("class","col-xs-12 col-sm-6 col-md-6 col-lg-6");
+                                                            $("#identificacioninicial2").css("display","");
+
+                                                    var iniciotabla = "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%;border-collapse: separate;border-spacing:  7px;'>";
+                                                    var fintabla ="</table>";
+
+                                                    $.each(data, function (ind, elem) {
+                                                        if(ind != "__type"){
+                                                            if(ind == "fechaDeNacimientoANIO" || ind == "fechaDeNacimientoDIA" || ind == "fechaDeNacimientoMES"){
+                                                            }else{
+                                                                var existe = validaexisteocr(elem, "sin datos");
+                                                                if(existe != "sin datos"){
+                                                                    iniciotabla += "<tr>"+
+                                                                    "<td align='left' valign='top' style='padding-right:2em;'>" + ind.replace("_", " ") + "</td>"+
+                                                                    "<td align='left' style='font-weight:bold;max-width: 250px;'>"+ elem+"</td>"+
+                                                                    "<td></td>"+
+                                                                "</tr>";
+                                                                }
+                                                            }
+                                                        }
+                                                    });
+
+                                                        var tablagral = iniciotabla + fintabla;
+
+
+
+                                                   swal({
+                                                          title: '<i style="font-style: normal;">Datos obtenidos</i>',
+                                                          html: tablagral,
+                                                          showCloseButton: true,
+                                                          showCancelButton:true,
+                                                          confirmButtonText:
+                                                            'Correcto <i class="glyphicon glyphicon-ok"></i>',
+                                                          cancelButtonText:
+                                                            'Reintentar <i class="glyphicon glyphicon-repeat"></i>',
+                                                            //cancelButtonColor:"#b9a107",
+                                                          confirmButtonClass: 'btn btn-success',
+                                                          cancelButtonClass: 'btn btn-danger',
+                                                          width: "auto",
+                                                          allowOutsideClick: false,
+                                                        }).then(function () {
+                                                            var d = new Date();
+                                                            result_imagefin.name= "TEC_" + d.getTime() +".jpg";
+                                                            result_imagefinmod.name = result_imagefin.name;
+
+                                                            /*$("#wrapper").css("width", "100%");
+                                                            $("#identificacioninicial").attr("class","col-xs-12 col-sm-6 col-md-6 col-lg-6");
+                                                            $("#identificacioninicial2").css("display","");*/
+
+
+
+
+                                                            $('#holder_result').attr("class", "overlay-containerOCR");
+                                                            $('#inefrenteoverlay').css("visibility", "visible");
+
+
+                                                            $('#lnknombremodalINEFrente').text(result_imagefinmod.name);
+                                                            $('#lnknombremodalINEFrente').attr("disabled", "disabled");
+
+                                                            if($('#result_image')[0].src != "https://sminet.com.mx/afiliamaasweb/images/shade.jpg" && $('#result_imageanver')[0].src != "https://sminet.com.mx/afiliamaasweb/images/shade.jpg"){
+                                                                $("#btnifeok").prop( "disabled", false );
+                                                                $("#btnifeok").fadeIn();
+                                                            }
+                                                            document.getElementById('txtNomSolicitantenew').value=data.Nombre;
+                                                            validaricontxt($('#txtNomSolicitantenew'));
+                                                           document.getElementById('txtApePaternonew').value=data.Paterno;
+                                                           validaricontxt($('#txtApePaternonew'));
+                                                           document.getElementById('txtApeMaternonew').value=data.Materno;
+                                                           document.getElementById('txtCalleSolicitantenew').value=data.calle;
+                                                           validaricontxt($('#txtCalleSolicitantenew'));
+                                                           /*document.getElementById('txtCpSolicitantenew').value=data.codigoPostal;
+                                                           validariconCP($('#txtCpSolicitantenew'));*/
+                                                           result_imagefin.src = result_image.src;
+                                                            result_imagefinmod.src = result_image.src;
+
+
+                                                           //para INE chear para los otros tipos de identificacion
+                                                           $("#txtTipIdentificacionnew option[value=2498]").attr("selected","selected");
+                                                           $("#txtTipIdentificacionnew").prop( "disabled", true );
+                                                           //$("#lstNacionalidadnew option[value=2519]").attr("selected","selected");
+                                                            validariconlistas($("#txtTipIdentificacionnew"));
+
+                                                           //validariconlistas($("#lstNacionalidadnew"));
+
+                                                          /* $.ajax({
+                                                                    type: 'POST',
+                                                                    url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCP',
+                                                                    data: JSON.stringify({"CP":data.codigoPostal}),
+                                                                    contentType: "application/json; charset=utf-8",
+                                                                    dataType: "json",
+                                                                    success: function(data){
+                                                                            var idest;
+                                                                            var idpob;
+                                                                            var cont= 0;
+                                                                            //$("#txttokenWS").val(data.Token);
+                                                                            //$("#lisColoniaSolicitantenew").removeOption(/./);
+                                                                            $('#lisColoniaSolicitantenew').empty();
+                                                                            $("#lisColoniaSolicitantenew").append('<option value="0">Seleccione...</option>');
+                                                                            $.each(data, function(i, item) {
+                                                                                $("#lisColoniaSolicitantenew").append('<option value="' + item.CTECP + '">' + item.COLONIA + '</option>');
+                                                                                idest = item.IDESTADO
+                                                                                console.log( item.CTECP);
+                                                                                idpob = item.IDPOBLACION
+                                                                               });
+
+                                                                        $('#lisEstadoEmpresanew').empty();
+                                                                           $("#lisEstadotem option").each(function () {
+                                                                               $("#lisEstadoSolicitantenew").append("<option value='" + this.value + "'>" + this.text + '</option>');
+
+                                                                               });
+                                                                            $("#lisEstadoSolicitantenew option[value="+ idest +"]").attr("selected","selected");
+
+
+                                                                               //$("#lisEstadoSolicitantenew option:selected").removeAttr("selected");
+                                                                                //$("#lisEstadoSolicitantenew option[value="+ idest +"]").attr("selected","selected");
+                                                                                validariconlistas($("#lisEstadoSolicitantenew"));
+
+                                                                            $.ajax({
+                                                                                    type: 'POST',
+                                                                                    url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetMunicipio',
+                                                                                    data: JSON.stringify({"idestado":idest}),
+                                                                                    contentType: "application/json; charset=utf-8",
+                                                                                    dataType: "json",
+                                                                                    success: function(data){
+
+                                                                                        $("#lisDelMuniSolicitantenew").empty();
+                                                                                        //$("#txttokenWS").val(data.Token);
+                                                                                            $.each(data, function(i, item) {
+                                                                                                $("#lisDelMuniSolicitantenew").append('<option value="' + item.IDPOBLACION + '">' + item.POBLACION + '</option>');
+                                                                                                idest = item.IDESTADO
+
+
+                                                                                               });
+                                                                                            $("#lisDelMuniSolicitantenew option[value="+ idpob +"]").attr("selected","selected");
+                                                                                            validariconlistas($("#lisDelMuniSolicitantenew"));
+
+
+
+                                                                                    },
+                                                                                    error: function (result) {
+                                                                                        console.log("errror....");
+                                                                                        swal({
+                                                                                          title: '<i style="font-style: normal;">Atención</i>',
+                                                                                        text: 'Error de comunicación, por favor contacte a su administrador de red',
+                                                                                          showCloseButton: true,
+                                                                                          confirmButtonText:
+                                                                                            'Aceptar <i class="glyphicon glyphicon-ok"></i>',
+                                                                                        allowOutsideClick: false,
+
+                                                                                        }).then(function () {
+
+                                                                                            });
+
+                                                                                    }
+                                                                                });
+
+
+
+                                                                    },
+                                                                    error: function (result) {
+                                                                        console.log("error....");
+
+                                                                        swal({
+                                                                              title: '<i style="font-style: normal;">Atención</i>',
+                                                                            text: 'Error de comunicación, por favor contacte a su administrador de red',
+                                                                              showCloseButton: true,
+                                                                              confirmButtonText:
+                                                                                'Aceptar <i class="glyphicon glyphicon-ok"></i>',
+                                                                            allowOutsideClick: false,
+
+                                                                            }).then(function () {
+
+                                                                                });
+                                                                    }
+                                                            });*/
+
+                                                           //document.getElementById('lisDelMuniSolicitantenew').value=data.colonia;
+                                                           $('#dateFechanacnewdia').val(data.fechaDeNacimientoDIA);
+                                                           $('#dateFechanacnewmes').val(data.fechaDeNacimientoMES);
+                                                           $('#dateFechanacnewanio').val("19" + data.fechaDeNacimientoANIO);
+
+
+
+                                                           $('#dateFechanacnew').val(data.fechaDeNacimientoANIO +"-"+ data.fechaDeNacimientoMES +"-" + data.fechaDeNacimientoDIA);
+                                                           validariconfecha($('#dateFechanacnew'));
+                                                           document.getElementById('txtNumExteriornew').value=data.numeroExt ? data.numeroExt : '';
+                                                           if($('#txtNumExteriornew').val() != ''){
+                                                                validaricontxt($('#txtNumExteriornew'));
+                                                           }
+
+                                                           $('#txtRFCnew').val(CalcularRFC($('#txtNomSolicitantenew').val() + " " + $('#txtSegundonombrenew').val() ,$('#txtApePaternonew').val(),$('#txtApeMaternonew').val(),$('#dateFechanacnew').val()));
+                                                           validaricontxt($('#txtRFCnew'));
+                                                           //document.getElementById('cpresult').value=data.codigoPostal;
+
+                                                            if(data.sexo =="M"){
+                                                            // Hacer algo si el checkbox ha sido seleccionado
+                                                                $('#chksexosolicitante').prop('checked', true)
+                                                                console.log("FEMENINO");
+                                                            }else{
+                                                                // Hacer algo si el checkbox ha sido deseleccionado
+                                                                $('#chksexosolicitante').prop('checked', false)
+                                                                console.log("MASCULINO");
+                                                            }
+
+                                                        }, function (dismiss) {
+                                                          // dismiss can be 'cancel', 'overlay',
+                                                          // 'close', and 'timer'
+                                                          if (dismiss === 'cancel' || dismiss === 'close') {
+                                                              $('#result_image')[0].src = "https://sminet.com.mx/afiliamaasweb/images/shade.jpg";
+                                                              $('#imgcompresa').click();
+
+                                                          }
+                                                        });
+
 
                                                     break;
                                                 case "PassportB:#mx.com.stefanini.service.api.rest":
