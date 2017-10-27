@@ -802,6 +802,23 @@ function processCompress(input) {
                                                            //$("#lstNacionalidadnew option[value=2519]").attr("selected","selected");
                                                             validariconlistas($("#txtTipIdentificacionnew"));
 
+
+
+                                                            $('#lisColoniaSolicitantenew').empty();
+                                                            $("#lisColoniaSolicitantenew").append('<option value="0">Seleccione...</option>');
+
+                                                            $('#lisEstadoSolicitantenew').empty();
+                                                                           $("#lisEstadotem option").each(function () {
+                                                                               $("#lisEstadoSolicitantenew").append("<option value='" + this.value + "'>" + this.text + '</option>');
+
+                                                                               });
+
+                                                       $("#lisEstadoSolicitantenew option[value=0]").attr("selected","selected");
+
+                                                       $("#lisDelMuniSolicitantenew").empty();
+                                                       $("#lisDelMuniSolicitantenew").append('<option value="0">Seleccione...</option>');
+
+
                                                            //validariconlistas($("#lstNacionalidadnew"));
 
                                                           /* $.ajax({
@@ -1054,6 +1071,21 @@ function processCompress(input) {
                                                            $("#txtTipIdentificacionnew").prop( "disabled", true );
                                                            //$("#lstNacionalidadnew option[value=2519]").attr("selected","selected");
                                                             validariconlistas($("#txtTipIdentificacionnew"));
+
+
+                                                       $('#lisColoniaSolicitantenew').empty();
+                                                            $("#lisColoniaSolicitantenew").append('<option value="0">Seleccione...</option>');
+
+                                                            $('#lisEstadoSolicitantenew').empty();
+                                                                           $("#lisEstadotem option").each(function () {
+                                                                               $("#lisEstadoSolicitantenew").append("<option value='" + this.value + "'>" + this.text + '</option>');
+
+                                                                               });
+
+                                                       $("#lisEstadoSolicitantenew option[value=0]").attr("selected","selected");
+
+                                                       $("#lisDelMuniSolicitantenew").empty();
+                                                       $("#lisDelMuniSolicitantenew").append('<option value="0">Seleccione...</option>');
 
                                                            //validariconlistas($("#lstNacionalidadnew"));
 
