@@ -1083,19 +1083,29 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$("#firma-img").attr("src",F164);
 
         if(datosgrales[0] != "Rechazadas"){
-		$("#firma-img").removeAttr("class","hide");
-		
-		$("#DivdelaFirmaBorrar").css("display","none");
-		$("#validarCliente").css("display","none");
+            $("#firma-img").removeAttr("class","hide");
+
+            $("#DivdelaFirmaBorrar").css("display","none");
+            $("#validarCliente").css("display","none");
+        }else{
+            $("#firma-img").attr("class","hide");
+
+            $("#DivdelaFirmaBorrar").css("display","");
+            $("#validarCliente").css("display","");
         }
 		
 		
 		if(datosgrales[0] != "Rechazadas"){
-		$("#firma-canvas").css("display","none");
-		$("#linkmodalopen").attr("class", "overlay");
-		$('#nomfirma').text($FirmaPath);
-		$('#nomfirma').attr("disabled","disabled");
+            $("#firma-canvas").css("display","none");
+            $("#linkmodalopen").attr("class", "overlay");
+            $('#nomfirma').text($FirmaPath);
+            $('#nomfirma').attr("disabled","disabled");
         }else{
+
+            $("#firma-canvas").css("display","");
+            $("#linkmodalopen").attr("class", "overlay");
+
+            $('#nomfirma').attr("disabled",false);
             $('#nomfirma').text("Cambiar firma");
         }
 
@@ -1118,6 +1128,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
             else{
                 $('#lblextra').attr("disabled",false);
                 $('#lblextra').text("Modificar");
+                $("#linkmodalopenextra").attr("class", "overlay");
                 $('#Imagesextras2').css("display","");
                 numextramostrar = 2
 
@@ -1152,6 +1163,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
             else{
                 $('#lblextra2').attr("disabled",false);
                 $('#lblextra2').text("Modificar");
+                $("#linkmodalopenextra2").attr("class", "overlay");
                 $('#Imagesextras2').show();
                 $('#Imagesextras3').show();
                 numextramostrar = 3;
@@ -1184,6 +1196,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
             else{
                 $('#lblextra3').attr("disabled",false);
                 $('#lblextra3').text("Modificar");
+                $("#linkmodalopenextra3").attr("class", "overlay");
                 $('#Imagesextras3').show();
                 $('#Imagesextras4').show();
                 numextramostrar=4
@@ -1215,6 +1228,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
             }else{
                 $('#lblextra4').attr("disabled",false);
                 $('#lblextra4').text("Modificar");
+                $("#linkmodalopenextra4").attr("class", "overlay");
                 $('#Imagesextras4').show();
                 $('#Imagesextras5').show();
                 numextramostrar = 5;
