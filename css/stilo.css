@@ -2691,4 +2691,22 @@ blockquote.nk - blockquote - style - 1 cite {
     margin-left: 26px;
 }
 
+.result_imagefinfirma{
+    height: 132px;
+    max-width: 75%;
+    border-radius: 15px;
+    margin-left: 26px;
+}
+
+.result_imagefinmodfirma{
+    height: 315px;
+    width: 100%;
+    border-radius: 15px;
+    margin-left: 15px;
+}
+
+
+
+
+
 
