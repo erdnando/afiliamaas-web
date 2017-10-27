@@ -1099,6 +1099,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
             $('#nomfirma').text("Cambiar firma");
         }
 
+        var numextramostrar = 0;
+
 
 		if($Extra1 != "Extra"){
 
@@ -1117,6 +1119,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
                 $('#lblextra').attr("disabled",false);
                 $('#lblextra').text("Modificar");
                 $('#Imagesextras2').css("display","");
+                numextramostrar = 2
 
             }
 
@@ -1151,10 +1154,16 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
                 $('#lblextra2').text("Modificar");
                 $('#Imagesextras2').show();
                 $('#Imagesextras3').show();
+                numextramostrar = 3;
             }
 		}else
             {
-                $('#Imagesextras2').css("display","none");
+                if (numextramostrar >= 2){
+                    $('#Imagesextras2').css('display','');
+                }else{
+                    $('#Imagesextras2').css("display","none");
+                }
+
                 $("#imaextramodal2").attr("name", $Extra2);
 
             }
@@ -1177,10 +1186,16 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
                 $('#lblextra3').text("Modificar");
                 $('#Imagesextras3').show();
                 $('#Imagesextras4').show();
+                numextramostrar=4
             }
 		}else
             {
-                $('#Imagesextras3').hide();
+
+                 if (numextramostrar >= 3){
+                    $('#Imagesextras3').css('display','');
+                }else{
+                    $('#Imagesextras3').css("display","none");
+                }
                 $("#imaextramodal3").attr("name", $Extra3);
 
             }
@@ -1202,10 +1217,15 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
                 $('#lblextra4').text("Modificar");
                 $('#Imagesextras4').show();
                 $('#Imagesextras5').show();
+                numextramostrar = 5;
             }
 		}else
             {
-                $('#Imagesextras4').hide();
+                 if (numextramostrar >= 4){
+                    $('#Imagesextras4').css('display','');
+                }else{
+                    $('#Imagesextras4').css("display","none");
+                }
                 $("#imaextramodal4").attr("name", $Extra4);
 
             }
@@ -1229,7 +1249,13 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
             }
 		}else
             {
-                $('#Imagesextras5').hide();
+
+                 if (numextramostrar == 5){
+                    $('#Imagesextras5').css('display','');
+                }else{
+                    $('#Imagesextras5').css("display","none");
+                }
+
                 $("#imaextramodal5").attr("name", $Extra5);
 
             }
