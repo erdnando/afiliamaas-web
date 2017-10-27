@@ -224,7 +224,7 @@ body.stop-scrolling {
           transform: rotate(-45deg);
           right: 16px; }
     .sweet-alert .sa-icon.sa-warning {
-      border-color: #F8BB86; }
+      border-color: #fff; }
       .sweet-alert .sa-icon.sa-warning .sa-body {
         position: absolute;
         width: 5px;
