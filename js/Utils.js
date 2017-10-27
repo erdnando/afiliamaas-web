@@ -66,7 +66,8 @@ function fncompaniamovil(){
 						   });	
 				},
 				error: function (result) {  
-					console.log("errror....companiamovil");
+					console.log("error: " + result);
+                            $('#cargandoafiliadiv').hide();
                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
                                                                     text: 'Error de comunicación, por favor contacte a su administrador de red',
@@ -109,7 +110,8 @@ function fncargaNacionalidad(){
 						}*/
 				},
 				error: function (result) {  
-					console.log("errror....nacionalidad");  
+					console.log("error: " + result);
+                            $('#cargandoafiliadiv').hide();
                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
                                                                     text: 'Error de comunicación, por favor contacte a su administrador de red',
@@ -143,7 +145,8 @@ function fncargatipoidentificacion(){
 						   });	
 				},
 				error: function (result) {  
-					console.log("errror....tipoiden");  
+					console.log("error: " + result);
+                            $('#cargandoafiliadiv').hide();
                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
                                                                     text: 'Error de comunicación, por favor contacte a su administrador de red',
@@ -176,7 +179,8 @@ function fncargaEdocivil(){
 						   });	
 				},
 				error: function (result) {  
-					console.log("errror....edocivil");  
+					console.log("error: " + result);
+                            $('#cargandoafiliadiv').hide();
                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
                                                                     text: 'Error de comunicación, por favor contacte a su administrador de red',
@@ -209,7 +213,8 @@ function fnestatusrecidencia(){
 						   });	
 				},
 				error: function (result) {  
-					console.log("errror....statusrecidencia");
+					console.log("error: " + result);
+                            $('#cargandoafiliadiv').hide();
                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
                                                                     text: 'Error de comunicación, por favor contacte a su administrador de red',
@@ -242,7 +247,8 @@ function fntipocontrato(){
 						   });	
 				},
 				error: function (result) {  
-					console.log("errror....tipocontrato");  
+					console.log("error: " + result);
+                            $('#cargandoafiliadiv').hide();
                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
                                                                     text: 'Error de comunicación, por favor contacte a su administrador de red',
@@ -297,7 +303,8 @@ function fncargaEdo(){//(combo, tipoedo, Delesol, colsoli){
 						
 				},
 				error: function (result) {  
-					console.log("errror....cargaestado");  
+					console.log("error: " + result);
+                            $('#cargandoafiliadiv').hide();
                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
                                                                     text: 'Error de comunicación, por favor contacte a su administrador de red',
@@ -611,7 +618,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 										
 								},
 								error: function (result) {  
-									console.log("errror....");  
+									console.log("error: " + result);
+                            $('#cargandoafiliadiv').hide();
                                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
                                                                     text: 'Error de comunicación, por favor contacte a su administrador de red',
@@ -630,7 +638,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 						
 				},
 				error: function (result) {  
-					console.log("errror....");  
+					console.log("error: " + result);
+                            $('#cargandoafiliadiv').hide();
                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
                                                                     text: 'Error de comunicación, por favor contacte a su administrador de red',
@@ -673,7 +682,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 					   });	
 				},
 				error: function (result) {  
-					console.log("errror....");
+					console.log("error: " + result);
+                            $('#cargandoafiliadiv').hide();
                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
                                                                     text: 'Error de comunicación, por favor contacte a su administrador de red',
@@ -712,7 +722,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 					$('#txtCpEmpresanew').val(dcodpos);
 				},
 				error: function (result) {  
-					console.log("errror....");  
+					console.log("error: " + result);
+                            $('#cargandoafiliadiv').hide();
                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
                                                                     text: 'Error de comunicación, por favor contacte a su administrador de red',
@@ -781,7 +792,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 										
 								},
 								error: function (result) {  
-									console.log("errror....");  
+									console.log("error: " + result);
+                            $('#cargandoafiliadiv').hide();
                                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
                                                                     text: 'Error de comunicación, por favor contacte a su administrador de red',
@@ -800,7 +812,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 						
 				},
 				error: function (result) {  
-					console.log("errror....");  
+					console.log("error: " + result);
+                            $('#cargandoafiliadiv').hide();
                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
                                                                     text: 'Error de comunicación, por favor contacte a su administrador de red',
@@ -842,7 +855,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 					   });	
 				},
 				error: function (result) {  
-					console.log("errror....");  
+					console.log("error: " + result);
+                            $('#cargandoafiliadiv').hide();
                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
                                                                     text: 'Error de comunicación, por favor contacte a su administrador de red',
@@ -881,7 +895,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 					$('#txtCpSolicitantenew').val("");
 				},
 				error: function (result) {  
-					console.log("errror....");  
+					console.log("error: " + result);
+                            $('#cargandoafiliadiv').hide();
                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
                                                                     text: 'Error de comunicación, por favor contacte a su administrador de red',
@@ -940,7 +955,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 						muestramodalSolirecrea(NoIDSol, DOC_IF64, DOC_IA64, F164, DOC_C164, DOC_C264, E164, E264, E36, E464, E564 )					
 				},
 				error: function (result) {  
-					console.log("errror" + result);  
+					console.log("error: " + result);
+                            $('#cargandoafiliadiv').hide();
                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
                                                                     text: 'Error de comunicación, por favor contacte a su administrador de red',
@@ -4838,7 +4854,8 @@ function consultasolicitudes(idUsr,token,Nomusuario,tipouser,pwd,compniare){
 
 						},
 						error: function (result) {
-							console.log("errror....solicitudessss");
+							console.log("error: " + result);
+                            $('#cargandoafiliadiv').hide();
 
                             swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',

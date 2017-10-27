@@ -42,6 +42,7 @@ $(document).ready(function(){
 				},
 				error: function (result) {  
 					console.log("errror....ingresar");  
+                    $('#cargando').hide()
                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
                                                                     text: 'Error de comunicación, por favor contacte a su administrador de red',

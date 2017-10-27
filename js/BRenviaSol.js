@@ -189,7 +189,8 @@ var idUsr =  $('#txtidUsrWS').val();
 
                                 },
                                 error: function (result) {
-                                    console.log("error....");
+                                    console.log("error: " + result);
+                            $('#cargandoafiliadiv').hide();
 
                                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',

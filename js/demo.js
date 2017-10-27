@@ -356,6 +356,7 @@ function processCompress(input) {
 
                                                                                     },
                                                                                     error: function (result) {
+                                                                                        $('#cargandoafiliadiv').hide();
                                                                                         console.log("errror....");
                                                                                         swal({
                                                                                           title: '<i style="font-style: normal;">Atención</i>',
@@ -377,6 +378,7 @@ function processCompress(input) {
                                                                     },
                                                                     error: function (result) {
                                                                         console.log("error....");
+                                                                        $('#cargandoafiliadiv').hide();
 
                                                                         swal({
                                                                               title: '<i style="font-style: normal;">Atención</i>',
@@ -904,6 +906,7 @@ function processCompress(input) {
 
                                                                                     },
                                                                                     error: function (result) {
+                                                                                    $('#cargandoafiliadiv').hide();
                                                                                         console.log("errror....");
                                                                                         swal({
                                                                                           title: '<i style="font-style: normal;">Atención</i>',
@@ -924,6 +927,7 @@ function processCompress(input) {
 
                                                                     },
                                                                     error: function (result) {
+                                                                    $('#cargandoafiliadiv').hide();
                                                                         console.log("error....");
 
                                                                         swal({
@@ -1180,6 +1184,7 @@ function processCompress(input) {
 
                                                                                     },
                                                                                     error: function (result) {
+                                                                                    $('#cargandoafiliadiv').hide();
                                                                                         console.log("errror....");
                                                                                         swal({
                                                                                           title: '<i style="font-style: normal;">Atención</i>',
@@ -1200,6 +1205,7 @@ function processCompress(input) {
 
                                                                     },
                                                                     error: function (result) {
+                                                                    $('#cargandoafiliadiv').hide();
                                                                         console.log("error....");
 
                                                                         swal({
@@ -1477,6 +1483,7 @@ function processCompressanver(input) {
 								},  
 								error: function (result) {  
 									console.log("errror...." + result);  
+                                    $('#cargandoafiliadiv').hide();
                                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
                                                                     text: 'Error de comunicación, por favor contacte a su administrador de red',
