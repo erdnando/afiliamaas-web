@@ -779,10 +779,10 @@ function processCompress(input) {
                                                             $('#lnknombremodalINEFrente').text(result_imagefinmod.name);
                                                             $('#lnknombremodalINEFrente').attr("disabled", "disabled");
 
-                                                            if($('#result_image')[0].src != "https://sminet.com.mx/afiliamaasweb/images/shade.jpg" && $('#result_imageanver')[0].src != "https://sminet.com.mx/afiliamaasweb/images/shade.jpg"){
+
                                                                 $("#btnifeok").prop( "disabled", false );
                                                                 $("#btnifeok").fadeIn();
-                                                            }
+
                                                             document.getElementById('txtNomSolicitantenew').value=data.Nombre;
                                                             validaricontxt($('#txtNomSolicitantenew'));
                                                            document.getElementById('txtApePaternonew').value=data.Paterno;
@@ -899,7 +899,7 @@ function processCompress(input) {
                                                            //document.getElementById('lisDelMuniSolicitantenew').value=data.colonia;
                                                            $('#dateFechanacnewdia').val(data.fechaDeNacimientoDIA);
                                                            $('#dateFechanacnewmes').val(data.fechaDeNacimientoMES);
-                                                           $('#dateFechanacnewanio').val("19" + data.fechaDeNacimientoANIO);
+                                                           $('#dateFechanacnewanio').val(data.fechaDeNacimientoANIO);
 
 
 
@@ -1032,10 +1032,10 @@ function processCompress(input) {
                                                             $('#lnknombremodalINEFrente').text(result_imagefinmod.name);
                                                             $('#lnknombremodalINEFrente').attr("disabled", "disabled");
 
-                                                            if($('#result_image')[0].src != "https://sminet.com.mx/afiliamaasweb/images/shade.jpg" && $('#result_imageanver')[0].src != "https://sminet.com.mx/afiliamaasweb/images/shade.jpg"){
-                                                                $("#btnifeok").prop( "disabled", false );
-                                                                $("#btnifeok").fadeIn();
-                                                            }
+
+                                                            $("#btnifeok").prop( "disabled", false );
+                                                            $("#btnifeok").fadeIn();
+
                                                             document.getElementById('txtNomSolicitantenew').value=data.Nombre;
                                                             validaricontxt($('#txtNomSolicitantenew'));
                                                            document.getElementById('txtApePaternonew').value=data.Paterno;
@@ -1152,7 +1152,7 @@ function processCompress(input) {
                                                            //document.getElementById('lisDelMuniSolicitantenew').value=data.colonia;
                                                            $('#dateFechanacnewdia').val(data.fechaDeNacimientoDIA);
                                                            $('#dateFechanacnewmes').val(data.fechaDeNacimientoMES);
-                                                           $('#dateFechanacnewanio').val("19" + data.fechaDeNacimientoANIO);
+                                                           $('#dateFechanacnewanio').val(data.fechaDeNacimientoANIO);
 
 
 
