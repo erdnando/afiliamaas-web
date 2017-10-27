@@ -11,7 +11,7 @@
 			divResultado.innerHTML = '';
 			
 			
-			processCompress(this);
+			processCompress(this, null);
 		});
 	
 	$("#identificacion-ineanver").change(function(){
@@ -20,7 +20,8 @@
 		divResultado.innerHTML = '';
 		
 		
-		processCompressanver(this);
+		//processCompressanver(this);
+        processCompress(this,"anver");
 	});
 	
 	$("#inputextra").change(function(){
@@ -48,7 +49,7 @@
 //});
 
 
-function processCompress(input) {
+function processCompress(input, ladoIDENt) {
 	$('#cargandoafiliadiv').show();
 
 	var output_format = "jpg";
@@ -56,7 +57,7 @@ function processCompress(input) {
 	
     if (input.files && input.files[0]) {
 		console.log('procesando imagen...');
-		var holder = document.getElementById('holder');
+		var holder document.getElementById('holder');
 		holder.className = '';
         //e.preventDefault();
         
@@ -71,7 +72,7 @@ function processCompress(input) {
 		console.log('recuperando binario...');
         reader = new FileReader();
         reader.onload = function(event) {
-            var i = document.getElementById("source_image");
+            var i = ladoIDENt == null ? document.getElementById("source_image"):document.getElementById("source_imageanver");
            	 	i.src = event.target.result;
 				//console.log('imagen sorce...'+i.src);
            	 	i.onload = function(){
@@ -88,10 +89,11 @@ function processCompress(input) {
 					console.log('imagen cargada...');
 					//fire click event to process image STF
 					//btn click------------------------------------------------------
-						var source_image = document.getElementById('source_image');
-						var result_image = document.getElementById('result_image');
-						var result_imagefin = document.getElementById('result_imagefin');
-						var result_imagefinmod = document.getElementById('result_imagefinmod');
+						var source_image = ladoIDENt == null ? document.getElementById("source_image"):document.getElementById("source_imageanver");
+						var result_image = ladoIDENt == null ? document.getElementById('result_image'):document.getElementById('result_imageanver');
+						var result_imagefin = ladoIDENt == null ? document.getElementById('result_imagefin'):document.getElementById('result_imagefinatras');
+						var result_imagefinmod = ladoIDENt == null ? document.getElementById('result_imagefinmod'):document.getElementById('result_imagefinmodatras');
+
 						if (source_image.src == "") {
 							alert("You must load an image first!");
 							return false;
@@ -154,27 +156,6 @@ function processCompress(input) {
 										{
                                             switch(data.__type) {
                                                 case "INEIFE:#mx.com.stefanini.service.api.rest":
-                                                    CURP:null
-                                                    Materno:"VARGAS"
-                                                    Nacionalidad:"MEXICANA"
-                                                    Nombre:"ERDNANDO"
-                                                    Paterno:"RODRIGUEZ"
-                                                    calle:"C PALOMA NEGRA 277"
-                                                    claveElector:"12115H500"
-                                                    codigoPostal:"57000"
-                                                    colonia:"BENITO JUAREZ "
-                                                    estado:null
-                                                    fechaDeNacimiento:"21/01/73"
-                                                    fechaDeNacimientoANIO:"73"
-                                                    fechaDeNacimientoDIA:"21"
-                                                    fechaDeNacimientoMES:"01"
-                                                    municipio:null
-                                                    numeroExt:null
-                                                    numeroInt:null
-                                                    sexo:"H"
-                                                    vigencia:"2025"
-
-
                                                     console.log('======================');
                                                    console.log('Resultado OCR');
                                                    console.log('======================');
@@ -295,7 +276,7 @@ function processCompress(input) {
                                                             $('#lnknombremodalINEFrente').text(result_imagefinmod.name);
                                                             $('#lnknombremodalINEFrente').attr("disabled", "disabled");
 
-                                                            if($('#result_image')[0].src != "https://sminet.com.mx/afiliamaas-web/images/shade.jpg" && $('#result_imageanver')[0].src != "https://sminet.com.mx/afiliamaas-web/images/shade.jpg"){
+                                                            if($('#result_image')[0].src != "https://sminet.com.mx/afiliamaasweb/images/shade.jpg" && $('#result_imageanver')[0].src != "https://sminet.com.mx/afiliamaasweb/images/shade.jpg"){
                                                                 $("#btnifeok").prop( "disabled", false );
                                                                 $("#btnifeok").fadeIn();
                                                             }
@@ -464,6 +445,106 @@ function processCompress(input) {
                                                     fVigencia:"Será válida hasta el 31 de diciembre de 2023"
                                                     numeroEmision:"1"
                                                     ocr:"5296085057488"
+
+
+
+
+                                                    console.log(data);
+                                                    console.log(data.claveElector);
+                                                    console.log(data.fActualiza);
+                                                    console.log(data.fConsulta);
+                                                    console.log(data.fRegistro);
+                                                    console.log(data.fVigencia);
+                                                    if(data.Token =="INVALID"){
+                                                        $('#cargandoafiliadiv').hide();
+                                                            swal({
+                                                                  title: '<i style="font-style: normal;">Sessión cerrada por inactividad</i>',
+                                                                  showCloseButton: true,
+                                                                  confirmButtonText:
+                                                                    'Aceptar <i class="glyphicon glyphicon-log-out"></i>',
+                                                                allowOutsideClick: false,
+
+                                                                }).then(function () {
+                                                                    $("#cargandoafiliadiv").show();
+                                                                      location.href=("Index.html");
+                                                                    });
+                                                            //location.href=("Index.html");
+                                                            //$("#txttokenWS").val(data.Token)
+                                                        }else{
+
+                                                            if(data.Token != null && data.Token != "INVALID"){
+                                                               $("#txttokenWS").val(data.Token);
+                                                            }
+                                                            $('#cargandoafiliadiv').hide();
+                                                            var cicresult = validaexisteocr(data.cic, "sin datos")
+                                                            if(cicresult == "sin datos" || cicresult == "no data"){
+                                                                cicresult = "sin datos"
+                                                            }else{
+                                                                cicresult = "IDMEX" + cicresult;
+                                                            }
+
+                                                            var cveelecto = validaexisteocr(data.claveElector, "sin datos");
+
+                                                            if(cveelecto == "sin datos" || cveelecto == "no data"){
+                                                                cveelecto = "sin datos";
+                                                            }
+                                                            var fecactua = validaexisteocr(data.fActualiza, "sin datos");
+                                                            var fecvigen = validaexisteocr(data.fVigencia, "sin datos");
+                                                            var fecreg = validaexisteocr(data.fRegistro, "sin datos");
+                                                            var fecconsul = validaexisteocr(data.fConsulta, "sin datos");
+                                                            var numemision = validaexisteocr(data.numeroEmision, "sin datos");
+                                                            var resocr = validaexisteocr(data.ocr, "sin datos");
+
+
+
+
+                                                           swal({
+                                                                title: '<i style="font-style: normal;">Datos obtenidos</i>',
+
+                                                                html:
+                                                                     "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%; border-collapse: separate;border-spacing:  7px;    height: 178px;'><tr><td align='left' valign='top' style='padding-right:2em;'>CIC:</td><td align='left' style='font-weight:bold'>"+ cicresult +"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Clave de elector:</td><td align='left' style='font-weight:bold'>"+cveelecto+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Fecha actualización:</td><td align='left' style='font-weight:bold'>"+fecactua+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Fecha de Vigencia:</td><td align='left' style='font-weight:bold; width: 100%;'>"+fecvigen+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Fecha de Registro:</td><td align='left' style='font-weight:bold'>"+fecreg+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Fecha de Consulta:</td><td align='left' style='font-weight:bold'>"+fecconsul+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Número de Emisión:</td><td align='left' style='font-weight:bold'>"+numemision+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em; width: 40%;'>Número de Identificación:</td><td align='left' style='font-weight:bold'>"+resocr+"</td><td></td></tr></table>",
+                                                                showCloseButton: true,
+                                                               showCancelButton:true,
+                                                                          confirmButtonText:
+                                                                            'Correcto <i class="glyphicon glyphicon-ok"></i>',
+                                                                          cancelButtonText:
+                                                                            'Reintentar <i class="glyphicon glyphicon-repeat"></i>',
+                                                               //cancelButtonColor:"#b9a107",
+                                                                    width: "455px",
+                                                               allowOutsideClick: false,
+
+                                                                }).then(function () {
+                                                                    var d = new Date();
+                                                                    result_imagefinatras.name= "TEC_" + d.getTime() +".jpg";
+                                                                    result_imagefinmodatras.name = result_imagefinatras.name;
+
+
+                                                                            $('#holder_resultanver').attr("class", "overlay-containerOCR");
+                                                                            $('#ineATRASoverlay').css("visibility", "visible");
+
+
+
+                                                                    $('#lnknombremodalINEAtras').text(result_imagefinmodatras.name);
+                                                                    $('#lnknombremodalINEAtras').attr("disabled", "disabled");
+                                                                    document.getElementById('txtNumIdentificanew').value=data.ocr;
+                                                                    validaricontxt($('#txtNumIdentificanew'));
+                                                                    if($('#result_image')[0].src != "https://sminet.com.mx/afiliamaas-web/images/shade.jpg" && $('#result_imageanver')[0].src != "https://sminet.com.mx/afiliamaas-web/images/shade.jpg"){
+                                                                            $("#btnifeok").prop( "disabled", false );
+                                                                            $("#btnifeok").fadeIn();
+                                                                        }
+                                                                    result_imagefinatras.src = result_image.src;
+                                                                    result_imagefinmodatras.src = result_image.src;
+                                                                }, function (dismiss) {
+                                                                      // dismiss can be 'cancel', 'overlay',
+                                                                      // 'close', and 'timer'
+                                                                      if (dismiss === 'cancel' || dismiss === 'close') {
+                                                                        $('#result_imageanver')[0].src = "https://sminet.com.mx/afiliamaas-web/images/shade.jpg";
+                                                                              $('#identificacion-ineanver').click();
+                                                                      }
+                                                                    });
+                                                            }
+
+
                                                     break;
                                                 case "Consulrar:#mx.com.stefanini.service.api.rest":
                                                     tipoagrupa = 'Rechazadas';
