@@ -207,13 +207,17 @@ function processCompress(input) {
                                                     var fintabla ="</table>";
 
                                                     $.each(data, function (ind, elem) {
-                                                        var existe = validaexisteocr(elem, "sin datos");
-                                                        if(existe != "sin datos"){
-                                                            iniciotabla += "<tr>"+
-                                                            "<td align='left' valign='top' style='padding-right:2em;'>" + ind + "</td>"+
-                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+ elem+"</td>"+
-                                                            "<td></td>"+
-                                                        "</tr>";
+                                                        if(ind != "__type"){
+                                                            if(ind != "fechaDeNacimientoANIO" || ind != "fechaDeNacimientoDIA" || ind != "fechaDeNacimientoMES"){
+                                                                var existe = validaexisteocr(elem, "sin datos");
+                                                                if(existe != "sin datos"){
+                                                                    iniciotabla += "<tr>"+
+                                                                    "<td align='left' valign='top' style='padding-right:2em;'>" + ind + "</td>"+
+                                                                    "<td align='left' style='font-weight:bold;max-width: 250px;'>"+ elem+"</td>"+
+                                                                    "<td></td>"+
+                                                                "</tr>";
+                                                                }
+                                                            }
                                                         }
                                                     });
 
