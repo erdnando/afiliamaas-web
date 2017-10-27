@@ -1110,11 +1110,13 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 			$("#linkmodalopenextra").attr("class", "overlay");
 			$('#lblextra').text($Extra1);
 			$('#lblextra').attr("disabled","disabled");
+                $('#Imagesextras').show();
 
             }
             else{
                 $('#lblextra').attr("disabled",false);
                 $('#lblextra').text("Modificar");
+                $('#Imagesextras').show();
                 $('#Imagesextras2').show();
 
             }
@@ -1123,10 +1125,10 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
             {
                 if(datosgrales[0] != "Rechazadas"){
                     $('#Imagesextras').hide();
-                $("#imaextramodal").attr("name", $Extra1);
+                    $("#imaextramodal").attr("name", $Extra1);
                 }else{
                     $('#Imagesextras').show();
-                $("#imaextramodal").attr("name", $Extra1);
+                    $("#imaextramodal").attr("name", $Extra1);
                 }
 
 
