@@ -283,7 +283,7 @@ HEADER
     height: 172px;
     float: right;
     border-radius: 10px;
-    text-align: -webkit-center;
+    text-align: center;
 }
 
 #holder_resultDatos {
@@ -319,7 +319,7 @@ HEADER
 	height: 172px; 
 	float: right;    
 	border-radius: 10px;
-    text-align: -webkit-center;
+    text-align: center;
 }
 
 #holder_resultDatosanver {
@@ -453,7 +453,7 @@ HEADER
 
 .contenidoficha{
     color: white;
-    text-align: -webkit-center;
+    text-align: center;
 }
 .fs-titleNuevas {
     font-size: 15px;
@@ -1721,7 +1721,7 @@ position: absolute;
     position: absolute;
     width: 100%;
     height: 100%;
-    text-align: -webkit-center;
+    text-align:center;
     top: 0;
     left: 0;
     background-color: rgba(128, 128, 128, 0.38);
@@ -1731,7 +1731,7 @@ position: absolute;
     position: absolute;
     width: 100%;
     height: 100%;
-    text-align: -webkit-center;
+    text-align:center;
     top: 0;
     left: 0;
     background-color: rgba(128, 128, 128, 0.38);
@@ -1752,7 +1752,7 @@ position: absolute;
     left: 66px;
     top: 175px;
     height: 88px;
-    text-align: -webkit-center;
+    text-align: center;
     /*background:#fff url(../images/ajax-loader.gif) no-repeat center;*/
 }
 
