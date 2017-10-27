@@ -1121,7 +1121,14 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 
 		}else
             {
+                if(datosgrales[0] != "Rechazadas"){
+                    $('#Imagesextras').hide();
                 $("#imaextramodal").attr("name", $Extra1);
+                }else{
+                    $('#Imagesextras').show();
+                $("#imaextramodal").attr("name", $Extra1);
+                }
+
 
             }
 
@@ -1146,6 +1153,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
             }
 		}else
             {
+                $('#Imagesextras2').hide();
                 $("#imaextramodal2").attr("name", $Extra2);
 
             }
@@ -1171,6 +1179,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
             }
 		}else
             {
+                $('#Imagesextras3').hide();
                 $("#imaextramodal3").attr("name", $Extra3);
 
             }
@@ -1195,6 +1204,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
             }
 		}else
             {
+                $('#Imagesextras4').hide();
                 $("#imaextramodal4").attr("name", $Extra4);
 
             }
@@ -1218,6 +1228,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
             }
 		}else
             {
+                $('#Imagesextras').hide();
                 $("#imaextramodal5").attr("name", $Extra5);
 
             }
