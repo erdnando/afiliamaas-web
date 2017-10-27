@@ -188,8 +188,8 @@ function processCompress(input) {
                                                    $('#cargandoafiliadiv').hide();
 
 
-                                                    var source_image = document.getElementById("source_imagedomi");
-                                                    var result_image = document.getElementById('result_imagedomi');
+                                                    var source_image = document.getElementById("source_image");
+                                                    var result_image = document.getElementById('result_image');
                                                     var result_imagefin = document.getElementById('result_imagefin');
                                                     var result_imagefinmod=document.getElementById('result_imagefinmod');
                                                     result_image.src = result_image1.src;
