@@ -263,8 +263,10 @@ function processCompress(input) {
 
                                                             $('#holder_result').attr("class", "overlay-containerOCR");
                                                             $('#inefrenteoverlay').css("visibility", "visible");
+                                                            $("#tituloboxINEfrente").text("INE(Frente)");
+                                                            $("#tituloboxINEanv").text("INE(Atras)");
 
-                                                            $("#boxineatras").css("display", "none");
+                                                            $("#boxineatras").css("display", "");
 
 
                                                             $('#lnknombremodalINEFrente').text(result_imagefinmod.name);
@@ -517,6 +519,10 @@ function processCompress(input) {
                                                                             $('#holder_resultanver').attr("class", "overlay-containerOCR");
                                                                             $('#ineATRASoverlay').css("visibility", "visible");
 
+                                                                    $("#tituloboxINEfrente").text("INE(Frente)");
+                                                                    $("#tituloboxINEanv").text("INE(Atras)");
+
+
                                                                     $("#boxineatras").css("display", "");
 
 
@@ -652,6 +658,9 @@ function processCompress(input) {
 
                                                                             $('#holder_resultanver').attr("class", "overlay-containerOCR");
                                                                             $('#ineATRASoverlay').css("visibility", "visible");
+
+                                                                    $("#tituloboxINEfrente").text("Matricula Consular");
+
 
 
                                                                     $("#boxineatras").css("display", "");
@@ -826,6 +835,9 @@ function processCompress(input) {
 
                                                        document.getElementById('txtNumIdentificanew').value=data.noPasaporte;
                                                                     validaricontxt($('#txtNumIdentificanew'));
+
+                                                       $("#tituloboxINEfrente").text("Pasaporte");
+
                                                        $("#boxineatras").css("display", "none");
 
 
@@ -1098,6 +1110,9 @@ function processCompress(input) {
 
                                                        document.getElementById('txtNumIdentificanew').value=data.noPasaporte;
                                                                     validaricontxt($('#txtNumIdentificanew'));
+
+                                                       $("#tituloboxINEfrente").text("Pasaporte");
+
                                                        $("#boxineatras").css("display", "none");
 
                                                            //validariconlistas($("#lstNacionalidadnew"));
