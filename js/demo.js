@@ -208,7 +208,8 @@ function processCompress(input) {
 
                                                     $.each(data, function (ind, elem) {
                                                         if(ind != "__type"){
-                                                            if(ind != "fechaDeNacimientoANIO" || ind != "fechaDeNacimientoDIA" || ind != "fechaDeNacimientoMES"){
+                                                            if(ind == "fechaDeNacimientoANIO" || ind == "fechaDeNacimientoDIA" || ind == "fechaDeNacimientoMES"){
+                                                            }else{
                                                                 var existe = validaexisteocr(elem, "sin datos");
                                                                 if(existe != "sin datos"){
                                                                     iniciotabla += "<tr>"+
