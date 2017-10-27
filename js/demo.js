@@ -57,7 +57,7 @@ function processCompress(input, ladoIDENt) {
 	
     if (input.files && input.files[0]) {
 		console.log('procesando imagen...');
-		var holder document.getElementById('holder');
+		var holder = document.getElementById('holder');
 		holder.className = '';
         //e.preventDefault();
         
