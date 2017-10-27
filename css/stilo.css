@@ -710,7 +710,7 @@ img{max-width:100%;}
     width: 100%;
     float: right;
     padding: 1% 8% 0%;
-    text-align: -webkit-right;
+    text-align:right;
 }
 .logo {
     width: 45%;

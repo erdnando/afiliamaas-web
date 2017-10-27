@@ -52,6 +52,7 @@ function signToImage() {
 
 function fncompaniamovil(){
 	$.ajax({ 			
+                timeout:60000,
 				type: 'POST',
 				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo',
 				data: JSON.stringify({ 'tipocatalogo':'1'}),
@@ -83,7 +84,8 @@ function fncompaniamovil(){
 
 function fncargaNacionalidad(){
 	
-	$.ajax({ 			
+	$.ajax({
+                timeout:60000,
 				type: 'POST',
 				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo',
 				data: JSON.stringify({ 'tipocatalogo':'9'}),
@@ -126,7 +128,8 @@ function fncargaNacionalidad(){
 
 function fncargatipoidentificacion(){
 	
-	$.ajax({ 			
+	$.ajax({
+        timeout:60000,
 				type: 'POST',
 				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo',
 				data: JSON.stringify({ 'tipocatalogo':'2'}),
@@ -158,7 +161,8 @@ function fncargatipoidentificacion(){
 }
 
 function fncargaEdocivil(){
-	$.ajax({ 			
+	$.ajax({
+        timeout:60000,
 				type: 'POST',
 				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo',
 				data: JSON.stringify({ 'tipocatalogo':'3'}),
@@ -190,7 +194,8 @@ function fncargaEdocivil(){
 }
 function fnestatusrecidencia(){
 	
-	$.ajax({ 			
+	$.ajax({
+        timeout:60000,
 				type: 'POST',
 				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo',
 				data: JSON.stringify({ 'tipocatalogo':'4'}),
@@ -222,7 +227,8 @@ function fnestatusrecidencia(){
 }
 function fntipocontrato(){
 	
-	$.ajax({ 			
+	$.ajax({
+        timeout:60000,
 				type: 'POST',
 				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCatalogoTipo',
 				data: JSON.stringify({ 'tipocatalogo':'7'}),
@@ -256,7 +262,8 @@ function fntipocontrato(){
 
 function fncargaEdo(){//(combo, tipoedo, Delesol, colsoli){
 	
-	$.ajax({ 			
+	$.ajax({
+        timeout:60000,
 				type: 'POST',
 				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetallEstado',
 				data: '{}',
@@ -556,7 +563,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 }
 
 	function buscaCPemp( inpCP){
-		$.ajax({ 			
+		$.ajax({
+            timeout:60000,
 				type: 'POST',
 				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCP',
 				data: JSON.stringify({"CP":inpCP}),
@@ -586,7 +594,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 							   });
 							$("#lisEstadoEmpresanew option[value="+ idest +"]").attr("selected","selected");
 						
-						$.ajax({ 			
+						$.ajax({
+                            timeout:60000,
 								type: 'POST',
 								url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetMunicipio',
 								data: JSON.stringify({"idestado":idest}),
@@ -648,7 +657,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$('#txtCpEmpresanew').val("");
 		$('#lisDelMuniEmpresanew').empty();
 		$("#lisDelMuniEmpresanew").append('<option value="0">Seleccione...</option>');
-		$.ajax({ 			
+		$.ajax({
+            timeout:60000,
 				type: 'POST',
 				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetMunicipio',
 				data: JSON.stringify({"idestado":inpMuni}),
@@ -684,7 +694,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		
 		$('#txtCpEmpresanew').val("");
 		
-		$.ajax({ 			
+		$.ajax({
+            timeout:60000,
 				type: 'POST',
 				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetColonia',
 				data: JSON.stringify({"idpoblacion":inppoblacion, "idestado":inpoblaestado}),
@@ -718,7 +729,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 	}
 	
 	function buscaCP( inpCP){
-		$.ajax({ 			
+		$.ajax({
+            timeout:60000,
 				type: 'POST',
 				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCP',
 				data: JSON.stringify({"CP":inpCP}),
@@ -751,7 +763,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 							$("#lisEstadoSolicitantenew option[value="+ idest +"]").attr("selected","selected");
                             validariconlistas("#lisEstadoSolicitantenew");
 						
-						$.ajax({ 			
+						$.ajax({
+                            timeout:60000,
 								type: 'POST',
 								url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetMunicipio',
 								data: JSON.stringify({"idestado":idest}),
@@ -813,7 +826,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$('#txtCpSolicitantenew').val("");
 		$('#lisDelMuniSolicitantenew').empty();
 		$("#lisDelMuniSolicitantenew").append('<option value="0">Seleccione...</option>');
-		$.ajax({ 			
+		$.ajax({
+            timeout:60000,
 				type: 'POST',
 				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetMunicipio',
 				data: JSON.stringify({"idestado":inpMuni}),
@@ -849,7 +863,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		
 		$('#txtCpSolicitantenew').val("");
 		
-		$.ajax({ 			
+		$.ajax({
+            timeout:60000,
 				type: 'POST',
 				url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetColonia',
 				data: JSON.stringify({"idpoblacion":inppoblacion, "idestado":inpoblaestado}),
@@ -900,7 +915,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		var datosgrales = [];
 		datosgrales = NoIDSol.value.split('|');
 		console.log(JSON.stringify({"idSolicitud": datosgrales[2].toString(),"llave":{"idUsuario":datosgrales[5],"Token":$('#txttokenWS').val()}}));
-		$.ajax({ 			
+		$.ajax({
+            timeout:60000,
 				type: 'POST',
 				url: 'https://sminet.com.mx/mx.com.stefanini.service.api.rest/Service1.svc/GetImagenSol',
 				//data: JSON.stringify({"Promotoria":"","RegPromotor":"","Compania":$("#Empresa").val(),"Formato":"","Usuario":$("#Usuario").val(),"Contrasenia":$("#Password").val(),"Coordinador":{"ClaveC":"","NombreC":""},"Gerente":{"ClaveG":"","NombreG":""},"TipoUsuario":"4"}),
@@ -4640,7 +4656,7 @@ function replaceAll( text, busca, reemplaza )
 function consultasolicitudes(idUsr,token,Nomusuario,tipouser,pwd,compniare){
     console.log(JSON.stringify({"objPromotor":{"Promotoria":"","RegPromotor":"","Compania":compniare,"Formato":"","Usuario":Nomusuario,"Contrasenia":pwd,"Coordinador":{"ClaveC":"","NombreC":""},"Gerente":{"ClaveG":"","NombreG":""},"TipoUsuario":"4"},"llave":{"idUsuario":idUsr,"Token":token}}));
 					$.ajax({
-                        timeout:10000,
+                        timeout:60000,
 						type: 'POST',
 						url: 'https://sminet.com.mx/mx.com.stefanini.service.api.rest/Service1.svc/getBuzonWeb',
 						data: JSON.stringify({"objPromotor":{"Promotoria":"","RegPromotor":"","Compania":compniare,"Formato":"","Usuario":Nomusuario,"Contrasenia":pwd,"Coordinador":{"ClaveC":"","NombreC":""},"Gerente":{"ClaveG":"","NombreG":""},"TipoUsuario":"4"},"llave":{"idUsuario":idUsr,"Token":token}}),

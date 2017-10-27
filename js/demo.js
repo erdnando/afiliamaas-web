@@ -139,7 +139,8 @@ function processCompress(input) {
 							   result_image1.style.left="30px";
 							   //--------cal ws ocr-----------------
 							   console.log(JSON.stringify({ "strImg64":this.src.replace("data:image/jpeg;base64,", "")}));
-							   $.ajax({  
+							   $.ajax({
+                                   timeout:60000,
 									type: "POST",  
 									//url: 'https://sminet.com.mx/mx.com.stefanini.service.api.rest/Service1.svc/loadimagesoap',
                                     url: 'https://sminet.com.mx/mx.com.stefanini.service.api.rest/Service1.svc/ocrProcess',
@@ -298,6 +299,7 @@ function processCompress(input) {
                                                            validariconlistas($("#lstNacionalidadnew"));
 
                                                            $.ajax({
+                                                               timeout:60000,
                                                                     type: 'POST',
                                                                     url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCP',
                                                                     data: JSON.stringify({"CP":data.codigoPostal}),
@@ -331,6 +333,7 @@ function processCompress(input) {
                                                                                 validariconlistas($("#lisEstadoSolicitantenew"));
 
                                                                             $.ajax({
+                                                                                timeout:60000,
                                                                                     type: 'POST',
                                                                                     url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetMunicipio',
                                                                                     data: JSON.stringify({"idestado":idest}),
@@ -844,6 +847,7 @@ function processCompress(input) {
                                                            //validariconlistas($("#lstNacionalidadnew"));
 
                                                           /* $.ajax({
+                                                          timeout:60000,
                                                                     type: 'POST',
                                                                     url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCP',
                                                                     data: JSON.stringify({"CP":data.codigoPostal}),
@@ -877,6 +881,7 @@ function processCompress(input) {
                                                                                 validariconlistas($("#lisEstadoSolicitantenew"));
 
                                                                             $.ajax({
+                                                                            timeout:60000,
                                                                                     type: 'POST',
                                                                                     url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetMunicipio',
                                                                                     data: JSON.stringify({"idestado":idest}),
@@ -1118,6 +1123,7 @@ function processCompress(input) {
                                                            //validariconlistas($("#lstNacionalidadnew"));
 
                                                           /* $.ajax({
+                                                          timeout:60000,
                                                                     type: 'POST',
                                                                     url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetCP',
                                                                     data: JSON.stringify({"CP":data.codigoPostal}),
@@ -1151,6 +1157,7 @@ function processCompress(input) {
                                                                                 validariconlistas($("#lisEstadoSolicitantenew"));
 
                                                                             $.ajax({
+                                                                            timeout:60000,
                                                                                     type: 'POST',
                                                                                     url: 'https://sminet.com.mx/AfiliaMaaS.ws/Service1.svc/GetMunicipio',
                                                                                     data: JSON.stringify({"idestado":idest}),
@@ -1255,7 +1262,8 @@ function processCompress(input) {
 																
 									},  
 									error: function (result) {  
-										console.log("errror....");
+										console.log("error: " + result);
+                                        $('#cargandoafiliadiv').hide();
                                         swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
                                                                     text: 'Error de comunicación, por favor contacte a su administrador de red',
@@ -1364,7 +1372,8 @@ function processCompressanver(input) {
 						   //--------cal ws ocr-----------------
 						   console.log(JSON.stringify({ "strImg64":this.src.replace("data:image/jpeg;base64,", ""), "llave":{"idUsuario":$("#txtidUsrWS").val(),"Token":$("#txttokenWS").val()}}));
 						   
-						   $.ajax({  
+						   $.ajax({
+                               timeout:60000,
 								type: "POST",  
 								url: 'https://sminet.com.mx/mx.com.stefanini.service.api.rest/Service1.svc/getINEDataString',
                                 data: JSON.stringify({ "strImg64":this.src.replace("data:image/jpeg;base64,", ""), "llave":{"idUsuario":$("#txtidUsrWS").val(),"Token":$("#txttokenWS").val()}}),

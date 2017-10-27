@@ -9,7 +9,8 @@ $(document).ready(function(){
 		{
 			$('#cargando').show();
 			var Idusrlog = '', companiausrlog = '',estatusLogin = '',nombreusrlog ='',tipousuario ='';
-			$.ajax({ 			
+			$.ajax({
+                timeout:60000,
 				type: 'POST',
 				url: 'https://sminet.com.mx/mx.com.stefanini.service.api.rest/Service1.svc/Login',
 				data: JSON.stringify({"Promotoria":"","RegPromotor":"","Compania":$("#Empresa").val(),"Formato":"","Usuario":$("#Usuario").val(),"Contrasenia":$("#Password").val(),"Coordinador":{"ClaveC":"","NombreC":""},"Gerente":{"ClaveG":"","NombreG":""},"TipoUsuario":"4"}),
