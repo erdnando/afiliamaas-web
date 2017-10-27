@@ -184,7 +184,7 @@ function processCompress(input) {
                                                    console.log('fechaDeNacimientoMES...'+data.fechaDeNacimientoMES);
                                                    console.log('numeroExt...'+data.numeroExt);
                                                    console.log('sexo...'+data.sexo);
-                                                   $("#txttokenWS").val(data.Token);
+                                                   //$("#txttokenWS").val(data.Token);
                                                    $('#cargandoafiliadiv').hide();
 
 
@@ -445,8 +445,8 @@ function processCompress(input) {
                                                           // dismiss can be 'cancel', 'overlay',
                                                           // 'close', and 'timer'
                                                           if (dismiss === 'cancel' || dismiss === 'close') {
-                                                              $('#result_image')[0].src = "https://sminet.com.mx/afiliamaas-web/images/shade.jpg";
-                                                              $('#identificacion-ine').click();
+                                                              $('#result_image')[0].src = "https://sminet.com.mx/afiliamaasweb/images/shade.jpg";
+                                                              $('#imgcompresa').click();
 
                                                           }
                                                         });
@@ -486,9 +486,9 @@ function processCompress(input) {
                                                             //$("#txttokenWS").val(data.Token)
                                                         }else{
 
-                                                            if(data.Token != null && data.Token != "INVALID"){
+                                                            /*if(data.Token != null && data.Token != "INVALID"){
                                                                $("#txttokenWS").val(data.Token);
-                                                            }
+                                                            }*/
                                                             $('#cargandoafiliadiv').hide();
                                                             var cicresult = validaexisteocr(data.cic, "sin datos")
                                                             if(cicresult == "sin datos" || cicresult == "no data"){
@@ -542,7 +542,7 @@ function processCompress(input) {
                                                                     $('#lnknombremodalINEAtras').attr("disabled", "disabled");
                                                                     document.getElementById('txtNumIdentificanew').value=data.ocr;
                                                                     validaricontxt($('#txtNumIdentificanew'));
-                                                                    if($('#result_image')[0].src != "https://sminet.com.mx/afiliamaas-web/images/shade.jpg" && $('#result_imageanver')[0].src != "https://sminet.com.mx/afiliamaas-web/images/shade.jpg"){
+                                                                    if($('#result_image')[0].src != "https://sminet.com.mx/afiliamaasweb/images/shade.jpg" && $('#result_imageanver')[0].src != "https://sminet.com.mx/afiliamaasweb/images/shade.jpg"){
                                                                             $("#btnifeok").prop( "disabled", false );
                                                                             $("#btnifeok").fadeIn();
                                                                         }
@@ -552,8 +552,8 @@ function processCompress(input) {
                                                                       // dismiss can be 'cancel', 'overlay',
                                                                       // 'close', and 'timer'
                                                                       if (dismiss === 'cancel' || dismiss === 'close') {
-                                                                        $('#result_imageanver')[0].src = "https://sminet.com.mx/afiliamaas-web/images/shade.jpg";
-                                                                              $('#identificacion-ineanver').click();
+                                                                        $('#result_imageanver')[0].src = "https://sminet.com.mx/afiliamaasweb/images/shade.jpg";
+                                                                              $('#imgcompresa').click();
                                                                       }
                                                                     });
                                                             }
