@@ -264,6 +264,8 @@ function processCompress(input) {
                                                             $('#holder_result').attr("class", "overlay-containerOCR");
                                                             $('#inefrenteoverlay').css("visibility", "visible");
 
+                                                            $("#boxineatras").css("display", "none");
+
 
                                                             $('#lnknombremodalINEFrente').text(result_imagefinmod.name);
                                                             $('#lnknombremodalINEFrente').attr("disabled", "disabled");
@@ -515,6 +517,8 @@ function processCompress(input) {
                                                                             $('#holder_resultanver').attr("class", "overlay-containerOCR");
                                                                             $('#ineATRASoverlay').css("visibility", "visible");
 
+                                                                    $("#boxineatras").css("display", "");
+
 
 
                                                                     $('#lnknombremodalINEAtras').text(result_imagefinmodatras.name);
@@ -648,6 +652,9 @@ function processCompress(input) {
 
                                                                             $('#holder_resultanver').attr("class", "overlay-containerOCR");
                                                                             $('#ineATRASoverlay').css("visibility", "visible");
+
+
+                                                                    $("#boxineatras").css("display", "");
 
 
 
@@ -790,8 +797,7 @@ function processCompress(input) {
                                                            document.getElementById('txtApeMaternonew').value=data.Materno;
                                                            document.getElementById('txtCalleSolicitantenew').value=data.calle;
                                                            validaricontxt($('#txtCalleSolicitantenew'));
-                                                           /*document.getElementById('txtCpSolicitantenew').value=data.codigoPostal;
-                                                           validariconCP($('#txtCpSolicitantenew'));*/
+                                                           document.getElementById('txtCpSolicitantenew').value="";
                                                            result_imagefin.src = result_image.src;
                                                             result_imagefinmod.src = result_image.src;
 
@@ -817,6 +823,10 @@ function processCompress(input) {
 
                                                        $("#lisDelMuniSolicitantenew").empty();
                                                        $("#lisDelMuniSolicitantenew").append('<option value="0">Seleccione...</option>');
+
+                                                       document.getElementById('txtNumIdentificanew').value=data.noPasaporte;
+                                                                    validaricontxt($('#txtNumIdentificanew'));
+                                                       $("#boxineatras").css("display", "none");
 
 
                                                            //validariconlistas($("#lstNacionalidadnew"));
@@ -1060,8 +1070,7 @@ function processCompress(input) {
                                                            document.getElementById('txtApeMaternonew').value=data.Materno;
                                                            document.getElementById('txtCalleSolicitantenew').value=data.calle;
                                                            validaricontxt($('#txtCalleSolicitantenew'));
-                                                           /*document.getElementById('txtCpSolicitantenew').value=data.codigoPostal;
-                                                           validariconCP($('#txtCpSolicitantenew'));*/
+                                                           document.getElementById('txtCpSolicitantenew').value="";
                                                            result_imagefin.src = result_image.src;
                                                             result_imagefinmod.src = result_image.src;
 
@@ -1086,6 +1095,10 @@ function processCompress(input) {
 
                                                        $("#lisDelMuniSolicitantenew").empty();
                                                        $("#lisDelMuniSolicitantenew").append('<option value="0">Seleccione...</option>');
+
+                                                       document.getElementById('txtNumIdentificanew').value=data.noPasaporte;
+                                                                    validaricontxt($('#txtNumIdentificanew'));
+                                                       $("#boxineatras").css("display", "none");
 
                                                            //validariconlistas($("#lstNacionalidadnew"));
 
