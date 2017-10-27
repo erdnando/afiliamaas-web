@@ -1096,7 +1096,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$('#nomfirma').text($FirmaPath);
 		$('#nomfirma').attr("disabled","disabled");
         }else{
-            $('#nomfirma').text("Agregar firma");
+            $('#nomfirma').text("Cambiar firma");
         }
 
 

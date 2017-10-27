@@ -1083,6 +1083,7 @@ $(document).ready(function(){
 
 
                     $("#rowvalida").click();
+                    reseteavalores();
 					
 				}else{
 
