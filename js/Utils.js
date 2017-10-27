@@ -1124,7 +1124,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		}else
             {
                 if(datosgrales[0] != "Rechazadas"){
-                    $('#Imagesextras').hide();
+                    $('#Imagesextras').css("display","none");
                     $("#imaextramodal").attr("name", $Extra1);
                 }else{
                     $('#Imagesextras').css("display","");
