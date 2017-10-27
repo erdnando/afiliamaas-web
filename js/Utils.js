@@ -1155,7 +1155,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
             }
 		}else
             {
-                $('#Imagesextras2').hide();
+                $('#Imagesextras2').css("display","none");
                 $("#imaextramodal2").attr("name", $Extra2);
 
             }
