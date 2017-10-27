@@ -1102,7 +1102,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 
 		if($Extra1 != "Extra"){
 
-            $('#Imagesextras').css('display','block');
+            $('#Imagesextras').css('display','');
 			$("#imaextramodal").attr("src",E164);
             $("#imaextramodal").attr("name", $Extra1);
 			$("#result_imageextra").attr("src",E164);
@@ -1229,7 +1229,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
             }
 		}else
             {
-                $('#Imagesextras').hide();
+                $('#Imagesextras5').hide();
                 $("#imaextramodal5").attr("name", $Extra5);
 
             }
