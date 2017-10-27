@@ -1110,14 +1110,14 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 			$("#linkmodalopenextra").attr("class", "overlay");
 			$('#lblextra').text($Extra1);
 			$('#lblextra').attr("disabled","disabled");
-                $('#Imagesextras').show();
+                $('#Imagesextras').css("display","");
 
             }
             else{
                 $('#lblextra').attr("disabled",false);
                 $('#lblextra').text("Modificar");
-                $('#Imagesextras').show();
-                $('#Imagesextras2').show();
+                $('#Imagesextras').css("display","");
+                $('#Imagesextras2').css("display","");
 
             }
 
@@ -1127,7 +1127,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
                     $('#Imagesextras').hide();
                     $("#imaextramodal").attr("name", $Extra1);
                 }else{
-                    $('#Imagesextras').show();
+                    $('#Imagesextras').css("display","");
                     $("#imaextramodal").attr("name", $Extra1);
                 }
 
