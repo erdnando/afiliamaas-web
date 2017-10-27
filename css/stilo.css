@@ -2674,5 +2674,21 @@ blockquote.nk - blockquote - style - 1 cite {
 }
 
 
+.result_imagefinmod{
+    height: 376px;
+    width: 100%;
+    display: block;
+    width: 97%;
+    margin-top: 5px;
+    left: 30px;
+    border-radius: 15px;
+    margin-left: 15px;
+}
+
+.result_imagefin{
+    max-width: 75%;
+    border-radius: 15px;
+    margin-left: 26px;
+}
 
 
