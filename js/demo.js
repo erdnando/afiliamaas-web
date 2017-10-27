@@ -11,7 +11,7 @@
 			divResultado.innerHTML = '';
 			
 			
-			processCompress(this, null);
+			processCompress(this);
 		});
 	
 	$("#identificacion-ineanver").change(function(){
@@ -49,7 +49,7 @@
 //});
 
 
-function processCompress(input, ladoIDENt) {
+function processCompress(input) {
 	$('#cargandoafiliadiv').show();
 
 	var output_format = "jpg";
@@ -57,7 +57,7 @@ function processCompress(input, ladoIDENt) {
 	
     if (input.files && input.files[0]) {
 		console.log('procesando imagen...');
-		var holder = document.getElementById('holder');
+		var holder = document.getElementById('holderdomi');
 		holder.className = '';
         //e.preventDefault();
         
@@ -72,7 +72,7 @@ function processCompress(input, ladoIDENt) {
 		console.log('recuperando binario...');
         reader = new FileReader();
         reader.onload = function(event) {
-            var i = ladoIDENt == null ? document.getElementById("source_image"):document.getElementById("source_imageanver");
+            var i = document.getElementById("source_imagedomi");
            	 	i.src = event.target.result;
 				//console.log('imagen sorce...'+i.src);
            	 	i.onload = function(){
@@ -89,12 +89,12 @@ function processCompress(input, ladoIDENt) {
 					console.log('imagen cargada...');
 					//fire click event to process image STF
 					//btn click------------------------------------------------------
-						var source_image = ladoIDENt == null ? document.getElementById("source_image"):document.getElementById("source_imageanver");
-						var result_image = ladoIDENt == null ? document.getElementById('result_image'):document.getElementById('result_imageanver');
-						var result_imagefin = ladoIDENt == null ? document.getElementById('result_imagefin'):document.getElementById('result_imagefinatras');
-						var result_imagefinmod = ladoIDENt == null ? document.getElementById('result_imagefinmod'):document.getElementById('result_imagefinmodatras');
+						var source_image1 = document.getElementById("source_imagedomi");
+						var result_image1 = document.getElementById('result_imagedomi');
+						/*var result_imagefin = document.getElementById('result_imagefindomi');
+						var result_imagefinmod = ladoIDENt == null ? document.getElementById('result_imagefinmod'):document.getElementById('result_imagefinmodatras');*/
 
-						if (source_image.src == "") {
+						if (source_image1.src == "") {
 							alert("You must load an image first!");
 							return false;
 						}
@@ -104,7 +104,7 @@ function processCompress(input, ladoIDENt) {
 
 						var time_start = new Date().getTime();
 						console.log('comprimiendo imagen...');
-						result_image.src = jic.compress(this,quality,output_format).src;
+						result_image1.src = jic.compress(this,quality,output_format).src;
 						
 						
 						
@@ -114,17 +114,17 @@ function processCompress(input, ladoIDENt) {
 						
 						
 								
-						result_image.onload = function(){
-							if($(result_image)[0].src != "https://sminet.com.mx/afiliamaas-web/images/shade.jpg")
+						result_image1.onload = function(){
+							if($(result_image1)[0].src != "https://sminet.com.mx/afiliamaasweb/images/shade.jpg")
 							{
-								var image_width=$(result_image).width(),
-								image_height=$(result_image).height();
+								var image_width=$(result_image1).width(),
+								image_height=$(result_image1).height();
 									//enviar esta imagen
-							   result_image.style.display = "block";
-							   result_image.style.width="99%";
-							   result_image.style.marginTop ="5px";
+							   result_image1.style.display = "block";
+							   result_image1.style.width="99%";
+							   result_image1.style.marginTop ="5px";
 							   //result_image.style.position="absolute";
-							   result_image.style.left="30px";
+							   result_image1.style.left="30px";
 							   //--------cal ws ocr-----------------
 							   console.log(JSON.stringify({ "strImg64":this.src.replace("data:image/jpeg;base64,", "")}));
 							   $.ajax({  
@@ -174,6 +174,13 @@ function processCompress(input, ladoIDENt) {
                                                    console.log('sexo...'+data.sexo);
                                                    $("#txttokenWS").val(data.Token);
                                                    $('#cargandoafiliadiv').hide();
+
+
+                                                    var source_image = document.getElementById("source_imagedomi");
+                                                    var result_image = document.getElementById('result_imagedomi');
+                                                    var result_imagefin = document.getElementById('result_imagefin');
+                                                    var result_imagefinmod=document.getElementById('result_imagefinmod');
+                                                    result_image.src = result_image1.src;
 
                                                     var nomcompletoocr = 'Las referencias familiares deben ser diferentes entre sí y diferentes al solicitante: ' + data.Nombre + ' ' + data.Paterno + ' ' + data.Materno
                                                     $('#lblreferenciassolicitante').text(nomcompletoocr.toUpperCase());
@@ -434,20 +441,12 @@ function processCompress(input, ladoIDENt) {
 
                                                     break;
                                                 case "INEREVERSO:#mx.com.stefanini.service.api.rest":
-                                                    Materno:null
-                                                    Nombre:null
-                                                    Paterno:null
-                                                    cic:"109261438"
-                                                    claveElector:"ALALOM83091215H700"
-                                                    fActualiza:" 24 de octubre    de 2017 "
-                                                    fConsulta:" 26/10/17"
-                                                    fRegistro:"AÑO DE REGISTRO 2002"
-                                                    fVigencia:"Será válida hasta el 31 de diciembre de 2023"
-                                                    numeroEmision:"1"
-                                                    ocr:"5296085057488"
 
-
-
+                                                    var source_image = document.getElementById('source_imageanver');
+                                                    var result_image = document.getElementById('result_imageanver');
+                                                    var result_imagefinatras = document.getElementById('result_imagefinatras');
+                                                    var result_imagefinmodatras = document.getElementById('result_imagefinmodatras');
+                                                    result_image.src = result_image1.src;
 
                                                     console.log(data);
                                                     console.log(data.claveElector);
