@@ -193,7 +193,8 @@ function processCompress(input) {
                                                     var result_imagefin = document.getElementById('result_imagefin');
                                                     var result_imagefinmod=document.getElementById('result_imagefinmod');
                                                     result_image.src = result_image1.src;
-                                                    result_image1.src=null;
+                                                    result_image1.src="";
+                                                    source_image1.src="";
 
                                                     var nomcompletoocr = 'Las referencias familiares deben ser diferentes entre sí y diferentes al solicitante: ' + data.Nombre + ' ' + data.Paterno + ' ' + data.Materno
                                                     $('#lblreferenciassolicitante').text(nomcompletoocr.toUpperCase());
@@ -202,13 +203,46 @@ function processCompress(input) {
                                                             $("#identificacioninicial").attr("class","col-xs-12 col-sm-6 col-md-6 col-lg-6");
                                                             $("#identificacioninicial2").css("display","");
 
+                                                    var iniciotabla = "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%;border-collapse: separate;border-spacing:  7px;'>";
+                                                    var fintabla ="</table>";
 
+                                                    $.each(data, function (ind, elem) {
+                                                        var existe = validaexisteocr(elem, "sin datos");
+                                                        if(existe != "sin datos"){
+                                                            iniciotabla += "<tr>"+
+                                                            "<td align='left' valign='top' style='padding-right:2em;'>" + ind + </td>"+
+                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+ elem+"</td>"+
+                                                            "<td></td>"+
+                                                        "</tr>"+
+                                                        }
+                                                    });
 
+                                                        var tablagral = iniciotabla + fintabla;
 
+                                                    /*CURP:"R0VE730121HMCDRRO9"
+                                                    Materno:"VARGAS"
+                                                    Nacionalidad:"MEXICANA"
+                                                    Nombre:"ERDNANDO"
+                                                    Paterno:"RODRIGUEZ"
+                                                    calle:"C PALOMA NEGRA 277"
+                                                    claveElector:"RDVRER73O12115H500"
+                                                    codigoPostal:"57000"
+                                                    colonia:"BENITO JUAREZ "
+                                                    estado:"MEX"
+                                                    fechaDeNacimiento:"21/01/73"
+                                                    fechaDeNacimientoANIO:"73"
+                                                    fechaDeNacimientoDIA:"21"
+                                                    fechaDeNacimientoMES:"01"
+                                                    municipio:"NEZAHUALCOYOTL"
+                                                    numeroExt:null
+                                                    numeroInt:null
+                                                    sexo:"H"
+                                                    vigencia:"2025"*/
 
                                                    swal({
                                                           title: '<i style="font-style: normal;">Datos obtenidos</i>',
-                                                          html:
+                                                          html: tablagral,
+                                                          /*html:
                                                             "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%;border-collapse: separate;border-spacing:  7px;'>"+
                                                         "<tr>"+
                                                             "<td align='left' valign='top' style='padding-right:2em;'>Nombre</td>"+
@@ -250,6 +284,16 @@ function processCompress(input) {
                                                             "<td align='left' style='font-weight:bold;max-width: 250px;'>"+data.colonia+"</td>"+
                                                             "<td></td>"+
                                                         "</tr>"+
+                                                       "<tr>"+
+                                                            "<td align='left' valign='top' style='padding-right:2em;'>Municipio</td>"+
+                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+data.municipio+"</td>"+
+                                                            "<td></td>"+
+                                                        "</tr>"+
+                                                       "<tr>"+
+                                                            "<td align='left' valign='top' style='padding-right:2em;'>Estado</td>"+
+                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+data.estado+"</td>"+
+                                                            "<td></td>"+
+                                                        "</tr>"+
                                                         "<tr>"+
                                                             "<td align='left' valign='top' style='padding-right:2em;'>Fecha nac</td>"+
                                                             "<td align='left' style='font-weight:bold;max-width: 250px;'>"+data.fechaDeNacimiento+"</td>"+
@@ -261,11 +305,16 @@ function processCompress(input) {
                                                             "<td></td>"+
                                                         "</tr>"+
                                                         "<tr>"+
+                                                            "<td align='left' valign='top' style='padding-right:2em;'>CURP</td>"+
+                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+data.CURP+"</td>"+
+                                                            "<td></td>"+
+                                                        "</tr>"+
+                                                        "<tr>"+
                                                             "<td align='left' valign='top' style='padding-right:2em;'>Vigencia</td>"+
                                                             "<td align='left' style='font-weight:bold;max-width: 250px;'>"+data.vigencia+"</td>"+
                                                             "<td></td>"+
                                                         "</tr>"+
-                                                    "</table>",
+                                                    "</table>",*/
                                                           showCloseButton: true,
                                                           showCancelButton:true,
                                                           confirmButtonText:
@@ -461,7 +510,8 @@ function processCompress(input) {
                                                     var result_imagefinatras = document.getElementById('result_imagefinatras');
                                                     var result_imagefinmodatras = document.getElementById('result_imagefinmodatras');
                                                     result_image.src = result_image1.src;
-                                                    result_image1.src=null;
+                                                    result_image1.src="";
+                                                    source_image1.src="";
 
                                                     $("#wrapper").css("width", "100%");
                                                             $("#identificacioninicial").attr("class","col-xs-12 col-sm-6 col-md-6 col-lg-6");
