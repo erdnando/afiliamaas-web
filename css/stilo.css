@@ -284,8 +284,8 @@ HEADER
     float: right;
     border-radius: 10px;
     text-align: center;
-    text-align: -webkit-center;
-    text-align: -ms-center;
+    /*text-align: -webkit-center;
+    text-align: -ms-center;*/
 
 }
 
