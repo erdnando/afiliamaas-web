@@ -168,7 +168,7 @@ function processCompress(input) {
 										{
                                             switch(data.__type) {
                                                 case "INEIFE:#mx.com.stefanini.service.api.rest":
-                                                    console.log('======================');
+                                                    /*console.log('======================');
                                                    console.log('Resultado OCR');
                                                    console.log('======================');
                                                    console.log(data);
@@ -183,7 +183,7 @@ function processCompress(input) {
                                                    console.log('fechaDeNacimientoDIA...'+data.fechaDeNacimientoDIA);
                                                    console.log('fechaDeNacimientoMES...'+data.fechaDeNacimientoMES);
                                                    console.log('numeroExt...'+data.numeroExt);
-                                                   console.log('sexo...'+data.sexo);
+                                                   console.log('sexo...'+data.sexo);*/
                                                    //$("#txttokenWS").val(data.Token);
                                                    $('#cargandoafiliadiv').hide();
 
@@ -247,79 +247,6 @@ function processCompress(input) {
                                                    swal({
                                                           title: '<i style="font-style: normal;">Datos obtenidos</i>',
                                                           html: tablagral,
-                                                          /*html:
-                                                            "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%;border-collapse: separate;border-spacing:  7px;'>"+
-                                                        "<tr>"+
-                                                            "<td align='left' valign='top' style='padding-right:2em;'>Nombre</td>"+
-                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+ data.Nombre+"</td>"+
-                                                            "<td></td>"+
-                                                        "</tr>"+
-                                                        "<tr>"+
-                                                            "<td align='left' valign='top' style='padding-right:2em;'>Paterno</td>"+
-                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+data.Paterno+"</td>"+
-                                                            "<td></td>"+
-                                                        "</tr>"+
-                                                        "<tr>"+
-                                                            "<td align='left' valign='top' style='padding-right:2em;'>Materno</td>"+
-                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+data.Materno+"</td>"+
-                                                            "<td></td>"+
-                                                        "</tr>"+
-                                                       "<tr>"+
-                                                            "<td align='left' valign='top' style='padding-right:2em;'>Sexo</td>"+
-                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+data.sexo+"</td>"+
-                                                            "<td></td>"+
-                                                        "</tr>"+
-                                                       "<tr>"+
-                                                            "<td align='left' valign='top' style='padding-right:2em;'>Nacionalidad</td>"+
-                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+data.Nacionalidad+"</td>"+
-                                                            "<td></td>"+
-                                                        "</tr>"+
-                                                        "<tr>"+
-                                                            "<td align='left' valign='top' style='padding-right:2em;'>Calle</td>"+
-                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+data.calle+"</td>"+
-                                                            "<td></td>"+
-                                                        "</tr>"+
-                                                        "<tr>"+
-                                                            "<td align='left' valign='top' style='padding-right:2em;'>CP</td>"+
-                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+data.codigoPostal+"</td>"+
-                                                            "<td></td>"+
-                                                        "</tr>"+
-                                                        "<tr>"+
-                                                            "<td align='left' valign='top' style='padding-right:2em;'>Colonia</td>"+
-                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+data.colonia+"</td>"+
-                                                            "<td></td>"+
-                                                        "</tr>"+
-                                                       "<tr>"+
-                                                            "<td align='left' valign='top' style='padding-right:2em;'>Municipio</td>"+
-                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+data.municipio+"</td>"+
-                                                            "<td></td>"+
-                                                        "</tr>"+
-                                                       "<tr>"+
-                                                            "<td align='left' valign='top' style='padding-right:2em;'>Estado</td>"+
-                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+data.estado+"</td>"+
-                                                            "<td></td>"+
-                                                        "</tr>"+
-                                                        "<tr>"+
-                                                            "<td align='left' valign='top' style='padding-right:2em;'>Fecha nac</td>"+
-                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+data.fechaDeNacimiento+"</td>"+
-                                                            "<td></td>"+
-                                                        "</tr>"+
-                                                        "<tr>"+
-                                                            "<td align='left' valign='top' style='padding-right:2em;'>Clave elector</td>"+
-                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+data.claveElector+"</td>"+
-                                                            "<td></td>"+
-                                                        "</tr>"+
-                                                        "<tr>"+
-                                                            "<td align='left' valign='top' style='padding-right:2em;'>CURP</td>"+
-                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+data.CURP+"</td>"+
-                                                            "<td></td>"+
-                                                        "</tr>"+
-                                                        "<tr>"+
-                                                            "<td align='left' valign='top' style='padding-right:2em;'>Vigencia</td>"+
-                                                            "<td align='left' style='font-weight:bold;max-width: 250px;'>"+data.vigencia+"</td>"+
-                                                            "<td></td>"+
-                                                        "</tr>"+
-                                                    "</table>",*/
                                                           showCloseButton: true,
                                                           showCancelButton:true,
                                                           confirmButtonText:
@@ -523,11 +450,11 @@ function processCompress(input) {
                                                             $("#identificacioninicial2").css("display","");
 
                                                     console.log(data);
-                                                    console.log(data.claveElector);
+                                                    /*console.log(data.claveElector);
                                                     console.log(data.fActualiza);
                                                     console.log(data.fConsulta);
                                                     console.log(data.fRegistro);
-                                                    console.log(data.fVigencia);
+                                                    console.log(data.fVigencia);*/
                                                     if(data.Token =="INVALID"){
                                                         $('#cargandoafiliadiv').hide();
                                                             swal({
@@ -549,7 +476,45 @@ function processCompress(input) {
                                                                $("#txttokenWS").val(data.Token);
                                                             }*/
                                                             $('#cargandoafiliadiv').hide();
-                                                            var cicresult = validaexisteocr(data.cic, "sin datos")
+
+
+                                                            var iniciotabla = "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%; border-collapse: separate;border-spacing:  7px;    height: 178px;'>";
+                                                            var fintabla ="</table>";
+
+                                                            $.each(data, function (ind, elem) {
+                                                                if(ind != "__type"){
+                                                                    if(ind == "Materno" || ind == "Nombre" || ind == "Paterno"){
+                                                                    }else{
+                                                                        var existe = validaexisteocr(elem, "sin datos");
+                                                                        if(existe != "sin datos"){
+                                                                            if(ind =="cic"){
+                                                                                iniciotabla += "<tr>"+
+                                                                                    "<td align='left' valign='top' style='padding-right:2em;'>"+ ind + "</td>"+
+                                                                                    "<td align='left' style='font-weight:bold'> IDMEX"+ elem +"</td>"+
+                                                                                    "<td></td>"+
+                                                                                "</tr>";
+                                                                            }else{
+                                                                                iniciotabla += "<tr>"+
+                                                                                    "<td align='left' valign='top' style='padding-right:2em;'>"+ ind + "</td>"+
+                                                                                    "<td align='left' style='font-weight:bold'>"+ elem +"</td>"+
+                                                                                    "<td></td>"+
+                                                                                "</tr>";
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            });
+
+                                                        var tablagral = iniciotabla + fintabla;
+
+
+
+
+
+
+
+
+                                                            /*var cicresult = validaexisteocr(data.cic, "sin datos")
                                                             if(cicresult == "sin datos" || cicresult == "no data"){
                                                                 cicresult = "sin datos"
                                                             }else{
@@ -566,16 +531,17 @@ function processCompress(input) {
                                                             var fecreg = validaexisteocr(data.fRegistro, "sin datos");
                                                             var fecconsul = validaexisteocr(data.fConsulta, "sin datos");
                                                             var numemision = validaexisteocr(data.numeroEmision, "sin datos");
-                                                            var resocr = validaexisteocr(data.ocr, "sin datos");
+                                                            var resocr = validaexisteocr(data.ocr, "sin datos");*/
 
 
 
 
                                                            swal({
                                                                 title: '<i style="font-style: normal;">Datos obtenidos</i>',
+                                                               html: tablagral,
 
-                                                                html:
-                                                                     "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%; border-collapse: separate;border-spacing:  7px;    height: 178px;'><tr><td align='left' valign='top' style='padding-right:2em;'>CIC:</td><td align='left' style='font-weight:bold'>"+ cicresult +"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Clave de elector:</td><td align='left' style='font-weight:bold'>"+cveelecto+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Fecha actualización:</td><td align='left' style='font-weight:bold'>"+fecactua+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Fecha de Vigencia:</td><td align='left' style='font-weight:bold; width: 100%;'>"+fecvigen+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Fecha de Registro:</td><td align='left' style='font-weight:bold'>"+fecreg+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Fecha de Consulta:</td><td align='left' style='font-weight:bold'>"+fecconsul+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Número de Emisión:</td><td align='left' style='font-weight:bold'>"+numemision+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em; width: 40%;'>Número de Identificación:</td><td align='left' style='font-weight:bold'>"+resocr+"</td><td></td></tr></table>",
+                                                                /*html:
+                                                                     "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%; border-collapse: separate;border-spacing:  7px;    height: 178px;'><tr><td align='left' valign='top' style='padding-right:2em;'>CIC:</td><td align='left' style='font-weight:bold'>"+ cicresult +"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Clave de elector:</td><td align='left' style='font-weight:bold'>"+cveelecto+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Fecha actualización:</td><td align='left' style='font-weight:bold'>"+fecactua+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Fecha de Vigencia:</td><td align='left' style='font-weight:bold; width: 100%;'>"+fecvigen+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Fecha de Registro:</td><td align='left' style='font-weight:bold'>"+fecreg+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Fecha de Consulta:</td><td align='left' style='font-weight:bold'>"+fecconsul+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em;'>Número de Emisión:</td><td align='left' style='font-weight:bold'>"+numemision+"</td><td></td></tr><tr><td align='left' valign='top' style='padding-right:2em; width: 40%;'>Número de Identificación:</td><td align='left' style='font-weight:bold'>"+resocr+"</td><td></td></tr></table>",*/
                                                                 showCloseButton: true,
                                                                showCancelButton:true,
                                                                           confirmButtonText:
