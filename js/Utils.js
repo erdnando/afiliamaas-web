@@ -66,7 +66,7 @@ function fncompaniamovil(){
 						   });	
 				},
 				error: function (result) {  
-					console.log("error: " + result);
+					console.log("error: " + result["statusText"]);
                             $('#cargandoafiliadiv').hide();
                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
@@ -110,7 +110,7 @@ function fncargaNacionalidad(){
 						}*/
 				},
 				error: function (result) {  
-					console.log("error: " + result);
+					console.log("error: " + result["statusText"]);
                             $('#cargandoafiliadiv').hide();
                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
@@ -145,7 +145,7 @@ function fncargatipoidentificacion(){
 						   });	
 				},
 				error: function (result) {  
-					console.log("error: " + result);
+					console.log("error: " + result["statusText"]);
                             $('#cargandoafiliadiv').hide();
                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
@@ -179,7 +179,7 @@ function fncargaEdocivil(){
 						   });	
 				},
 				error: function (result) {  
-					console.log("error: " + result);
+					console.log("error: " + result["statusText"]);
                             $('#cargandoafiliadiv').hide();
                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
@@ -213,7 +213,7 @@ function fnestatusrecidencia(){
 						   });	
 				},
 				error: function (result) {  
-					console.log("error: " + result);
+					console.log("error: " + result["statusText"]);
                             $('#cargandoafiliadiv').hide();
                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
@@ -247,7 +247,7 @@ function fntipocontrato(){
 						   });	
 				},
 				error: function (result) {  
-					console.log("error: " + result);
+					console.log("error: " + result["statusText"]);
                             $('#cargandoafiliadiv').hide();
                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
@@ -303,7 +303,7 @@ function fncargaEdo(){//(combo, tipoedo, Delesol, colsoli){
 						
 				},
 				error: function (result) {  
-					console.log("error: " + result);
+					console.log("error: " + result["statusText"]);
                             $('#cargandoafiliadiv').hide();
                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
@@ -618,7 +618,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 										
 								},
 								error: function (result) {  
-									console.log("error: " + result);
+									console.log("error: " + result["statusText"]);
                             $('#cargandoafiliadiv').hide();
                                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
@@ -638,7 +638,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 						
 				},
 				error: function (result) {  
-					console.log("error: " + result);
+					console.log("error: " + result["statusText"]);
                             $('#cargandoafiliadiv').hide();
                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
@@ -682,7 +682,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 					   });	
 				},
 				error: function (result) {  
-					console.log("error: " + result);
+					console.log("error: " + result["statusText"]);
                             $('#cargandoafiliadiv').hide();
                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
@@ -722,7 +722,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 					$('#txtCpEmpresanew').val(dcodpos);
 				},
 				error: function (result) {  
-					console.log("error: " + result);
+					console.log("error: " + result["statusText"]);
                             $('#cargandoafiliadiv').hide();
                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
@@ -792,7 +792,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 										
 								},
 								error: function (result) {  
-									console.log("error: " + result);
+									console.log("error: " + result["statusText"]);
                             $('#cargandoafiliadiv').hide();
                                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
@@ -812,7 +812,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 						
 				},
 				error: function (result) {  
-					console.log("error: " + result);
+					console.log("error: " + result["statusText"]);
                             $('#cargandoafiliadiv').hide();
                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
@@ -855,7 +855,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 					   });	
 				},
 				error: function (result) {  
-					console.log("error: " + result);
+					console.log("error: " + result["statusText"]);
                             $('#cargandoafiliadiv').hide();
                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
@@ -895,7 +895,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 					$('#txtCpSolicitantenew').val("");
 				},
 				error: function (result) {  
-					console.log("error: " + result);
+					console.log("error: " + result["statusText"]);
                             $('#cargandoafiliadiv').hide();
                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
@@ -955,7 +955,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 						muestramodalSolirecrea(NoIDSol, DOC_IF64, DOC_IA64, F164, DOC_C164, DOC_C264, E164, E264, E36, E464, E564 )					
 				},
 				error: function (result) {  
-					console.log("error: " + result);
+					console.log("error: " + result["statusText"]);
                             $('#cargandoafiliadiv').hide();
                     swal({
                                                                       title: '<i style="font-style: normal;">Atención</i>',
@@ -4866,7 +4866,7 @@ function consultasolicitudes(idUsr,token,Nomusuario,tipouser,pwd,compniare){
 
 						},
 						error: function (result) {
-							console.log("error: " + result);
+							console.log("error: " + result["statusText"]);
                             $('#cargandoafiliadiv').hide();
 
                             swal({

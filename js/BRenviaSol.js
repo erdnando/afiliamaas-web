@@ -189,7 +189,7 @@ var idUsr =  $('#txtidUsrWS').val();
 
                                 },
                                 error: function (result) {
-                                    console.log("error: " + result);
+                                    console.log("error: " + result["statusText"]);
                             $('#cargandoafiliadiv').hide();
 
                                     swal({
