@@ -1605,7 +1605,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$('#dateFechanacnewanio').removeAttr("disabled");
 
 
-		$("#firma-img").removeAttr("src");
+		/*$("#firma-img").removeAttr("src");
 		$("#firma-img").attr("class","hide");
 
 		$("#DivdelaFirmaBorrar").css("display","");
@@ -1619,7 +1619,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$("#firma-canvas").css("display","");
 		$("#linkmodalopen").removeAttr("class", "overlay");
 		$('#nomfirma').text("Agregar firma");
-		$('#nomfirma').removeAttr("disabled");
+		$('#nomfirma').removeAttr("disabled");*/
 
 
 		/*$("#result_imagefin").attr("src",datosgrales[5].toString());
