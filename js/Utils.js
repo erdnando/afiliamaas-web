@@ -1,4 +1,6 @@
-
+function hola(){
+    console.log("si la agarra");
+}
 
 function getParameterByName(name, url) {
 	if (!url) url = window.location.href;
@@ -4944,6 +4946,112 @@ function refrescasolicitudes(){
 
                                         location.href=('AfiliaMaaS.html?exml2340=' + cadena);
 }
+
+
+
+function hola2(){
+    console.log("si la agarra");
+}
+
+function cerrarmodalsolicitudes() {
+                console.log("click <<>>" + $("#mdlgralnombre")[0].innerText);
+                if($("#mdlgralnombre")[0].innerText != "Nueva solicitud")
+                {
+                    $('#DatGrales').modal('hide');
+
+
+
+
+                    $("#rowvalida").click();
+                    reseteavalores();
+
+				}else{
+
+                    if($("#tipostatusrecreasol").val()!="Rechazadas"){
+					swal({
+						  title: '¡Atención!',
+						  text: "¿Salir sin concluir la solicitud?",
+						  /*type: 'warning',*/
+						  showCloseButton: true,
+						  showCancelButton: true,
+						  confirmButtonText: 'Guardar solicitud <i class="glyphicon glyphicon-floppy-saved"></i>',
+						  cancelButtonText: 'Salir <i class="glyphicon glyphicon-floppy-remove"></i>',
+                        //cancelButtonColor:"#b9a107",
+												  width: "auto",
+                                                  allowOutsideClick: false,
+						}).then(function () {
+
+
+
+
+						}, function (dismiss) {
+						  // dismiss can be 'cancel', 'overlay',
+						  // 'close', and 'timer'
+						  if (dismiss === 'cancel') {
+
+                              $("#cargandoafiliadiv").show();
+
+                              var nomCompleto =$("#pnompromo").text();
+
+
+
+							var cadena = Base64.encode($("#txttokenWS").val() + "|" + $("#txtidUsrWS").val() + "|" + $("#txtNomusuarioWS").val() + "|" +  $("#txtcompniareWS").val() + "|" + $("#txtpwdWS").val() + "|" + nomCompleto);
+
+							location.href=('AfiliaMaaS.html?exml2340=' + cadena);
+
+						  }
+
+						  if (dismiss === 'close') {
+
+
+
+						  }
+						});
+
+                    }else{
+
+                        swal({
+						  title: '¡Atención!',
+						  text: "¿Salir sin reenviar la solicitud actual?",
+						  showCloseButton: true,
+						  showCancelButton: true,
+						  confirmButtonText: 'Reenviar solicitud <i class="glyphicon glyphicon-floppy-send"></i>',
+						  cancelButtonText: 'Salir <i class="glyphicon glyphicon-floppy-remove"></i>',
+												  width: "auto",
+                                                  allowOutsideClick: false,
+						}).then(function () {
+							$('#terminar').click();
+
+
+
+						}, function (dismiss) {
+						  // dismiss can be 'cancel', 'overlay',
+						  // 'close', and 'timer'
+						  if (dismiss === 'cancel') {
+
+                              $("#cargandoafiliadiv").show();
+
+                              var nomCompleto =$("#pnompromo").text();
+
+
+
+							var cadena = Base64.encode($("#txttokenWS").val() + "|" + $("#txtidUsrWS").val() + "|" + $("#txtNomusuarioWS").val() + "|" +  $("#txtcompniareWS").val() + "|" + $("#txtpwdWS").val() + "|" + nomCompleto);
+
+							location.href=('AfiliaMaaS.html?exml2340=' + cadena);
+
+						  }
+
+						  if (dismiss === 'close') {
+
+
+
+						  }
+						});
+
+                    }
+				}
+
+		}
 
 
 	
