@@ -1020,6 +1020,10 @@ $(document).ready(function(){
 		  
 		});*/
 		
+
+    $('#btnClosemdlOcr').click(function(){
+        alert("cerrar");
+    });
 		$('#btnClosemdlOcr').on({			
 			click:	function () {
 				if($('#result_image')[0].src != "https://sminet.com.mx/afiliamaas/images/shade.jpg" || $('#result_imageanver')[0].src != "https://sminet.com.mx/afiliamaas/images/shade.jpg"){
