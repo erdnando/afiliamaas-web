@@ -213,7 +213,16 @@ function processCompress(input) {
                                                             $("#identificacioninicial").attr("class","col-xs-12 col-sm-6 col-md-6 col-lg-6");
                                                             $("#identificacioninicial2").css("display","");
 
-                                                    var iniciotabla = "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%;border-collapse: separate;border-spacing:  7px;'>";
+                                                    var iniciotabla = "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%;border-collapse: separate;border-spacing:  7px;'>"+
+                                                        "<tr>"+
+                                                                    "<td align='left' valign='top' style='padding-right:2em;'>"+
+                                                                        "Identificación: "+
+                                                                    "</td>"+
+                                                                    "<td align='left' style='font-weight:bold;max-width: 250px;'>"+
+                                                                        "INE/IFE (Frente)"+
+                                                                    "</td>"+
+                                                                    "<td></td>"+
+                                                                "</tr>";
                                                     var fintabla ="</table>";
 
                                                     $.each(data, function (ind, elem) {
@@ -474,7 +483,16 @@ function processCompress(input) {
 
 
                                                             var iniciotabla = "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%; border-collapse: separate;border-spacing:  7px;    height: 178px;'>";
-                                                            var fintabla ="</table>";
+                                                            var fintabla ="</table>"+
+                                                                "<tr>"+
+                                                                    "<td align='left' valign='top' style='padding-right:2em;'>"+
+                                                                        "Identificación: "+
+                                                                    "</td>"+
+                                                                    "<td align='left' style='font-weight:bold;max-width: 250px;'>"+
+                                                                        "INE/IFE (Anverso)"+
+                                                                    "</td>"+
+                                                                    "<td></td>"+
+                                                                "</tr>";
 
                                                             $.each(data, function (ind, elem) {
                                                                 if(ind != "__type"){
@@ -620,7 +638,16 @@ function processCompress(input) {
 
 
                                                             var iniciotabla = "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%; border-collapse: separate;border-spacing:  7px;    height: 178px;'>";
-                                                            var fintabla ="</table>";
+                                                            var fintabla ="</table>"+
+                                                                "<tr>"+
+                                                                    "<td align='left' valign='top' style='padding-right:2em;'>"+
+                                                                        "Identificación: "+
+                                                                    "</td>"+
+                                                                    "<td align='left' style='font-weight:bold;max-width: 250px;'>"+
+                                                                        "Matrícula Consular (Anverso)"+
+                                                                    "</td>"+
+                                                                    "<td></td>"+
+                                                                "</tr>";
 
                                                             $.each(data, function (ind, elem) {
                                                                 if(ind != "__type"){
@@ -745,7 +772,16 @@ function processCompress(input) {
                                                             $("#identificacioninicial2").css("display","none");
 
                                                     var iniciotabla = "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%;border-collapse: separate;border-spacing:  7px;'>";
-                                                    var fintabla ="</table>";
+                                                    var fintabla ="</table>"+
+                                                                "<tr>"+
+                                                                    "<td align='left' valign='top' style='padding-right:2em;'>"+
+                                                                        "Identificación: "+
+                                                                    "</td>"+
+                                                                    "<td align='left' style='font-weight:bold;max-width: 250px;'>"+
+                                                                        "Pasaporte A"+
+                                                                    "</td>"+
+                                                                    "<td></td>"+
+                                                                "</tr>";
 
                                                     $.each(data, function (ind, elem) {
                                                         if(ind != "__type"){
@@ -1025,7 +1061,16 @@ function processCompress(input) {
                                                             $("#identificacioninicial2").css("display","none");
 
                                                     var iniciotabla = "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%;border-collapse: separate;border-spacing:  7px;'>";
-                                                    var fintabla ="</table>";
+                                                    var fintabla ="</table>"+
+                                                                "<tr>"+
+                                                                    "<td align='left' valign='top' style='padding-right:2em;'>"+
+                                                                        "Identificación: "+
+                                                                    "</td>"+
+                                                                    "<td align='left' style='font-weight:bold;max-width: 250px;'>"+
+                                                                        "Pasaporte B"+
+                                                                    "</td>"+
+                                                                    "<td></td>"+
+                                                                "</tr>";
 
                                                     $.each(data, function (ind, elem) {
                                                         if(ind != "__type"){
