@@ -1036,18 +1036,9 @@ $(document).ready(function(){
 						  
 						  allowOutsideClick: false,
 						}).then(function () {
-							/*$('#result_image')[0].src = "https://sminet.com.mx/afiliamaas-web/images/shade.jpg";
-							$('#result_imageanver')[0].src = "https://sminet.com.mx/afiliamaas-web/images/shade.jpg";
-                            $('#holder_result').removeAttr("class", "overlay-containerOCR");
-                            $('#inefrenteoverlay').css("visibility", "hidden");
-                            $('#holder_resultanver').removeAttr("class", "overlay-containerOCR");
-                            $('#ineATRASoverlay').css("visibility", "hidden");
-							$('#3b').modal('hide');
-							$('#2b').modal('show');*/
-                        //location.reload();
-                        $("#cargandoafiliadiv").show();
+                            $("#cargandoafiliadiv").show();
 
-                        var nomCompleto =$("#pnompromo").text();
+                            var nomCompleto =$("#pnompromo").text();
 
 
 
@@ -1077,10 +1068,10 @@ $(document).ready(function(){
 		});
 
     $('#btmcloseDatGrales').click(function(){
-        console.log("cerrar modal solicitud");
+        console.log("cerrar");
     });
-		
-		
+
+
 		$('#btmcloseDatGrales').on({			
 			click:	function () {
                 if($("#mdlgralnombre")[0].innerText != "Nueva solicitud")
@@ -1116,26 +1107,7 @@ $(document).ready(function(){
 						  // dismiss can be 'cancel', 'overlay',
 						  // 'close', and 'timer'
 						  if (dismiss === 'cancel') {
-							  /*$('#result_image')[0].src = "https://sminet.com.mx/afiliamaas-web/images/shade.jpg"
-							$('#result_imageanver')[0].src = "https://sminet.com.mx/afiliamaas-web/images/shade.jpg"
-                              $('#holder_result').removeAttr("class", "overlay-containerOCR");
-                            $('#inefrenteoverlay').css("visibility", "hidden");
-                            $('#holder_resultanver').removeAttr("class", "overlay-containerOCR");
-                            $('#ineATRASoverlay').css("visibility", "hidden");
-							$('#DatGrales').modal('hide');
-                              for(var x=1;x<7;x++)
-                                {
-                                    navegasliderheaderatras(x);
-                                }
 
-							$('#3b').modal('hide');
-							$('#2b').modal('show');
-                              $("#rowvalida").click();
-							  reseteavalores();*/
-
-
-
-                              //location.reload();
                               $("#cargandoafiliadiv").show();
 
                               var nomCompleto =$("#pnompromo").text();
@@ -1177,26 +1149,7 @@ $(document).ready(function(){
 						  // dismiss can be 'cancel', 'overlay',
 						  // 'close', and 'timer'
 						  if (dismiss === 'cancel') {
-							  /*$('#result_image')[0].src = "https://sminet.com.mx/afiliamaas-web/images/shade.jpg"
-							$('#result_imageanver')[0].src = "https://sminet.com.mx/afiliamaas-web/images/shade.jpg"
-                              $('#holder_result').removeAttr("class", "overlay-containerOCR");
-                            $('#inefrenteoverlay').css("visibility", "hidden");
-                            $('#holder_resultanver').removeAttr("class", "overlay-containerOCR");
-                            $('#ineATRASoverlay').css("visibility", "hidden");
-							$('#DatGrales').modal('hide');
-                              for(var x=1;x<7;x++)
-                                {
-                                    navegasliderheaderatras(x);
-                                }
 
-							$('#3b').modal('hide');
-							$('#2b').modal('show');
-                              $("#rowvalida").click();
-							  reseteavalores();*/
-
-
-
-                              //location.reload();
                               $("#cargandoafiliadiv").show();
 
                               var nomCompleto =$("#pnompromo").text();
