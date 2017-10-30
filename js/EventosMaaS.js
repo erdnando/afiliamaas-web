@@ -1022,7 +1022,7 @@ $(document).ready(function(){
 		
 
     $('#btnClosemdlOcr').click(function(){
-        alert("cerrar");
+        console.log("cerrar");
     });
 		$('#btnClosemdlOcr').on({			
 			click:	function () {
@@ -1075,6 +1075,10 @@ $(document).ready(function(){
 			}
 		  
 		});
+
+    $('#btmcloseDatGrales').click(function(){
+        console.log("cerrar modal solicitud");
+    });
 		
 		
 		$('#btmcloseDatGrales').on({			
