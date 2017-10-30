@@ -1071,9 +1071,12 @@ $(document).ready(function(){
         console.log("cerrar");
     });
 
+    console.log("asignar click a debug btmcloseDatGrales");
+
 
 		$('#btmcloseDatGrales').on({			
 			click:	function () {
+                console.log("click <<>>" + $("#mdlgralnombre")[0].innerText);
                 if($("#mdlgralnombre")[0].innerText != "Nueva solicitud")
                 {
                     $('#DatGrales').modal('hide');
@@ -1174,6 +1177,8 @@ $(document).ready(function(){
 			}
 		  
 		});
+
+    console.log ("si lo realizo btmcloseDatGrales");
 		
 		
 		$('#btnifeok').on({			
