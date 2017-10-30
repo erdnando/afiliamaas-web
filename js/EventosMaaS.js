@@ -1083,7 +1083,7 @@ $(document).ready(function(){
     console.log("asignar click a debug btmcloseDatGrales");
 
 
-		$('#btmcloseDatGrales').click(function () {
+	/*	$('#btmcloseDatGrales').click(function () {
                 console.log("click <<>>" + $("#mdlgralnombre")[0].innerText);
                 if($("#mdlgralnombre")[0].innerText != "Nueva solicitud")
                 {
@@ -1101,7 +1101,6 @@ $(document).ready(function(){
 					swal({
 						  title: '¡Atención!',
 						  text: "¿Salir sin concluir la solicitud?",
-						  /*type: 'warning',*/
 						  showCloseButton: true,
 						  showCancelButton: true,
 						  confirmButtonText: 'Guardar solicitud <i class="glyphicon glyphicon-floppy-saved"></i>',
@@ -1143,12 +1142,10 @@ $(document).ready(function(){
                         swal({
 						  title: '¡Atención!',
 						  text: "¿Salir sin reenviar la solicitud actual?",
-						  /*type: 'warning',*/
 						  showCloseButton: true,
 						  showCancelButton: true,
 						  confirmButtonText: 'Reenviar solicitud <i class="glyphicon glyphicon-floppy-send"></i>',
 						  cancelButtonText: 'Salir <i class="glyphicon glyphicon-floppy-remove"></i>',
-                        //cancelButtonColor:"#b9a107",
 												  width: "auto",
                                                   allowOutsideClick: false,
 						}).then(function () {
@@ -1183,7 +1180,7 @@ $(document).ready(function(){
                     }
 				}
 		  
-		});
+		});*/
 
     console.log ("si lo realizo btmcloseDatGrales");
 		
