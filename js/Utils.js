@@ -4739,7 +4739,7 @@ function consultasolicitudes(idUsr,token,Nomusuario,tipouser,pwd,compniare){
                             if(data.solicitudes.length > 0){
 								if(data.solicitudes[0].Token =="INVALID"){
 											swal({
-												  title: '<i>Sessión cerrada por inactividad</i>',
+												  title: '<i style="font-style: normal;">Sesión cerrada por inactividad</i>',
 												  showCloseButton: true,
 												  confirmButtonText:
 													'<i class="glyphicon glyphicon-ok"></i>',

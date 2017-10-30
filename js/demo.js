@@ -152,7 +152,7 @@ function processCompress(input) {
 										if(data.Token =="INVALID"){
                                             $('#cargandoafiliadiv').hide();
 											swal({
-												  title: '<i style="font-style: normal;">Sessión cerrada por inactividad</i>',
+												  title: '<i style="font-style: normal;">Sesión cerrada por inactividad</i>',
 												  showCloseButton: true,
 												  confirmButtonText:
 													'Aceptar <i class="glyphicon glyphicon-log-out"></i>',
@@ -462,7 +462,7 @@ function processCompress(input) {
                                                     if(data.Token =="INVALID"){
                                                         $('#cargandoafiliadiv').hide();
                                                             swal({
-                                                                  title: '<i style="font-style: normal;">Sessión cerrada por inactividad</i>',
+                                                                  title: '<i style="font-style: normal;">Sesión cerrada por inactividad</i>',
                                                                   showCloseButton: true,
                                                                   confirmButtonText:
                                                                     'Aceptar <i class="glyphicon glyphicon-log-out"></i>',
@@ -617,7 +617,7 @@ function processCompress(input) {
                                                     if(data.Token =="INVALID"){
                                                         $('#cargandoafiliadiv').hide();
                                                             swal({
-                                                                  title: '<i style="font-style: normal;">Sessión cerrada por inactividad</i>',
+                                                                  title: '<i style="font-style: normal;">Sesión cerrada por inactividad</i>',
                                                                   showCloseButton: true,
                                                                   confirmButtonText:
                                                                     'Aceptar <i class="glyphicon glyphicon-log-out"></i>',
@@ -1440,7 +1440,7 @@ function processCompressanver(input) {
                                     if(data.Token =="INVALID"){
                                         $('#cargandoafiliadiv').hide();
 											swal({
-												  title: '<i style="font-style: normal;">Sessión cerrada por inactividad</i>',
+												  title: '<i style="font-style: normal;">Sesión cerrada por inactividad</i>',
 												  showCloseButton: true,
 												  confirmButtonText:
 													'Aceptar <i class="glyphicon glyphicon-log-out"></i>',
