@@ -488,7 +488,7 @@ function processCompress(input) {
                                                                         "Identificación: "+
                                                                     "</td>"+
                                                                     "<td align='left' style='font-weight:bold;max-width: 250px;'>"+
-                                                                        "INE/IFE (Anverso)"+
+                                                                        "INE/IFE (Atrás)"+
                                                                     "</td>"+
                                                                     "<td></td>"+
                                                                 "</tr>";
@@ -643,7 +643,7 @@ function processCompress(input) {
                                                                         "Identificación: "+
                                                                     "</td>"+
                                                                     "<td align='left' style='font-weight:bold;max-width: 250px;'>"+
-                                                                        "Matrícula Consular (Anverso)"+
+                                                                        "Matrícula Consular (Atrás)"+
                                                                     "</td>"+
                                                                     "<td></td>"+
                                                                 "</tr>";
