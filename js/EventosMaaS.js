@@ -1071,6 +1071,15 @@ $(document).ready(function(){
         console.log("cerrar");
     });
 
+     $('#btmcloseDatGrales1').click(function(){
+        console.log("cerrar2");
+    });
+
+     $('#btmcloseDatGrales2').click(function(){
+        console.log("cerrar2");
+    });
+
+
     console.log("asignar click a debug btmcloseDatGrales");
 
 
