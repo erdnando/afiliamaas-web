@@ -482,8 +482,7 @@ function processCompress(input) {
                                                             $('#cargandoafiliadiv').hide();
 
 
-                                                            var iniciotabla = "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%; border-collapse: separate;border-spacing:  7px;    height: 178px;'>";
-                                                            var fintabla ="</table>"+
+                                                            var iniciotabla = "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%; border-collapse: separate;border-spacing:  7px;    height: 178px;'>"+
                                                                 "<tr>"+
                                                                     "<td align='left' valign='top' style='padding-right:2em;'>"+
                                                                         "Identificación: "+
@@ -493,6 +492,7 @@ function processCompress(input) {
                                                                     "</td>"+
                                                                     "<td></td>"+
                                                                 "</tr>";
+                                                            var fintabla ="</table>";
 
                                                             $.each(data, function (ind, elem) {
                                                                 if(ind != "__type"){
@@ -637,8 +637,7 @@ function processCompress(input) {
                                                             $('#cargandoafiliadiv').hide();
 
 
-                                                            var iniciotabla = "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%; border-collapse: separate;border-spacing:  7px;    height: 178px;'>";
-                                                            var fintabla ="</table>"+
+                                                            var iniciotabla = "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%; border-collapse: separate;border-spacing:  7px;    height: 178px;'>"+
                                                                 "<tr>"+
                                                                     "<td align='left' valign='top' style='padding-right:2em;'>"+
                                                                         "Identificación: "+
@@ -648,6 +647,7 @@ function processCompress(input) {
                                                                     "</td>"+
                                                                     "<td></td>"+
                                                                 "</tr>";
+                                                            var fintabla ="</table>";
 
                                                             $.each(data, function (ind, elem) {
                                                                 if(ind != "__type"){
@@ -771,8 +771,7 @@ function processCompress(input) {
                                                             $("#identificacioninicial").removeAttr("class","col-xs-12 col-sm-6 col-md-6 col-lg-6");
                                                             $("#identificacioninicial2").css("display","none");
 
-                                                    var iniciotabla = "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%;border-collapse: separate;border-spacing:  7px;'>";
-                                                    var fintabla ="</table>"+
+                                                    var iniciotabla = "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%;border-collapse: separate;border-spacing:  7px;'>"+
                                                                 "<tr>"+
                                                                     "<td align='left' valign='top' style='padding-right:2em;'>"+
                                                                         "Identificación: "+
@@ -782,6 +781,7 @@ function processCompress(input) {
                                                                     "</td>"+
                                                                     "<td></td>"+
                                                                 "</tr>";
+                                                    var fintabla ="</table>";
 
                                                     $.each(data, function (ind, elem) {
                                                         if(ind != "__type"){
@@ -1060,8 +1060,7 @@ function processCompress(input) {
                                                             $("#identificacioninicial").removeAttr("class","col-xs-12 col-sm-6 col-md-6 col-lg-6");
                                                             $("#identificacioninicial2").css("display","none");
 
-                                                    var iniciotabla = "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%;border-collapse: separate;border-spacing:  7px;'>";
-                                                    var fintabla ="</table>"+
+                                                    var iniciotabla = "<table cellpadding='0' cellspacing='0' border=0 style='margin-top:19px;border-color:transparent; font-size:11px; width: 100%;border-collapse: separate;border-spacing:  7px;'>"+
                                                                 "<tr>"+
                                                                     "<td align='left' valign='top' style='padding-right:2em;'>"+
                                                                         "Identificación: "+
@@ -1071,6 +1070,7 @@ function processCompress(input) {
                                                                     "</td>"+
                                                                     "<td></td>"+
                                                                 "</tr>";
+                                                    var fintabla ="</table>";
 
                                                     $.each(data, function (ind, elem) {
                                                         if(ind != "__type"){
