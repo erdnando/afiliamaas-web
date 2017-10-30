@@ -1067,7 +1067,7 @@ $(document).ready(function(){
 		  
 		});
 
-    $('#btmcloseDatGrales').click(function(){
+    /*$('#btmcloseDatGrales').click(function(){
         console.log("cerrar");
     });
 
@@ -1077,14 +1077,13 @@ $(document).ready(function(){
 
      $('#btmcloseDatGrales2').click(function(){
         console.log("cerrar2");
-    });
+    });*/
 
 
     console.log("asignar click a debug btmcloseDatGrales");
 
 
-		$('#btmcloseDatGrales').on({			
-			click:	function () {
+		$('#btmcloseDatGrales').click(function () {
                 console.log("click <<>>" + $("#mdlgralnombre")[0].innerText);
                 if($("#mdlgralnombre")[0].innerText != "Nueva solicitud")
                 {
@@ -1183,7 +1182,6 @@ $(document).ready(function(){
 
                     }
 				}
-			}
 		  
 		});
 
