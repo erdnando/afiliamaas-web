@@ -1274,7 +1274,7 @@ function processCompress(input) {
 
 
 
-                                                           $('#dateFechanacnew').val(data.fechaDeNacimiento.substr(7, 2) +"-"+ data.fechaDeNacimiento.substr(4, 2); +"-" + data.fechaDeNacimiento.substr(0, 2););
+                                                           $('#dateFechanacnew').val(data.fechaDeNacimiento.substr(7, 2) +"-"+ data.fechaDeNacimiento.substr(4, 2) +"-" + data.fechaDeNacimiento.substr(0, 2));
                                                            validariconfecha($('#dateFechanacnew'));
                                                            document.getElementById('txtNumExteriornew').value=data.numeroExt ? data.numeroExt : '';
                                                            if($('#txtNumExteriornew').val() != ''){
