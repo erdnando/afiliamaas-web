@@ -1268,9 +1268,9 @@ function processCompress(input) {
                                                             });*/
 
                                                            //document.getElementById('lisDelMuniSolicitantenew').value=data.colonia;
-                                                           $('#dateFechanacnewdia').val(data.fechaDeNacimiento)..substr(0, 2);
-                                                           $('#dateFechanacnewmes').val(data.fechaDeNacimiento).substr(4, 2);
-                                                           $('#dateFechanacnewanio').val(data.fechaDeNacimiento).substr(7, 2);
+                                                           $('#dateFechanacnewdia').val(data.fechaDeNacimiento.substr(0, 2));
+                                                           $('#dateFechanacnewmes').val(data.fechaDeNacimiento.substr(4, 2));
+                                                           $('#dateFechanacnewanio').val(data.fechaDeNacimiento.substr(7, 2));
 
 
 
