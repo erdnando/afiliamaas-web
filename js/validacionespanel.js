@@ -94,7 +94,7 @@ $(document).ready(function(){
 		$("#cargandoafiliadiv").hide();
 
      $('#dateFechanacnewdiv').datepicker({
-         format: "dd-mm-yyyy",
+         format: "yyyy-mm-dd",
          autoclose: true,
          language: "es"
 
