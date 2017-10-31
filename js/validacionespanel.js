@@ -93,6 +93,13 @@ $(document).ready(function(){
 		
 		$("#cargandoafiliadiv").hide();
 
+     $('#dateFechanacnewdiv').datepicker({
+         format: "dd-mm-yyyy",
+         autoclose: true,
+         language: "es"
+
+     });
+
 		
 });
 
@@ -119,6 +126,8 @@ $(document).ready(function(){
 		
 		//$('#txtCorreonew').mask("[a-zA-Z0-9._%-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,4}")
 		
+
+
 		
 		
 $('.tsf-wizard-1').tsfWizard({

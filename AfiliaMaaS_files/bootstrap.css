@@ -2604,6 +2604,18 @@ select[multiple].form-group-lg .form-control {
   text-align: center;
   pointer-events: none;
 }
+.form-control-feedbackcalendar {
+  position: absolute;
+  top: 0;
+  right: 232px;
+  z-index: 2;
+  display: block;
+  width: 47px;
+  height: 34px;
+  line-height: 29px;
+  text-align: center;
+  pointer-events: none;
+}
 .input-lg + .form-control-feedback {
   width: 46px;
   height: 46px;
@@ -2644,6 +2656,9 @@ select[multiple].form-group-lg .form-control {
 .has-success .form-control-feedback {
   color: #3c763d;
 }
+.has-success .form-control-feedbackcalendar {
+  color: #3c763d;
+}
 .has-warning .help-block,
 .has-warning .control-label,
 .has-warning .radio,
@@ -2674,6 +2689,10 @@ select[multiple].form-group-lg .form-control {
 .has-warning .form-control-feedback {
   color: #f5ee0b;
 }
+.has-warning .form-control-feedbackcalendar {
+  color: #f5ee0b;
+}
+
 .has-error .help-block,
 .has-error .control-label,
 .has-error .radio,
@@ -2702,6 +2721,9 @@ select[multiple].form-group-lg .form-control {
   border-color: red;
 }
 .has-error .form-control-feedback {
+  color: red;
+}
+.has-error .form-control-feedbackcalendar {
   color: red;
 }
 .has-feedback label ~ .form-control-feedback {
