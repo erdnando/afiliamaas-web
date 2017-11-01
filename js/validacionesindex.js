@@ -98,7 +98,17 @@ $(document).ready(function(){
 		focus:	function () {
 			$("#Usuario").css('border', 'none');
 			$("#Usuario").css('border-bottom', '2px solid #cecfd3'); 
-		}
+		},
+        keypress: function(tecla) {
+			var texto=tecla.keyCode;
+            if(texto == 13){
+                $( "#Ingresar" ).click();
+            }
+            else{
+                $("#Usuario").css('border', 'none');
+			     $("#Usuario").css('border-bottom', '2px solid #cecfd3');
+            }
+        }
 	  
 	});
 	$('#Password').on({
@@ -109,7 +119,17 @@ $(document).ready(function(){
 		focus:	function () {
 			$("#Password").css('border', 'none');
 			$("#Password").css('border-bottom', '2px solid #cecfd3'); 
-		}
+		},
+        keypress: function(tecla) {
+			var texto=tecla.keyCode;
+            if(texto == 13){
+                $( "#Ingresar" ).click();
+            }
+            else{
+                $("#Password").css('border', 'none');
+			     $("#Password").css('border-bottom', '2px solid #cecfd3');
+            }
+        }
 	  
 	});
 	$('#Empresa').on({
@@ -120,7 +140,17 @@ $(document).ready(function(){
 		focus:	function () {
 			$("#Empresa").css('border', 'none');
 			$("#Empresa").css('border-bottom', '2px solid #cecfd3'); 
-		}
+		},
+        keypress: function(tecla) {
+			var texto=tecla.keyCode;
+            if(texto == 13){
+                $( "#Ingresar" ).click();
+            }
+            else{
+                $("#Empresa").css('border', 'none');
+			     $("#Empresa").css('border-bottom', '2px solid #cecfd3');
+            }
+        }
 	  
 	});
 	
