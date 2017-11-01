@@ -2,6 +2,11 @@ $(document).ready(function(){
 	
 		var cadenacif = Base64.decode(getParameterByName('exml2340'));
 		var cadsincif = [];
+
+    if(cadenacif =="��N"){
+       location.href=("Index.html");
+    }else
+        {
 		cadsincif = cadenacif.split('|');
 		
 		$('#txtidUsrWS').val(cadsincif[1].toString());//.val(getParameterByName('exml2344'));
@@ -99,6 +104,8 @@ $(document).ready(function(){
          language: "es"
 
      });
+
+        }
 
 		
 });
