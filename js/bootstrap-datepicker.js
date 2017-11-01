@@ -935,7 +935,7 @@
 		headTemplate: '<thead>'+
 							'<tr>'+
 								'<th class="prev"><i class="glyphicon glyphicon-arrow-left"/></th>'+
-								'<th colspan="5" class="switch"></th>'+
+								'<th class="switch" colspan="5" ></th>'+
 								'<th class="next"><i class="glyphicon glyphicon-arrow-right"/></th>'+
 							'</tr>'+
 						'</thead>',
