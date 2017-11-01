@@ -27,7 +27,7 @@ $(document).ready(function(){
 						console.log(data.Compania);
 						
 						if(data.IdUsuario == 0){
-							swal("","¡Error de logueo por favor verifique!","warning");
+							swal("","¡Error de autenticación por favor verifique!","warning");
 							//location.href='';
                             $('#cargando').hide();
 							return false;
