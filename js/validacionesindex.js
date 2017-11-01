@@ -44,7 +44,7 @@ $(document).ready(function(){
 					console.log("errror....ingresar");  
                     $('#cargando').hide()
                     swal({
-                                                                      title: '<i>Atención</i>',
+                                                                      title: 'Atención',
                                                                     text: 'Error de comunicación, por favor contacte a su administrador de red',
                                                                       showCloseButton: true,
                                                                       confirmButtonText:
