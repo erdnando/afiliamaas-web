@@ -1,12 +1,12 @@
 $(document).ready(function(){
-	
-		var cadenacif = Base64.decode(getParameterByName('exml2340'));
-		var cadsincif = [];
 
-    if(cadenacif =="��N"){
+    if(getParameterByName('exml2340') =="ERRO"){
        location.href=("Index.html");
     }else
         {
+
+		var cadenacif = Base64.decode(getParameterByName('exml2340'));
+		var cadsincif = [];
 		cadsincif = cadenacif.split('|');
 		
 		$('#txtidUsrWS').val(cadsincif[1].toString());//.val(getParameterByName('exml2344'));
