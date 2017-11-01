@@ -410,7 +410,7 @@ function processCompress(input) {
 
 
 
-                                                           $('#dateFechanacnew').val(data.fechaDeNacimiento.substr(6, 4) +"-"+ data.fechaDeNacimiento.substr(3, 2) +"-" + data.fechaDeNacimiento.substr(0, 2));
+                                                           $('#dateFechanacnew').val("19" + data.fechaDeNacimiento.substr(6, 4) +"-"+ data.fechaDeNacimiento.substr(3, 2) +"-" + data.fechaDeNacimiento.substr(0, 2));
                                                        $('#dateFechanacnew').datepicker({
                                                                  format: "yyyy-mm-dd",
                                                                  autoclose: true,
