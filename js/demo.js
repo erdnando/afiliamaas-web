@@ -405,12 +405,12 @@ function processCompress(input) {
 
                                                            //document.getElementById('lisDelMuniSolicitantenew').value=data.colonia;
                                                             $('#dateFechanacnewdia').val(data.fechaDeNacimiento.substr(0, 2));
-                                                           $('#dateFechanacnewmes').val(data.fechaDeNacimiento.substr(4, 2));
-                                                           $('#dateFechanacnewanio').val(data.fechaDeNacimiento.substr(7, 2));
+                                                           $('#dateFechanacnewmes').val(data.fechaDeNacimiento.substr(3, 2));
+                                                           $('#dateFechanacnewanio').val(data.fechaDeNacimiento.substr(6, 4));
 
 
 
-                                                           $('#dateFechanacnew').val(data.fechaDeNacimiento.substr(7, 2) +"-"+ data.fechaDeNacimiento.substr(4, 2) +"-" + data.fechaDeNacimiento.substr(0, 2));
+                                                           $('#dateFechanacnew').val(data.fechaDeNacimiento.substr(6, 4) +"-"+ data.fechaDeNacimiento.substr(3, 2) +"-" + data.fechaDeNacimiento.substr(0, 2));
                                                            validariconfecha($('#dateFechanacnew'));
                                                            document.getElementById('txtNumExteriornew').value=data.numeroExt ? data.numeroExt : '';
                                                            if($('#txtNumExteriornew').val() != ''){
@@ -982,8 +982,8 @@ function processCompress(input) {
 
                                                            //document.getElementById('lisDelMuniSolicitantenew').value=data.colonia;
                                                            $('#dateFechanacnewdia').val(data.fechaDeNacimiento.substr(0, 2));
-                                                           $('#dateFechanacnewmes').val(data.fechaDeNacimiento.substr(4, 2));
-                                                           $('#dateFechanacnewanio').val(data.fechaDeNacimiento.substr(7, 2));
+                                                           $('#dateFechanacnewmes').val(data.fechaDeNacimiento.substr(3, 2));
+                                                           $('#dateFechanacnewanio').val(data.fechaDeNacimiento.substr(6, 4));
 
 
 
@@ -1269,12 +1269,12 @@ function processCompress(input) {
 
                                                            //document.getElementById('lisDelMuniSolicitantenew').value=data.colonia;
                                                            $('#dateFechanacnewdia').val(data.fechaDeNacimiento.substr(0, 2));
-                                                           $('#dateFechanacnewmes').val(data.fechaDeNacimiento.substr(4, 2));
-                                                           $('#dateFechanacnewanio').val(data.fechaDeNacimiento.substr(7, 2));
+                                                           $('#dateFechanacnewmes').val(data.fechaDeNacimiento.substr(3, 2));
+                                                           $('#dateFechanacnewanio').val(data.fechaDeNacimiento.substr(6, 4));
 
 
 
-                                                           $('#dateFechanacnew').val(data.fechaDeNacimiento.substr(7, 2) +"-"+ data.fechaDeNacimiento.substr(4, 2) +"-" + data.fechaDeNacimiento.substr(0, 2));
+                                                           $('#dateFechanacnew').val(data.fechaDeNacimiento.substr(6, 4) +"-"+ data.fechaDeNacimiento.substr(3, 2) +"-" + data.fechaDeNacimiento.substr(0, 2));
                                                            validariconfecha($('#dateFechanacnew'));
                                                            document.getElementById('txtNumExteriornew').value=data.numeroExt ? data.numeroExt : '';
                                                            if($('#txtNumExteriornew').val() != ''){
