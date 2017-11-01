@@ -98,13 +98,6 @@ $(document).ready(function(){
 		
 		$("#cargandoafiliadiv").hide();
 
-     $('#dateFechanacnewdiv').datepicker({
-         format: "yyyy-mm-dd",
-         autoclose: true,
-         language: "es"
-
-     });
-
         }
 
 		

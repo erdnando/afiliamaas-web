@@ -411,9 +411,17 @@ function processCompress(input) {
 
 
                                                            $('#dateFechanacnew').val(data.fechaDeNacimiento.substr(6, 4) +"-"+ data.fechaDeNacimiento.substr(3, 2) +"-" + data.fechaDeNacimiento.substr(0, 2));
+                                                       $('#dateFechanacnew').datepicker({
+                                                                 format: "yyyy-mm-dd",
+                                                                 autoclose: true,
+                                                                 language: "es",
+                                                                date: data.fechaDeNacimiento.substr(6, 4) +"-"+ data.fechaDeNacimiento.substr(3, 2) +"-" + data.fechaDeNacimiento.substr(0, 2)
+
+                                                             });
                                                            validariconfecha($('#dateFechanacnew'));
 
-                                                       $().datepicker('setDate', new Date(2014, 1, 14));
+
+                                                       //$().datepicker('setDate', new Date(2014, 1, 14));
                                                            document.getElementById('txtNumExteriornew').value=data.numeroExt ? data.numeroExt : '';
                                                            if($('#txtNumExteriornew').val() != ''){
                                                                 validaricontxt($('#txtNumExteriornew'));
@@ -990,6 +998,14 @@ function processCompress(input) {
 
 
                                                            $('#dateFechanacnew').val(data.fechaDeNacimiento.substr(7, 2) +"-"+ data.fechaDeNacimiento.substr(4, 2) +"-" + data.fechaDeNacimiento.substr(0, 2));
+
+                                                            $('#dateFechanacnew').datepicker({
+                                                                 format: "yyyy-mm-dd",
+                                                                 autoclose: true,
+                                                                 language: "es",
+                                                                date: data.fechaDeNacimiento.substr(6, 4) +"-"+ data.fechaDeNacimiento.substr(3, 2) +"-" + data.fechaDeNacimiento.substr(0, 2)
+
+                                                             });
                                                            validariconfecha($('#dateFechanacnew'));
 
                                                        $().datepicker('setDate', new Date(2014, 1, 14));
@@ -1279,9 +1295,17 @@ function processCompress(input) {
 
 
                                                            $('#dateFechanacnew').val(data.fechaDeNacimiento.substr(6, 4) +"-"+ data.fechaDeNacimiento.substr(3, 2) +"-" + data.fechaDeNacimiento.substr(0, 2));
+                                                       $('#dateFechanacnew').datepicker({
+                                                                 format: "yyyy-mm-dd",
+                                                                 autoclose: true,
+                                                                 language: "es",
+                                                                date: data.fechaDeNacimiento.substr(6, 4) +"-"+ data.fechaDeNacimiento.substr(3, 2) +"-" + data.fechaDeNacimiento.substr(0, 2)
+
+                                                             });
+
                                                            validariconfecha($('#dateFechanacnew'));
 
-                                                            $().datepicker('setDate', new Date(2014, 1, 14));
+
                                                            document.getElementById('txtNumExteriornew').value=data.numeroExt ? data.numeroExt : '';
                                                            if($('#txtNumExteriornew').val() != ''){
                                                                 validaricontxt($('#txtNumExteriornew'));
