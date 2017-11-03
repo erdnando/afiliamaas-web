@@ -1022,8 +1022,14 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$nomcompleto = $Pnombre + ' ' +  $Apellidopaterno + ' ' + $Apellidomaterno;
 		  //console.log($nomcompleto);
 		//doc
-		$IdentificacionFrentePath = validaexiste(xmlDoc.documentElement.getElementsByTagName("doc")[0].getElementsByTagName("IdentificacionFrentePath"),"INE(frente)");
-		$IdentificacionAtrasPath= validaexiste(xmlDoc.documentElement.getElementsByTagName("doc")[0].getElementsByTagName("IdentificacionAtrasPath"),"INE(atras)"); 
+
+        if($Tpoidentif=="2498"){
+            $IdentificacionFrentePath = validaexiste(xmlDoc.documentElement.getElementsByTagName("doc")[0].getElementsByTagName("IdentificacionFrentePath"),"Pasaporte");
+            $IdentificacionAtrasPath= validaexiste(xmlDoc.documentElement.getElementsByTagName("doc")[0].getElementsByTagName("IdentificacionAtrasPath"),"");
+        }else{
+            $IdentificacionFrentePath = validaexiste(xmlDoc.documentElement.getElementsByTagName("doc")[0].getElementsByTagName("IdentificacionFrentePath"),"INE(frente)");
+            $IdentificacionAtrasPath= validaexiste(xmlDoc.documentElement.getElementsByTagName("doc")[0].getElementsByTagName("IdentificacionAtrasPath"),"INE(atras)");
+        }
 		$Contrato1Path= validaexiste(xmlDoc.documentElement.getElementsByTagName("doc")[0].getElementsByTagName("Contrato1Path"),"Contrato 1-2");
 		$Contrato2Path= validaexiste(xmlDoc.documentElement.getElementsByTagName("doc")[0].getElementsByTagName("Contrato2Path"),"Contrato 2-2");
 		$FirmaPath= validaexiste(xmlDoc.documentElement.getElementsByTagName("doc")[0].getElementsByTagName("FirmaPath"),"Firma");
@@ -1069,17 +1075,31 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$('#dateFechanacnewanio').val($FechanacAnio);
 		
 
-		$("#result_imagefin").attr("src",DOC_IF64);
-		$("#result_imagefinmod").attr("src",DOC_IF64);
-		$('#lnknombremodalINEFrente').text($IdentificacionFrentePath);
-		$('#lnknombremodalINEFrente').attr("disabled","disabled");
-		//$('#titulomodalfinINEFrente').text($IdentificacionFrentePath);
-		
-		$("#result_imagefinatras").attr("src",DOC_IA64);
-		$("#result_imagefinmodatras").attr("src",DOC_IA64);
-		$('#lnknombremodalINEAtras').text($IdentificacionAtrasPath);
-		$('#lnknombremodalINEAtras').attr("disabled","disabled");
-		//$('#titulomodalfinINEAtras').text($IdentificacionAtrasPath);
+
+        if($Tpoidentif=="2498"){
+            $("#result_imagefin").attr("src",DOC_IF64);
+            $("#result_imagefinmod").attr("src",DOC_IF64);
+            $('#lnknombremodalINEFrente').text($IdentificacionFrentePath);
+            $('#lnknombremodalINEFrente').attr("disabled","disabled");
+            //$('#titulomodalfinINEFrente').text($IdentificacionFrentePath);
+
+
+            $("#boxineatras").css("display","none");
+        }else{
+
+            $("#boxineatras").css("display","");
+            $("#result_imagefin").attr("src",DOC_IF64);
+            $("#result_imagefinmod").attr("src",DOC_IF64);
+            $('#lnknombremodalINEFrente').text($IdentificacionFrentePath);
+            $('#lnknombremodalINEFrente').attr("disabled","disabled");
+            //$('#titulomodalfinINEFrente').text($IdentificacionFrentePath);
+
+            $("#result_imagefinatras").attr("src",DOC_IA64);
+            $("#result_imagefinmodatras").attr("src",DOC_IA64);
+            $('#lnknombremodalINEAtras').text($IdentificacionAtrasPath);
+            $('#lnknombremodalINEAtras').attr("disabled","disabled");
+            //$('#titulomodalfinINEAtras').text($IdentificacionAtrasPath);
+        }
 		
 		$("#imagenpresenta").attr("src",F164);
 		$("#firma-img").attr("src",F164);
