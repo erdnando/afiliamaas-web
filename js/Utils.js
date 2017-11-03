@@ -3613,7 +3613,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
                     {
                         cntlvalidados += 1;
                     }else{
-                        conterrorref3[conterrorref3.length] = elem;
+                        conterrorref3[conterrorref3.length] = '#lisNacionalidadRef3new';
 
                     }
 
