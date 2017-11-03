@@ -4630,12 +4630,81 @@ function validacontrolespantallGral(){
 
 
     if(controlvalidados5 == totalvalidar5 ){
-        $('#titulostep5').css('color','rgb(150, 192, 61)');
+
+
+
+        var controlesref3=['#txtNombreRef3new','#txtApellidoPaternoRef3new', '#txtTelCasaRef3new'];
+                var conterrorref3=[]
+
+                var controlavalidarref3 = 4;
+                var cntlvalidados = 0;
+
+                $.each(controlesref3, function (ind, elem) {
+                    if($(elem).val().trim() != "")
+                    {
+                        cntlvalidados += 1;
+                    }else{
+                        conterrorref3[conterrorref3.length] = elem;
+
+                    }
+                });
+
+                if($('#lisNacionalidadRef3new').val().trim() != "0")
+                    {
+                        cntlvalidados += 1;
+                    }else{
+                        conterrorref3[conterrorref3.length] = '#lisNacionalidadRef3new';
+
+                    }
+
+                if(cntlvalidados == 0){
+                    $('#titulostep5').css('color','rgb(150, 192, 61)');
+                    $("#stOkTitstepRefFam").attr('class', 'glyphicon glyphicon-ok');
+                    $("#stOkTitstepRefFam").show();
+                    $("#stOkTitModRefFam").show();
+                    $('#rowvalida5').addClass('rowiniciostepactivosuccess5').removeClass('rowiniciostepactivo5').removeClass('rowvalida5');
+                    $('#rowvalida5').css('background-color','#96c03d');
+                }
+                else if(cntlvalidados == controlavalidarref3){
+                    $('#titulostep5').css('color','rgb(150, 192, 61)');
+                    $("#stOkTitstepRefFam").attr('class', 'glyphicon glyphicon-ok');
+                    $("#stOkTitstepRefFam").show();
+                    $("#stOkTitModRefFam").show();
+                    $('#rowvalida5').addClass('rowiniciostepactivosuccess5').removeClass('rowiniciostepactivo5').removeClass('rowvalida5');
+                    $('#rowvalida5').css('background-color','#96c03d');
+                }
+                else if(cntlvalidados < controlavalidarref3){
+                   $.each(conterrorref3 , function (ind, elem) {
+
+                        var demoTimeout;
+                        clearTimeout(demoTimeout);
+                        $(elem).trigger('startRumble');
+                        validaricontxt(elem);
+                        demoTimeout = setTimeout(function(){$(elem).trigger('stopRumble');},1500);
+                    });
+
+                     var demoTimeout4;
+
+                        clearTimeout(demoTimeout4);
+                        $("#lblreferenciassolicitante").css('display', 'inline');
+                        $('#lblreferenciassolicitante').text('Por favor completa todos los campos para la referencia No. 3');
+                        $('#lblreferenciassolicitante').trigger('startRumble');
+                       $("#lblreferenciassolicitante").css('color', 'rgba(206, 206, 4, 0.86)');
+                        demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
+
+
+                    if(!kinkheader){
+                        e.preventDefault();
+                    }
+
+
+                }
+        /*$('#titulostep5').css('color','rgb(150, 192, 61)');
         $("#stOkTitstepRefFam").attr('class', 'glyphicon glyphicon-ok');
         $("#stOkTitstepRefFam").show();
         $("#stOkTitModRefFam").show();
         $('#rowvalida5').addClass('rowiniciostepactivosuccess5').removeClass('rowiniciostepactivo').removeClass('rowvalida5');
-        $('#rowvalida5').css('background-color','#96c03d');
+        $('#rowvalida5').css('background-color','#96c03d');*/
     }else{
         totalcontrolesheader[totalcontrolesheader.length]= "Referencias Familiares";
         //$('#rowvalida5').addClass('novalidorow').removeClass('rowiniciostepactivo');
