@@ -3600,7 +3600,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
                 var cntlvalidados = 0;
 
                 $.each(controlesref3, function (ind, elem) {
-                    if($(elem).val().trim() != "" || $(elem).val().trim() != null)
+                    if($(elem).val().trim() != "")
                     {
                         cntlvalidados += 1;
                     }else{
