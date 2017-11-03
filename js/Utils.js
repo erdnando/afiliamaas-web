@@ -3593,14 +3593,14 @@ function validacontrolespantall(pantalla, kinkheader, e){
 			
 			if(controlvalidados == totalvalidar ){
 
-                var controlesref3=['#txtNombreRef3new','#txtNombreRef3new', '#txtApellidoPaternoRef3new','#txtApellidoPaternoRef3new'];
+                var controlesref3=['#txtNombreRef3new','#txtApellidoPaternoRef3new', '#lisNacionalidadRef3new','#txtTelCasaRef3new'];
                 var conterrorref3=[]
 
                 var controlavalidarref3 = 4;
                 var cntlvalidados = 0;
 
                 $.each(controlesref3, function (ind, elem) {
-                    if($(elem).val().trim() != '' || $(elem).val().trim() != null)
+                    if($(elem).val().trim() != "" || $(elem).val().trim() != null)
                     {
                         cntlvalidados += 1;
                     }else{
