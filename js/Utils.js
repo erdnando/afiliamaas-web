@@ -3649,7 +3649,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
                         $("#lblreferenciassolicitante").css('display', 'inline');
                         $('#lblreferenciassolicitante').text('Por favor completa todos los campos para la referencia No. 3');
                         $('#lblreferenciassolicitante').trigger('startRumble');
-                       $("#lblreferenciassolicitante").css('color', 'red');
+                       $("#lblreferenciassolicitante").css('color', 'rgba(206, 206, 4, 0.86)');
                         demoTimeout4 = setTimeout(function(){$('#lblreferenciassolicitante').trigger('stopRumble')},1000);
 
 
