@@ -82,7 +82,7 @@ function processCompress(input) {
 		
 		
 		console.log('recuperando binario...');
-        reader = new window.FileReader;
+        reader = new FileReader();
         reader.onload = function(event) {
             var i = document.getElementById("source_imagedomi");
            	 	i.src = event.target.result;
