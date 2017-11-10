@@ -3291,6 +3291,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 				$("#stOkTitModDomicilio").show();
 				$('#rowvalida2').addClass('rowiniciostepactivosuccess2').removeClass('rowiniciostepactivo2').removeClass('rowvalida2');
                 $('#rowvalida2').css('background-color','#96c03d');
+                guardasolitemporal();
 			}else{
 				//$('#rowvalida2').addClass('novalidorow').removeClass('rowiniciostepactivo');
 				//$('#anumpaso2').css('color','yellow')
@@ -3373,6 +3374,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 				
 				if(!kinkheader){
 					e.preventDefault();
+                    guardasolitemporal();
 				}
 				
 				
@@ -3477,6 +3479,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 				$("#stOkTitModDatEco").show();
 				$('#rowvalida3').addClass('rowiniciostepactivosuccess3').removeClass('rowiniciostepactivo3').removeClass('rowvalida3');
                 $('#rowvalida3').css('background-color','#96c03d');
+                guardasolitemporal();
 			}else{
 				//$('#rowvalida3').addClass('novalidorow').removeClass('rowiniciostepactivo');
 				//$('#anumpaso3').css('color','yellow')
@@ -3525,7 +3528,8 @@ function validacontrolespantall(pantalla, kinkheader, e){
 				/*$("#stOkTitstepDatEco").attr('class', 'glyphicon glyphicon-warning-sign');
 				$("#stOkTitstepDatEco").show();*/
 				if(!kinkheader){
-				e.preventDefault();
+				    e.preventDefault();
+                    guardasolitemporal();
 				}
 				
 				
@@ -3585,6 +3589,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 					$("#stOkTitModPerPol").show();
 					$('#rowvalida4').addClass('rowiniciostepactivosuccess4').removeClass('rowiniciostepactivo4').removeClass('rowvalida4');
                     $('#rowvalida4').css('background-color','#96c03d');
+                    guardasolitemporal();
 				}else{
 					//$('#rowvalida5').addClass('novalidorow').removeClass('rowiniciostepactivo');
 					//$('#anumpaso5').css('color','yellow')
@@ -3603,7 +3608,8 @@ function validacontrolespantall(pantalla, kinkheader, e){
 					/*$("#stOkTitstepRefFam").attr('class', 'glyphicon glyphicon-warning-sign');
 					$("#stOkTitstepRefFam").show();*/
 					if(!kinkheader){
-					e.preventDefault();
+					   e.preventDefault();
+                        guardasolitemporal();
 					}
 					
 					
@@ -3700,6 +3706,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
                     $("#stOkTitModRefFam").show();
                     $('#rowvalida5').addClass('rowiniciostepactivosuccess5').removeClass('rowiniciostepactivo5').removeClass('rowvalida5');
                     $('#rowvalida5').css('background-color','#96c03d');
+                    guardasolitemporal();
                 }
                 else if(cntlvalidados == controlavalidarref3){
                     $('#titulostep5').css('color','rgb(150, 192, 61)');
@@ -3708,6 +3715,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
                     $("#stOkTitModRefFam").show();
                     $('#rowvalida5').addClass('rowiniciostepactivosuccess5').removeClass('rowiniciostepactivo5').removeClass('rowvalida5');
                     $('#rowvalida5').css('background-color','#96c03d');
+                    guardasolitemporal();
                 }
                 else if(cntlvalidados < controlavalidarref3){
                    $.each(conterrorref3 , function (ind, elem) {
@@ -3731,6 +3739,7 @@ function validacontrolespantall(pantalla, kinkheader, e){
 
                     if(!kinkheader){
                         e.preventDefault();
+                        guardasolitemporal();
                     }
 
 
@@ -4998,6 +5007,13 @@ function consultasolicitudes(idUsr,token,Nomusuario,tipouser,pwd,compniare){
                                             var icono;
                                             var fstitulo;
                                             switch(data.solicitudes[r].ESTATUS) {
+                                                case '0':
+                                                    tipoagrupa = 'Nuevas';
+                                                    tiporow = 'rowNuevas';
+                                                    topoproy = data.solicitudes[r].ID_SOLICITUD + " Pendiente";
+                                                    icono = 'glyphicon glyphicon-file';
+                                                    fstitulo ='fs-titleNuevas';
+                                                    break;
                                                 case '1':
                                                     tipoagrupa = 'Nuevas';
                                                     tiporow = 'rowNuevas';
