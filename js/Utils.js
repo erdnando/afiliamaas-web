@@ -1498,7 +1498,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		
 		//disabled
 
-        if(datosgrales[0] != "Rechazadas" || datosgrales[2] != "0" ){
+        if(datosgrales[0] != "Rechazadas" || datosgrales[2] == "0" ){
 		$('#txtNomSolicitantenew').attr("disabled","disabled");
 		$('#txtSegundonombrenew').attr("disabled","disabled");
 		$('#txtApePaternonew').attr("disabled","disabled");
