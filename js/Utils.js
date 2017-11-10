@@ -1498,7 +1498,11 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		
 		//disabled
 
-        if(datosgrales[0] != "Rechazadas" && datosgrales[2] != "0"){
+
+
+        var status0 = parseInt(datosgrales[2].search("Pendiente"));
+
+        if(datosgrales[0] != "Rechazadas" && status0 == -1){
 		$('#txtNomSolicitantenew').attr("disabled","disabled");
 		$('#txtSegundonombrenew').attr("disabled","disabled");
 		$('#txtApePaternonew').attr("disabled","disabled");
@@ -1738,7 +1742,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$('#optparenpoliticonew').removeAttr("disabled");
 		$('#sldparentescopoli').css("background-color","#ffffff");
         }
-        else if(datosgrales[0] == "Nuevas" && datosgrales[2] == "0"){
+        else if(datosgrales[0] == "Nuevas" && status0 > 0){
             //$('#mdlgralnombre').text("Nueva solicitud");
 		$('#txtNomSolicitantenew').removeAttr("disabled");
 		$('#txtSegundonombrenew').removeAttr("disabled");
