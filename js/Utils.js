@@ -2929,6 +2929,32 @@ function guardasolitemporal(){
     var statussol, idsolievia = "";
     statussol = "0";
     idsolievia = $("#idsolguardadotemp").val();
+
+    var sexosoli;
+
+			if($("#chksexosolicitante").is(':checked')){
+			// Hacer algo si el checkbox ha sido seleccionado
+				sexosoli = "FEMENINO";
+				console.log(sexosoli);
+			}else{
+				// Hacer algo si el checkbox ha sido deseleccionado
+				sexosoli = "MASCULINO";
+				console.log(sexosoli);
+			}
+          var espolitico="NO";
+          var tieneparen = "NO";
+
+
+            if($("#optpersonapoliticonew").is(':checked')){
+				espolitico="SI";
+
+			}
+
+			if($("#optparenpoliticonew").is(':checked')){
+				tieneparen="SI";
+			}
+
+
     $.ajax({
             timeout:60000,
             type: 'POST',
