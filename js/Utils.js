@@ -1609,7 +1609,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$("#txtOtrosIngresosnew").attr("disabled","disabled");
 		$("#txtFuenteOtrosIngrenew").attr("disabled","disabled");
         }else if(datosgrales[0] == "Rechazadas"){
-            /*$('#mdlgralnombre').text("Nueva solicitud");*/
+            $('#mdlgralnombre').text("Nueva solicitud");
 		$('#txtNomSolicitantenew').removeAttr("disabled");
 		$('#txtSegundonombrenew').removeAttr("disabled");
 		$('#txtApePaternonew').removeAttr("disabled");
@@ -1738,7 +1738,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$('#sldparentescopoli').css("background-color","#ffffff");
         }
         else if(datosgrales[2] == "0"){
-            $('#mdlgralnombre').text("Nueva solicitud");
+            /*$('#mdlgralnombre').text("Nueva solicitud");*/
 		$('#txtNomSolicitantenew').removeAttr("disabled");
 		$('#txtSegundonombrenew').removeAttr("disabled");
 		$('#txtApePaternonew').removeAttr("disabled");
