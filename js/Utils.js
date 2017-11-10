@@ -937,7 +937,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 				type: 'POST',
 				url: 'https://sminet.com.mx/mx.com.stefanini.service.api.rest/Service1.svc/GetImagenSol',
 				//data: JSON.stringify({"Promotoria":"","RegPromotor":"","Compania":$("#Empresa").val(),"Formato":"","Usuario":$("#Usuario").val(),"Contrasenia":$("#Password").val(),"Coordinador":{"ClaveC":"","NombreC":""},"Gerente":{"ClaveG":"","NombreG":""},"TipoUsuario":"4"}),
-				data: JSON.stringify({"idSolicitud": datosgrales[2].toString(),"llave":{"idUsuario":datosgrales[5],"Token":datosgrales[6]}}),
+				data: JSON.stringify({"idSolicitud": datosgrales[2].replace(" Pendiente", "").toString(),"llave":{"idUsuario":datosgrales[5],"Token":datosgrales[6]}}),
 				contentType: "application/json; charset=utf-8",
                 dataType: "json",
 				success: function(data){
