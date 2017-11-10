@@ -190,19 +190,19 @@ var idUsr =  $('#txtidUsrWS').val();
                                 },
                                 error: function (result) {
                                     console.log("error: " + result["statusText"]);
-                            $('#cargandoafiliadiv').hide();
+                                    $('#cargandoafiliadiv').hide();
 
                                     swal({
-                                                                      title: '<i style="font-style: normal;">Atención</i>',
-                                                                    text: 'Error de comunicación, por favor contacte a su administrador de red',
-                                                                      showCloseButton: true,
-                                                                      confirmButtonText:
-                                                                        'Aceptar <i class="glyphicon glyphicon-ok"></i>',
-                                                                    allowOutsideClick: false,
+                                        title: '<i style="font-style: normal;">Atención</i>',
+                                        text: 'Error de comunicación, por favor contacte a su administrador de red',
+                                        showCloseButton: true,
+                                        confirmButtonText:
+                                                            'Aceptar <i class="glyphicon glyphicon-ok"></i>',
+                                        allowOutsideClick: false,
 
-                                                                    }).then(function () {
+                                    }).then(function () {
 
-                                                                        });
+                                            });
                                 }
                             });
 
