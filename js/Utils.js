@@ -988,6 +988,14 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
         $('#recreasolicitudinput').val("SI");
         $("#tipostatusrecreasol").val(datosgrales[0].toString());
         $("#idsolrecreasol").val(datosgrales[2].toString());
+        var status0 = parseInt(datosgrales[2].search("Pendiente"));
+        if(status0 >0)
+            {
+                $("#espendiente").val("SI");
+            }else{
+                $("#espendiente").val("NO");
+            }
+
 
 
 

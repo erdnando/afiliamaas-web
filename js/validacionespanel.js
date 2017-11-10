@@ -166,6 +166,7 @@ $('.tsf-wizard-1').tsfWizard({
                    pantalla = '6';
                }
 
+
                 if($('#recreasolicitudinput').val() == "NO")
                 {
                     if(pantalla == '6'){
@@ -175,13 +176,23 @@ $('.tsf-wizard-1').tsfWizard({
                     if(pantalla == '6'){
                         $('#terminar').css("display", "");
                     }
-                }else{
+                }else if($('#recreasolicitudinput').val() == "SI" && $("#espendiente").val("NO");){
+
                     if(pantalla == '6'){
                         $('#terminar').css("display", "none");
                     }
                     navegasliderheaderlibre(null, pantalla);
                     if(pantalla == '6'){
                         $('#terminar').css("display", "none");
+                    }
+                }else if($('#recreasolicitudinput').val() == "SI" && $("#espendiente").val("SI");){
+
+                    if(pantalla == '6'){
+                        $('#terminar').css("display", "");
+                    }
+                    validacontrolespantall(pantalla,false,e);
+                    if(pantalla == '6'){
+                        $('#terminar').css("display", "");
                     }
                 }
 
