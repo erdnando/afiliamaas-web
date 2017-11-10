@@ -1498,7 +1498,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		
 		//disabled
 
-        if(datosgrales[0] != "Rechazadas"){
+        if(datosgrales[0] != "Rechazadas" || datosgrales[2] != "0" ){
 		$('#txtNomSolicitantenew').attr("disabled","disabled");
 		$('#txtSegundonombrenew').attr("disabled","disabled");
 		$('#txtApePaternonew').attr("disabled","disabled");
@@ -1608,7 +1608,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$("#txtTelOficinanew").attr("disabled","disabled");
 		$("#txtOtrosIngresosnew").attr("disabled","disabled");
 		$("#txtFuenteOtrosIngrenew").attr("disabled","disabled");
-        }else if(datosgrales[0] == "Rechazadas"){
+        }else{
             $('#mdlgralnombre').text("Nueva solicitud");
 		$('#txtNomSolicitantenew').removeAttr("disabled");
 		$('#txtSegundonombrenew').removeAttr("disabled");
@@ -1737,135 +1737,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$('#optparenpoliticonew').removeAttr("disabled");
 		$('#sldparentescopoli').css("background-color","#ffffff");
         }
-        else if(datosgrales[2] == "0"){
-            /*$('#mdlgralnombre').text("Nueva solicitud");*/
-		$('#txtNomSolicitantenew').removeAttr("disabled");
-		$('#txtSegundonombrenew').removeAttr("disabled");
-		$('#txtApePaternonew').removeAttr("disabled");
-		$('#txtApeMaternonew').removeAttr("disabled");
-		$("#txtTipIdentificacionnew").removeAttr("disabled");
-		$('#txtNumIdentificanew').removeAttr("disabled");
-		$('#dateFechanacnew').removeAttr("disabled");
-		$('#txtRFCnew').removeAttr("disabled");
-		$("#lstEdoCivilnew").removeAttr("disabled");
-		$('#txtDependientesnew').removeAttr("disabled");
-		$('#dateFechanacnewdia').removeAttr("disabled");
-		$('#dateFechanacnewmes').removeAttr("disabled");
-		$('#dateFechanacnewanio').removeAttr("disabled");
-		$("#lstNacionalidadnew").removeAttr("disabled");
-		$('#dateFechanacnewanio').removeAttr("disabled");
 
-
-		/*$("#firma-img").removeAttr("src");
-		$("#firma-img").attr("class","hide");
-
-		$("#DivdelaFirmaBorrar").css("display","");
-        //$('#terminar').css("display", "");
-		$("#validarCliente").css("display","");
-
-
-
-
-
-		$("#firma-canvas").css("display","");
-		$("#linkmodalopen").removeAttr("class", "overlay");
-		$('#nomfirma').text("Agregar firma");
-		$('#nomfirma').removeAttr("disabled");*/
-
-
-		/*$("#result_imagefin").attr("src",datosgrales[5].toString());
-		$("#result_imagefinmod").attr("src",datosgrales[5].toString());
-		$('#lnknombremodalINEFrente').text($IdentificacionFrentePath);
-		$('#titulomodalfinINEFrente').text($IdentificacionFrentePath);
-
-		$("#result_imagefinatras").attr("src",datosgrales[6].toString());
-		$("#result_imagefinmodatras").attr("src",datosgrales[6].toString());
-		$('#lnknombremodalINEAtras').text($IdentificacionAtrasPath);
-		$('#titulomodalfinINEAtras').text($IdentificacionAtrasPath);
-
-		$("#imagenpresenta").attr("src",datosgrales[7].toString());
-		$("#firma-img").attr("src",datosgrales[7].toString());
-		$('#lnknombremodalINEFrente').text($IdentificacionFrentePath);
-		$('#titulomodalfinINEFrente').text($IdentificacionFrentePath);
-
-		$("#result_imagefin").attr("src",datosgrales[5].toString());
-		$("#result_imagefinmod").attr("src",datosgrales[5].toString());
-		$('#lnknombremodalINEFrente').text($IdentificacionFrentePath);
-		$('#titulomodalfinINEFrente').text($IdentificacionFrentePath);
-
-		$("#result_imagefin").attr("src",datosgrales[5].toString());
-		$("#result_imagefinmod").attr("src",datosgrales[5].toString());
-		$('#lnknombremodalINEFrente').text($IdentificacionFrentePath);
-		$('#titulomodalfinINEFrente').text($IdentificacionFrentePath);*/
-
-		$('#txtCalleSolicitantenew').removeAttr("disabled");
-		$('#txtNumInteriornew').removeAttr("disabled");
-		$('#txtNumExteriornew').removeAttr("disabled");
-		$('#txtCpSolicitantenew').removeAttr("disabled");
-
-		$("#lisEstadoSolicitantenew").removeAttr("disabled");
-		$("#lisDelMuniSolicitantenew").removeAttr("disabled");
-
-		$('.glyphicon-circle-arrow-up').removeAttr("disabled");
-		$('.glyphicon-circle-arrow-down').removeAttr("disabled");
-
-		$("#lisColoniaSolicitantenew").removeAttr("disabled");
-		$('#txtTiempoResidencianew').removeAttr("disabled");
-		$("#lisEstatusResidencianew").removeAttr("disabled");
-		$('#txtMontoViviendanew').removeAttr("disabled");
-		$('#txtCorreonew').removeAttr("disabled");
-		$('#txtTelefonoCasanew').removeAttr("disabled");
-		$('#txtTelefonoCelularnew').removeAttr("disabled");
-		$("#lisCompaniaMovilnew").removeAttr("disabled");
-
-		$('#txtNombreRef1new').removeAttr("disabled");
-		$('#txtApellidoPaternoRef1new').removeAttr("disabled");
-		$('#txtApellidoMaternoRef1new').removeAttr("disabled");
-		$("#lisNacionalidadRef1new").removeAttr("disabled");
-		$('#txtTelCasaRef1new').removeAttr("disabled");
-
-		$('#txtNombreRef2new').removeAttr("disabled");
-		$('#txtApellidoPaternoRef2new').removeAttr("disabled");
-		$('#txtApellidoMaternoRef2new').removeAttr("disabled");
-		$("#lisNacionalidadRef2new").removeAttr("disabled");
-		$('#txtTelCasaRef2new').removeAttr("disabled");
-
-		$('#txtNombreRef3new').removeAttr("disabled");
-		$('#txtApellidoPaternoRef3new').removeAttr("disabled");
-		$('#txtApellidoMaternoRef3new').removeAttr("disabled");
-		$("#lisNacionalidadRef3new").removeAttr("disabled");
-		$('#txtTelCasaRef3new').removeAttr("disabled");
-
-		$("#lisTipoContratonew").removeAttr("disabled");
-		$('#txtantiguedadnew').removeAttr("disabled");
-		$('#txtAosCasadonew').removeAttr("disabled");
-		$("#txtIngresonew").removeAttr("disabled");
-		$('#txtNombreEmpresanew').removeAttr("disabled");
-		$("#txtGironew").removeAttr("disabled");
-		$("#txtPuestonew").removeAttr("disabled");
-
-
-		$("#txtCalleEmpresanew").removeAttr("disabled");
-		$("#txtNumeroInteriorempnew").removeAttr("disabled");
-		$("#txtNumeroExteriorEmpresa").removeAttr("disabled");
-		$("#txtCpEmpresanew").removeAttr("disabled");
-		$("#lisEstadoEmpresanew").removeAttr("disabled");
-		$("#lisDelMuniEmpresanew").removeAttr("disabled");
-		$("#lisColoniaEmpresanew").removeAttr("disabled");
-		//$("#txtantiguedadnew").removeAttr("disabled");
-		$("#txtTelOficinanew").removeAttr("disabled");
-		$("#txtOtrosIngresosnew").removeAttr("disabled");
-		$("#txtFuenteOtrosIngrenew").removeAttr("disabled");
-		$('#chksexosolicitante').removeAttr("disabled");
-		$('#sldsexosoli').css("background-color","#ffffff");
-		$('#optpersonapoliticonew').removeAttr("disabled");
-		$('#sldpersopoli').css("background-color","#ffffff");
-
-        //$('#terminar').removeAttr("disabled");
-
-		$('#optparenpoliticonew').removeAttr("disabled");
-		$('#sldparentescopoli').css("background-color","#ffffff");
-        }
 		
 		
 		
