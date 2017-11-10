@@ -176,7 +176,7 @@ $('.tsf-wizard-1').tsfWizard({
                     if(pantalla == '6'){
                         $('#terminar').css("display", "");
                     }
-                }else if($('#recreasolicitudinput').val() == "SI" && $("#espendiente").val("NO")){
+                }else if($('#recreasolicitudinput').val() == "SI" && $("#espendiente").val() == "NO"){
 
                     if(pantalla == '6'){
                         $('#terminar').css("display", "none");
@@ -185,7 +185,7 @@ $('.tsf-wizard-1').tsfWizard({
                     if(pantalla == '6'){
                         $('#terminar').css("display", "none");
                     }
-                }else if($('#recreasolicitudinput').val() == "SI" && $("#espendiente").val("SI")){
+                }else if($('#recreasolicitudinput').val() == "SI" && $("#espendiente").val()=="SI"){
 
                     if(pantalla == '6'){
                         $('#terminar').css("display", "");
