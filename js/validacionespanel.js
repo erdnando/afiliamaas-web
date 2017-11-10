@@ -156,7 +156,7 @@ $('.tsf-wizard-1').tsfWizard({
                else if($('#modalpaso3').attr('class') == 'tsf-step step-3 active slide-left-right-effect'){
                    pantalla = '3';
                }
-*               else if($('#modalpaso4').attr('class') == 'tsf-step step-4 active slide-left-right-effect'){
+              else if($('#modalpaso4').attr('class') == 'tsf-step step-4 active slide-left-right-effect'){
                    pantalla = '4';
                }
                else if($('#modalpaso5').attr('class') == 'tsf-step step-5 active slide-left-right-effect'){
