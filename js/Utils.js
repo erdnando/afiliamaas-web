@@ -1382,7 +1382,9 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$('#txtNumInteriornew').val($NoInt);
 		$('#txtNumExteriornew').val($NoExt);
 		$('#txtCpSolicitantenew').val($Cpdom);
-		buscaCP($Cpdom);
+        if($Cpdom != null){
+		  buscaCP($Cpdom);
+        }
 		$("#lisEstadoSolicitantenew option[value="+$Estado+"]").attr("selected","selected");
 		$("#lisDelMuniSolicitantenew option[value="+$Delegacion+"]").attr("selected","selected");
 		
@@ -1534,7 +1536,9 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$("#txtNumeroInteriorempnew").val($NoIntemp);
 		$("#txtNumeroExteriorEmpresa").val($NoExtemp);
 		$("#txtCpEmpresanew").val($Cpdomemp);
-		buscaCPemp($Cpdomemp);
+        if ($Cpdomemp != null){
+		  buscaCPemp($Cpdomemp);
+        }
 		$("#lisEstadoEmpresanew option[value="+$Estadoemp+"]").attr("selected","selected");
 		$("#lisDelMuniEmpresanew option[value="+$Delegacionemp+"]").attr("selected","selected");
 		
