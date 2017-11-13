@@ -5284,13 +5284,68 @@ function cerrarmodalsolicitudes() {
                 console.log("click <<>>" + $("#mdlgralnombre")[0].innerText);
                 if($("#mdlgralnombre")[0].innerText != "Nueva solicitud")
                 {
-                    $('#DatGrales').modal('hide');
+
+                    if($("#espendiente").val() == "NO"){
+                        $('#DatGrales').modal('hide');
+                        $("#rowvalida").click();
+                        reseteavalores();
+                    }
+                    else{
+
+                        swal({
+						  title: '¡Atención!',
+						  text: "¿Salir sin concluir la solicitud?",
+						  /*type: 'warning',*/
+						  showCloseButton: true,
+						  showCancelButton: true,
+						  confirmButtonText: 'Guardar solicitud <i class="glyphicon glyphicon-floppy-saved"></i>',
+						  cancelButtonText: 'Salir <i class="glyphicon glyphicon-floppy-remove"></i>',
+                        //cancelButtonColor:"#b9a107",
+												  width: "auto",
+                                                  allowOutsideClick: false,
+						}).then(function () {
+
+                            guardasolitemporal();
+
+                             $("#cargandoafiliadiv").show();
+
+                              var nomCompleto =$("#pnompromo").text();
+
+
+
+							var cadena = Base64.encode($("#txttokenWS").val() + "|" + $("#txtidUsrWS").val() + "|" + $("#txtNomusuarioWS").val() + "|" +  $("#txtcompniareWS").val() + "|" + $("#txtpwdWS").val() + "|" + nomCompleto);
+
+							location.href=('AfiliaMaaS.html?exml2340=' + cadena);
 
 
 
 
-                    $("#rowvalida").click();
-                    reseteavalores();
+
+						}, function (dismiss) {
+						  // dismiss can be 'cancel', 'overlay',
+						  // 'close', and 'timer'
+						  if (dismiss === 'cancel') {
+
+                              $("#cargandoafiliadiv").show();
+
+                              var nomCompleto =$("#pnompromo").text();
+
+
+
+							var cadena = Base64.encode($("#txttokenWS").val() + "|" + $("#txtidUsrWS").val() + "|" + $("#txtNomusuarioWS").val() + "|" +  $("#txtcompniareWS").val() + "|" + $("#txtpwdWS").val() + "|" + nomCompleto);
+
+							location.href=('AfiliaMaaS.html?exml2340=' + cadena);
+
+						  }
+
+						  if (dismiss === 'close') {
+
+
+
+						  }
+						});
+
+                    }
 
 				}else{
 
