@@ -1113,7 +1113,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$("#imagenpresenta").attr("src",F164);
 		$("#firma-img").attr("src",F164);
 
-        if(datosgrales[0] != "Rechazadas"  ){
+        if(datosgrales[0] != "Rechazadas" && status0 == -1 ){
             $("#firma-img").removeAttr("class","hide");
 
             $("#DivdelaFirmaBorrar").css("display","none");
