@@ -1124,10 +1124,10 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
             $("#DivdelaFirmaBorrar").css("display","");
             $("#validarCliente").css("display","");
         }else if(datosgrales[0] != "Rechazadas" && status0 > 0){
-            $("#firma-img").removeAttr("class","hide");
+            $("#firma-img").attr("class","hide");
 
-            $("#DivdelaFirmaBorrar").css("display","none");
-            $("#validarCliente").css("display","none");
+            $("#DivdelaFirmaBorrar").css("display","");
+            $("#validarCliente").css("display","");
         }
 		
 		
@@ -1148,7 +1148,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
             $("#linkmodalopen").attr("class", "overlay");
 
             $('#nomfirma').attr("disabled",false);
-            $('#nomfirma').text("Cambiar firma");
+            $('#nomfirma').text("Firma");
         }
 
         var numextramostrar = 0;
