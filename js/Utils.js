@@ -989,6 +989,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
         $("#tipostatusrecreasol").val(datosgrales[0].toString());
         $("#idsolrecreasol").val(datosgrales[2].toString());
         var status0 = parseInt(datosgrales[2].search("Pendiente"));
+
         if(status0 >0)
             {
                 $("#espendiente").val("SI");
@@ -1112,31 +1113,41 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$("#imagenpresenta").attr("src",F164);
 		$("#firma-img").attr("src",F164);
 
-        if(datosgrales[0] != "Rechazadas"){
+        if(datosgrales[0] != "Rechazadas"  ){
             $("#firma-img").removeAttr("class","hide");
 
             $("#DivdelaFirmaBorrar").css("display","none");
             $("#validarCliente").css("display","none");
-        }else{
+        }else if(datosgrales[0] == "Rechazadas"){
             $("#firma-img").attr("class","hide");
 
             $("#DivdelaFirmaBorrar").css("display","");
             $("#validarCliente").css("display","");
+        }else if(datosgrales[0] != "Rechazadas" && status0 > 0){
+            $("#firma-img").removeAttr("class","hide");
+
+            $("#DivdelaFirmaBorrar").css("display","none");
+            $("#validarCliente").css("display","none");
         }
 		
 		
-		if(datosgrales[0] != "Rechazadas"){
+		if(datosgrales[0] != "Rechazadas" && status0 == -1){
             $("#firma-canvas").css("display","none");
             $("#linkmodalopen").attr("class", "overlay");
             $('#nomfirma').text($FirmaPath);
             $('#nomfirma').attr("disabled","disabled");
-        }else{
+        }else if(datosgrales[0] == "Rechazadas"){
 
             $("#firma-canvas").css("display","");
             $("#linkmodalopen").attr("class", "overlay");
 
             $('#nomfirma').attr("disabled",false);
             $('#nomfirma').text("Cambiar firma");
+        }if(datosgrales[0] != "Rechazadas" && status0 > 0){
+            $("#firma-canvas").css("display","none");
+            $("#linkmodalopen").attr("class", "overlay");
+            $('#nomfirma').text($FirmaPath);
+            $('#nomfirma').attr("disabled","disabled");
         }
 
         var numextramostrar = 0;
@@ -1148,14 +1159,14 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 			$("#imaextramodal").attr("src",E164);
             $("#imaextramodal").attr("name", $Extra1);
 			$("#result_imageextra").attr("src",E164);
-            if(datosgrales[0] != "Rechazadas"){
-			$('#titulomodalfin').text($Extra1);
-			$("#linkmodalopenextra").attr("class", "overlay");
-			$('#lblextra').text($Extra1);
-			$('#lblextra').attr("disabled","disabled");
+            if(datosgrales[0] != "Rechazadas" && status0 == -1){
+                $('#titulomodalfin').text($Extra1);
+                $("#linkmodalopenextra").attr("class", "overlay");
+                $('#lblextra').text($Extra1);
+                $('#lblextra').attr("disabled","disabled");
 
             }
-            else{
+            else if(datosgrales[0] == "Rechazadas"){
                 $('#lblextra').attr("disabled",false);
                 $('#lblextra').text("Modificar");
                 $("#linkmodalopenextra").attr("class", "overlay");
@@ -1163,14 +1174,24 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
                 numextramostrar = 2
 
             }
+            else if(datosgrales[0] != "Rechazadas" && status0 > 0){
+                $('#titulomodalfin').text($Extra1);
+                $("#linkmodalopenextra").attr("class", "overlay");
+                $('#lblextra').text($Extra1);
+                $('#lblextra').attr("disabled","disabled");
+
+            }
 
 		}else
             {
-                if(datosgrales[0] != "Rechazadas"){
+                if(datosgrales[0] != "Rechazadas"  && status0 == -1){
                     $('#Imagesextras').css("display","none");
                     $("#imaextramodal").attr("name", $Extra1);
-                }else{
+                }else if(datosgrales[0] == "Rechazadas"){
                     $('#Imagesextras').css("display","");
+                    $("#imaextramodal").attr("name", $Extra1);
+                }else if(datosgrales[0] != "Rechazadas"  && status0 > 0){
+                    $('#Imagesextras').css("display","none");
                     $("#imaextramodal").attr("name", $Extra1);
                 }
 
@@ -1184,19 +1205,24 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 			$("#result_imageextra2").attr("src",E264);
 			$('#titulomodalfin2').text($Extra2);
 
-            if(datosgrales[0] != "Rechazadas"){
-			$("#linkmodalopenextra2").attr("class", "overlay");
-			$('#lblextra2').text($Extra2);
-			$('#lblextra2').attr("disabled","disabled");
-			$('#Imagesextras2').show();
+            if(datosgrales[0] != "Rechazadas" && status0 == -1){
+                $("#linkmodalopenextra2").attr("class", "overlay");
+                $('#lblextra2').text($Extra2);
+                $('#lblextra2').attr("disabled","disabled");
+                $('#Imagesextras2').show();
             }
-            else{
+            else if(datosgrales[0] == "Rechazadas"){
                 $('#lblextra2').attr("disabled",false);
                 $('#lblextra2').text("Modificar");
                 $("#linkmodalopenextra2").attr("class", "overlay");
                 $('#Imagesextras2').show();
                 $('#Imagesextras3').show();
                 numextramostrar = 3;
+            }else if(datosgrales[0] != "Rechazadas" && status0 > 0){
+                $("#linkmodalopenextra2").attr("class", "overlay");
+                $('#lblextra2').text($Extra2);
+                $('#lblextra2').attr("disabled","disabled");
+                $('#Imagesextras2').show();
             }
 		}else
             {
@@ -1217,19 +1243,25 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 			$("#result_imageextra3").attr("src",E364);
 			$('#titulomodalfin3').text($Extra3);
 
-            if(datosgrales[0] != "Rechazadas"){
-			$("#linkmodalopenextra3").attr("class", "overlay");
-			$('#lblextra3').text($Extra3);
-			$('#lblextra3').attr("disabled","disabled");
-			$('#Imagesextras3').show();
+            if(datosgrales[0] != "Rechazadas" && status0 == -1){
+                $("#linkmodalopenextra3").attr("class", "overlay");
+                $('#lblextra3').text($Extra3);
+                $('#lblextra3').attr("disabled","disabled");
+                $('#Imagesextras3').show();
             }
-            else{
+            else if(datosgrales[0] == "Rechazadas"){
                 $('#lblextra3').attr("disabled",false);
                 $('#lblextra3').text("Modificar");
                 $("#linkmodalopenextra3").attr("class", "overlay");
                 $('#Imagesextras3').show();
                 $('#Imagesextras4').show();
                 numextramostrar=4
+            }
+            else if(datosgrales[0] != "Rechazadas" && status0 > 0){
+                $("#linkmodalopenextra3").attr("class", "overlay");
+                $('#lblextra3').text($Extra3);
+                $('#lblextra3').attr("disabled","disabled");
+                $('#Imagesextras3').show();
             }
 		}else
             {
@@ -1250,18 +1282,23 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 			$("#result_imageextra4").attr("src",E464);
 			$('#titulomodalfin4').text($Extra4);
 
-            if(datosgrales[0] != "Rechazadas"){
-			$("#linkmodalopenextra4").attr("class", "overlay");
-			$('#lblextra4').text($Extra4);
-			$('#lblextra4').attr("disabled","disabled");
-			$('#Imagesextras4').show();
-            }else{
+            if(datosgrales[0] != "Rechazadas" && status0 == -1){
+                $("#linkmodalopenextra4").attr("class", "overlay");
+                $('#lblextra4').text($Extra4);
+                $('#lblextra4').attr("disabled","disabled");
+                $('#Imagesextras4').show();
+            }else if(datosgrales[0] == "Rechazadas"){
                 $('#lblextra4').attr("disabled",false);
                 $('#lblextra4').text("Modificar");
                 $("#linkmodalopenextra4").attr("class", "overlay");
                 $('#Imagesextras4').show();
                 $('#Imagesextras5').show();
                 numextramostrar = 5;
+            }else if(datosgrales[0] != "Rechazadas" && status0 > 0){
+                $("#linkmodalopenextra4").attr("class", "overlay");
+                $('#lblextra4').text($Extra4);
+                $('#lblextra4').attr("disabled","disabled");
+                $('#Imagesextras4').show();
             }
 		}else
             {
@@ -1281,14 +1318,19 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 			$("#result_imageextra5").attr("src",E564);
 			$('#titulomodalfin5').text($Extra5);
 
-            if(datosgrales[0] != "Rechazadas"){
-			$("#linkmodalopenextra5").attr("class", "overlay");
-			$('#lblextra5').text($Extra5);
-			$('#lblextra5').attr("disabled","disabled");
-			$('#Imagesextras5').show();
-            }else{
+            if(datosgrales[0] != "Rechazadas" && status0 == -1){
+                $("#linkmodalopenextra5").attr("class", "overlay");
+                $('#lblextra5').text($Extra5);
+                $('#lblextra5').attr("disabled","disabled");
+                $('#Imagesextras5').show();
+            }else if(datosgrales[0] == "Rechazadas"){
                 $('#lblextra5').attr("disabled",false);
                 $('#lblextra5').text("Modificar");
+                $('#Imagesextras5').show();
+            }else if(datosgrales[0] != "Rechazadas" && status0 > 0){
+                $("#linkmodalopenextra5").attr("class", "overlay");
+                $('#lblextra5').text($Extra5);
+                $('#lblextra5').attr("disabled","disabled");
                 $('#Imagesextras5').show();
             }
 		}else
@@ -1508,7 +1550,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 
 
 
-        var status0 = parseInt(datosgrales[2].search("Pendiente"));
+
 
         if(datosgrales[0] != "Rechazadas" && status0 == -1){
 		$('#txtNomSolicitantenew').attr("disabled","disabled");
@@ -1520,9 +1562,6 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$('#sldpersopoli').css("background-color","#e2dede");
 		$('#sldparentescopoli').css("background-color","#e2dede");
 
-
-		
-		
 		$('.glyphicon-circle-arrow-up').attr("disabled",true);
 		$('.glyphicon-circle-arrow-down').attr("disabled",true);
 		$('#optpersonapoliticonew').attr("disabled","disabled");
@@ -1538,32 +1577,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 		$('#dateFechanacnewanio').attr("disabled","disabled");
 		$("#lstNacionalidadnew").attr("disabled","disabled");
 		$('#dateFechanacnewanio').attr("disabled","disabled");
-		
 
-		/*$("#result_imagefin").attr("src",datosgrales[5].toString());
-		$("#result_imagefinmod").attr("src",datosgrales[5].toString());
-		$('#lnknombremodalINEFrente').text($IdentificacionFrentePath);
-		$('#titulomodalfinINEFrente').text($IdentificacionFrentePath);
-		
-		$("#result_imagefinatras").attr("src",datosgrales[6].toString());
-		$("#result_imagefinmodatras").attr("src",datosgrales[6].toString());
-		$('#lnknombremodalINEAtras').text($IdentificacionAtrasPath);
-		$('#titulomodalfinINEAtras').text($IdentificacionAtrasPath);
-		
-		$("#imagenpresenta").attr("src",datosgrales[7].toString());
-		$("#firma-img").attr("src",datosgrales[7].toString());
-		$('#lnknombremodalINEFrente').text($IdentificacionFrentePath);
-		$('#titulomodalfinINEFrente').text($IdentificacionFrentePath);
-		
-		$("#result_imagefin").attr("src",datosgrales[5].toString());
-		$("#result_imagefinmod").attr("src",datosgrales[5].toString());
-		$('#lnknombremodalINEFrente').text($IdentificacionFrentePath);
-		$('#titulomodalfinINEFrente').text($IdentificacionFrentePath);
-		
-		$("#result_imagefin").attr("src",datosgrales[5].toString());
-		$("#result_imagefinmod").attr("src",datosgrales[5].toString());
-		$('#lnknombremodalINEFrente').text($IdentificacionFrentePath);
-		$('#titulomodalfinINEFrente').text($IdentificacionFrentePath);*/
 		
 		$('#txtCalleSolicitantenew').attr("disabled","disabled");
 		$('#txtNumInteriornew').attr("disabled","disabled");
