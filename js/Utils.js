@@ -5294,11 +5294,11 @@ function cerrarmodalsolicitudes() {
 
                         swal({
 						  title: '¡Atención!',
-						  text: "¿Salir sin concluir la solicitud?",
+						  text: "¿Está seguro de salir?",
 						  /*type: 'warning',*/
 						  showCloseButton: true,
 						  showCancelButton: true,
-						  confirmButtonText: 'Guardar solicitud <i class="glyphicon glyphicon-floppy-saved"></i>',
+						  confirmButtonText: 'Guardar <i class="glyphicon glyphicon-floppy-saved"></i>',
 						  cancelButtonText: 'Salir <i class="glyphicon glyphicon-floppy-remove"></i>',
                         //cancelButtonColor:"#b9a107",
 												  width: "auto",
@@ -5356,7 +5356,7 @@ function cerrarmodalsolicitudes() {
 						  /*type: 'warning',*/
 						  showCloseButton: true,
 						  showCancelButton: true,
-						  confirmButtonText: 'Guardar solicitud <i class="glyphicon glyphicon-floppy-saved"></i>',
+						  confirmButtonText: 'Guardar <i class="glyphicon glyphicon-floppy-saved"></i>',
 						  cancelButtonText: 'Salir <i class="glyphicon glyphicon-floppy-remove"></i>',
                         //cancelButtonColor:"#b9a107",
 												  width: "auto",
@@ -5397,7 +5397,7 @@ function cerrarmodalsolicitudes() {
 						  text: "¿Salir sin reenviar la solicitud actual?",
 						  showCloseButton: true,
 						  showCancelButton: true,
-						  confirmButtonText: 'Reenviar solicitud <i class="glyphicon glyphicon-floppy-send"></i>',
+						  confirmButtonText: 'Reenviar <i class="glyphicon glyphicon-floppy-send"></i>',
 						  cancelButtonText: 'Salir <i class="glyphicon glyphicon-floppy-remove"></i>',
 												  width: "auto",
                                                   allowOutsideClick: false,
