@@ -1144,10 +1144,11 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
             $('#nomfirma').attr("disabled",false);
             $('#nomfirma').text("Cambiar firma");
         }if(datosgrales[0] != "Rechazadas" && status0 > 0){
-            $("#firma-canvas").css("display","none");
+           $("#firma-canvas").css("display","");
             $("#linkmodalopen").attr("class", "overlay");
-            $('#nomfirma').text($FirmaPath);
-            $('#nomfirma').attr("disabled","disabled");
+
+            $('#nomfirma').attr("disabled",false);
+            $('#nomfirma').text("Cambiar firma");
         }
 
         var numextramostrar = 0;
@@ -1175,10 +1176,11 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
 
             }
             else if(datosgrales[0] != "Rechazadas" && status0 > 0){
-                $('#titulomodalfin').text($Extra1);
+                 $('#lblextra').attr("disabled",false);
+                $('#lblextra').text("Modificar");
                 $("#linkmodalopenextra").attr("class", "overlay");
-                $('#lblextra').text($Extra1);
-                $('#lblextra').attr("disabled","disabled");
+                $('#Imagesextras2').css("display","");
+                numextramostrar = 2
 
             }
 
@@ -1191,7 +1193,7 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
                     $('#Imagesextras').css("display","");
                     $("#imaextramodal").attr("name", $Extra1);
                 }else if(datosgrales[0] != "Rechazadas"  && status0 > 0){
-                    $('#Imagesextras').css("display","none");
+                    $('#Imagesextras').css("display","");
                     $("#imaextramodal").attr("name", $Extra1);
                 }
 
@@ -1219,10 +1221,12 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
                 $('#Imagesextras3').show();
                 numextramostrar = 3;
             }else if(datosgrales[0] != "Rechazadas" && status0 > 0){
+                 $('#lblextra2').attr("disabled",false);
+                $('#lblextra2').text("Modificar");
                 $("#linkmodalopenextra2").attr("class", "overlay");
-                $('#lblextra2').text($Extra2);
-                $('#lblextra2').attr("disabled","disabled");
                 $('#Imagesextras2').show();
+                $('#Imagesextras3').show();
+                numextramostrar = 3;
             }
 		}else
             {
@@ -1258,10 +1262,12 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
                 numextramostrar=4
             }
             else if(datosgrales[0] != "Rechazadas" && status0 > 0){
+                 $('#lblextra3').attr("disabled",false);
+                $('#lblextra3').text("Modificar");
                 $("#linkmodalopenextra3").attr("class", "overlay");
-                $('#lblextra3').text($Extra3);
-                $('#lblextra3').attr("disabled","disabled");
                 $('#Imagesextras3').show();
+                $('#Imagesextras4').show();
+                numextramostrar=4
             }
 		}else
             {
@@ -1295,10 +1301,11 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
                 $('#Imagesextras5').show();
                 numextramostrar = 5;
             }else if(datosgrales[0] != "Rechazadas" && status0 > 0){
+                $('#lblextra4').attr("disabled",false);
+                $('#lblextra4').text("Modificar");
                 $("#linkmodalopenextra4").attr("class", "overlay");
-                $('#lblextra4').text($Extra4);
-                $('#lblextra4').attr("disabled","disabled");
                 $('#Imagesextras4').show();
+                $('#Imagesextras5').show();
             }
 		}else
             {
@@ -1328,9 +1335,8 @@ function CalcularHomoclave(nombreCompleto,fecha,rfc)
                 $('#lblextra5').text("Modificar");
                 $('#Imagesextras5').show();
             }else if(datosgrales[0] != "Rechazadas" && status0 > 0){
-                $("#linkmodalopenextra5").attr("class", "overlay");
-                $('#lblextra5').text($Extra5);
-                $('#lblextra5').attr("disabled","disabled");
+                $('#lblextra5').attr("disabled",false);
+                $('#lblextra5').text("Modificar");
                 $('#Imagesextras5').show();
             }
 		}else
